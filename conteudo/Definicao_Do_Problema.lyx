@@ -339,9 +339,16 @@ Definição do Problema
 \end_layout
 
 \begin_layout Standard
-No Brasil, no segundo semestre de 2015, aproximadamente 72.43% das pessoas
- possuíam acesso a internet através de smartphones, o que caracteriza o
- Smartphone como meio mais comum de acesso a internet entre os brasileiros.
+No Brasil no segundo semestre de 2015, aproximadamente 72.43% das pessoas
+ possuíam acesso a internet através de smartphones(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nielsen-brasileiros-smartphones"
+
+\end_inset
+
+) caracterizando o Smartphone como meio mais comum de acesso a internet
+ entre os brasileiros.
  Entretanto nem todos os sites e sistemas são adpatados a esses dispositivos,
  que possuem características especiais, como o tamanho reduzido da tela.
  
@@ -382,9 +389,18 @@ Um dos problemas levantados na arquitetura atual do Portal do Aluno SenacRS
  Após o usuário conseguir chegar na tela de login, há uma nova espera, agora
  para que o sistema liste as unidades do SENAC.
  Esse processo pode demorar de 10 a 40 segundos, dependendo da rede do usuário.
- Em um dos testes efetuados, simulando uma rede 3g mediana o tempo necessário
- para liberar a inserção dos dados na tela inicial foi de 26.54 segundos
- como demonstrado na Figura
+ Em um dos testes efetuados, simulando uma rede 3g mediana
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+100ms de latência e velocidade de 250kb/s à 750kb/s
+\end_layout
+
+\end_inset
+
+ o tempo necessário para liberar a inserção dos dados na tela inicial foi
+ de 26.54 segundos como demonstrado na Figura
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Requisições-de-Rede"
@@ -451,8 +467,8 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
-O tamanho da fonte e layout também demonstra como não é otimizado para o
- acesso mobile como é possível ver na Figura 
+O tamanho da fonte e layout também confirmam como o sistema não é otimizado
+ para o acesso mobile, é possível ver na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Processo-para-logar"
