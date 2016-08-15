@@ -1,0 +1,484 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
+\newcommand{\bibtex}{\textsc{Bib}\negthinspace\TeX\space}
+\newcommand{\biblatex}{\textsc{Bib}\LaTeX}
+
+% For controling section formatting.
+\usepackage{sectsty,textcase}
+\sectionfont{\normalfont\normalsize\bfseries\MakeTextUppercase}
+\subsectionfont{\normalfont\normalsize\MakeTextUppercase}
+\subsubsectionfont{\normalfont\normalsize\bfseries}
+
+% Use to align "Folha de Rosto"
+\usepackage{changepage}
+\usepackage{ragged2e}
+\usepackage{hyphenat}
+
+% position page number on the header, at right.
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\rhead{\thepage}
+\cfoot{}
+\fancypagestyle{empty}{\fancyhf{}}
+\fancypagestyle{plain}{\fancyhf{}}
+
+% Align Table and Figure "captions"
+\usepackage[singlelinecheck=false]{caption}
+
+% Cria ambiente para citacoes longas.
+\newenvironment{citacao}%
+{ \par\addvspace{\baselineskip}%
+   \footnotesize%
+   \begin{adjustwidth}{40mm}{0cm}}%
+{\end{adjustwidth}\addvspace{\baselineskip}\par}
+
+% Configure TOC
+\usepackage{tocloft,etoolbox}
+%% Fixes capitalization for Section and Subsection.
+\patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
+\patchcmd{\l@subsection}{#1}{\MakeUppercase{#1}}{}{}
+%% Hide page numbers no TOC, LOT and LOF
+\renewcommand{\cftaftertoctitle}{\thispagestyle{empty}}
+\renewcommand{\cftafterloftitle}{\thispagestyle{empty}} 
+\renewcommand{\cftafterlottitle}{\thispagestyle{empty}}
+%%  Fixes TOC, LOT and LOF  title font
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hfill}
+
+%% Fixes description in LOT and LOF
+\renewcommand{\cftfigfont}{Figura }
+\renewcommand{\cfttabfont}{Tabela }
+
+%% Fixes subsubsection font
+\renewcommand{\cftsubsubsecfont}{\bfseries}
+
+%% Fixes identation on TOC
+\cftsetindents{subsec}{0cm}{1.25cm}
+\cftsetindents{sec}{0cm}{1.25cm}
+\cftsetindents{subsubsec}{0cm}{1.25cm}
+\cftsetindents{fig}{0cm}{1.25cm}
+\cftsetindents{tab}{0cm}{1.25cm}
+%% Hide 'dots' on TOC, LOF and LOT.
+\renewcommand{\cftfigdotsep}{\cftnodots}
+\renewcommand{\cfttabdotsep}{\cftnodots}
+\renewcommand{\cftsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsubsecdotsep}{\cftnodots}
+%% Fixes separation between sections.
+\renewcommand{\cftbeforesecskip}{0em}
+
+% Add up to subsubsection to TOC 
+\setcounter{tocdepth}{3}
+
+% fix abstract title font
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries\MakeUppercase}
+
+% Used to colorize table cells
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{colortbl}
+
+% Fix item names
+\usepackage[brazilian]{babel}
+\addto{\captionsbrazilian}{\renewcommand{\listfigurename}{Lista de Ilustrações}}
+
+% Fix identation of first paragraph
+\usepackage{indentfirst}
+
+% Fixes footnote alignment
+\usepackage[hang]{footmisc}
+\setlength\footnotemargin{8pt}
+
+% Set default figure and table placement
+\def\fps@figure{h}
+\def\fps@table{h}
+
+% Bibliography configuration
+\usepackage[%
+    style=authoryear-comp,
+    natbib=true,
+    isbn=false,
+    doi=true,
+    dateabbrev=true,
+    mergedate=basic,
+    backend=biber]{biblatex}
+%% Allow bib file to be specied as a relative path from document root.
+\ifcsname input@path\endcsname 
+  \edef\@basepath{\expandafter\@firstofone\input@path} %remove curly braces
+  \def\rm@quotes#1"#2"#3\@nul{\ifx\relax#2\relax #1\else #2\fi} %
+  \edef\@basepath{\expandafter\rm@quotes\@basepath""\@nul} %remove quotes
+\else\edef\@basepath{./}\fi
+%
+\let\orig@addbibresource\addbibresource
+\renewrobustcmd*{\addbibresource}[2][type=file]{\orig@addbibresource[#1]{\@basepath#2}}
+
+% Load bibliography.
+\addbibresource{bibliografia.bib}
+
+% center bibliography section title
+\defbibheading{bibliography}[\refname]{%
+    \centering\section*{#1}%
+    \addcontentsline{toc}{section}{\refname}%
+    \markboth{#1}{#1}%
+}
+
+% fix bibliography alignment
+\setlength{\bibhang}{0pt}
+\renewcommand*{\bibfont}{\raggedright}
+
+% Fix bibliography entries
+
+% Fix author names separator.
+\renewcommand*{\multinamedelim}{;\space}
+\renewcommand*{\finalnamedelim}{;\space}
+
+% Make last author name uppercase
+\AtBeginBibliography{\renewcommand{\mkbibnamelast}[1]{\MakeUppercase{#1}}}
+
+% Fix name order to be "last name, name" for all authors.
+\DeclareNameAlias{sortname}{last-first}
+
+
+% Fix strings
+\DefineBibliographyStrings{brazilian}{%
+  url = {Disponível em\addcolon\addspace},
+  pages = {p\adddot},
+  in = {Em\addcolon},
+  volume  = {vol\adddot},
+  number = {n\adddot},
+  urlseen = {Acesso em\addcolon\addspace},
+}
+
+% Fix urldate
+\DeclareFieldFormat{urldate}{%
+    \space\bibstring{urlseen}\space%
+    \thefield{urlday}\space%
+    \mkbibmonth{\thefield{urlmonth}}\space%
+    \thefield{urlyear}\adddot}
+
+% Fix Volume
+\DeclareFieldFormat*{volume}{\space vol\adddot\addspace{#1}\adddot}
+
+% Fix Number
+\DeclareFieldFormat*{number}{\space n\adddot\addspace{#1}\adddot}
+
+% Fix URL (with non-ASCII chars)
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=url]
+      \step[fieldset=verba, origfieldval]
+    }
+  }
+}
+\DeclareFieldFormat*{url}{\space\bibstring{url}<\thefield{verba}>}
+
+% Fix title
+\DeclareFieldFormat*{title}{#1}
+\DeclareFieldFormat*{subtitle}{\addcolon {#1}}
+
+% Fix order of fields for Books
+\DeclareBibliographyDriver{book}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}
+  \printfield{subtitle}
+  \newunit\newblock
+  \printlist{publisher}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \finentry}
+
+% Fix order of fields for Misc
+\DeclareBibliographyDriver{misc}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}%
+  \newunit\newblock
+  \textbf{\printlist{publisher}}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \newunit
+  \printfield{url}%
+  \newunit
+  \printurldate
+  \finentry}
+
+% Fix proceedings
+\DeclareFieldFormat*{booktitle}{#1}
+
+% fix journal
+\DeclareFieldFormat*{journaltitle}{#1}
+
+% Fix order of fields for inprocedings
+\DeclareBibliographyDriver{inproceedings}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{maintitle+booktitle}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{address}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+
+% Fix order of fields for article
+\DeclareBibliographyDriver{article}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{journal}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Apresentação Geral do Projeto
+\end_layout
+
+\begin_layout Standard
+A apresentação do projeto é uma breve introdução sobre o projeto que será
+ realizado.
+ O objetivo desta seção é dar informação suficiente para o leitor decidir
+ se deve ou não realizar uma leitura aprofundada do texto.
+ O 
+\begin_inset Quotes eld
+\end_inset
+
+leitor do texto
+\begin_inset Quotes erd
+\end_inset
+
+ não é o professor avaliador, são estudantes e profissionais que querem
+ entender como você solucionou um problema semelhante ao que eles encontraram.
+ É para estas pessoas que você está escrevendo.
+\end_layout
+
+\begin_layout Standard
+Na apresentação do projeto você deve deixar claro qual o problema abordado,
+ como ele afeta alguma coisa, qual a solução proposta, e o que a solução
+ proposta faz com relação ao problema.
+\end_layout
+
+\begin_layout Standard
+Todo seu trabalho deve embasar-se na literatura da área, e mesmo que uma
+ grande parte da informação consumida hoje em dia venha da 
+\emph on
+World Wide Web
+\emph default
+ (WWW), nem sempre suas fontes são confiáveis.
+ Baseie suas decisões, principalmente em referências bibliograficas revisadas
+ pela comunidade científica como livros, artigos de 
+\emph on
+journals
+\emph default
+ e conferências, relatórios técnicos, etc., evite 
+\emph on
+blogs
+\emph default
+, Wikipedia
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Wikipedia: projeto colaborativo para a criação de uma enciclopédia de livre
+ acesso, disponível na WWW.
+ (http://wikipedia.org)
+\end_layout
+
+\end_inset
+
+, jornais e revistas sem cunho científico (Veja, Carta Capital, Caras).
+\end_layout
+
+\begin_layout Standard
+Uma abordagem interessante é um esquema de quatro parágrafos.
+ O primeiro destes parágrafos descreve o problema e seu contexto.
+ No segundo parágrafo, você declara porque o problema é um problema.
+ No terceiro parágrafo faça um resumo da sua solução/contibuição para solucionar
+ o problema, capturando a sua essência.
+ É interessante, nesse ponto, mostrar que tipo de solução está sendo implementad
+a.
+ No quarto parágrafo, declare a implicação da sua solução/contribuição.
+ A subseção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Apresentação-do-Modelo"
+
+\end_inset
+
+ mostra um exemplo dessa abordagem, tendo como foco este projeto de modelo
+ de TCC.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Apresentação-do-Modelo"
+
+\end_inset
+
+Apresentação do Modelo de TCC
+\end_layout
+
+\begin_layout Standard
+Um dos momentos de mair tensão para a maioria dos alunos de cursos superiores
+ e de pós-graduação é a escrita do Trabalho de Conclusão de Curso (TCC).
+\end_layout
+
+\begin_layout Standard
+Além do esforço de planejamento e implementação de um projeto, deve ser
+ produzido um relatório sobre este projeto, o qual deve, não apenas conter
+ conteúdo representativo do curso de formação, mas estar adequado a um conjunto
+ de normas técinas, definidas pela Associação Brasileira de Normas Técnicas
+ (ABNT).
+\end_layout
+
+\begin_layout Standard
+Este projeto visa prover ao aluno um conjunto de arquivos que servirá de
+ modelo para a edição dos relatórios exigidos durante a realização do TCC
+ nos cursos tecnológicos de Redes de Computadores e Análise e Desenvolvimento
+ de Sistemas, atendendo a norma NBR 10719:2011 da 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abnt-tcc"
+
+\end_inset
+
+, como definida pela biblioteca da Faculade Senac Porto Alegre
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Faculdade Senac Porto Alegre: http://portal.senacrs.com.br/faculdades.asp?Unidade=63
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Utilizando estes arquivos de modelo, o aluno terá mais uma opção de ferramenta
+ para a edição dos relatórios, podendo utilizar o editor de textos LyX
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+LyX: http://lyx.org
+\end_layout
+
+\end_inset
+
+, disponível para as os principais sistemas operacionais para computadores
+ de mesa (
+\emph on
+desktops
+\emph default
+) do mercado.
+\end_layout
+
+\end_body
+\end_document

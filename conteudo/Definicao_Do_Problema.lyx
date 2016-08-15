@@ -1,0 +1,1285 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
+\newcommand{\bibtex}{\textsc{Bib}\negthinspace\TeX\space}
+\newcommand{\biblatex}{\textsc{Bib}\LaTeX}
+
+% For controling section formatting.
+\usepackage{sectsty,textcase}
+\sectionfont{\normalfont\normalsize\bfseries\MakeTextUppercase}
+\subsectionfont{\normalfont\normalsize\MakeTextUppercase}
+\subsubsectionfont{\normalfont\normalsize\bfseries}
+
+% Use to align "Folha de Rosto"
+\usepackage{changepage}
+\usepackage{ragged2e}
+\usepackage{hyphenat}
+
+% position page number on the header, at right.
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\rhead{\thepage}
+\cfoot{}
+\fancypagestyle{empty}{\fancyhf{}}
+\fancypagestyle{plain}{\fancyhf{}}
+
+% Align Table and Figure "captions"
+\usepackage[singlelinecheck=false]{caption}
+
+% Cria ambiente para citacoes longas.
+\newenvironment{citacao}%
+{ \par\addvspace{\baselineskip}%
+   \footnotesize%
+   \begin{adjustwidth}{40mm}{0cm}}%
+{\end{adjustwidth}\addvspace{\baselineskip}\par}
+
+% Configure TOC
+\usepackage{tocloft,etoolbox}
+%% Fixes capitalization for Section and Subsection.
+\patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
+\patchcmd{\l@subsection}{#1}{\MakeUppercase{#1}}{}{}
+%% Hide page numbers no TOC, LOT and LOF
+\renewcommand{\cftaftertoctitle}{\thispagestyle{empty}}
+\renewcommand{\cftafterloftitle}{\thispagestyle{empty}} 
+\renewcommand{\cftafterlottitle}{\thispagestyle{empty}}
+%%  Fixes TOC, LOT and LOF  title font
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hfill}
+
+%% Fixes description in LOT and LOF
+\renewcommand{\cftfigfont}{Figura }
+\renewcommand{\cfttabfont}{Tabela }
+
+%% Fixes subsubsection font
+\renewcommand{\cftsubsubsecfont}{\bfseries}
+
+%% Fixes identation on TOC
+\cftsetindents{subsec}{0cm}{1.25cm}
+\cftsetindents{sec}{0cm}{1.25cm}
+\cftsetindents{subsubsec}{0cm}{1.25cm}
+\cftsetindents{fig}{0cm}{1.25cm}
+\cftsetindents{tab}{0cm}{1.25cm}
+%% Hide 'dots' on TOC, LOF and LOT.
+\renewcommand{\cftfigdotsep}{\cftnodots}
+\renewcommand{\cfttabdotsep}{\cftnodots}
+\renewcommand{\cftsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsubsecdotsep}{\cftnodots}
+%% Fixes separation between sections.
+\renewcommand{\cftbeforesecskip}{0em}
+
+% Add up to subsubsection to TOC 
+\setcounter{tocdepth}{3}
+
+% fix abstract title font
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries\MakeUppercase}
+
+% Used to colorize table cells
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{colortbl}
+
+% Fix item names
+\usepackage[brazilian]{babel}
+\addto{\captionsbrazilian}{\renewcommand{\listfigurename}{Lista de Ilustrações}}
+
+% Fix identation of first paragraph
+\usepackage{indentfirst}
+
+% Fixes footnote alignment
+\usepackage[hang]{footmisc}
+\setlength\footnotemargin{8pt}
+
+% Set default figure and table placement
+\def\fps@figure{h}
+\def\fps@table{h}
+
+% Bibliography configuration
+\usepackage[%
+    style=authoryear-comp,
+    natbib=true,
+    isbn=false,
+    doi=true,
+    dateabbrev=true,
+    mergedate=basic,
+    backend=biber]{biblatex}
+%% Allow bib file to be specied as a relative path from document root.
+\ifcsname input@path\endcsname 
+  \edef\@basepath{\expandafter\@firstofone\input@path} %remove curly braces
+  \def\rm@quotes#1"#2"#3\@nul{\ifx\relax#2\relax #1\else #2\fi} %
+  \edef\@basepath{\expandafter\rm@quotes\@basepath""\@nul} %remove quotes
+\else\edef\@basepath{./}\fi
+%
+\let\orig@addbibresource\addbibresource
+\renewrobustcmd*{\addbibresource}[2][type=file]{\orig@addbibresource[#1]{\@basepath#2}}
+
+% Load bibliography.
+\addbibresource{bibliografia.bib}
+
+% center bibliography section title
+\defbibheading{bibliography}[\refname]{%
+    \centering\section*{#1}%
+    \addcontentsline{toc}{section}{\refname}%
+    \markboth{#1}{#1}%
+}
+
+% fix bibliography alignment
+\setlength{\bibhang}{0pt}
+\renewcommand*{\bibfont}{\raggedright}
+
+% Fix bibliography entries
+
+% Fix author names separator.
+\renewcommand*{\multinamedelim}{;\space}
+\renewcommand*{\finalnamedelim}{;\space}
+
+% Make last author name uppercase
+\AtBeginBibliography{\renewcommand{\mkbibnamelast}[1]{\MakeUppercase{#1}}}
+
+% Fix name order to be "last name, name" for all authors.
+\DeclareNameAlias{sortname}{last-first}
+
+
+% Fix strings
+\DefineBibliographyStrings{brazilian}{%
+  url = {Disponível em\addcolon\addspace},
+  pages = {p\adddot},
+  in = {Em\addcolon},
+  volume  = {vol\adddot},
+  number = {n\adddot},
+  urlseen = {Acesso em\addcolon\addspace},
+}
+
+% Fix urldate
+\DeclareFieldFormat{urldate}{%
+    \space\bibstring{urlseen}\space%
+    \thefield{urlday}\space%
+    \mkbibmonth{\thefield{urlmonth}}\space%
+    \thefield{urlyear}\adddot}
+
+% Fix Volume
+\DeclareFieldFormat*{volume}{\space vol\adddot\addspace{#1}\adddot}
+
+% Fix Number
+\DeclareFieldFormat*{number}{\space n\adddot\addspace{#1}\adddot}
+
+% Fix URL (with non-ASCII chars)
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=url]
+      \step[fieldset=verba, origfieldval]
+    }
+  }
+}
+\DeclareFieldFormat*{url}{\space\bibstring{url}<\thefield{verba}>}
+
+% Fix title
+\DeclareFieldFormat*{title}{#1}
+\DeclareFieldFormat*{subtitle}{\addcolon {#1}}
+
+% Fix order of fields for Books
+\DeclareBibliographyDriver{book}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}
+  \printfield{subtitle}
+  \newunit\newblock
+  \printlist{publisher}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \finentry}
+
+% Fix order of fields for Misc
+\DeclareBibliographyDriver{misc}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}%
+  \newunit\newblock
+  \textbf{\printlist{publisher}}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \newunit
+  \printfield{url}%
+  \newunit
+  \printurldate
+  \finentry}
+
+% Fix proceedings
+\DeclareFieldFormat*{booktitle}{#1}
+
+% fix journal
+\DeclareFieldFormat*{journaltitle}{#1}
+
+% Fix order of fields for inprocedings
+\DeclareBibliographyDriver{inproceedings}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{maintitle+booktitle}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{address}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+
+% Fix order of fields for article
+\DeclareBibliographyDriver{article}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{journal}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Definição do Problema
+\end_layout
+
+\begin_layout Standard
+Nesta seção deve ser definido o escopo do projeto, deixando claro o que
+ será realizado, e para isso, é importante detalhar o problema que se deseja
+ resolver, o cliente ou perfil de cliente que se beneficiará com o uso do
+ projeto, e comparar o projeto com outros semelhantes já existentes.
+\end_layout
+
+\begin_layout Standard
+Apresente todos os problemas que dizem respeito a relação a solução que
+ será implementada, levantando questões de praticidade, segurança, alterações
+ de processos existentes, etc.
+\end_layout
+
+\begin_layout Standard
+Após terminar esta seção, o leitor deverá enteder com algum detalhe o problema
+ sendo tratado, as necessidades da solução implantada, e o ambiente em que
+ esta será utilizada.
+ O leitor deve entender porque o projeto foi desenvolvido, ao invés de aplicar
+ uma solução já existente.
+\end_layout
+
+\begin_layout Standard
+Para mostrar o motivo pelo qual o projeto deve ser desenvolvido, você deve
+ pesquisar o mercado e identificar soluções existentes que sejam semelhantes
+ à solução proposta.
+ Determine, de acordo com o problema a ser tratado, um conjunto de característic
+as que uma solução ideal possuiria, e compare o sistema proposto, com os
+ sistemas existentes, em relação a estas características.
+ Explique o motivo destas características serem relevantes ao problema.
+\end_layout
+
+\begin_layout Standard
+Para facilitar a visualização das características, é interessante a criação
+ de uma tabela comparativa em relação às características levantadas.
+\end_layout
+
+\begin_layout Standard
+Utilize a opção 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Insert
+\emph default
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\emph on
+Float
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Table
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ para inserir uma tabela.
+ Isto criará uma área onde você poderá inserir a sua tabela (
+\emph on
+Insert
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Table
+\emph default
+).
+ Aproveite para adicionar um 
+\emph on
+label
+\emph default
+ a sua tabela, pois será este 
+\emph on
+label
+\emph default
+ que você utilizará para referenciar sua tabela no texto.
+ Lembre-se que toda tabela ou figura deve ser referenciada no texto.
+ Veja o exempla da Tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Sistemas-correlatos"
+
+\end_inset
+
+.
+ Para referenciar a tabela no texto, você deve incluir uma 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Cross-reference
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ao fazer isso, uma janela com todos os 
+\emph on
+labels 
+\emph default
+disponíveis será exibida e você pode escolher o que deseja.
+ Tabelas e figuras adicionadas dessa forma são automaticamente adicionadas
+ às listas correspondentes.
+\end_layout
+
+\begin_layout Standard
+A descrição da 
+\series bold
+fonte
+\series default
+ é obrigatória, e deve ser adicionada manualmente.
+ Posicione o cursor imediatamente após a tabela, adicione uma nova linha,
+ e digite os dados.
+ A palavra 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+Fonte:
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ pode estar em negrito (pois para tabelas é aplicada a norma do IBGE), porém
+ não é necessário (e não recomendado).
+ O que é obrigatório é que o tamanho da fonte seja 10.
+ Para alterar o tamanho da fonte, você pode escrever o texto, selecioná-lo
+ e alterar o 
+\begin_inset Quotes eld
+\end_inset
+
+Text Style
+\begin_inset Quotes erd
+\end_inset
+
+, aplicando o tamanho 
+\begin_inset Quotes eld
+\end_inset
+
+Small
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Definição do Problema no Contexto deste Projeto
+\end_layout
+
+\begin_layout Standard
+Manter a formatação ABNT durante a execução do projeto de TCC é mais um
+ fator de 
+\emph on
+stress
+\emph default
+ para o aluno, e uma tarefa que acaba consumindo tempo que poderia ser melhor
+ empregado na construção e desenvolvimento da solução.
+ A tarefa pode ser tão dispendiosa, com relação a tempo, ou tediosa, a ponto
+ do aluno não querer desenvolvê-la, que foi criado um mercado em torno do
+ TCC, com diversos profissionais oferencendo seu trabalho de revisão de
+ texto e formatação nos padrões da ABNT.
+\end_layout
+
+\begin_layout Standard
+Neste projeto, serão disponibilizado modelos que auxiliarão o aluno a manter
+ o foco no desenvolvimento da solução e do seu relatório, deixando a cargo
+ de uma ferramenta, o editor LyX, o controle e manutenção da formatação
+ nos padrões corretos.
+\end_layout
+
+\begin_layout Standard
+Diversos sistemas podem ser utilizados para se obter resultados semelhantes,
+ como o Microsoft Word 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "msword"
+
+\end_inset
+
+, ou o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lamport-latex"
+
+\end_inset
+
+, porém estes sistemas devem apresentar certas características de forma
+ a auxiliar a execução do trabalho, ou garantir uma boa qualidade do documento
+ gerado.
+ A Tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Sistemas-correlatos"
+
+\end_inset
+
+ resume as características desejadas nos sistemas para desenvolvimento dos
+ documentos de TCC, que foram avaliadas neste trabalho.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Sistemas-correlatos"
+
+\end_inset
+
+Sistemas correlatos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Característica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+MS-Word
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+LyX
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Usabilidade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muito Boa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Razoável
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muito Boa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+WYSIWYG 
+\series default
+(ver texto)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Não
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Limitado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Portabilidade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Média
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muito Boa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Qualidade final
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Boa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Controle ABNT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Razoável
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Divisão em múltiplos
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+arquivos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Não
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A criação de documentos divididos em vários arquivos é possível no Microsoft
+ Word, porém o modelo disponível aos alunos da Faculdade Senac Porto Alegre
+ não foi desenvolvido desta forma.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Edição 
+\emph on
+online
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Não
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Controle de versão 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Péssimo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excelente
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align left
+
+\series bold
+\size footnotesize
+Fonte:
+\series default
+ Próprio autor, embora isso seja um quadro, não uma tabela.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O Microsoft Word, desenvolvido pela Microsoft Corporation, é um editor de
+ textos formatados, criado com a idéia WYSIWYG, sigla do inglês 
+\emph on
+What You See Is What You Get
+\emph default
+, significando que aquilo que você vê na tela, é o que você irá obter ao
+ imprimir.
+ Com uma usabilidade muito boa, que apresenta bons resultados finais, embora
+ nem sempre iguais ao que aparece na tela devido a diferenças entre impressoras.
+ Apesar da facilidade de uso, o controle da edição no padrão ABNT é, em
+ boa parte, deixado a cargo do usuário, não sendo, muitas vezes, forçado
+ pelo sistema.
+ O 
+\emph on
+software
+\emph default
+ está disponível apenas para as plataformas Microsoft Windows e Apple Mac
+ OS X, ou como um serviço 
+\emph on
+online
+\emph default
+, através do produto 
+\begin_inset Quotes eld
+\end_inset
+
+Office 365
+\begin_inset Quotes erd
+\end_inset
+
+, comercializado pela Microsoft.
+ O principal problema na utilização do Microsoft Word é a utilização de
+ um arquivo de dados proprietário para conter o documento, e manter este
+ arquivo em um sistema de controle de versão é muito mais complicado que
+ manter arquivos em formato texto.
+ Outra característica interessante durante a execução do TCC é a capacidade
+ de editar as seções dos documentos em arquivos separados, e reaproveitar
+ estes arquivos nos diferentes documentos que dever ser entregues.
+ Embora esta característica esteja presente no Microsoft Word há várias
+ versões, ela não está presente no modelo disponibilizado aos alunos (na
+ data de escrita deste documento).
+\end_layout
+
+\begin_layout Standard
+O 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ foi desenvolvido por 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "lamport-latex"
+
+\end_inset
+
+ como um conjunto de macros para o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TeX
+\end_layout
+
+\end_inset
+
+, um sistema de tipografia desenvolvido em 1978 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "knuth-texbook"
+
+\end_inset
+
+, que facilita o trabalho de criação de documentos que serão processados
+ pelo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TeX
+\end_layout
+
+\end_inset
+
+.
+ Disponível para a maioria dos sistemas operacionais utilizados no mercado,
+ o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ é reconhecido, principalmente, pela alta qualidade dos documentos gerados
+ (em razão da utilização do 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TeX
+\end_layout
+
+\end_inset
+
+).
+ Como o usuário edita o conteúdo do texto a partir de comandos pré-definidos,
+ não é possível ao usuário alterar a formatação sem modificar os comandos
+ já existentes, garantindo assim a formatação no padrão ABNT.
+ Outra grande vantagem é a utilização de arquivos texto comuns, que além
+ da possibilidade de utilização simples em qualquer sitema de controle de
+ versão, permite que o conteúdo seja acessado, independente do sistema estar
+ disponível ou não (embora, nesse caso, não esteja formatado).
+ O uso de diversos arquivos para compor um documento também é bastante simplific
+ado.
+ O principal problema do 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ é sua usabilidade, pois exige que se aprenda um grande número de comandos
+ para formatar corretamente seu documento, e não tenha uma visão nem aproximada
+ do resultado que será obtido, antes que seja gerado um documento pronto
+ para impressão.
+ No entanto, uma vez gerado este documento, não existe variação na sua impressão
+, mesmo em impressoras diferentes.
+ O serviço ShareLaTeX
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+ShareLaTeX: https://www.sharelatex.com
+\end_layout
+
+\end_inset
+
+ permite a edição e armazenamento de documentos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+, incluindo a edição colaborativa dos documentos.
+\end_layout
+
+\begin_layout Standard
+Propondo uma interface WYSIWYG, o LyX é um editor de texto que utiliza o
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ para a geração do documento a ser impresso, herdando todas as suas característi
+cas com relação a controle e qualidade.
+ Embora não esteja disponível em todas as plataformas onde o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ pode ser encontrado, o LyX está disponível para as principais plataformas
+ do mercado, como Microsoft Windows, Apple Mac OS X, Linux, OS/2, Haiku,
+ FreeBSD e outros.
+ Embora o objetivo do projeto LyX seja criar um editor WYSIWYG para o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+, a visualização do documento ainda não é ideal, mas próxima do que o usuário
+ irá obter.
+\end_layout
+
+\begin_layout Standard
+Atualmente, está em desenvolvimento o desenvolvimento de um modelo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ para o TCC da Faculdade Senac Porto Alegre, e com o propósito de propiciar
+ mais uma ferramenta para auxiliar os alunos, este projeto propõe um modelo
+ para o LyX, por ser uma ferramenta com boa usabilidade.
+\end_layout
+
+\end_body
+\end_document

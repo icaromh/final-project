@@ -1,0 +1,773 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% Fixes footnote alignment
+\usepackage[hang]{footmisc}
+\setlength\footnotemargin{8pt}
+
+% Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
+\newcommand{\bibtex}{\textsc{Bib}\negthinspace\TeX\space}
+\newcommand{\biblatex}{\textsc{Bib}\LaTeX}
+
+% For controling section formatting.
+\usepackage{sectsty,textcase}
+\sectionfont{\normalfont\normalsize\bfseries\MakeTextUppercase}
+\subsectionfont{\normalfont\normalsize\MakeTextUppercase}
+\subsubsectionfont{\normalfont\normalsize\bfseries}
+
+% Use to align "Folha de Rosto"
+\usepackage{changepage}
+\usepackage{ragged2e}
+\usepackage{hyphenat}
+
+% position page number on the header, at right.
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\rhead{\thepage}
+\cfoot{}
+\fancypagestyle{empty}{\fancyhf{}}
+\fancypagestyle{plain}{\fancyhf{}}
+
+% Align Table and Figure "captions"
+\usepackage[singlelinecheck=false]{caption}
+
+% Cria ambiente para citacoes longas.
+\newenvironment{citacao}%
+{ \par\addvspace{\baselineskip}%
+   \footnotesize%
+   \begin{adjustwidth}{40mm}{0cm}}%
+{\end{adjustwidth}\addvspace{\baselineskip}\par}
+
+% Configure TOC
+\usepackage{tocloft,etoolbox}
+%% Fixes capitalization for Section and Subsection.
+\patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
+\patchcmd{\l@subsection}{#1}{\MakeUppercase{#1}}{}{}
+%% Hide page numbers no TOC, LOT and LOF
+\renewcommand{\cftaftertoctitle}{\thispagestyle{empty}}
+\renewcommand{\cftafterloftitle}{\thispagestyle{empty}} 
+\renewcommand{\cftafterlottitle}{\thispagestyle{empty}}
+%%  Fixes TOC, LOT and LOF  title font
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hfill}
+
+% Fix page number on second page of TOC
+\renewcommand{\cftsecafterpnum}{\thispagestyle{empty}}
+\renewcommand{\cftsubsecafterpnum}{\thispagestyle{empty}}
+\renewcommand{\cftsubsubsecafterpnum}{\thispagestyle{empty}}
+
+%% Fixes description in LOT and LOF
+\renewcommand{\cftfigfont}{Figura }
+\renewcommand{\cfttabfont}{Tabela }
+
+%% Fixes subsubsection font
+\renewcommand{\cftsubsubsecfont}{\bfseries}
+
+%% Fixes identation on TOC
+\cftsetindents{subsec}{0cm}{1.25cm}
+\cftsetindents{sec}{0cm}{1.25cm}
+\cftsetindents{subsubsec}{0cm}{1.25cm}
+\cftsetindents{fig}{0cm}{1.25cm}
+\cftsetindents{tab}{0cm}{1.25cm}
+%% Hide 'dots' on TOC, LOF and LOT.
+\renewcommand{\cftfigdotsep}{\cftnodots}
+\renewcommand{\cfttabdotsep}{\cftnodots}
+\renewcommand{\cftsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsubsecdotsep}{\cftnodots}
+%% Fixes separation between sections.
+\renewcommand{\cftbeforesecskip}{0em}
+
+% Add up to subsubsection to TOC 
+\setcounter{tocdepth}{3}
+
+% fix abstract title font
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries\MakeUppercase}
+
+% Used to colorize table cells
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{colortbl}
+
+% Fix item names
+\usepackage[brazilian]{babel}
+\addto{\captionsbrazilian}{\renewcommand{\listfigurename}{Lista de Ilustrações}}
+
+% Fix identation of first paragraph
+\usepackage{indentfirst}
+
+% Set default figure and table placement
+\def\fps@figure{h}
+\def\fps@table{h}
+
+% Bibliography configuration
+\usepackage[%
+    style=authoryear-comp,
+    natbib=true,
+    isbn=false,
+    doi=true,
+    dateabbrev=true,
+    mergedate=basic,
+    backend=biber]{biblatex}
+%% Allow bib file to be specied as a relative path from document root.
+\ifcsname input@path\endcsname 
+  \edef\@basepath{\expandafter\@firstofone\input@path} %remove curly braces
+  \def\rm@quotes#1"#2"#3\@nul{\ifx\relax#2\relax #1\else #2\fi} %
+  \edef\@basepath{\expandafter\rm@quotes\@basepath""\@nul} %remove quotes
+\else\edef\@basepath{./}\fi
+%
+\let\orig@addbibresource\addbibresource
+\renewrobustcmd*{\addbibresource}[2][type=file]{\orig@addbibresource[#1]{\@basepath#2}}
+
+% Load bibliography.
+\addbibresource{bibliografia.bib}
+
+% center bibliography section title
+\defbibheading{bibliography}[\refname]{%
+    \centering\section*{#1}%
+    \addcontentsline{toc}{section}{\refname}%
+    \markboth{#1}{#1}%
+}
+
+% fix bibliography alignment
+\setlength{\bibhang}{0pt}
+\renewcommand*{\bibfont}{\raggedright}
+
+% Fix bibliography entries
+
+% Fix author names separator.
+\renewcommand*{\multinamedelim}{;\space}
+\renewcommand*{\finalnamedelim}{;\space}
+
+% Make last author name uppercase
+\AtBeginBibliography{\renewcommand{\mkbibnamelast}[1]{\MakeUppercase{#1}}}
+
+% Fix name order to be "last name, name" for all authors.
+\DeclareNameAlias{sortname}{last-first}
+
+
+% Fix strings
+\DefineBibliographyStrings{brazilian}{%
+  url = {Disponível em\addcolon\addspace},
+  pages = {p\adddot},
+  in = {Em\addcolon},
+  volume  = {vol\adddot},
+  number = {n\adddot},
+  urlseen = {Acesso em\addcolon\addspace},
+}
+
+% Fix urldate
+\DeclareFieldFormat{urldate}{%
+    \space\bibstring{urlseen}\space%
+    \thefield{urlday}\space%
+    \mkbibmonth{\thefield{urlmonth}}\space%
+    \thefield{urlyear}\adddot}
+
+% Fix Volume
+\DeclareFieldFormat*{volume}{\space vol\adddot\addspace{#1}\adddot}
+
+% Fix Number
+\DeclareFieldFormat*{number}{\space n\adddot\addspace{#1}\adddot}
+
+% Fix URL (with non-ASCII chars)
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=url]
+      \step[fieldset=verba, origfieldval]
+    }
+  }
+}
+\DeclareFieldFormat*{url}{\space\bibstring{url}<\thefield{verba}>}
+
+% Fix title
+\DeclareFieldFormat*{title}{#1}
+\DeclareFieldFormat*{subtitle}{\addcolon {#1}}
+
+% Fix order of fields for Books
+\DeclareBibliographyDriver{book}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}
+  \printfield{subtitle}
+  \newunit\newblock
+  \printlist{publisher}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \finentry}
+
+% Fix order of fields for Misc
+\DeclareBibliographyDriver{misc}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}%
+  \newunit\newblock
+  \textbf{\printlist{publisher}}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \newunit
+  \printfield{url}%
+  \newunit
+  \printurldate
+  \finentry}
+
+% Fix proceedings
+\DeclareFieldFormat*{booktitle}{#1}
+
+% fix journal
+\DeclareFieldFormat*{journaltitle}{#1}
+
+% Fix order of fields for inprocedings
+\DeclareBibliographyDriver{inproceedings}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{maintitle+booktitle}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{address}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+
+% Fix order of fields for article
+\DeclareBibliographyDriver{article}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{journal}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+
+% add a new line to every bib entry
+\setlength\bibitemsep{2\itemsep}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+IMPORTANTE: Você não deve alterar NADA neste arquivo, ele serve como 
+\begin_inset Quotes eld
+\end_inset
+
+master
+\begin_inset Quotes erd
+\end_inset
+
+ para gerar o documento.
+\end_layout
+
+\begin_layout Plain Layout
+Nem mesmo as NOTAS podem ser removidas!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Para editar um dos arquivos contido neste documento, basta clicar no 
+\begin_inset Quotes eld
+\end_inset
+
+link
+\begin_inset Quotes erd
+\end_inset
+
+ e escolher a opção (botão) 
+\begin_inset Quotes eld
+\end_inset
+
+Editar
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Você deve alterar os campos exitentes na Capa e na Folha de Rosto (nome,
+ título e data).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "acessorios/Capa_Relatorio_Final.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "acessorios/Folha_Rosto_Relatorio_Final.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Altere o arquivo Resumo.lyx para incluir seu resumo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Resumo.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Remova o item abaixo, e a quebra de página, APENAS se a Lista de Figuras
+ ficar vazia.
+ Isto nunca deveria acontecer, uma vez que a tabela comparativa de sistemas,
+ é uma figura, os diagramas são figuras, assim como as imagens que você
+ deveria ter utilizado para auxiliar no entendimento da Descrição da Solução.
+\end_layout
+
+\begin_layout Plain Layout
+Para não precisar reinserir a lista, remova-a apenas na versão final do
+ documento.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Remova o item abaixo, e a quebra de página, APENAS se a Lista de Tabelas
+ ficar vazia.
+ De acordo com a norma do IBGE, adotada pela ABNT para relatórios, Tabelas
+ possuem como dado principal números, caso os dados da 
+\begin_inset Quotes eld
+\end_inset
+
+tabela
+\begin_inset Quotes erd
+\end_inset
+
+ não sejam números, ela deve ser considerada um 
+\begin_inset Quotes eld
+\end_inset
+
+Quadro
+\begin_inset Quotes erd
+\end_inset
+
+ ou 
+\begin_inset Quotes eld
+\end_inset
+
+Figura
+\begin_inset Quotes erd
+\end_inset
+
+ (use 
+\begin_inset Quotes eld
+\end_inset
+
+Figura
+\begin_inset Quotes erd
+\end_inset
+
+, devido a uma limitação deste modelo).
+\end_layout
+
+\begin_layout Plain Layout
+Para não precisar reinserir a lista, remova-a apenas na versão final do
+ documento.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+O sumário é gerado automaticamente, e inclui seções, subseções e subsubseções.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Os arquivos abaixo representam, cada um, uma seção do documento.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Apresentacao_Do_Projeto.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Definicao_Do_Problema.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Objetivos.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Analise_De_Tecnologias_E_Ferramentas.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Descricao_Da_Solucao.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Abordagem_De_Desenvolvimento.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Arquitetura_Do_Sistema.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Funcionamento_Do_Sistema.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Validacao.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Consideracoes_Finais.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conteudo/Componentes_Reutilizados.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A bibliografia é gerada automaticamente, altere o arquivo bibliografia.bib
+ para incluir os livros e artigos citados no texto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Para o BibLaTeX: 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliografia"
+options "bibtotoc,bib/senac-plainnat"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

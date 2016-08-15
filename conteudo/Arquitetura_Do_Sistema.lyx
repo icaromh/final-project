@@ -1,0 +1,407 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
+\newcommand{\bibtex}{\textsc{Bib}\negthinspace\TeX\space}
+\newcommand{\biblatex}{\textsc{Bib}\LaTeX}
+
+% For controling section formatting.
+\usepackage{sectsty,textcase}
+\sectionfont{\normalfont\normalsize\bfseries\MakeTextUppercase}
+\subsectionfont{\normalfont\normalsize\MakeTextUppercase}
+\subsubsectionfont{\normalfont\normalsize\bfseries}
+
+% Use to align "Folha de Rosto"
+\usepackage{changepage}
+\usepackage{ragged2e}
+\usepackage{hyphenat}
+
+% position page number on the header, at right.
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\rhead{\thepage}
+\cfoot{}
+\fancypagestyle{empty}{\fancyhf{}}
+\fancypagestyle{plain}{\fancyhf{}}
+
+% Align Table and Figure "captions"
+\usepackage[singlelinecheck=false]{caption}
+
+% Cria ambiente para citacoes longas.
+\newenvironment{citacao}%
+{ \par\addvspace{\baselineskip}%
+   \footnotesize%
+   \begin{adjustwidth}{40mm}{0cm}}%
+{\end{adjustwidth}\addvspace{\baselineskip}\par}
+
+% Configure TOC
+\usepackage{tocloft,etoolbox}
+%% Fixes capitalization for Section and Subsection.
+\patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
+\patchcmd{\l@subsection}{#1}{\MakeUppercase{#1}}{}{}
+%% Hide page numbers no TOC, LOT and LOF
+\renewcommand{\cftaftertoctitle}{\thispagestyle{empty}}
+\renewcommand{\cftafterloftitle}{\thispagestyle{empty}} 
+\renewcommand{\cftafterlottitle}{\thispagestyle{empty}}
+%%  Fixes TOC, LOT and LOF  title font
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hfill}
+
+%% Fixes description in LOT and LOF
+\renewcommand{\cftfigfont}{Figura }
+\renewcommand{\cfttabfont}{Tabela }
+
+%% Fixes subsubsection font
+\renewcommand{\cftsubsubsecfont}{\bfseries}
+
+%% Fixes identation on TOC
+\cftsetindents{subsec}{0cm}{1.25cm}
+\cftsetindents{sec}{0cm}{1.25cm}
+\cftsetindents{subsubsec}{0cm}{1.25cm}
+\cftsetindents{fig}{0cm}{1.25cm}
+\cftsetindents{tab}{0cm}{1.25cm}
+%% Hide 'dots' on TOC, LOF and LOT.
+\renewcommand{\cftfigdotsep}{\cftnodots}
+\renewcommand{\cfttabdotsep}{\cftnodots}
+\renewcommand{\cftsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsecdotsep}{\cftnodots}
+\renewcommand{\cftsubsubsecdotsep}{\cftnodots}
+%% Fixes separation between sections.
+\renewcommand{\cftbeforesecskip}{0em}
+
+% Add up to subsubsection to TOC 
+\setcounter{tocdepth}{3}
+
+% fix abstract title font
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries\MakeUppercase}
+
+% Used to colorize table cells
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{colortbl}
+
+% Fix item names
+\usepackage[brazilian]{babel}
+\addto{\captionsbrazilian}{\renewcommand{\listfigurename}{Lista de Ilustrações}}
+
+% Fix identation of first paragraph
+\usepackage{indentfirst}
+
+% Fixes footnote alignment
+\usepackage[hang]{footmisc}
+\setlength\footnotemargin{8pt}
+
+% Set default figure and table placement
+\def\fps@figure{h}
+\def\fps@table{h}
+
+% Bibliography configuration
+\usepackage[%
+    style=authoryear-comp,
+    natbib=true,
+    isbn=false,
+    doi=true,
+    dateabbrev=true,
+    mergedate=basic,
+    backend=biber]{biblatex}
+%% Allow bib file to be specied as a relative path from document root.
+\ifcsname input@path\endcsname 
+  \edef\@basepath{\expandafter\@firstofone\input@path} %remove curly braces
+  \def\rm@quotes#1"#2"#3\@nul{\ifx\relax#2\relax #1\else #2\fi} %
+  \edef\@basepath{\expandafter\rm@quotes\@basepath""\@nul} %remove quotes
+\else\edef\@basepath{./}\fi
+%
+\let\orig@addbibresource\addbibresource
+\renewrobustcmd*{\addbibresource}[2][type=file]{\orig@addbibresource[#1]{\@basepath#2}}
+
+% Load bibliography.
+\addbibresource{bibliografia.bib}
+
+% center bibliography section title
+\defbibheading{bibliography}[\refname]{%
+    \centering\section*{#1}%
+    \addcontentsline{toc}{section}{\refname}%
+    \markboth{#1}{#1}%
+}
+
+% fix bibliography alignment
+\setlength{\bibhang}{0pt}
+\renewcommand*{\bibfont}{\raggedright}
+
+% Fix bibliography entries
+
+% Fix author names separator.
+\renewcommand*{\multinamedelim}{;\space}
+\renewcommand*{\finalnamedelim}{;\space}
+
+% Make last author name uppercase
+\AtBeginBibliography{\renewcommand{\mkbibnamelast}[1]{\MakeUppercase{#1}}}
+
+% Fix name order to be "last name, name" for all authors.
+\DeclareNameAlias{sortname}{last-first}
+
+
+% Fix strings
+\DefineBibliographyStrings{brazilian}{%
+  url = {Disponível em\addcolon\addspace},
+  pages = {p\adddot},
+  in = {Em\addcolon},
+  volume  = {vol\adddot},
+  number = {n\adddot},
+  urlseen = {Acesso em\addcolon\addspace},
+}
+
+% Fix urldate
+\DeclareFieldFormat{urldate}{%
+    \space\bibstring{urlseen}\space%
+    \thefield{urlday}\space%
+    \mkbibmonth{\thefield{urlmonth}}\space%
+    \thefield{urlyear}\adddot}
+
+% Fix Volume
+\DeclareFieldFormat*{volume}{\space vol\adddot\addspace{#1}\adddot}
+
+% Fix Number
+\DeclareFieldFormat*{number}{\space n\adddot\addspace{#1}\adddot}
+
+% Fix URL (with non-ASCII chars)
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=url]
+      \step[fieldset=verba, origfieldval]
+    }
+  }
+}
+\DeclareFieldFormat*{url}{\space\bibstring{url}<\thefield{verba}>}
+
+% Fix title
+\DeclareFieldFormat*{title}{#1}
+\DeclareFieldFormat*{subtitle}{\addcolon {#1}}
+
+% Fix order of fields for Books
+\DeclareBibliographyDriver{book}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}
+  \printfield{subtitle}
+  \newunit\newblock
+  \printlist{publisher}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \finentry}
+
+% Fix order of fields for Misc
+\DeclareBibliographyDriver{misc}{%
+  \printnames{author}%
+  \newunit\newblock
+  \textbf{\printfield{title}}%
+  \newunit\newblock
+  \textbf{\printlist{publisher}}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+  \newunit
+  \printfield{url}%
+  \newunit
+  \printurldate
+  \finentry}
+
+% Fix proceedings
+\DeclareFieldFormat*{booktitle}{#1}
+
+% fix journal
+\DeclareFieldFormat*{journaltitle}{#1}
+
+% Fix order of fields for inprocedings
+\DeclareBibliographyDriver{inproceedings}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{maintitle+booktitle}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{address}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+
+% Fix order of fields for article
+\DeclareBibliographyDriver{article}{%
+  \printnames{author}%
+  \newunit\newblock
+  \printfield{title}\adddot\addspace%
+  \textbf{\usebibmacro{journal}}%
+  \newunit%
+  \printfield{volume}%
+  \printfield{number}%
+  \newunit\newblock%
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printlist{location}%
+  \newunit
+  \printfield{year}%
+ \finentry}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Arquitetura do Sistema
+\end_layout
+
+\begin_layout Standard
+Este tópico deve conter a listagem de modelos que serão elaborados ao longo
+ do desenvolvimento do sistema, considerando o tipo de sistema a ser desenvolvid
+o e a abordagem de desenvolvimento, bem como as visões abaixo que são aplicáveis
+ ao projeto.
+ A seguir são apresentados exemplos de modelos que podem ser utilizados
+ de acordo com algumas estratégias de desenvolvimento.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Atenção
+\series default
+: no Plano de Trabalho estes elementos podem ser apenas citados.
+ Eles serão construídos posteriormente e apresentados ao final do primeiro
+ semestre do TCC, no Relatório Parcial de Projeto.
+\end_layout
+
+\begin_layout Standard
+Sempre é uma boa citar 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gof-patterns"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Modelagem Funcional
+\end_layout
+
+\begin_layout Standard
+Fluxograma, requisitos funcionais e não funcionais, diagrama de fluxo de
+ dados (DFD) em níveis, diagrama de atividades, diagrama de classes, diagrama
+ de sequência, diagrama de casos de uso e modelo de casos de uso, esquemas,
+ histórias do usuário, classes de teste, lista de backlog, entre outros.
+\end_layout
+
+\begin_layout Subsection
+Modelagem do Processo de Negócio
+\end_layout
+
+\begin_layout Standard
+Esquemas, lista de regras de negócio, diagrama de atividades, diagramas
+ em BPMN, descrições, entre outros.
+\end_layout
+
+\begin_layout Subsection
+Modelagem de Dados
+\end_layout
+
+\begin_layout Standard
+Diagrama Entidade-Relacionamento, XML Schema, dicionário de dados, glossário,
+ modelo conceitual, entre outros.
+\end_layout
+
+\begin_layout Subsection
+Modelagem da Interface Gráfica do Usuário
+\end_layout
+
+\begin_layout Standard
+Protótipos de interface, wireframes de baixa fidelidade, wireframes de alta
+ fidelidade, esquemas de navegação, sitemaps, entre outros.
+\end_layout
+
+\end_body
+\end_document
