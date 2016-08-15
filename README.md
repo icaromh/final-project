@@ -1,30 +1,18 @@
 SENAC TCC
 =========
 
-O objetivo deste projeto é prover aos alunos da Faculdade Senac
-Porto Alegre mais uma ferramenta para a edição dos documentos
-necessários ao Trabalho de Conclusão de Curso.
+# Cronograma
 
-A ferramenta escolhida para este projeto é o [Lyx](http://lyx.org),
-que é um editor quasi-WYSIWYG para LaTeX.
+|Data | Atividade|
+|-----|-----|
+| **~~12/08/2016~~** | ~~(sexta-feira) Entrega do **formulário de Aceite** (secretaria)~~ |
+| **~~18/08/2016~~** | ~~Postagem no Blackboard do **Mapa mental do projeto** **(APS1)**~~ |
+| **25/08/2016** | Postagem no Blackboard o **Plano de Trabalho** **(APS2)** |
+| **29/08/2016** | (segunda-feira) Entrega do plano na Secretaria (1 cópia impressa) |
+| **15/09/2016** | Semana de seminário de andamento TCC2 (ir assistir) |
+| **03/11/2016** | Postagem no Blackboard o **Relatório Parcial** **(APS3)**  |
+| **07/11/2016** | (segunda-feira) Entrega do Relatório na Secretaria (2 cópias impressas) |
+| **10/11/2016** | Simulação de banca |
+| **17/11/2016** | Postagem no Blackboard das **apresentações** para as bancas **(APS4)** |
+| **19/11/2016** | (sábado) Bancas de TCC1 |
 
-Este diretório contém uma coleção de arquivos Lyx, configurados para
-facilitar a edição dos documentos de TCC da Faculdade Senac Porto
-Alegre, dentro das normas ABNT (NBR 10719:2011).
-
-Para criar o seu documento, você deve escolher qual dos modelos irá
-editar: Plano de Trabalho, Relatório Parcial (TCC1) ou Relatório 
-Final, abrir o documento apropriado no Lyx e editar os arquivos de
-conteúdo, que são todos os capítulos e o resumo.
-
-Você pode também editar os arquivos individualmente, e apenas gerar o
-documento final a partir do _arqivo master_.
-
-Sugere-se o uso de um sistema de controle de versão, por exemplo Git,
-para manter um histórico das modificações. Utilize TAGS ou BRANCHES
-para marcar os eventos de entrega oficial.
-
-Para informações sobre a instalação, consulte o arquivo
-[INSTALL.md](INSTALL.md).
-
-Bom trabalho!
