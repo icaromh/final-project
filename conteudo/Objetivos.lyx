@@ -338,99 +338,17 @@ Provides natbib 1
 Objetivos
 \end_layout
 
-\begin_layout Standard
-Os objetivos do projeto devem ser divididos em objetivo geral e objetivos
- específicos.
- Devem descrever os resultados esperados com o projeto, e mostrar o que
- você pretende alcaçar com o projeto, para que servirá o sistema, e o que
- irá acontecer no ambiente onde a solução for implantada.
-\end_layout
-
-\begin_layout Standard
-O objetivo geral é mais abrangente, e um resumo do que se pretende obter
- ao término do desenvolvimento do projeto.
- Os objetivos específicos constituem ações para o alcance do objetivo geral,
- sendo essas ações, que levarão ao objetivo geral.
-\end_layout
-
 \begin_layout Subsection
 Objetivo Geral
 \end_layout
 
 \begin_layout Standard
-O objetivo geral deve ser escrito em tempo infinitivo (por exemplo: desenvolver,
- implementar, implantar), e deve ser alcançável e não genérico demais, porém
- deve mostrar que mudanças serão obtidas com a aplicação do projeto, uma
- vez que este esteja concluído.
-\end_layout
-
-\begin_layout Standard
-Ao contrário dos objetivos específicos, o objetivo geral deve ser um só,
- espressar a inteção de atingir um determinado fim, não deve ser quantificado,
- nem expressar a forma como se vai trabalhar.
- Evite o uso de 
-\begin_inset Quotes eld
-\end_inset
-
-conectores
-\begin_inset Quotes erd
-\end_inset
-
-, pois isso indica que provavelmente está descrevendo objetivos específicos.
-\end_layout
-
-\begin_layout Standard
-Quando descrever o objetivo geral, resuma em uma frase o que se deseja realizar
- com o projeto, que problema se quer solucionar, quais mudanças se quer
- alcançar e que diferença o projeto trará aos seus usuários.
-\end_layout
-
-\begin_layout Subsubsection
-Objetivo Geral deste projeto
-\end_layout
-
-\begin_layout Standard
-Permitir aos alunos da Faculdade Senac Porto Alegre mais uma opção para
- a edição do trabalho de conclusão de curso, multiplataforma e com controle
- automático da formatação dentro dos padrões ABNT, como definidos pela instituiç
-ão.
+O objetivo geral deste trabalho é desenvolver uma aplicação multiplataforma
+ para facilitar o acesso a dados acadêmicos dos alunos do SenacRS.
 \end_layout
 
 \begin_layout Subsection
 Objetivos Específicos
-\end_layout
-
-\begin_layout Standard
-Ao contrário do Objetivo Geral, que pode ser complexo e amplo, os objetivos
- específicos definem objetivos intermediários, menores e mais simples.
- Os objetivos específicos representam os passos necessários para se alcançar
- o objetivo geral.
- Assim como o objetivo geral, também devem ser redigidos utilizando verbos
- no infinitivo e devem expressar uma ação por objetivo.
- São resultados e benefícios quantificáveis, que deverão ser validados ao
- longo do projeto.
- Através dos objetivos específicos do projeto, deve ser possível identificar
- as estratégias que serão utilizadas no desenvolvimento do projeto.
-\end_layout
-
-\begin_layout Standard
-É importante resaltar que os objetivos específicos não são características
- ou funcionalidades do projeto, mas resultados intermediários obtidos durante
- o desenvolvimento do projeto, que levam ao objetivo geral.
-\end_layout
-
-\begin_layout Standard
-Recomenda-se a criação de quatro ou cinco objetivos específicos, e sua descrição
- em forma de lista ordenada.
-\end_layout
-
-\begin_layout Subsubsection
-Objetivos específicos deste projeto
-\end_layout
-
-\begin_layout Standard
-Para atingir o objetivo geral deste projeto, será necessário o atingimento
- dos seguintes objetivos específicos:
 \end_layout
 
 \begin_layout Enumerate
@@ -443,9 +361,8 @@ a)
 
 \end_inset
 
-Permitir a utilização de arquivos independentes para cada uma das seções
- dos documentos, de forma que possam ser reaproveitados durante todo o período
- do TCC.
+Disponibilizar uma alternativa de visualização de dados acadêmicos ao Portal
+ do Aluno SenacRS.
 \end_layout
 
 \begin_layout Enumerate
@@ -458,8 +375,7 @@ b)
 
 \end_inset
 
-Disponibilizar modelos prontos para o Plano de Trabalho, Relatório Parcial
- e Relatório Final, que não precisam de alteração por parte do aluno.
+Disponibilizar uma aplicação focada ao acesso mobile dos dados do aluno.
 \end_layout
 
 \begin_layout Enumerate
@@ -472,8 +388,7 @@ c)
 
 \end_inset
 
-Garantir a formatação nos padrões ABNT aprovados pela biblioteca da Faculdade
- Senac Porto Alegre, uma vez que o aluno utilize o modelo corretamente.
+Notificar o aluno sobre alterações nas notas ao longo do semestre.
 \end_layout
 
 \begin_layout Enumerate
@@ -486,8 +401,7 @@ d)
 
 \end_inset
 
-Permitir que apenas com a edição dos arquivos referentes às seções do documento
- seja gerado o documento final, para cada etapa do TCC.
+Notificar o aluno sobre alterações em sua presença ao longo do semetre.
 \end_layout
 
 \begin_layout Enumerate
@@ -500,8 +414,8 @@ e)
 
 \end_inset
 
-Disponibilizar uma forma simples de gerenciamento da bibliografia consultada,
- auxiliando o aluno no controle das referências bibliográficas e suas citações.
+Disponibilizar uma forma simples de visualizar o histórico finaneiro do
+ aluno.
 \end_layout
 
 \end_body
