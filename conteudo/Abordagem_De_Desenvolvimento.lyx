@@ -339,343 +339,126 @@ Abordagem de Desenvolvimento
 \end_layout
 
 \begin_layout Standard
-Nesta seção deverá ser definida qual estratégia de desenvolvimento de software
- será empregada para execução do projeto, e esta definição irá influenciar
- a definição da arquitetura do sistema, a validação, e a apresentação do
- cronograma.
- Você pode também adaptar os modelos existentes à execução do projeto, e
- esta adaptação precisa ser descrita aqui, e embasada na literatura existente.
-\end_layout
-
-\begin_layout Standard
-As diversas abordagens de desenvolvimento existentes exigirão diferentes
- artefatos e eventos durante a execução do projeto.
-\end_layout
-
-\begin_layout Subsection
-Exemplos de abordagens de desenvolvimento
-\end_layout
-
-\begin_layout Standard
-Aqui são apresentados o 
-\begin_inset Quotes eld
-\end_inset
-
-resumo do resumo
-\begin_inset Quotes erd
-\end_inset
-
- de algumas abordagens de desenvolvimento, e o que se espera ao utilizá-las.
-\end_layout
-
-\begin_layout Standard
-Espiral
-\end_layout
-
-\begin_layout Standard
-Iterativo e Incremental
-\end_layout
-
-\begin_layout Standard
-OpenUP / RUP
-\end_layout
-
-\begin_layout Subsubsection
-Cascata
-\end_layout
-
-\begin_layout Standard
-Ao utilizar o modelo de desenvolvimento em Cascata, o aluno deverá, na entrega
- do relatório parcial, ter terminado toda a fase de elicitação de requisitos
- e planejamento, apresentando os devidos artefatos.
- É exigido, também, que a construção do sistema já tenha sido iniciada e
- que um protótipo seja apresentado nesta fase do TCC.
- O modelo Cascata não deve sofrer alterações dos requisitos após o início
- da fase de construção.
-\end_layout
-
-\begin_layout Standard
-A validação do projeto deverá ser realizada com a codificação e testes finalizad
-os.
- 
-\end_layout
-
-\begin_layout Subsubsection
-SCRUM
-\end_layout
-
-\begin_layout Standard
-É uma metodologia para gestão e planejamento de projetos, caracterizada
- pela utilização de ciclos (
-\emph on
-sprints
-\emph default
-), uso de 
-\emph on
-Backlog 
-\emph default
-de Produto, reuniões de planejamento e encerramento de ciclos (
-\emph on
-Sprint Planning/Review
-\emph default
-), existência de um 
-\emph on
-Product Owner
-\emph default
- (que irá determinar as prioridades do itens de 
-\emph on
-backlog
-\emph default
-), a criação de um produto 
-\begin_inset Quotes eld
-\end_inset
-
-pronto
-\begin_inset Quotes erd
-\end_inset
-
- a cada sprint, e validação do produto (pelo 
-\emph on
-Product Owner
-\emph default
-) a cada ciclo.
- 
-\end_layout
-
-\begin_layout Standard
-É desaconselhável que o desenvolvedor do projeto acumule o papel de 
-\emph on
-Product Owner
-\emph default
-, sendo o uso desta abordagem mais aconselhável quando existe um cliente
- que irá participar no projeto (como 
-\emph on
-Product Owner
-\emph default
+A metodologia de desenvolvimento escolhida foi o Scrum por ter como premissa
+ entregas rápidas e que tenham valor de negócio(
+\shape italic
+Business Value
+\shape default
 ).
+ Foi adaptado de forma que seja possível trabalhar apenas com uma pessoa.
 \end_layout
 
 \begin_layout Standard
-Aconselha-se que, com a utilização desta abordagem de desenvolvimento inclua,
- na arquitetura do sistema, sejam adicionados detalhamentos dos ciclos,
- incluindo resultados da 
-\emph on
-Sprint Planning
-\emph default
- e 
-\emph on
-Sprint Review
-\emph default
-, repriorização do 
-\emph on
-Backlog 
-\emph default
-de Produto pelo Product Owner, análise de requisitos e 
-\emph on
-design
-\emph default
- necessários para a implementação de cada ciclo.
+No Scrum as entregas são feitas em ciclos de trabalho chamadas de Sprints,
+ normalmente de 2 a 4 semanas, definido para este projeto que tenham 2 semanas.
+ Ao final de cada Sprint é entregue uma versão funcional e incremental do
+ produto chamado de MVP(
+\shape italic
+Minimum Viable Product).
 \end_layout
 
 \begin_layout Standard
-Com relação a validação, ela deve incluir uma validação para cada 
-\emph on
-sprint
-\emph default
-, das funcionalidades implementadas.
- Esta validação deverá ser realizada pelo 
-\emph on
-Product Owner
-\emph default
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de método de trabalho do SCRUM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/scrum.png
+	lyxscale 50
+	width 100text%
+	height 100text%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pereira2007entendendo"
+
+\end_inset
+
 .
 \end_layout
 
-\begin_layout Standard
-O cronograma do Plano de Trabalho, deve apresentar uma previsão de implementação
- das funcionalidades descritas no 
-\emph on
-Backlog 
-\emph default
-de Produto, de acordo com as prioridades indicadas pela 
-\emph on
-Product Owner
-\emph default
-, e o cronograma deve ser atualiza nos relatórios Parcial e de Andamento
- do projeto, refletindo a nova priorização.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Em todas as abordagens baseadas em ciclos, reserve uma parte do ciclo para
- atualização do relatório.
-\end_layout
-
-\begin_layout Subsubsection
-
-\emph on
-Extreme Programming 
-\emph default
-(XP)
-\end_layout
-
-\begin_layout Standard
-XP é uma abordagem de desenvolvimento voltada a pequenas equipes, que precisa
- de diversas adaptações para que seja aplicada a um projeto individual como
- o TCC.
- Entre as práticas recomendadas pela abordagem de desenvolvimento, algumas
- são muito importantes, como:
-\end_layout
-
-\begin_layout Description
-Fases
-\begin_inset space ~
-\end_inset
-
-Pequenas Representam o uso de ciclos curtos, onde pequenas versões funcionais
- do sistema são liberadas para testes de aceitação do cliente.
-\end_layout
-
-\begin_layout Description
-Testes
-\begin_inset space ~
-\end_inset
-
-de
-\begin_inset space ~
-\end_inset
-
-Aceitação Testes contruídos em conjunto com cliente, que permitem validar
- a implementação de um requisito do sistema.
-\end_layout
-
-\begin_layout Description
-Padronização
-\begin_inset space ~
-\end_inset
-
-do
-\begin_inset space ~
-\end_inset
-
-Código Deve ser estabelecido um formato de padrão de codificação, e este
- padrão de codificação deve ser seguido.
- É interessante mostrar, nos documentos do TCC o padrão de codificação utilizado.
-\end_layout
-
-\begin_layout Description
-IntegraçãoContínua Demonstrar o uso de integração contínua no desenvolvimento
- do projeto.
-\end_layout
-
-\begin_layout Standard
-Assim como no caso de SCRUM, é muito importante que exista um cliente para
- o projeto, o qual irá definir, pelo menos, os testes de aceitação.
-\end_layout
-
-\begin_layout Standard
-A descrição da arquitetura do sistema deveria incluir as fases desenvolvidas,
- e as decisões realisadas em cada uma destas fases, incluindo o planejamento,
- projeto, detalhes relevantes da codificação (por exemplo, alterações no
- modelo de dados da aplicação), e os testes realizados.
- Quando da utilização de testes unitários, apresentar os testes mais relevantes,
- e a cobertura de testes para o requisito implementado.
-\end_layout
-
-\begin_layout Subsubsection
-Prototipação
-\end_layout
-
-\begin_layout Standard
-De acordo com a Wikipedia:
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{citacao}
-\end_layout
-
-\end_inset
-
-Prototipação é uma abordagem baseada em uma visão evolutiva do desenvolvimento
- de software, afetando o processo como um todo.
- Envolve a produção de versões iniciais - protótipos (análogo a maquetes
- para a arquitetura) - de um sistema futuro com o qual é possível realizar
- verificações e experimentos, com o intuito de avaliar algumas de suas caracterí
-sticas antes que o sistema venha realmente a ser construído, de forma definitiva.
+O 
+\shape italic
+Product Backlog
+\shape default
+ que é “[...] uma lista de itens priorizados que incluem tudo o que precisa
+ ser realizado, que possa ser associado com valor de negócio, para a finalização
+ do projeto, sejam requisitos funcionais ou não [...]"(
 \begin_inset CommandInset citation
-LatexCommand citep
-key "wiki-prototipacao"
+LatexCommand cite
+key "pereira2007entendendo"
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{citacao}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Na prototipação, diversos protótipos (partes do software, ou integração
- entre módulos) são desenvolvidos ao longo do projeto, e este fato deve
- estar presente na arquitetura do sistema, e possivelmente, na validação
- do sistema.
- Descreva cada um dos protótipos, e o que precisou ser realizado para a
- sua implementação.
-\end_layout
-
-\begin_layout Subsubsection
-OpenUP
+) será escrito em cartões e fixado em um quadro de trabalho.
+ Para ser possível visualizar o andamento da Sprint, será utilizado o Kanban
+ com as fases: “
+\shape italic
+To Do
+\shape default
+”, “
+\shape italic
+Doing
+\shape default
+” e “
+\shape italic
+Done
+\shape default
+” e todas as tarefas marcadas como “
+\shape italic
+Done
+\shape default
+” serão revisadas na reunião semanal.
 \end_layout
 
 \begin_layout Standard
-O OpenUP é uma abordagem de desenvolvimento baseada no RUP (Rational Unified
- Process), que inclui o desenvolvimento iterativo incremental, casos de
- uso e cenários.
+Através das reuniões semanais será possível para o Scrum Master, definido
+ como o professor orientador, acompanhar o andamento da Sprint, nessa reunião
+ será mostrado o quadro de trabalho e possíveis tarefas bloqueantes.
+ Ao final de cada Sprint há o 
+\shape italic
+Sprint Review
+\shape default
+, nessa reunião serão demonstrados todos os problemas da Sprint e tudo que
+ aconteceu de forma adequada.
  
-\end_layout
-
-\begin_layout Subsubsection
-Espiral
-\end_layout
-
-\begin_layout Standard
-O modelo Espiral, é uma abordagem de desenvolivmento iterativa incremental,
- baseada em ciclos, onde cada ciclo é composto de quatro etapas: Planejamento,
- Análise de Riscos, Execução e Verificação.
-\end_layout
-
-\begin_layout Standard
-Neste modelo, é esperado que o aluno demonstre para cada ciclo, na arquitetura
- do sistema, além dos artefatos tradicionais de análise e desenvolvimento
- (diagramas de caso de uso, classes e ER, por exemplo), uma análise dos
- riscos de cada ciclo do projeto.
-\end_layout
-
-\begin_layout Subsubsection
-Outras abordagens de desenvolvimento
-\end_layout
-
-\begin_layout Standard
-Diversas outras abordagens de desenvolvimento podem ser utilizadas no desenvolvi
-mento do projeto, como Iterativo Incremental, Evolutionary Development Model,
- etc.
-\end_layout
-
-\begin_layout Standard
-Independente do modelo escolhido, a arquitetura do sistema, a validação
- e o cronograma devem estar de acordo com a abordagem de desenvolvimento.
 \end_layout
 
 \end_body
