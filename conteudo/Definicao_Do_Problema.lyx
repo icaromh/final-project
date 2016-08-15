@@ -339,225 +339,194 @@ Definição do Problema
 \end_layout
 
 \begin_layout Standard
-Nesta seção deve ser definido o escopo do projeto, deixando claro o que
- será realizado, e para isso, é importante detalhar o problema que se deseja
- resolver, o cliente ou perfil de cliente que se beneficiará com o uso do
- projeto, e comparar o projeto com outros semelhantes já existentes.
+No Brasil, no segundo semestre de 2015, aproximadamente 72.43% das pessoas
+ possuíam acesso a internet através de smartphones, o que caracteriza o
+ Smartphone como meio mais comum de acesso a internet entre os brasileiros.
+ Entretanto nem todos os sites e sistemas são adpatados a esses dispositivos,
+ que possuem características especiais, como o tamanho reduzido da tela.
+ 
 \end_layout
 
 \begin_layout Standard
-Apresente todos os problemas que dizem respeito a relação a solução que
- será implementada, levantando questões de praticidade, segurança, alterações
- de processos existentes, etc.
+O Portal do Aluno SenacRS é o local onde o aluno pode acompanhar seu desenpenho
+ acadêmico.
+ Nele é possível visualizar as notas obtidas nas disciplinas correntes e
+ passadas, faltas obtidas e até mesmo consultar dados financeiros.
+ 
 \end_layout
 
 \begin_layout Standard
-Após terminar esta seção, o leitor deverá enteder com algum detalhe o problema
- sendo tratado, as necessidades da solução implantada, e o ambiente em que
- esta será utilizada.
- O leitor deve entender porque o projeto foi desenvolvido, ao invés de aplicar
- uma solução já existente.
+Entre os sistemas que não estão adaptados a dispositívos móveis se encontra
+ o Portal do Aluno SenacRS, desenvolvido com foco ao acesso desktop
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Desktop: computador de mesa, notebooks.
+\end_layout
+
+\end_inset
+
+.
+ Essa não otimização para dispositivos móveis cria alguns problemas para
+ o usuário final.
 \end_layout
 
 \begin_layout Standard
-Para mostrar o motivo pelo qual o projeto deve ser desenvolvido, você deve
- pesquisar o mercado e identificar soluções existentes que sejam semelhantes
- à solução proposta.
- Determine, de acordo com o problema a ser tratado, um conjunto de característic
-as que uma solução ideal possuiria, e compare o sistema proposto, com os
- sistemas existentes, em relação a estas características.
- Explique o motivo destas características serem relevantes ao problema.
-\end_layout
-
-\begin_layout Standard
-Para facilitar a visualização das características, é interessante a criação
- de uma tabela comparativa em relação às características levantadas.
-\end_layout
-
-\begin_layout Standard
-Utilize a opção 
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-Insert
-\emph default
-
-\begin_inset Formula $\rightarrow$
-\end_inset
-
-
-\emph on
-Float
-\begin_inset Formula $\rightarrow$
-\end_inset
-
-Table
-\emph default
-
-\begin_inset Quotes erd
-\end_inset
-
- para inserir uma tabela.
- Isto criará uma área onde você poderá inserir a sua tabela (
-\emph on
-Insert
-\begin_inset Formula $\rightarrow$
-\end_inset
-
-Table
-\emph default
-).
- Aproveite para adicionar um 
-\emph on
-label
-\emph default
- a sua tabela, pois será este 
-\emph on
-label
-\emph default
- que você utilizará para referenciar sua tabela no texto.
- Lembre-se que toda tabela ou figura deve ser referenciada no texto.
- Veja o exempla da Tabela 
+Um dos problemas levantados na arquitetura atual do Portal do Aluno SenacRS
+ é o redireciomento incial.
+ Ao tentar acessar a página de login do usuário, o sistema redireciona para
+ uma tela de sessão expirada e informa para clicar no link ou aguardar o
+ redirecionamento.
+ Esse processo leva em torno de 5 segundos.
+ Após o usuário conseguir chegar na tela de login, há uma nova espera, agora
+ para que o sistema liste as unidades do SENAC.
+ Esse processo pode demorar de 10 a 40 segundos, dependendo da rede do usuário.
+ Em um dos testes efetuados, simulando uma rede 3g mediana o tempo necessário
+ para liberar a inserção dos dados na tela inicial foi de 26.54 segundos
+ como demonstrado na Figura
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Sistemas-correlatos"
+reference "fig:Requisições-de-Rede"
 
 \end_inset
 
 .
- Para referenciar a tabela no texto, você deve incluir uma 
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-Cross-reference
-\emph default
-
-\begin_inset Quotes erd
-\end_inset
-
-.
- Ao fazer isso, uma janela com todos os 
-\emph on
-labels 
-\emph default
-disponíveis será exibida e você pode escolher o que deseja.
- Tabelas e figuras adicionadas dessa forma são automaticamente adicionadas
- às listas correspondentes.
 \end_layout
 
 \begin_layout Standard
-A descrição da 
-\series bold
-fonte
-\series default
- é obrigatória, e deve ser adicionada manualmente.
- Posicione o cursor imediatamente após a tabela, adicione uma nova linha,
- e digite os dados.
- A palavra 
-\begin_inset Quotes eld
-\end_inset
-
-
-\series bold
-Fonte:
-\series default
-
-\begin_inset Quotes erd
-\end_inset
-
- pode estar em negrito (pois para tabelas é aplicada a norma do IBGE), porém
- não é necessário (e não recomendado).
- O que é obrigatório é que o tamanho da fonte seja 10.
- Para alterar o tamanho da fonte, você pode escrever o texto, selecioná-lo
- e alterar o 
-\begin_inset Quotes eld
-\end_inset
-
-Text Style
-\begin_inset Quotes erd
-\end_inset
-
-, aplicando o tamanho 
-\begin_inset Quotes eld
-\end_inset
-
-Small
-\begin_inset Quotes erd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Definição do Problema no Contexto deste Projeto
-\end_layout
-
-\begin_layout Standard
-Manter a formatação ABNT durante a execução do projeto de TCC é mais um
- fator de 
-\emph on
-stress
-\emph default
- para o aluno, e uma tarefa que acaba consumindo tempo que poderia ser melhor
- empregado na construção e desenvolvimento da solução.
- A tarefa pode ser tão dispendiosa, com relação a tempo, ou tediosa, a ponto
- do aluno não querer desenvolvê-la, que foi criado um mercado em torno do
- TCC, com diversos profissionais oferencendo seu trabalho de revisão de
- texto e formatação nos padrões da ABNT.
-\end_layout
-
-\begin_layout Standard
-Neste projeto, serão disponibilizado modelos que auxiliarão o aluno a manter
- o foco no desenvolvimento da solução e do seu relatório, deixando a cargo
- de uma ferramenta, o editor LyX, o controle e manutenção da formatação
- nos padrões corretos.
-\end_layout
-
-\begin_layout Standard
-Diversos sistemas podem ser utilizados para se obter resultados semelhantes,
- como o Microsoft Word 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "msword"
-
-\end_inset
-
-, ou o 
-\begin_inset ERT
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
 
+\end_layout
 
-\backslash
-LaTeX
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Requisições-de-Rede"
+
+\end_inset
+
+Requisições de Rede feitas no carregamento da tela de login
 \end_layout
 
 \end_inset
 
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "lamport-latex"
+
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/tempo_tela_login.png
+	lyxscale 50
+	width 100text%
+	height 100theight%
+	keepAspectRatio
 
 \end_inset
 
-, porém estes sistemas devem apresentar certas características de forma
- a auxiliar a execução do trabalho, ou garantir uma boa qualidade do documento
- gerado.
- A Tabela 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Construída pelo autor do projeto
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O tamanho da fonte e layout também demonstra como não é otimizado para o
+ acesso mobile como é possível ver na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:Sistemas-correlatos"
+reference "fig:Processo-para-logar"
 
 \end_inset
 
- resume as características desejadas nos sistemas para desenvolvimento dos
- documentos de TCC, que foram avaliadas neste trabalho.
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Processo-para-logar"
+
+\end_inset
+
+Processo para logar com smartphone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/passo-passo-login.jpg
+	lyxscale 10
+	width 100text%
+	height 100page%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Construída pelo autor do projeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+É possível ver que, apesar de existir o sistema e funcionar em dispositivos
+ móveis ele não é otimizado para tal.
+ Dificultando o acesso quando se quer apenas visualizar uma nota, por exemplo.
+ Além de não possuir nenhum sistema de alertas quando há alguma informação
+ relevante alterada para o aluno.
+ Conforme a Tabela
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Comparativo-Portal-do"
+
+\end_inset
+
+ é possível visualizar melhor os problemas que o Easyac tenta solucionar.
 \end_layout
 
 \begin_layout Standard
@@ -567,86 +536,55 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align left
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Sistemas-correlatos"
+name "tab:Comparativo-Portal-do"
 
 \end_inset
 
-Sistemas correlatos
+Comparativo Portal do Aluno SenacRS e Easyac
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align left
 \begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="4">
-<features rotate="0" booktabs="true" tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0pt">
+<lyxtabular version="3" rows="8" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\series bold
-Característica
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-MS-Word
+Easyac
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-LyX
+Portal do Aluno
 \end_layout
 
 \end_inset
@@ -659,49 +597,7 @@ LyX
 \begin_layout Plain Layout
 
 \series bold
-Usabilidade
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Muito Boa
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Razoável
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Muito Boa
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-WYSIWYG 
-\series default
-(ver texto)
+Layout otimizado para mobile
 \end_layout
 
 \end_inset
@@ -710,7 +606,7 @@ WYSIWYG
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sim
+X
 \end_layout
 
 \end_inset
@@ -719,16 +615,7 @@ Sim
 \begin_inset Text
 
 \begin_layout Plain Layout
-Não
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Limitado
 \end_layout
 
 \end_inset
@@ -741,25 +628,7 @@ Limitado
 \begin_layout Plain Layout
 
 \series bold
-Portabilidade
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Média
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Excelente
+Notificações de novas notas 
 \end_layout
 
 \end_inset
@@ -768,7 +637,16 @@ Excelente
 \begin_inset Text
 
 \begin_layout Plain Layout
-Muito Boa
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -781,47 +659,38 @@ Muito Boa
 \begin_layout Plain Layout
 
 \series bold
-Qualidade final
+Notificações de novas faltas
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Boa
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Excelente
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Excelente
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Controle ABNT
+Visualização de notas 
 \end_layout
 
 \end_inset
@@ -830,7 +699,7 @@ Controle ABNT
 \begin_inset Text
 
 \begin_layout Plain Layout
-Razoável
+X
 \end_layout
 
 \end_inset
@@ -839,48 +708,20 @@ Razoável
 \begin_inset Text
 
 \begin_layout Plain Layout
-Excelente
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Excelente
+X
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Divisão em múltiplos
-\series default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\series bold
-arquivos
+Visualização de faltas
 \end_layout
 
 \end_inset
@@ -889,19 +730,7 @@ arquivos
 \begin_inset Text
 
 \begin_layout Plain Layout
-Não
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-A criação de documentos divididos em vários arquivos é possível no Microsoft
- Word, porém o modelo disponível aos alunos da Faculdade Senac Porto Alegre
- não foi desenvolvido desta forma.
-\end_layout
-
-\end_inset
-
-
+X
 \end_layout
 
 \end_inset
@@ -910,31 +739,20 @@ A criação de documentos divididos em vários arquivos é possível no Microsof
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sim
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Sim
+X
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Edição 
-\emph on
-online
+Versão web 
 \end_layout
 
 \end_inset
@@ -943,7 +761,7 @@ online
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sim
+X
 \end_layout
 
 \end_inset
@@ -952,16 +770,7 @@ Sim
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sim
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Não
+X
 \end_layout
 
 \end_inset
@@ -974,34 +783,25 @@ Não
 \begin_layout Plain Layout
 
 \series bold
-Controle de versão 
+Versão mobile
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Péssimo
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Excelente
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Excelente
 \end_layout
 
 \end_inset
@@ -1015,270 +815,17 @@ Excelente
 \end_layout
 
 \begin_layout Plain Layout
-\noindent
-\align left
 
 \series bold
-\size footnotesize
-Fonte:
+\size small
+Fonte: 
 \series default
- Próprio autor, embora isso seja um quadro, não uma tabela.
+Construída pelo autor do projeto
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-O Microsoft Word, desenvolvido pela Microsoft Corporation, é um editor de
- textos formatados, criado com a idéia WYSIWYG, sigla do inglês 
-\emph on
-What You See Is What You Get
-\emph default
-, significando que aquilo que você vê na tela, é o que você irá obter ao
- imprimir.
- Com uma usabilidade muito boa, que apresenta bons resultados finais, embora
- nem sempre iguais ao que aparece na tela devido a diferenças entre impressoras.
- Apesar da facilidade de uso, o controle da edição no padrão ABNT é, em
- boa parte, deixado a cargo do usuário, não sendo, muitas vezes, forçado
- pelo sistema.
- O 
-\emph on
-software
-\emph default
- está disponível apenas para as plataformas Microsoft Windows e Apple Mac
- OS X, ou como um serviço 
-\emph on
-online
-\emph default
-, através do produto 
-\begin_inset Quotes eld
-\end_inset
-
-Office 365
-\begin_inset Quotes erd
-\end_inset
-
-, comercializado pela Microsoft.
- O principal problema na utilização do Microsoft Word é a utilização de
- um arquivo de dados proprietário para conter o documento, e manter este
- arquivo em um sistema de controle de versão é muito mais complicado que
- manter arquivos em formato texto.
- Outra característica interessante durante a execução do TCC é a capacidade
- de editar as seções dos documentos em arquivos separados, e reaproveitar
- estes arquivos nos diferentes documentos que dever ser entregues.
- Embora esta característica esteja presente no Microsoft Word há várias
- versões, ela não está presente no modelo disponibilizado aos alunos (na
- data de escrita deste documento).
-\end_layout
-
-\begin_layout Standard
-O 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- foi desenvolvido por 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "lamport-latex"
-
-\end_inset
-
- como um conjunto de macros para o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TeX
-\end_layout
-
-\end_inset
-
-, um sistema de tipografia desenvolvido em 1978 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "knuth-texbook"
-
-\end_inset
-
-, que facilita o trabalho de criação de documentos que serão processados
- pelo 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TeX
-\end_layout
-
-\end_inset
-
-.
- Disponível para a maioria dos sistemas operacionais utilizados no mercado,
- o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- é reconhecido, principalmente, pela alta qualidade dos documentos gerados
- (em razão da utilização do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TeX
-\end_layout
-
-\end_inset
-
-).
- Como o usuário edita o conteúdo do texto a partir de comandos pré-definidos,
- não é possível ao usuário alterar a formatação sem modificar os comandos
- já existentes, garantindo assim a formatação no padrão ABNT.
- Outra grande vantagem é a utilização de arquivos texto comuns, que além
- da possibilidade de utilização simples em qualquer sitema de controle de
- versão, permite que o conteúdo seja acessado, independente do sistema estar
- disponível ou não (embora, nesse caso, não esteja formatado).
- O uso de diversos arquivos para compor um documento também é bastante simplific
-ado.
- O principal problema do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- é sua usabilidade, pois exige que se aprenda um grande número de comandos
- para formatar corretamente seu documento, e não tenha uma visão nem aproximada
- do resultado que será obtido, antes que seja gerado um documento pronto
- para impressão.
- No entanto, uma vez gerado este documento, não existe variação na sua impressão
-, mesmo em impressoras diferentes.
- O serviço ShareLaTeX
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-ShareLaTeX: https://www.sharelatex.com
-\end_layout
-
-\end_inset
-
- permite a edição e armazenamento de documentos 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
-, incluindo a edição colaborativa dos documentos.
-\end_layout
-
-\begin_layout Standard
-Propondo uma interface WYSIWYG, o LyX é um editor de texto que utiliza o
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- para a geração do documento a ser impresso, herdando todas as suas característi
-cas com relação a controle e qualidade.
- Embora não esteja disponível em todas as plataformas onde o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- pode ser encontrado, o LyX está disponível para as principais plataformas
- do mercado, como Microsoft Windows, Apple Mac OS X, Linux, OS/2, Haiku,
- FreeBSD e outros.
- Embora o objetivo do projeto LyX seja criar um editor WYSIWYG para o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
-, a visualização do documento ainda não é ideal, mas próxima do que o usuário
- irá obter.
-\end_layout
-
-\begin_layout Standard
-Atualmente, está em desenvolvimento o desenvolvimento de um modelo 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- para o TCC da Faculdade Senac Porto Alegre, e com o propósito de propiciar
- mais uma ferramenta para auxiliar os alunos, este projeto propõe um modelo
- para o LyX, por ser uma ferramenta com boa usabilidade.
 \end_layout
 
 \end_body
