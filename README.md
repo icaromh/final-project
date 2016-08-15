@@ -16,10 +16,5 @@ SENAC TCC
 | **17/11/2016** | Postagem no Blackboard das **apresentações** para as bancas **(APS4)** |
 | **19/11/2016** | (sábado) Bancas de TCC1 |
 
-# Relatórios
-- [Plano de Trabalho](https://github.com/icaromh/truco-cerveja-churrasco/blob/master/build/Plano_de_Trabalho.pdf)
-- Relatório Parcial
-- Relatório Final
-
 # Créditos
 Projeto baseado no projeto do Prof. Me. Rafael Guterres Jeffman [senac-tcc-lyx](https://github.com/rafasgj/senac-tcc-lyx)
