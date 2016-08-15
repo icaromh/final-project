@@ -340,36 +340,39 @@ Definição do Problema
 
 \begin_layout Standard
 No Brasil no segundo semestre de 2015, aproximadamente 72.43% das pessoas
- possuíam acesso a internet através de smartphones(
+ possuíam acesso a internet através de smartfones(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "nielsen-brasileiros-smartphones"
 
 \end_inset
 
-) caracterizando o Smartphone como meio mais comum de acesso a internet
- entre os brasileiros.
- Entretanto nem todos os sites e sistemas são adpatados a esses dispositivos,
+) caracterizando o Smartfone como meio mais comum de acesso a internet entre
+ os brasileiros.
+ Entretanto nem todos os sites e sistemas são adaptados a esses dispositivos,
  que possuem características especiais, como o tamanho reduzido da tela.
  
 \end_layout
 
 \begin_layout Standard
-O Portal do Aluno SenacRS é o local onde o aluno pode acompanhar seu desenpenho
- acadêmico.
- Nele é possível visualizar as notas obtidas nas disciplinas correntes e
- passadas, faltas obtidas e até mesmo consultar dados financeiros.
+O Portal do Aluno SenacRS é o local onde o aluno pode acompanhar seu desempenho
+ acadêmico, nele é possível visualizar as notas obtidas nas disciplinas
+ correntes e passadas, faltas obtidas e até mesmo consultar dados financeiros.
  
 \end_layout
 
 \begin_layout Standard
-Entre os sistemas que não estão adaptados a dispositívos móveis se encontra
- o Portal do Aluno SenacRS, desenvolvido com foco ao acesso desktop
+Entre os sistemas que não estão adaptados a dispositivos móveis se encontra
+ o Portal do Aluno SenacRS, desenvolvido com foco ao acesso 
+\shape italic
+desktop
+\shape default
+
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Desktop: computador de mesa, notebooks.
+desktop: computador de mesa, notebooks.
 \end_layout
 
 \end_inset
@@ -381,7 +384,7 @@ Desktop: computador de mesa, notebooks.
 
 \begin_layout Standard
 Um dos problemas levantados na arquitetura atual do Portal do Aluno SenacRS
- é o redireciomento incial.
+ é o redirecionamento inicial.
  Ao tentar acessar a página de login do usuário, o sistema redireciona para
  uma tela de sessão expirada e informa para clicar no link ou aguardar o
  redirecionamento.
@@ -394,7 +397,7 @@ Um dos problemas levantados na arquitetura atual do Portal do Aluno SenacRS
 status open
 
 \begin_layout Plain Layout
-100ms de latência e velocidade de 250kb/s à 750kb/s
+rede 3g mediana:100ms de latência e velocidade de 250kb/s à 750kb/s
 \end_layout
 
 \end_inset
@@ -494,7 +497,7 @@ name "fig:Processo-para-logar"
 
 \end_inset
 
-Processo para logar com smartphone
+Processo para logar com smartfone
 \end_layout
 
 \end_inset
@@ -530,12 +533,7 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
-É possível ver que, apesar de existir o sistema e funcionar em dispositivos
- móveis ele não é otimizado para tal.
- Dificultando o acesso quando se quer apenas visualizar uma nota, por exemplo.
- Além de não possuir nenhum sistema de alertas quando há alguma informação
- relevante alterada para o aluno.
- Conforme a Tabela
+Conforme a Tabela
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Comparativo-Portal-do"
@@ -842,6 +840,21 @@ Construída pelo autor do projeto
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+É possível ver que apesar do Portal do Aluno SenacRS existir e funcionar
+ em dispositivos móveis ele não é otimizado para tal.
+ Tornando o acesso um processo oneroso ao usuário quando se quer apenas
+ visualizar uma nota, por exemplo.
+ Além de não possuir nenhum sistema de notificações referente a informações
+ relevantes ao aluno.
+\end_layout
+
+\begin_layout Standard
+A partir desses pontos o Easyac propõe-se a otimizar o processo para o usuário,
+ desde a quantidade de requisições, diminuindo assim o tráfego de rede,
+ até uma melhor experiência com layout otimizado ao dispositivo.
 \end_layout
 
 \end_body

@@ -338,433 +338,275 @@ Provides natbib 1
 Análise de Tecnologias e Ferramentas
 \end_layout
 
-\begin_layout Standard
-Para cada uma das tecnologias e ferramentas adotadas no sistema, você deve,
- descrever a tecnologia/ferramenta em poucas palavras, mostrar como a tecnologia
- será aplicada ao projeto, e, principalmente, justificar o porquê da escolha
- para o projeto.
+\begin_layout Subsection
+Node.js
 \end_layout
 
 \begin_layout Standard
-Na justificativa da escolha, você deve ou fazer uma comparação com outras
- tecnologias/ferramentas utilizadas para o mesmo fim (preferível), ou justificar
- mediante referências bibliográficas, onde mostram a utilização das tecnologias
- e/ou ferramentas aplicadas de forma semelhante ao mesmo tipo de projeto.
- 
-\end_layout
+Node.js é uma plataforma de execução de JavaScript construída em cima do
+ motor de JavaScript V8 do Chrome.
+ Usa um modelo de I/O não bloqueante baseado em eventos o que o torna leve
+ e eficiente (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-node.js"
 
-\begin_layout Standard
-Todas as ferramentas e tecnologias utilizadas no projeto devem ser descritas
- nesta seção, sejam elas amplamente conhecidas (ex.: HTML) ou não (ex.: Dragon
- NaturallySpeaking SDK).
- Você deve descrever linguagens de programação, ambientes de desenvolvimento
- (IDE), bibliotecas e serviços de 
-\emph on
-software
-\emph default
- (API), 
-\emph on
-frameworks
-\emph default
-, ambientes de modelagem do sistema (ex.: Astah), sistemas gerenciadores
- de bancos de dados, etc.
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Para facilitar a leitura do capítulo, você pode agrupar as ferramentas por
- componentes macro do projeto (ex.: 
-\emph on
-backend
-\emph default
-, comunicação, 
-\emph on
-hardware
-\emph default
-), e separe as ferramentas em itens próprios (subseção ou subsubseção).
+).
+ Possui o maior ecossistema de bibliotecas de código aberto do mundo, o
+ NPM.
+ Foi escolhido para manter a consistência entre as demais tecnologias, por
+ tratar-se de JavaScript como servidor torna o desenvolvimento muito mais
+ ágil.
 \end_layout
 
 \begin_layout Subsection
-Análise de Tecnologias e Ferramentas utilizadas neste projeto.
+Docker
 \end_layout
 
 \begin_layout Standard
-Para a elaboração deste projeto, foram necessárias ferramentas relacionadas
- ao 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- e ao LyX, para que fosse possível criar o modelo de TCC.
- Estas ferramentas estão descritas nesta seção.
-\end_layout
-
-\begin_layout Subsubsection
-LyX
-\end_layout
-
-\begin_layout Standard
-O LyX é um editor de textos, que combina a força e flexibilidade do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TeX/
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
-, com uma interface gráfica e as facilidades de uso que esse tipo de inteface
- traz ao usuário.
- Focado principalmente na estrutura do documento, o LyX aproxima a ideia
- de preocupar-se com a estrutura do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- com um ambiente muito próximo a um editor WYSIWYG 
+Docker é uma plataforma aberta para desenvolvedores construírem, entregarem
+ e executarem aplicações distribuídas independente do ambiente(
 \begin_inset CommandInset citation
-LatexCommand citep
-key "lyx"
+LatexCommand cite
+key "what-docker"
 
 \end_inset
 
-.
+).
+ Utiliza o conceito de 
+\shape italic
+containers
+\shape default
+ com benefícios similares a máquinas virtuais.
+ Tais como alocação de recursos e isolamento de processos.
+ Porém sua abordagem de arquitetura o torna muito mais portável e eficiente,
+ enquanto máquinas virtuais simulam todo o sistema operacional o Docker
+ faz uso de LXC(
+\shape italic
+Linux Containers
+\shape default
+), utilizando recursos reais da máquina hospedeira.
 \end_layout
 
 \begin_layout Standard
-E foi esta combinação de facilidade de uso, com foco na estrutura do documento,
- a qual é desejada em uma ferramenta para a elaboração de documentos técnicos,
- que incentivou a escolha desta ferramenta para esse projeto.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset ERT
+\begin_inset Float table
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
 
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Comparativo-entre-arquitetura"
 
-\backslash
-biblatex
+\end_inset
+
+Comparativo entre arquitetura de VMs e Docker
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Arquitetura de Máquinas Virtuais
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Arquitetura Docker
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/arquitetura_maquina_virtual.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/arquitetura_docker.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte
+\series default
+: Construída pelo autor do projeto e imagens disponíveis em: https://www.docker.co
+m/what-docker
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+MongoDB
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-biblatex
-\backslash
-space
+MongoDB é um banco de dados 
+\shape italic
+open source
+\shape default
+ orientado a documentos que provê escala automática, alta performance e
+ disponibilidade(MONGO, 2016).
+ Elimina a necessidade de um ORM(
+\shape italic
+Object Relational Mapping
+\shape default
+) para facilitar o desenvolvimento.
+ Foi escolhido por ser um banco de dados 
+\shape italic
+open source
+\shape default
+ e possuir a maior comunidade entre os demais bancos de dados NOSQL(não
+ somente SQL).
 \end_layout
 
-\end_inset
-
- é um pacote do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
+\begin_layout Subsection
+Git
 \end_layout
 
-\end_inset
-
-, para processar listas de referências 
+\begin_layout Standard
+Git é um sistema 
+\shape italic
+open source
+\shape default
+ de controle de versão distribuído(
 \begin_inset CommandInset citation
-LatexCommand citep
-key "biblatex"
+LatexCommand cite
+key "about-git"
 
 \end_inset
 
-.
- Utiliza ferramentas que processam um conjunto de referências bibliográficas
- com o mesmo formato de arquivo utilizado pelo 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bibtex
-\end_layout
+).
+ Similar ao SVN e demais sistemas de controle de código porém mais rápido.
+ Foi escolhido para manter o histórico de alterações e organizar novas funcional
+idades de forma eficiente.
+ Conforme a figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lista-comparativa-entre"
 
 \end_inset
 
-, podendo ser utilizado em conjunto com outras ferramentas para gerenciar
- estas referências.
+ é possível visualizar o quão mais rápido ele é.
 \end_layout
 
 \begin_layout Standard
-O 
-\begin_inset ERT
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
 
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Lista-comparativa-entre"
 
-\backslash
-biblatex
-\backslash
-space
+\end_inset
+
+Lista comparativa entre GIT e SVN
 \end_layout
 
 \end_inset
 
- pode utilizar tanto o 
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/git-performance.png
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "bibtex"
-
-\end_inset
-
-, quanto o Biber
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Biber: http://biblatex-biber.sourceforge.net/
-\end_layout
-
-\end_inset
-
-, para separar os dados do banco de dados de referências bibliográficas
- em campos que serão posteriormente processados.
-\end_layout
-
-\begin_layout Standard
-Originalmente, o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bibtex
-\end_layout
-
-\end_inset
-
- havia sido escolhido para o projeto por ser a ferramenta padrão do LyX
- para inserção de citações, porém a dificuldade em formatar as referências
- bibliográficas no padrão ABNT (principalmente a diferença de formatação
- dos nomes e sobrenomes dos autores) acabou forçando a mudança para o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-biblatex
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
+LatexCommand cite
+key "about-git"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- é um sistema de diagramação de documentos que utiliza macros e marcas (
-\emph on
-tags
-\emph default
-) para formatar o documento 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "lamport-latex"
-
-\end_inset
-
-.
- Foi criado por Leslie Lamport, em 1985, para facilitar o usa do sistema
- de tipografia TeX 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "knuth-texbook"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Neste projeto, alguns elementos do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- são utilizados para formatar os modelos de documentos utilizados pelo LyX,
- principalmente na configuração do 
-\begin_inset Quotes eld
-\end_inset
-
-preambulo
-\begin_inset Quotes erd
-\end_inset
-
- utilizado em cada um dos documentos individuais.
-\end_layout
-
-\begin_layout Subsubsection
-Módulos 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-O 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- utiliza uma estrutura de módulos para facilitar a edição de documentos,
- e todo documento neste formato usa, normalmente, um conjunto destes módulos
- para diferentes efeitos.
- Neste projeto, os seguintes módulos serão utilizados:
-\end_layout
-
-\begin_layout Itemize
-enumitem: para criar listas ordenadas por números ou letras.
-\end_layout
-
-\begin_layout Itemize
-sectsty: para alterar o estilo do texto das seções do texto.
-\end_layout
-
-\begin_layout Itemize
-textcase: para alterar a capitalização de letras.
-\end_layout
-
-\begin_layout Itemize
-ragged2e: utilizado para controlar o alinhamento do texto.
-\end_layout
-
-\begin_layout Itemize
-changepage: módulos utilizados para o posicionamento e modificação da página,
- utilizados na criação das páginas de rosto.
-\end_layout
-
-\begin_layout Itemize
-tocloft, etoolbox: utilizados para configuração do elementos do sumário,
- e listas de tabelas e figuras.
-\end_layout
-
-\begin_layout Itemize
-abstract: utilizado para corrigir o formato do título do resumo.
-\end_layout
-
-\begin_layout Itemize
-indentfirst: utilizado para correção da identação do primeiro parágrafo
- de cada seção.
-\end_layout
-
-\begin_layout Itemize
-babel: utilizado para que os elementos automáticos e outras ferramentas,
- como hifenização, utilizam a língua portuguesa, como falada no Brasil.
-\end_layout
-
-\begin_layout Itemize
-fancyhdr: utilizado para posicionar a numeração de páginas.
 \end_layout
 
 \end_body
