@@ -109,7 +109,7 @@ Insira seu nome completo.
 
 \end_inset
 
-NOME DO AUTOR
+ÍCARO MAINES HEIMIG
 \end_layout
 
 \begin_layout Standard
@@ -155,7 +155,7 @@ Insira o título e, se existir, o subtitulo do trabalho.
 \align center
 
 \series bold
-TITULO
+EASYAC
 \series default
 
 \begin_inset ERT
@@ -172,7 +172,7 @@ status open
 
 \end_inset
 
-Subtitulo
+Aplicativo mobile para acompanhamento acadêmico
 \series bold
 
 \begin_inset VSpace 2cm
@@ -245,13 +245,9 @@ Altere o nome do seu orientador
 
 \end_inset
 
-
-\size small
 Prof.
- Esp./Me./Dr.
- 
-\size default
-Fulano de Tal
+ Me.
+ Rafael Guterres Jeffman
 \begin_inset ERT
 status open
 
