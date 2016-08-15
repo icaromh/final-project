@@ -362,6 +362,26 @@ key "about-node.js"
 \end_layout
 
 \begin_layout Subsection
+nginx
+\end_layout
+
+\begin_layout Standard
+nginx é um servidor HTTP e proxy reverso, um servidor proxy de e-mail e
+ um servidor proxy TCP/UDP genérico, originalmente escrito por Igor Sysoev(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-nginx"
+
+\end_inset
+
+).
+ Possui características de um servidor HTTP básico como servir arquivos
+ estáticos, proxy reverso com cache, balanceamento de carga e suporta HTTP/2.
+ Foi escolhido principalmente por ser um servidor de proxy reverso para
+ servir as chamadas a API evitando assim a sobrecarga do servidor.
+\end_layout
+
+\begin_layout Subsection
 Docker
 \end_layout
 
