@@ -338,175 +338,55 @@ Provides natbib 1
 Componentes Reutilizados
 \end_layout
 
-\begin_layout Standard
-Lista de todo material que foi ou será reutilizado de outras origens, tais
- como: documentos de empresas, base de dados, frameworks, bibliotecas, serviços
- WEB, entre outros.
-\end_layout
-
-\begin_layout Standard
-Neste projeto, os seguintes componentes foram reutilizados:
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
+\begin_layout Enumerate
+\begin_inset Argument item:1
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-biblatex
-\end_layout
-
-\end_inset
-
- Para inserção das referências bibliográficas do texto.
-\end_layout
-
-\begin_layout Description
-Lyx Editor de textos que utiliza o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- para a geração do documento final.
-\end_layout
-
-\begin_layout Description
-Pacotes
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-space
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- Diversos pacotes da distribuição padrão do 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- para formatação do texto.
-\end_layout
-
-\begin_layout Subsection
-Pacotes 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
+a)
 \end_layout
 
 \end_inset
 
 
+\series bold
+Docker
+\series default
+ disponível em https://www.docker.com/
 \end_layout
 
-\begin_layout Standard
-Para facilitar a formatação do texto, diversos pacotes 
-\begin_inset ERT
+\begin_layout Enumerate
+\begin_inset Argument item:1
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-LaTeX
+a)
 \end_layout
 
 \end_inset
 
- foram utilizados, e são descritos a seguir:
+
+\series bold
+MongoDB
+\series default
+ disponível em https://www.mongodb.org/
 \end_layout
 
-\begin_layout Description
-sectsty Para formatar os títulos de seção.
-\end_layout
-
-\begin_layout Description
-textcase Para alterar a capitalização de palavras.
-\end_layout
-
-\begin_layout Description
-changepage Para alterar as configurações de página em trechos específicos.
-\end_layout
-
-\begin_layout Description
-ragged2e Para alinhamento de texto.
-\end_layout
-
-\begin_layout Description
-hyphenat Para controlar a hifenização.
-\end_layout
-
-\begin_layout Description
-caption Para controlar a formatação e alinhamento de tabelas e figuras.
-\end_layout
-
-\begin_layout Description
-tocloft Para controlar a formatação das listas de figuras e tabelas e do
- sumário.
-\end_layout
-
-\begin_layout Description
-etoolbox Permite alterar commandos existentes do 
-\begin_inset ERT
+\begin_layout Enumerate
+\begin_inset Argument item:1
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-LaTeX
+a)
 \end_layout
 
 \end_inset
 
-.
-\end_layout
 
-\begin_layout Description
-abstract Permite formatar o resumo.
-\end_layout
-
-\begin_layout Description
-babel Para controlar as regras de acordo com uma língua específica.
-\end_layout
-
-\begin_layout Description
-identfirst Identa corretamente o primeiro paragrafo de cada seção.
-\end_layout
-
-\begin_layout Description
-fancyhdr Define a posição da numeração de páginas.
+\series bold
+Node.js
+\series default
+ disponível em https://nodejs.org/en/
 \end_layout
 
 \end_body

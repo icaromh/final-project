@@ -339,46 +339,7 @@ Cronograma
 \end_layout
 
 \begin_layout Standard
-Neste item descreve-se o planejamento das atividades para desenvolvimento
- de seu projeto.
- No plano de trabalho, é 
-\end_layout
-
-\begin_layout Standard
-obrigatória a apresentação do cronograma de TCCI e TCCII.
- No relatório parcial, é obrigatória a apresentação do cronograma realizado
- em TCC I e dos ajustes realizados pra o TCC II.
- No relatório de andamento, é apresentado o cronograma realizado de TCC
- II e os ajustes até a conclusão do projeto.
-\end_layout
-
-\begin_layout Standard
-Apesar da aparência, de acordo com as normas ABNT, tabelas são elementos
- cujo foco são números (estatísticos), e como não é o que ocorre no cronograma,
- ele deve ser chamado de 
-\begin_inset Quotes eld
-\end_inset
-
-Quadro
-\begin_inset Quotes erd
-\end_inset
-
- ou 
-\begin_inset Quotes eld
-\end_inset
-
-Figura
-\begin_inset Quotes erd
-\end_inset
-
- (Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Cronograma"
-
-\end_inset
-
-).
+@TODO
 \end_layout
 
 \begin_layout Standard
@@ -880,79 +841,16 @@ Detalhamento Descritivo
 
 \begin_layout Plain Layout
 
+\series bold
 \size small
-Fonte: Autor do projeto.
+Fonte
+\series default
+: Autor do projeto.
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-As cores no 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- possuem 
-\begin_inset Quotes eld
-\end_inset
-
-nomes
-\begin_inset Quotes erd
-\end_inset
-
-, os quais podem ser conhecidos no site 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- Color
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\backslash
-space
-\end_layout
-
-\end_inset
-
- Color: http://latexcolor.com.
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \end_body

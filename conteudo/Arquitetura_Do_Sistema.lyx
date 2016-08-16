@@ -336,6 +336,14 @@ Arquitetura do Sistema
 \end_layout
 
 \begin_layout Standard
+@TODO
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 Este tópico deve conter a listagem de modelos que serão elaborados ao longo
  do desenvolvimento do sistema, considerando o tipo de sistema a ser desenvolvid
 o e a abordagem de desenvolvimento, bem como as visões abaixo que são aplicáveis
@@ -352,55 +360,6 @@ Atenção
 : no Plano de Trabalho estes elementos podem ser apenas citados.
  Eles serão construídos posteriormente e apresentados ao final do primeiro
  semestre do TCC, no Relatório Parcial de Projeto.
-\end_layout
-
-\begin_layout Standard
-Sempre é uma boa citar 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "gof-patterns"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Modelagem Funcional
-\end_layout
-
-\begin_layout Standard
-Fluxograma, requisitos funcionais e não funcionais, diagrama de fluxo de
- dados (DFD) em níveis, diagrama de atividades, diagrama de classes, diagrama
- de sequência, diagrama de casos de uso e modelo de casos de uso, esquemas,
- histórias do usuário, classes de teste, lista de backlog, entre outros.
-\end_layout
-
-\begin_layout Subsection
-Modelagem do Processo de Negócio
-\end_layout
-
-\begin_layout Standard
-Esquemas, lista de regras de negócio, diagrama de atividades, diagramas
- em BPMN, descrições, entre outros.
-\end_layout
-
-\begin_layout Subsection
-Modelagem de Dados
-\end_layout
-
-\begin_layout Standard
-Diagrama Entidade-Relacionamento, XML Schema, dicionário de dados, glossário,
- modelo conceitual, entre outros.
-\end_layout
-
-\begin_layout Subsection
-Modelagem da Interface Gráfica do Usuário
-\end_layout
-
-\begin_layout Standard
-Protótipos de interface, wireframes de baixa fidelidade, wireframes de alta
- fidelidade, esquemas de navegação, sitemaps, entre outros.
 \end_layout
 
 \end_body

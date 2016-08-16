@@ -339,35 +339,28 @@ Definição do Problema
 \end_layout
 
 \begin_layout Standard
-No Brasil no segundo semestre de 2015, aproximadamente 72.43% das pessoas
- possuíam acesso a internet através de smartfones(
+No segundo semestre de 2015, aproximadamente 72% dos brasileiros possuíam
+ acesso a internet através de smartphones(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "nielsen-brasileiros-smartphones"
 
 \end_inset
 
-) caracterizando o Smartfone como meio mais comum de acesso a internet entre
- os brasileiros.
- Entretanto nem todos os sites e sistemas são adaptados a esses dispositivos,
- que possuem características especiais, como o tamanho reduzido da tela.
- 
+) caracterizando o Smartphone como meio mais comum de acesso a internet
+ entre os brasileiros.
+ Entretanto, nem todos os sites e sistemas são adaptados a esses dispositivos,
+ devido a suas características especiais, como o tamanho reduzido da tela,
+ por exemplo.
 \end_layout
 
 \begin_layout Standard
-O Portal do Aluno SenacRS é o local onde o aluno pode acompanhar seu desempenho
- acadêmico, nele é possível visualizar as notas obtidas nas disciplinas
- correntes e passadas, faltas obtidas e até mesmo consultar dados financeiros.
- 
-\end_layout
-
-\begin_layout Standard
-Entre os sistemas que não estão adaptados a dispositivos móveis se encontra
+Entre os sistemas que não estão adaptados aos dispositivos móveis se encontra
  o Portal do Aluno SenacRS, desenvolvido com foco ao acesso 
 \shape italic
 desktop
 \shape default
-
+ 
 \begin_inset Foot
 status open
 
@@ -378,26 +371,26 @@ desktop: computador de mesa, notebooks.
 \end_inset
 
 .
- Essa não otimização para dispositivos móveis cria alguns problemas para
- o usuário final.
+ O Portal do Aluno SenacRS é o local no qual o aluno pode acompanhar seu
+ desempenho acadêmico, visualizar as notas das disciplinas correntes e passadas,
+ faltas obtidas e, até mesmo, consultar dados financeiros.
+ 
 \end_layout
 
 \begin_layout Standard
-Um dos problemas levantados na arquitetura atual do Portal do Aluno SenacRS
- é o redirecionamento inicial.
- Ao tentar acessar a página de login do usuário, o sistema redireciona para
- uma tela de sessão expirada e informa para clicar no link ou aguardar o
- redirecionamento.
+Na arquitetura atual do Portal do Aluno SenacRS, ao tentar acessar a página
+ de login do usuário, o sistema redireciona para uma tela de sessão expirada
+ e informa para clicar no link ou aguardar o redirecionamento.
  Esse processo leva em torno de 5 segundos.
  Após o usuário conseguir chegar na tela de login, há uma nova espera, agora
  para que o sistema liste as unidades do SENAC.
- Esse processo pode demorar de 10 a 40 segundos, dependendo da rede do usuário.
- Em um dos testes efetuados, simulando uma rede 3g mediana
+ Este processo pode demorar de 10 a 40 segundos, dependendo da rede do usuário.
+ Em um dos testes efetuados, simulando uma rede 3G mediana
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-rede 3g mediana:100ms de latência e velocidade de 250kb/s à 750kb/s
+rede 3G mediana:100ms de latência e velocidade de 250kb/s à 750kb/s
 \end_layout
 
 \end_inset
@@ -458,10 +451,6 @@ Requisições de Rede feitas no carregamento da tela de login
 Fonte:
 \series default
  Construída pelo autor do projeto
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
@@ -844,17 +833,18 @@ Construída pelo autor do projeto
 
 \begin_layout Standard
 É possível ver que apesar do Portal do Aluno SenacRS existir e funcionar
- em dispositivos móveis ele não é otimizado para tal.
- Tornando o acesso um processo oneroso ao usuário quando se quer apenas
- visualizar uma nota, por exemplo.
- Além de não possuir nenhum sistema de notificações referente a informações
- relevantes ao aluno.
+ em dispositivos móveis, ele não é otimizado para tal, tornando a consulta
+ de uma nota, por exemplo, em um processo oneroso.
+ Além disso, não possui nenhum sistema de notificações referente a informações
+ relevantes para o aluno.
 \end_layout
 
 \begin_layout Standard
-A partir desses pontos o Easyac propõe-se a otimizar o processo para o usuário,
- desde a quantidade de requisições, diminuindo assim o tráfego de rede,
- até uma melhor experiência com layout otimizado ao dispositivo.
+A partir desses pontos, o Easyac propõe-se a otimizar o acesso às informações
+ do aluno, minimizando o número de interações a serem executadas, e avisá-lo,
+ através de notificações, quando uma nova informação relevante for adicionada.
+ Tudo isso, através de uma interface adaptada a dispositivos móveis.
+ 
 \end_layout
 
 \end_body
