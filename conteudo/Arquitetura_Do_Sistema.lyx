@@ -336,30 +336,23 @@ Arquitetura do Sistema
 \end_layout
 
 \begin_layout Standard
-@TODO
+Para desenvolver o projeto serão utilizadas Histórias de Usuário para esclarecer
+ as tarefas adicionadas ao 
+\shape italic
+Product Backlog
+\shape default
+ e para definir as coleções do MongoDB será utilizada modelagem de documentos.
+ Será criado um modelo arquiteturial básico para demonstrar as conexões
+ entre os serviços.
+\end_layout
+
+\begin_layout Standard
+Ao longo do projeto serão levantados requisitos funcionais e não funcionais
+ e apresentados modelos de interface de usuário através de wireframes.
 \end_layout
 
 \begin_layout Standard
 
-\end_layout
-
-\begin_layout Standard
-Este tópico deve conter a listagem de modelos que serão elaborados ao longo
- do desenvolvimento do sistema, considerando o tipo de sistema a ser desenvolvid
-o e a abordagem de desenvolvimento, bem como as visões abaixo que são aplicáveis
- ao projeto.
- A seguir são apresentados exemplos de modelos que podem ser utilizados
- de acordo com algumas estratégias de desenvolvimento.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Atenção
-\series default
-: no Plano de Trabalho estes elementos podem ser apenas citados.
- Eles serão construídos posteriormente e apresentados ao final do primeiro
- semestre do TCC, no Relatório Parcial de Projeto.
 \end_layout
 
 \end_body

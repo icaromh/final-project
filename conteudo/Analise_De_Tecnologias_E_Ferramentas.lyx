@@ -527,7 +527,7 @@ MongoDB
 \begin_layout Standard
 MongoDB é um banco de dados 
 \shape italic
-open source
+opensource
 \shape default
  orientado a documentos que provê escala automática, alta performance e
  disponibilidade(MONGO, 2016).
@@ -538,26 +538,86 @@ Object Relational Mapping
 ) para facilitar o desenvolvimento.
  Foi escolhido por ser um banco de dados 
 \shape italic
-open source
+opensource
 \shape default
  e possuir a maior comunidade entre os demais bancos de dados NOSQL(não
  somente SQL).
 \end_layout
 
 \begin_layout Subsection
-Ionic
+NativeScript
 \end_layout
 
 \begin_layout Standard
-@TODO
+NativeScript é um framework para construir aplicativos iOS e Android nativos
+ usando JavaScript e CSS.
+ NativeScript renderiza as interfaces de usuário através do motor de renderizaçã
+o nativo da plataforma, sem WebViews, resultando em uma performance e experiênci
+a do usuário como aplicativos nativos(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-nativescript"
+
+\end_inset
+
+).
+ O NativeScript, assim como outros frameworks, a exemplo do XAMARIN, utiliza
+ uma linguagem de programação para desenvolver o aplicativo e transpila
+ para linguagem nativa do dispositivo, entregando à múltiplas plataformas.
+ 
+\end_layout
+
+\begin_layout Standard
+Foi escolhido pela familiaridade do autor com JavaScript, linguagem utilizada
+ para desenvolver com NativeScript, por ser um projeto opensource e possuir
+ uma comunidade altamente ativa.
 \end_layout
 
 \begin_layout Subsection
-CircleCI
+Travis CI
 \end_layout
 
 \begin_layout Standard
-@TODO
+Travis CI é uma plataforma de integração contínua que é gratuita para projetos
+ opensource hospedados no Github(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-travis"
+
+\end_inset
+
+).
+ Trabalha com imagens docker pré-definidas e quando há alguma submissão
+ de código ao Github inicia um novo container e executa os passos necessários
+ para testar o código enviado.
+ Ainda dentro do Travis CI é possível programá-lo para enviar notificações
+ para outras plataformas e enviar o código para um servidor de produção.
+ 
+\end_layout
+
+\begin_layout Standard
+Foi escolhido, entre tantas outras plataformas de integração contínua por
+ não ser 
+\shape italic
+self-hosted
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+self-hosted: 
+\shape default
+Hospedado pelo desenvolvedor
+\shape italic
+.
+\end_layout
+
+\end_inset
+
+ 
+\shape default
+e ser gratuito para projetos opensource.
 \end_layout
 
 \begin_layout Subsection
