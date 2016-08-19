@@ -336,23 +336,74 @@ Arquitetura do Sistema
 \end_layout
 
 \begin_layout Standard
-Para desenvolver o projeto serão utilizadas Histórias de Usuário para esclarecer
- as tarefas adicionadas ao 
+Ao longo das 
+\shape italic
+\size small
+Sprints
+\shape default
+\size default
+ do projeto todos os artefatos desenvolvidos serão adicionados aos seus
+ respectivos tópicos abaixo.
+ Pela natureza ágil do projeto os modelos estarão em constante modificação.
+ Para desenvolver o projeto serão utilizadas Histórias de Usuário para esclarece
+r as tarefas adicionadas ao 
 \shape italic
 Product Backlog
 \shape default
- e para definir as coleções do MongoDB será utilizada modelagem de documentos.
- Será criado um modelo arquiteturial básico para demonstrar as conexões
- entre os serviços.
+.
+\end_layout
+
+\begin_layout Subsection
+Modelagem Funcional
 \end_layout
 
 \begin_layout Standard
-Ao longo do projeto serão levantados requisitos funcionais e não funcionais
- e apresentados modelos de interface de usuário através de wireframes.
+A partir das histórias de usuário criadas a partir das tarefas adicionadas
+ ao 
+\shape italic
+\size small
+Product Backlog
+\shape default
+\size default
+ serão levantados requisitos funcionais e não funcionais.
+ E criados fluxogramas para demonstrar os processos com clareza e encontrar
+ possíveis pontos de falha.
+\end_layout
+
+\begin_layout Subsection
+Modelagem de Dados
 \end_layout
 
 \begin_layout Standard
+O sistema será construído utilizando como banco de dados principal o MongoDB,
+ que por sua natureza NOSQL baseada em documentos não possui 
+\shape italic
+\size small
+schema
+\shape default
+\size default
+.
+ O formato de documentos que o MongoDB utiliza é o BSON, um formato binário
+ de JSON, com a capacidade de armazenar mais formatos(como datas).
+ Para definição da estrutura dos documentos será feita uma modelagem de
+ documentos, onde a estrutura é imaginada como uma consulta única e não
+ relacional.
+\end_layout
 
+\begin_layout Subsection
+Modelagem da Interface Gráfica do Usuário
+\end_layout
+
+\begin_layout Standard
+Para demonstrar as interfaces a serem desenvolvidas serão criados 
+\shape italic
+\size small
+wireframes
+\shape default
+\size default
+ de baixa e alta fidelidade.
+ Inicialmente serão desenhados no papel e posteriormente passados para um
+ software de modelagem.
 \end_layout
 
 \end_body
