@@ -339,7 +339,148 @@ Descrição da Solução
 \end_layout
 
 \begin_layout Standard
-@TODO
+Para atingir o objetivo de simplificar a navegação nos dados do Portal do
+ Aluno SenacRS será desenvolvido um aplicativo mobile e, para que seja possível
+ exibir os dados no aplicativo existirão diversos serviços com suas respectivas
+ responsabilidades executando em 
+\shape italic
+background
+\shape default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+background
+\shape default
+: no contexto do projeto são serviços que são executados continuamente sem
+ a intervenção do usuário
+\end_layout
+
+\end_inset
+
+.
+ Desenvolvido em JavaScript e compilado para linguagem nativa do dispositivo(And
+roid, iOS), o aplicativo possuirá uma interface fluída com 
+\shape italic
+look'n feel
+\shape default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+look'n feel
+\shape default
+: no contexto do projeto é a aparência nativa do dispositivo
+\end_layout
+
+\end_inset
+
+ do dispositivo acessado.
+ 
+\end_layout
+
+\begin_layout Standard
+Os dados que aparecerão no aplicativo serão uma cópia exata aos apresentados
+ no Portal do Aluno SenacRS.
+ E, para que isso seja possível, será desenvolvido um robô que busque, de
+ forma automática, os dados do aluno.
+ O robô é uma implementação de um web crawler, o principal método de se
+ obter informações de um website, tanto para indexação de motores de busca
+ como para arquivar dados.
+ Isso é feito seguindo os caminhos dos links de uma página para outra, também
+ chamado de 
+\begin_inset Quotes eld
+\end_inset
+
+crawling
+\begin_inset Quotes erd
+\end_inset
+
+(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "andersen2007web"
+
+\end_inset
+
+).
+ Uma vez que o usuário informe seus dados de acesso ao Portal do Aluno SenacRS
+ no aplicativo, o robô navega através do portal e se encarrega de buscar
+ os dados e, de tempos em tempos, acessa novamente para atualizá-los na
+ base de dados.
+\end_layout
+
+\begin_layout Standard
+Além de buscar os dados, o robô também é responsável por enviá-los a outro
+ serviço, chamado de Normalizer.
+ O Normalizer é um normalizador de dados e funcionará de modo similar a
+ ferramentas de ETL.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+O processo de ETL (Extract, Transform and Load) destina-se à extração, transform
+ação e carga dos dados de uma ou mais bases de dados de origem para uma
+ ou mais bases de dados de destino (Data Warehouse).
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os dados enviados pelo robô são lidos, interpretados, mapeados e transformados
+ em uma estrutura normalizada para que então seja enviado para uma camada
+ de diferenciação, o serviço 
+\begin_inset Quotes eld
+\end_inset
+
+Differ
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+O Differ será ativado a cada nova busca de dados no Portal do Aluno SenacRS.
+ Ele é responsável por receber a estrutura normalizada, criar uma camada
+ de diferenciação com os dados já inseridos no banco de dados e, caso haja
+ alguma alteração relevante como: uma nova nota publicada, uma nova falta,
+ um novo título para pagar.
+ Ele enviará uma mensagem notificando o usuário dessa alteração.
+ Após isso, os novos dados serão salvos no banco de dados e poderão ser
+ consultados através da API.
+\end_layout
+
+\begin_layout Standard
+A comunicação entre o banco de dados e o aplicativo se dará, como dito anteriorm
+ente, através de uma API(
+\series bold
+descrever o que é API
+\series default
+) pública.
+ A forma de autenticação na API será através JWT(JSON Web Token), onde o
+ usuário envia suas credenciais e é retornado um token, gerado pelo servidor,
+ o qual é a chave de autenticação para utilizar os demais métodos da API,
+ buscar dados de matrícula do aluno, por exemplo.
+ É importante atentar-se que o usuário só tem acesso aos dados do aluno
+ vinculado a ele.
+ Por exemplo, quando um usuário se identifica com nome de usuário e senha
+ válidos no Portal do Aluno, o token gerado só será válido para as informações
+ referentes ao usuário informado.
+ 
 \end_layout
 
 \end_body
