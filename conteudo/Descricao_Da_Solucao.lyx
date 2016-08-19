@@ -341,14 +341,14 @@ Descrição da Solução
 \begin_layout Standard
 Para atingir o objetivo de simplificar a navegação nos dados do Portal do
  Aluno SenacRS será desenvolvido um aplicativo mobile e, para que seja possível
- exibir os dados no aplicativo existirão diversos serviços com suas respectivas
- responsabilidades executando em 
+ exibir os dados no aplicativo, existirão vários serviços.
+ Executados em 
 \shape italic
 background
 \shape default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -361,15 +361,15 @@ background
 
 \end_inset
 
-.
- Desenvolvido em JavaScript e compilado para linguagem nativa do dispositivo(And
-roid, iOS), o aplicativo possuirá uma interface fluída com 
+, cada serviço possui responsabilidades específicas.
+ Desenvolvido em JavaScript e compilado para linguagem nativa do dispositivo
+ (Android, iOS), o aplicativo possuirá uma interface fluída com 
 \shape italic
 look'n feel
 \shape default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -382,27 +382,18 @@ look'n feel
 \end_inset
 
  do dispositivo acessado.
- 
 \end_layout
 
 \begin_layout Standard
-Os dados que aparecerão no aplicativo serão uma cópia exata aos apresentados
+Os dados que aparecerão no aplicativo serão uma cópia exata dos apresentados
  no Portal do Aluno SenacRS.
- E, para que isso seja possível, será desenvolvido um robô que busque, de
- forma automática, os dados do aluno.
+ Para que isso seja possível, será desenvolvido um robô que busque, de forma
+ automática, os dados do aluno.
  O robô é uma implementação de um web crawler, o principal método de se
- obter informações de um website, tanto para indexação de motores de busca
- como para arquivar dados.
+ obter informações de um website, tanto para indexação de motores de busca,
+ quanto para arquivar dados.
  Isso é feito seguindo os caminhos dos links de uma página para outra, também
- chamado de 
-\begin_inset Quotes eld
-\end_inset
-
-crawling
-\begin_inset Quotes erd
-\end_inset
-
-(
+ chamado de “crawling”(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "andersen2007web"
@@ -412,8 +403,7 @@ key "andersen2007web"
 ).
  Uma vez que o usuário informe seus dados de acesso ao Portal do Aluno SenacRS
  no aplicativo, o robô navega através do portal e se encarrega de buscar
- os dados e, de tempos em tempos, acessa novamente para atualizá-los na
- base de dados.
+ as informações e, de tempos em tempos, atualizá-los na base de dados.
 \end_layout
 
 \begin_layout Standard
@@ -421,7 +411,6 @@ Além de buscar os dados, o robô também é responsável por enviá-los a outro
  serviço, chamado de Normalizer.
  O Normalizer é um normalizador de dados e funcionará de modo similar a
  ferramentas de ETL.
- 
 \end_layout
 
 \begin_layout Standard
@@ -442,45 +431,114 @@ ação e carga dos dados de uma ou mais bases de dados de origem para uma
 \begin_layout Standard
 Os dados enviados pelo robô são lidos, interpretados, mapeados e transformados
  em uma estrutura normalizada para que então seja enviado para uma camada
- de diferenciação, o serviço 
-\begin_inset Quotes eld
-\end_inset
-
-Differ
-\begin_inset Quotes erd
-\end_inset
-
-.
+ de diferenciação, o serviço Differ.
 \end_layout
 
 \begin_layout Standard
 O Differ será ativado a cada nova busca de dados no Portal do Aluno SenacRS.
  Ele é responsável por receber a estrutura normalizada, criar uma camada
  de diferenciação com os dados já inseridos no banco de dados e, caso haja
- alguma alteração relevante como: uma nova nota publicada, uma nova falta,
- um novo título para pagar.
- Ele enviará uma mensagem notificando o usuário dessa alteração.
- Após isso, os novos dados serão salvos no banco de dados e poderão ser
- consultados através da API.
+ alguma alteração relevante, como uma nova nota publicada, uma nova falta,
+ um novo título para pagar, ele enviará uma mensagem notificando o usuário
+ dessa alteração.
+ Após isso, os novos dados serão salvos no base de dados e poderão ser consultad
+os através da API(
+\shape italic
+Application Programming Interface
+\shape default
+ ou Interface de programação de Aplicativos).
 \end_layout
 
 \begin_layout Standard
 A comunicação entre o banco de dados e o aplicativo se dará, como dito anteriorm
-ente, através de uma API(
-\series bold
-descrever o que é API
-\series default
-) pública.
+ente, através de uma API pública.
  A forma de autenticação na API será através JWT(JSON Web Token), onde o
  usuário envia suas credenciais e é retornado um token, gerado pelo servidor,
  o qual é a chave de autenticação para utilizar os demais métodos da API,
  buscar dados de matrícula do aluno, por exemplo.
  É importante atentar-se que o usuário só tem acesso aos dados do aluno
- vinculado a ele.
+ vinculados a ele.
  Por exemplo, quando um usuário se identifica com nome de usuário e senha
  válidos no Portal do Aluno, o token gerado só será válido para as informações
  referentes ao usuário informado.
  
+\end_layout
+
+\begin_layout Standard
+Antes das requisições chegarem a API haverá um servidor NGINX que servirá
+ como balanceador de carga entre algumas instâncias da API.
+ E, também, como um servidor de proxy reverso, cacheando requisições iguais
+ e não sobrecarregando os servidores.
+ O modelo de exemplo da solução é visível na Figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelo-exemplo-da-solucao"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelo-exemplo-da-solucao"
+
+\end_inset
+
+Modelo exemplo da solução
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/arquitetura_solucao.png
+	lyxscale 30
+	width 100text%
+	height 100text%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+\size default
+ 
+\size small
+Construída pelo autor do projeto
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
