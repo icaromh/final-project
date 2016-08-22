@@ -344,7 +344,8 @@ Objetivo Geral
 
 \begin_layout Standard
 O objetivo geral deste trabalho é desenvolver uma aplicação multiplataforma
- para facilitar o acesso a dados acadêmicos dos alunos do SenacRS.
+ para facilitar o acesso a dados acadêmicos dos alunos do SenacRS e alertá-los
+ sobre informações alteradas no portal.
 \end_layout
 
 \begin_layout Subsection
