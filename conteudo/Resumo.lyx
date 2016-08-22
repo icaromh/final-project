@@ -332,7 +332,17 @@ Provides natbib 1
 \begin_body
 
 \begin_layout Abstract
-@TODO
+Em tempos de redes sociais e aplicativos nos avisando pró-ativamente sobre
+ as mais diversas interações e atualizações em nossos meios é de se esperar
+ que todas as informações que nos cercam sejam dessa forma.
+ Entre as informações relevantes que estamos expostos estão informações
+ referêntes a nossa vida acadêmica e, diferente do que esperamos, o processo
+ de obter informações relevantes sobre ela utilizando o Portal do Aluno
+ SenacRS nao é um processo simples ou pró-ativo.
+ O projeto apresentado neste relatório tem como propósitos criar um aplicativo
+ para ser uma fonte otimizada para acesso mobile dos dados do aluno e fornecer
+ notificações sobre alterações em suas informações acadêmicas, como notas
+ e dados financeiros.
 \end_layout
 
 \begin_layout Abstract
@@ -342,9 +352,9 @@ Provides natbib 1
 \series bold
 Palavras-chave: 
 \series default
-Aplicativo.
- Cache.
- Portal do Aluno.
+Aplicativo Mobile.
+ API.
+ Portal do Aluno SenacRS.
 \end_layout
 
 \begin_layout Standard
