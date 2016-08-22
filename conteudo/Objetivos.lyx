@@ -418,5 +418,18 @@ Disponibilizar uma forma simples de visualizar o histórico finaneiro do
  aluno.
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+e)
+\end_layout
+
+\end_inset
+
+Disponibilizar uma API pública para consumo dos dados de alunos.
+\end_layout
+
 \end_body
 \end_document

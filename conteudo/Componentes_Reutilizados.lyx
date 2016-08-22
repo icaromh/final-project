@@ -360,7 +360,7 @@ Docker
 status open
 
 \begin_layout Plain Layout
-a)
+b)
 \end_layout
 
 \end_inset
@@ -377,7 +377,7 @@ MongoDB
 status open
 
 \begin_layout Plain Layout
-a)
+c)
 \end_layout
 
 \end_inset
@@ -387,6 +387,57 @@ a)
 Node.js
 \series default
  disponível em https://nodejs.org/en/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+d)
+\end_layout
+
+\end_inset
+
+
+\series bold
+nginx
+\series default
+ disponível em https://nginx.org/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+d)
+\end_layout
+
+\end_inset
+
+
+\series bold
+NativeScript
+\series default
+ disponível em https://www.nativescript.org/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+e)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Travis CI
+\series default
+ disponível em https://travis-ci.org/
 \end_layout
 
 \end_body
