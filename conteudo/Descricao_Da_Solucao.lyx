@@ -414,15 +414,38 @@ Além de buscar os dados, o robô também é responsável por enviá-los a outro
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
 
-\series bold
-\begin_inset Quotes eld
+\begin_layout Plain Layout
+
+
+\backslash
+begin{citacao}
+\end_layout
+
 \end_inset
 
 O processo de ETL (Extract, Transform and Load) destina-se à extração, transform
 ação e carga dos dados de uma ou mais bases de dados de origem para uma
  ou mais bases de dados de destino (Data Warehouse).
-\begin_inset Quotes erd
+\begin_inset CommandInset citation
+LatexCommand cite
+key "desmistificando-etl"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{citacao}
+\end_layout
+
 \end_inset
 
 
