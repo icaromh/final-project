@@ -561,8 +561,17 @@ key "about-nativescript"
 \end_inset
 
 ).
- O NativeScript, assim como outros frameworks, a exemplo do XAMARIN, utiliza
- uma linguagem de programação para desenvolver o aplicativo e transpila
+ O NativeScript, assim como outros frameworks, a exemplo do XAMARIN
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+XAMARIN: saiba mais em https://www.xamarin.com
+\end_layout
+
+\end_inset
+
+, utiliza uma linguagem de programação para desenvolver o aplicativo e transpila
  para linguagem nativa do dispositivo, entregando à múltiplas plataformas.
  
 \end_layout
@@ -640,69 +649,7 @@ key "about-git"
  Similar ao SVN e demais sistemas de controle de código porém mais rápido.
  Foi escolhido para manter o histórico de alterações e organizar novas funcional
 idades de forma eficiente.
- Conforme a figura
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Lista-comparativa-entre"
-
-\end_inset
-
- é possível visualizar o quão mais rápido ele é.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Lista-comparativa-entre"
-
-\end_inset
-
-Lista comparativa entre GIT e SVN
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/icaro/Documentos/tcc/images/git-performance.png
-	scale 65
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-\size small
-Fonte:
-\series default
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "about-git"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body

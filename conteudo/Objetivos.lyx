@@ -343,8 +343,8 @@ Objetivo Geral
 \end_layout
 
 \begin_layout Standard
-O objetivo geral deste trabalho é desenvolver uma aplicação multiplataforma
- para facilitar o acesso a dados acadêmicos dos alunos do SenacRS e alertá-los
+O objetivo geral deste trabalho é desenvolver uma aplicação mobile multiplatafor
+ma para facilitar o acesso a dados acadêmicos dos alunos do SenacRS e alertá-los
  sobre informações alteradas no portal.
 \end_layout
 
@@ -402,7 +402,7 @@ d)
 
 \end_inset
 
-Notificar o aluno sobre alterações em sua presença ao longo do semetre.
+Notificar o aluno sobre faltas ao longo do semetre.
 \end_layout
 
 \begin_layout Enumerate

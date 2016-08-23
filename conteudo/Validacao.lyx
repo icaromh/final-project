@@ -363,10 +363,6 @@ Sprint
 \shape italic
 Scrum Master
 \shape default
- e 
-\shape italic
-stakeholders
-\shape default
  do projeto.
  Por se tratar de um sistema online será possível validar também o código
  através de relatórios de erro e 

@@ -407,10 +407,48 @@ reference "fig:Requisições-de-Rede"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{citacao}
+\end_layout
+
+\end_inset
+
+Usuários esperam páginas carregarem em dois segundos.
+ Depois do terceiro, até 40% dos usuários abandonam o site.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "performance2segundos"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{citacao}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -474,7 +512,7 @@ reference "fig:Processo-para-logar"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -536,7 +574,7 @@ reference "tab:Comparativo-Portal-do"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
