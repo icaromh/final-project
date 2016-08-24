@@ -448,11 +448,7 @@ end{citacao}
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -512,7 +508,7 @@ reference "fig:Processo-para-logar"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -574,7 +570,7 @@ reference "tab:Comparativo-Portal-do"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -638,7 +634,7 @@ Portal do Aluno
 \begin_layout Plain Layout
 
 \series bold
-Layout otimizado para mobile
+Resposta em até 2 segundos
 \end_layout
 
 \end_inset
@@ -802,7 +798,7 @@ Versão web
 \begin_inset Text
 
 \begin_layout Plain Layout
-X
+
 \end_layout
 
 \end_inset
@@ -872,17 +868,18 @@ Construída pelo autor do projeto
 \begin_layout Standard
 É possível ver que apesar do Portal do Aluno SenacRS existir e funcionar
  em dispositivos móveis, ele não é otimizado para tal, tornando a consulta
- de uma nota, por exemplo, em um processo oneroso.
+ de uma nota, por exemplo, em uma tarefa nada simplória.
  Além disso, não possui nenhum sistema de notificações referente a informações
  relevantes para o aluno.
+ 
 \end_layout
 
 \begin_layout Standard
 A partir desses pontos, o Easyac propõe-se a otimizar o acesso às informações
  do aluno, minimizando o número de interações a serem executadas, e avisá-lo,
  através de notificações, quando uma nova informação relevante for adicionada.
- Tudo isso, através de uma interface adaptada a dispositivos móveis.
- 
+ Tudo isso, através de uma interface adaptada a dispositivos móveis e de
+ forma tão segura quanto o acesso direto aos dados do Portal do Aluno SenacRS.
 \end_layout
 
 \end_body

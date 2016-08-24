@@ -475,8 +475,8 @@ Application Programming Interface
 \begin_layout Standard
 A comunicação entre o banco de dados e o aplicativo se dará, como dito anteriorm
 ente, através de uma API pública.
- A forma de autenticação na API será através JWT(JSON Web Token), onde o
- usuário envia suas credenciais e é retornado um token, gerado pelo servidor,
+ A forma de autenticação na API será através JWT (JSON Web Token), onde
+ o usuário envia suas credenciais e é retornado um token, gerado pelo servidor,
  o qual é a chave de autenticação para utilizar os demais métodos da API,
  buscar dados de matrícula do aluno, por exemplo.
  É importante atentar-se que o usuário só tem acesso aos dados do aluno
@@ -484,7 +484,18 @@ ente, através de uma API pública.
  Por exemplo, quando um usuário se identifica com nome de usuário e senha
  válidos no Portal do Aluno, o token gerado só será válido para as informações
  referentes ao usuário informado.
- 
+ Para garantir que os dados enviados pelo aluno para o servidor não sejam
+ observados por analisadores de pacotes, todas as requisições serão criptografad
+as usando SSL (
+\shape italic
+Secure Socket Layer
+\shape default
+) e transmitidas em HTTPS (
+\shape italic
+Hyper Text Transfer Protocol Secure
+\shape default
+) tornando os dados legíveis apenas para o cliente que efetuar a requisição
+ e o servidor que recebê-la.
 \end_layout
 
 \begin_layout Standard
