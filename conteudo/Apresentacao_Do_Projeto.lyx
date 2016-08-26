@@ -339,10 +339,10 @@ Apresentação Geral do Projeto
 \end_layout
 
 \begin_layout Standard
-Segundo Nielsen, 10 segundos é o limite que um usuário mantem a atenção
+Segundo Nielsen, 10 segundos é o tempo limite que um usuário mantém a atenção
  focada em um diálogo.
- Para tempos mais demorados, usuários querem efetuar outras tarefas enquanto
- esperam o computador terminar de carregar (
+ Para períodos mais demorados, enquanto esperam o computador terminar de
+ carregar, os usuários querem efetuar outras tarefas (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "responsetimes-3-important-limits"
@@ -350,16 +350,16 @@ key "responsetimes-3-important-limits"
 \end_inset
 
 ).
- A partir dessa afirmação espera-se que sistemas web modernos sejam suficienteme
-nte rápidos para que não nos deparemos com essa perda de interesse.
+ Para que não percamos o interesse, espera-se que sistemas web modernos
+ sejam suficientemente rápidos.
  Contrariando o limite comentado por Nielsen, o Portal do Aluno SenacRS
- apresenta a página de login no sistema após 10 à 40 segundos, tendo um
- pior desempenho em redes móveis como 3G e 4G.
+ exibe a página de login no sistema após 10 à 40 segundos, apresentando
+ um desempenho ainda mais baixo em redes móveis.
 \end_layout
 
 \begin_layout Standard
-Pensando nessa problemática e, sendo percebido que o layout não foi desenhado
- para ser utilizado em dispositivos móveis surgiu o Easyac
+A partir dessa problemática e, sendo percebido que o layout não foi desenhado
+ para ser utilizado em dispositivos móveis, surgiu o Easyac
 \begin_inset Foot
 status open
 
@@ -369,23 +369,20 @@ Easyac: Acrônimo para Easy e Senac - Senac fácil em inglês.
 
 \end_inset
 
-, uma aplicação mobile multiplataforma que notifica o aluno sobre alterações
- em suas notas e demais informações relevantes a partir de sistemas distribuidos
- que buscam os dados do aluno, transformam em uma estrutura otimizada e
- alimentam o banco dados, verificando novas atualizações.
+: uma aplicação mobile multiplataforma que notifica o aluno sobre alterações
+ em suas notas e demais informações relevantes.
+ 
 \end_layout
 
 \begin_layout Standard
-O projeto a ser desenvolvido propõe-se a criar uma forma simples visualizar
- os dados acadêmicos do aluno através de uma aplicação mobile, sem necessidade
- de navegar por diversas páginas e otimizando o tempo de carregamento das
- informações.
- Para alcançar esse objetivo serão disponibilizados outros 2 projetos de
- código aberto.
- O Crawler responsável pela mineiração dos dados do aluno que pode ser acoplado
- a qualquer aplicação node.js e uma API com documentação para que possa ser
- possível integrar os dados do aluno a outros sistemas.
- Ambos com só funcionarão com as devidas permissões e credenciais de acesso
+Para alcançar esse objetivo serão desenvolvidas aplicações distribuídas
+ que buscam os dados do aluno, os transformam em uma estrutura otimizada
+ e alimentam o banco dados, verificando novas atualizações.
+ Também serão disponibilizados outros dois projetos de código aberto, um
+ crawler responsável pela mineração dos dados do aluno, que pode ser acoplado
+ a qualquer aplicação node.js, e uma API com documentação para que seja possível
+ integrar os dados do aluno a outros sistemas.
+ Ambos só funcionarão com as devidas permissões e credenciais de acesso
  do aluno.
 \end_layout
 

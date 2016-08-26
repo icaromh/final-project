@@ -944,6 +944,8 @@ Desenvolvimento do Differ
 
 \begin_layout Plain Layout
 
+\series bold
+x
 \end_layout
 
 \end_inset
@@ -999,6 +1001,8 @@ Criação de notificações a partir do Differ
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 x
 \end_layout
 
