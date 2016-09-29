@@ -350,10 +350,10 @@ key "responsetimes-3-important-limits"
 \end_inset
 
 ).
- Para que não percamos o interesse, espera-se que sistemas web modernos
+ Para que o interesse não seja perdido, espera-se que sistemas web modernos
  sejam suficientemente rápidos.
  Contrariando o limite comentado por Nielsen, o Portal do Aluno SenacRS
- exibe a página de login no sistema após 10 à 40 segundos, apresentando
+ exibe a página de login no sistema após 10 a 40 segundos, apresentando
  um desempenho ainda mais baixo em redes móveis.
 \end_layout
 

@@ -392,7 +392,7 @@ Insira seu nome completo.
 
 \end_inset
 
-NOME DO AUTOR
+ÍCARO MAINES HEIMIG
 \end_layout
 
 \begin_layout Standard
@@ -438,7 +438,7 @@ Insira o título e, se existir, o subtitulo do trabalho.
 \align center
 
 \series bold
-TITULO
+EASYAC
 \series default
 
 \begin_inset ERT
@@ -455,7 +455,7 @@ status open
 
 \end_inset
 
-Subtitulo
+Aplicativo mobile para acompanhamento acadêmico no SenacRS
 \end_layout
 
 \begin_layout Standard

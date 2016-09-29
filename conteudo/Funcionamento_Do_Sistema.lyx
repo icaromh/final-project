@@ -494,7 +494,7 @@ Note
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -515,12 +515,6 @@ Exemplos de Notas dos documentos de TCC no LyX
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/rafael/Documents/TCC/images/lyx_notes.jpg
-	width 12cm
-
-\end_inset
-
 
 \end_layout
 
