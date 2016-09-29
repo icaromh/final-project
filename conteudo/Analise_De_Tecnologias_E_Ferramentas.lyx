@@ -545,6 +545,31 @@ opensource
 \end_layout
 
 \begin_layout Subsection
+Mongoose
+\end_layout
+
+\begin_layout Standard
+Mongoose é um módulo de node.js que oferece uma solução simples e direta
+ baseada em 
+\shape italic
+schema
+\shape default
+ para modelar dados relacionados ao MongoDB.
+ Ele trás validações, transformação de tipo de dados, gerador de consultas
+ e 
+\shape italic
+hooks
+\shape default
+.
+ O módulo foi escolhido por trazer a facilidade de definir 
+\shape italic
+schemas
+\shape default
+ e trabalhar em cima deles e, por suas demais características citadas anteriorme
+nte.
+\end_layout
+
+\begin_layout Subsection
 NativeScript
 \end_layout
 

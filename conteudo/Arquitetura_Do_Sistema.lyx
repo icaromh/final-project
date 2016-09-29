@@ -371,26 +371,6 @@ Product Backlog
 \end_layout
 
 \begin_layout Subsection
-Modelagem de Dados
-\end_layout
-
-\begin_layout Standard
-O sistema será construído utilizando como banco de dados principal o MongoDB,
- que por sua natureza NOSQL baseada em documentos não possui 
-\shape italic
-\size small
-schema
-\shape default
-\size default
-.
- O formato de documentos que o MongoDB utiliza é o BSON, um formato binário
- de JSON, com a capacidade de armazenar mais formatos(como datas).
- Para definição da estrutura dos documentos será feita uma modelagem de
- documentos, onde a estrutura é imaginada como uma consulta única e não
- relacional.
-\end_layout
-
-\begin_layout Subsection
 Modelagem da Interface Gráfica do Usuário
 \end_layout
 
@@ -404,6 +384,196 @@ wireframes
  de baixa e alta fidelidade.
  Inicialmente serão desenhados no papel e posteriormente passados para um
  software de modelagem.
+\end_layout
+
+\begin_layout Subsection
+Modelagem de Dados
+\end_layout
+
+\begin_layout Standard
+O sistema foi construído utilizando como banco de dados principal o MongoDB,
+ que por sua natureza NOSQL baseada em documentos não possui 
+\shape italic
+\size small
+schema
+\shape default
+\size default
+.
+ O formato de documentos que o MongoDB utiliza é o BSON, um formato binário
+ de JSON, com a capacidade de armazenar mais formatos(como datas).
+ Para definição da estrutura dos documentos foi feita uma modelagem de documento
+s, onde a estrutura é imaginada como uma consulta única e não relacional.
+\end_layout
+
+\begin_layout Subsubsection
+Modelagem JSON
+\end_layout
+
+\begin_layout Standard
+A partir do módulo mongoose é possível adicionar a uma coleção uma modelagem
+ baseada em schemas e, assim, trabalhar de forma mais organizadas os dados
+ não estruturados do MongoDB.
+ Adicionando validações e casting de informações, por exemplo.
+ É possível ver a seguir definição dos esquemas de aluno(Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schema-Aluno"
+
+\end_inset
+
+), Faltas(Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schema-Faltas"
+
+\end_inset
+
+) e Notas(Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schema-Notas"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Cada schema definido através do mongoose se torna uma coleção(collection)
+ no MongoDB.
+ Como mencionado anteriormente, os dados foram modelados imaginado-os como
+ resposta a uma consulta para que o processo de leitura seja otimizado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema Aluno
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schema-Aluno"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/schema_aluno.png
+	width 33text%
+	height 33theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema Faltas
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schema-Faltas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/schema_falta.png
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema Notas
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schema-Notas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/schema_nota.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
