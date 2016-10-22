@@ -9,7 +9,7 @@ SENAC TCC
 | **~~18/08/2016~~** | ~~Postagem no Blackboard do **Mapa mental do projeto** **(APS1)**~~ |
 | **~~25/08/2016~~** | ~~Postagem no Blackboard o **Plano de Trabalho** **(APS2)**~~ |
 | **~~29/08/2016~~** | ~~(segunda-feira) Entrega do plano na Secretaria (1 cópia impressa)~~ |
-| **15/09/2016** | Semana de seminário de andamento TCC2 (ir assistir) |
+| **~~15/09/2016~~** | ~~Semana de seminário de andamento TCC2 (ir assistir)~~ |
 | **03/11/2016** | Postagem no Blackboard o **Relatório Parcial** **(APS3)**  |
 | **07/11/2016** | (segunda-feira) Entrega do Relatório na Secretaria (2 cópias impressas) |
 | **10/11/2016** | Simulação de banca |
