@@ -1444,6 +1444,14 @@ Deve-se retornar os dados básicos do aluno autenticado(código do aluno,
 Sprint 2
 \end_layout
 
+\begin_layout Standard
+Aqui ainda nao possui modelagem de dados porque nao há inserção no banco.
+ Nessa sprint foram criadas as buscas de nota e falta de alunos, além de
+ ser descoberto que há a necessidade de ter um normalizador dentro do crawler.
+ Contrariando a arquitetura imaginada inicialmente, onde seria um microserviço.
+ Os dados de saída do crawler ainda estão no formado bruto encontrado.
+\end_layout
+
 \begin_layout Subsubsection
 Itens do Backlog
 \end_layout
@@ -1623,6 +1631,60 @@ Caso haja algum erro no processo de extração dos dados deverá retornar uma
 
 \begin_layout Subsection
 Sprint 3
+\end_layout
+
+\begin_layout Standard
+Nessa sprint foi iniciado o trabalho de normalizar os dados vindos do portal.
+ Foi criada uma interface facade no crawler que facilita a extração dos
+ dados e já normaliza a saída.
+ 
+\end_layout
+
+\begin_layout Standard
+Também nessa sprint foi iniciada a autenticação da API, por hora é o processo
+ mais demorado do sistema, já que a autenticação é feita pelo próprio portal
+ do aluno, por baixo dos panos.
+ A API foi construída com o express e nginx.
+ Para que os ambientes de produção e desenvolvimento fossem iguais nesse
+ momento foram criadas imagens docker para a API
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+link para repositório api
+\end_layout
+
+\end_inset
+
+ e o nginx
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+link para repositório container docker nginx
+\end_layout
+
+\end_inset
+
+.
+ E também utilizado o docker-compose para orquestrar os containers.
+ Ainda nessa sprint.
+ 
+\end_layout
+
+\begin_layout Standard
+Como uma das premissas do projeto é trafegar todos os dados utilizando uma
+ conexão segura, nessa Sprint foi instalado um certificado de segurança,
+ através do Let's Encrypt, no servidor de produção.
+ O certificado instalado serve para as urls https://api.easyac.xyz e https://eayac.
+xyz que respectivamente são a url para consumo da API e a url do hotsite
+ do projeto.
+\end_layout
+
+\begin_layout Standard
+Também nessa sprint foi iniciada a modelagem de dados e instanciado um novo
+ container com mongoDB.
+ Adicionado ao docker-compose.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1853,10 +1915,6 @@ Modelagem de Dados
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 O sistema foi construído utilizando como banco de dados principal o MongoDB,
  que por sua natureza NOSQL baseada em documentos não possui 
 \shape italic
@@ -2005,10 +2063,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2080,6 +2134,229 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Sprint 4
+\end_layout
+
+\begin_layout Standard
+Nessa sprint foi criada a rota faltante de busca de notas do aluno autenticado.
+ E criada, através do Swagger Tools, uma documentação interativa da API.
+ A partir de um arquivo descritivo no formato YAML é possível gerar uma
+ interface para consumo da API.
+ 
+\end_layout
+
+\begin_layout Standard
+Adicionalmente, essa interface foi personalizada para a paleta de cores
+ do projeto(tons de azul), criada uma nova url no servidor de produção e
+ instalado um certificado para essa url.
+ A documentação pode ser acessada em https://docs.easyac.xyz.
+\end_layout
+
+\begin_layout Standard
+Foi criado um repositório e um container para a documentação.
+ Além de ser adicionado ao docker-compose para que seja iniciada junto ao
+ ecossistema criado.
+\end_layout
+
+\begin_layout Subsubsection
+Itens do Backlog
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Item
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de notas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Interface para documentação e testes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+User Stories
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 07
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de autenticar um aluno através de uma API
+\end_layout
+
+\begin_layout Standard
+Para que eu possa integrar os dados do aluno independente da plataforma.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A partir de um 
+\shape italic
+endpoint
+\shape default
+ REST deve ser possível logar um aluno no Portal do Aluno SenacRS e retornar
+ o um token autenticado para esse aluno.
+\end_layout
+
+\begin_layout Itemize
+O endpoint deve ser acessível via HTTPS.
+\end_layout
+
+\begin_layout Itemize
+Caso haja algum erro no processo deve-se retornar uma mensagem informando
+ o erro ocorrido.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 06
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de consultar as notas de um aluno em uma API
+\end_layout
+
+\begin_layout Standard
+Para que eu possa integrar os dados do aluno independente da plataforma.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+Deve ser possível retornar as notas de um aluno a partir de um endpoint
+ REST.
+\end_layout
+
+\begin_layout Itemize
+O endpoint deve ser acessível em HTTPS.
+\end_layout
+
+\begin_layout Itemize
+O endpoint deve ser protegido com autenticação via cabeçalho HTTP.
+\end_layout
+
+\begin_layout Itemize
+Caso não seja passado o token autenticado no cabeçalho da requisição o sistema
+ deve retornar uma mensagem informando que a requisição não é autorizada
+ com HTTP Status Code 401.
+\end_layout
+
+\begin_layout Subsubsection
+Modelagem de Dados
 \end_layout
 
 \begin_layout Standard
@@ -2203,6 +2480,67 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Modelagem de Interface
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela de documentação da API
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tela-de-documentação"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/tela_swagger.png
+	lyxscale 30
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Adicionar documentação expandida.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Adicionar tela inicial do Swagger
 \end_layout
 
 \end_body
