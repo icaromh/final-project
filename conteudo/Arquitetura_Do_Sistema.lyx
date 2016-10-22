@@ -336,58 +336,1524 @@ Arquitetura do Sistema
 \end_layout
 
 \begin_layout Standard
-Ao longo das 
-\shape italic
-\size small
-Sprints
-\shape default
-\size default
- do projeto todos os artefatos desenvolvidos serão adicionados aos seus
- respectivos tópicos abaixo.
- Pela natureza ágil do projeto os modelos estarão em constante modificação.
- Para desenvolver o projeto serão utilizadas Histórias de Usuário para esclarece
-r as tarefas adicionadas ao 
-\shape italic
-Product Backlog
-\shape default
+Os artefatos do sistema estão dispostos dentro das Sprints e são adicionados
+ conforme as interações.
+ A cada interação os itens do Backlog são atualizados e mudam de 
+\begin_inset Quotes eld
+\end_inset
+
+não implementados
+\begin_inset Quotes erd
+\end_inset
+
+ para 
+\begin_inset Quotes eld
+\end_inset
+
+implementados
+\begin_inset Quotes erd
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Subsection
-Modelagem Funcional
-\end_layout
-
-\begin_layout Standard
-A partir das histórias de usuário criadas a partir das tarefas adicionadas
- ao 
-\shape italic
-\size small
 Product Backlog
-\shape default
-\size default
- serão levantados requisitos funcionais e não funcionais.
- E criados fluxogramas para demonstrar os processos com clareza e encontrar
- possíveis pontos de falha.
 \end_layout
 
-\begin_layout Subsection
-Modelagem da Interface Gráfica do Usuário
+\begin_layout Subsubsection
+Itens não implementados
 \end_layout
 
 \begin_layout Standard
-Para demonstrar as interfaces a serem desenvolvidas serão criados 
-\shape italic
-\size small
-wireframes
-\shape default
-\size default
- de baixa e alta fidelidade.
- Inicialmente serão desenhados no papel e posteriormente passados para um
- software de modelagem.
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Código
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prioridade
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solicitar atualização de dados de faltas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baixa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Atualizar automaticamente dados dos alunos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Média
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tela de autenticação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exibir notas atualizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exibir faltas atualizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exibir relatório de todas disciplinas cursadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baixa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Consultar notas por ano e semestre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baixa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Consultar faltas por ano e semestre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baixa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Receber alerta quando houver notas lançadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Receber alerta quando houver uma nova falta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Média
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Itens implementados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Item
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sprint
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logar de forma automática no portal do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de faltas do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de notas do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados básicos do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Normalizar dados para consumo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Autenticar aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-07
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de faltas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-08
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de notas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Interface para documentação e testes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+Sprint 1
+\end_layout
+
+\begin_layout Standard
+A Sprint 1 se deteve a criar o mínimo para que seja possível logar no Portal
+ do Aluno SenacRS através de um módulo NPM facilmente instalável em qualquer
+ projeto nodejs.
+ Para atingir esse objetivo foi criado uma organização
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Organização Easyac: https://github.com/easyac
+\end_layout
+
+\end_inset
+
+ no Github, chamada de Easyac, onde estão todos os códigos desenvolvidos
+ para o projeto.
+\end_layout
+
+\begin_layout Standard
+Nessa Sprint, como dito, o objetivo maior era a criação do módulo crawler
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Repositório Crawler: https://github.com/easyac/crawler
+\end_layout
+
+\end_inset
+
+, que autentica o usuário e busca dados no Portal do Aluno SenacRS.
+\end_layout
+
+\begin_layout Standard
+O módulo de Crawler foi enviado para o NPM
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+NPM easyac-crawler: https://www.npmjs.com/package/easyac-crawler
+\end_layout
+
+\end_inset
+
+ e a qualidade de código avaliado com integração contínua pelo TravisCI
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+TravisCI: https://travis-ci.org/easyac/crawler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Itens do Backlog
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Item
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logar de forma automática no portal do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+User Stories
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 01
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de logar automaticamente no Portal do Aluno SenacRS.
+\end_layout
+
+\begin_layout Standard
+Para que eu possa extrair informações do portal sem necessidade de autenticar
+ a cada interação.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+Deve ser construído um módulo NPM e publicado para que seja possível utilizá-lo
+ em qualquer projeto nodejs.
+\end_layout
+
+\begin_layout Itemize
+A partir dos dados de um aluno(usuário, senha e unidade) o módulo(crawler)
+ deve navegar até a página de login do Portal do Aluno SenacRS, efetuar
+ o login e retornar a sessão do usuário.
+\end_layout
+
+\begin_layout Itemize
+Em caso de dados inválidos o módulo deverá retornar uma mensagem de erro
+ informando a falha no login.
+\end_layout
+
+\begin_layout Standard
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 02
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de buscar dados dos alunos dentro do Portal do Aluno SenacRS
+\end_layout
+
+\begin_layout Standard
+Para que eu possa utilizar em uma aplicação de terceiros.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+Deve-se retornar os dados básicos do aluno autenticado(código do aluno,
+ turmas).
+\end_layout
+
+\begin_layout Subsection
+Sprint 2
+\end_layout
+
+\begin_layout Subsubsection
+Itens do Backlog
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Item
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de faltas do aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de notas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+User Stories
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 03
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de extrair dados de faltas do Portal do Aluno SenacRS
+\end_layout
+
+\begin_layout Standard
+Para que eu possa utilizar esses valores em um sistema de terceiros.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A partir da sessão extraída na US-01 deve retornar em formato JSON todas
+ as faltas do aluno autenticado.
+\end_layout
+
+\begin_layout Itemize
+Caso haja algum erro no processo de extração dos dados deverá retornar uma
+ mensagem informando o erro ocorrido.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 04
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de extrair dados de notas do Portal do Aluno SenacRS
+\end_layout
+
+\begin_layout Standard
+Para que eu possa utilizar esses valores em um sistema de terceiros.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A partir da sessão extraída na US-01 deve retornar em formato JSON todas
+ as notas do aluno autenticado.
+\end_layout
+
+\begin_layout Itemize
+Caso haja algum erro no processo de extração dos dados deverá retornar uma
+ mensagem informando o erro ocorrido.
+\end_layout
+
+\begin_layout Subsection
+Sprint 3
+\end_layout
+
+\begin_layout Subsubsection
+Itens do Backlog
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Item
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Produto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Normalizar dados para consumo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crawler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Autenticar aluno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PBI-07
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Buscar dados de faltas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+API
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+User Stories
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 05
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de autenticar um aluno através de uma API
+\end_layout
+
+\begin_layout Standard
+Para que eu possa integrar os dados do aluno independente da plataforma.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A partir de um 
+\shape italic
+endpoint
+\shape default
+ REST deve ser possível logar um aluno no Portal do Aluno SenacRS e retornar
+ o um token autenticado para esse aluno.
+\end_layout
+
+\begin_layout Itemize
+O endpoint deve ser acessível via HTTPS.
+\end_layout
+
+\begin_layout Itemize
+Caso haja algum erro no processo deve-se retornar uma mensagem informando
+ o erro ocorrido.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 06
+\end_layout
+
+\begin_layout Standard
+Eu como desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de consultar as faltas de um aluno em uma API
+\end_layout
+
+\begin_layout Standard
+Para que eu possa integrar os dados do aluno independente da plataforma.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+Deve ser possível retornar as faltas de um aluno a partir de um endpoint
+ REST.
+\end_layout
+
+\begin_layout Itemize
+O endpoint deve ser acessível em HTTPS.
+\end_layout
+
+\begin_layout Itemize
+O endpoint deve ser protegido com autenticação via cabeçalho HTTP.
+\end_layout
+
+\begin_layout Itemize
+Caso não seja passado o token autenticado no cabeçalho da requisição o sistema
+ deve retornar uma mensagem informando que a requisição não é autorizada
+ com HTTP Status Code 401.
+\end_layout
+
+\begin_layout Subsubsection
 Modelagem de Dados
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -405,33 +1871,29 @@ schema
 s, onde a estrutura é imaginada como uma consulta única e não relacional.
 \end_layout
 
-\begin_layout Subsubsection
-Modelagem JSON
-\end_layout
-
 \begin_layout Standard
 A partir do módulo mongoose é possível adicionar a uma coleção uma modelagem
  baseada em schemas e, assim, trabalhar de forma mais organizadas os dados
  não estruturados do MongoDB.
  Adicionando validações e casting de informações, por exemplo.
- É possível ver a seguir definição dos esquemas de aluno(Figura 
+ É possível ver a seguir definição dos esquemas de aluno(Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Schema-Aluno"
+reference "alg:Schema-Aluno"
 
 \end_inset
 
-), Faltas(Figura 
+), Faltas(Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Schema-Faltas"
+reference "alg:Schema-Faltas"
 
 \end_inset
 
-) e Notas(Figura 
+) e Notas(Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Schema-Notas"
+reference "alg:Schema-Notas"
 
 \end_inset
 
@@ -447,7 +1909,7 @@ Cada schema definido através do mongoose se torna uma coleção(collection)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+\begin_inset Float algorithm
 wide false
 sideways false
 status open
@@ -459,7 +1921,7 @@ status open
 Schema Aluno
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Schema-Aluno"
+name "alg:Schema-Aluno"
 
 \end_inset
 
@@ -472,11 +1934,59 @@ name "fig:Schema-Aluno"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/icaro/Documentos/tcc/images/schema_aluno.png
-	width 33text%
-	height 33theight%
-	keepAspectRatio
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  'username': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'unity': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'password': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'cookie': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'webToken': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'isValidCookie': Boolean,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'createdAt': Date,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'lastSearch': Date
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -489,10 +1999,14 @@ name "fig:Schema-Aluno"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+\begin_inset Float algorithm
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -501,7 +2015,7 @@ status open
 Schema Faltas
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Schema-Faltas"
+name "alg:Schema-Faltas"
 
 \end_inset
 
@@ -514,9 +2028,49 @@ name "fig:Schema-Faltas"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/icaro/Documentos/tcc/images/schema_falta.png
-	width 25text%
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  'alunoId': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'cursoId': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'disciplina': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'ano': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'semestre': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'faltas': Number
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -529,7 +2083,7 @@ name "fig:Schema-Faltas"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+\begin_inset Float algorithm
 wide false
 sideways false
 status open
@@ -545,7 +2099,7 @@ status open
 Schema Notas
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Schema-Notas"
+name "alg:Schema-Notas"
 
 \end_inset
 
@@ -558,9 +2112,84 @@ name "fig:Schema-Notas"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/icaro/Documentos/tcc/images/schema_nota.png
-	width 40text%
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  'alunoId': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'cursoId': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'disciplina': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'ano': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'semestre': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'conceito': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  'parciais': [
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+      'descricao': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+      'ordemParcial': Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+      'valorAvaliacaoParcial': String,
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
