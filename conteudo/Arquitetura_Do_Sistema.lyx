@@ -1848,7 +1848,7 @@ US 05
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -1870,8 +1870,12 @@ A partir de um
 \shape italic
 endpoint
 \shape default
- REST deve ser possível logar um aluno no Portal do Aluno SenacRS e retornar
- o um token autenticado para esse aluno.
+ REST, deve ser possível logar um aluno no Portal do Aluno SenacRS.
+\end_layout
+
+\begin_layout Itemize
+Deve-se retornar um token autenticado do aluno, caso o login seja efetuado
+ com sucesso.
 \end_layout
 
 \begin_layout Itemize
@@ -1879,7 +1883,7 @@ O endpoint deve ser acessível via HTTPS.
 \end_layout
 
 \begin_layout Itemize
-Caso haja algum erro no processo deve-se retornar uma mensagem informando
+Caso haja algum erro no processo, deve-se retornar uma mensagem informando
  o erro ocorrido.
 \end_layout
 
@@ -1890,7 +1894,7 @@ US 06
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -1908,7 +1912,10 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-Deve ser possível retornar as faltas de um aluno a partir de um endpoint
+Deve ser possível retornar as faltas de um aluno a partir de um 
+\shape italic
+endpoint
+\shape default
  REST.
 \end_layout
 
@@ -1921,8 +1928,8 @@ O endpoint deve ser protegido com autenticação via cabeçalho HTTP.
 \end_layout
 
 \begin_layout Itemize
-Caso não seja passado o token autenticado no cabeçalho da requisição o sistema
- deve retornar uma mensagem informando que a requisição não é autorizada
+Caso não seja passado o token autenticado no cabeçalho da requisição, o
+ sistema deve retornar uma mensagem informando que a requisição não é autorizada
  com HTTP Status Code 401.
 \end_layout
 
@@ -1931,55 +1938,59 @@ Modelagem de Dados
 \end_layout
 
 \begin_layout Standard
-O sistema foi construído utilizando como banco de dados principal o MongoDB,
- que por sua natureza NOSQL baseada em documentos não possui 
-\shape italic
-\size small
-schema
-\shape default
-\size default
-.
- O formato de documentos que o MongoDB utiliza é o BSON, um formato binário
- de JSON, com a capacidade de armazenar mais formatos (como datas).
- Para definição da estrutura dos documentos foi feita uma modelagem de documento
-s, onde a estrutura é imaginada como uma consulta única e não relacional.
+Para definição da estrutura dos documentos foi feita uma modelagem de documentos
+, onde a estrutura é imaginada como a resposta de uma consulta única e não
+ relacional.
+ 
 \end_layout
 
 \begin_layout Standard
-A partir do módulo mongoose é possível adicionar a uma coleção uma modelagem
- baseada em schemas e, assim, trabalhar de forma mais organizadas os dados
- não estruturados do MongoDB.
- Adicionando validações e casting de informações, por exemplo.
- É possível ver a seguir definição dos esquemas de aluno (Algoritmo 
+A partir do módulo mongoose, é possível adicionar a uma coleção uma modelagem
+ baseada em 
+\shape italic
+schemas
+\shape default
+ e, assim, criar validações de tipos de dados e trabalhar de forma mais
+ organizada os dados não estruturados do MongoDB.
+ 
+\end_layout
+
+\begin_layout Standard
+É possível ver a seguir a definição dos 
+\shape italic
+schemas
+\shape default
+ de aluno (Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Schema-Aluno"
 
 \end_inset
 
-), Faltas (Algoritmo 
+) e Faltas (Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Schema-Faltas"
 
 \end_inset
 
-) e Notas (Algoritmo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "alg:Schema-Notas"
-
-\end_inset
-
 ).
- 
 \end_layout
 
 \begin_layout Standard
-Cada schema definido através do mongoose se torna uma coleção (collection)
- no MongoDB.
- Como mencionado anteriormente, os dados foram modelados imaginado-os como
- resposta a uma consulta para que o processo de leitura seja otimizado.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2157,24 +2168,35 @@ Sprint 4
 \end_layout
 
 \begin_layout Standard
-Nessa sprint foi criada a rota faltante de busca de notas do aluno autenticado.
- E criada, através do Swagger Tools, uma documentação interativa da API.
- A partir de um arquivo descritivo no formato YAML é possível gerar uma
- interface para consumo da API.
+Nessa sprint foi criada a rota faltante para a busca de notas do aluno.
+ E, através do Swagger UI, foi gerada uma documentação interativa da API.
+ Como adicional, essa documentação foi personalizada para a paleta de cores
+ do projeto (tons de azul), criado um novo subdomínio
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://docs.easyac.xyz
+\end_layout
+
+\end_inset
+
+ e instalado um novo certificado de segurança.
  
 \end_layout
 
 \begin_layout Standard
-Adicionalmente, essa interface foi personalizada para a paleta de cores
- do projeto (tons de azul), criada uma nova url no servidor de produção
- e instalado um certificado para essa url.
- A documentação pode ser acessada em https://docs.easyac.xyz.
+Ao final da Sprint foi gerado um novo container docker
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/easyac/apidocs
 \end_layout
 
-\begin_layout Standard
-Foi criado um repositório e um container para a documentação.
- Além de ser adicionado ao docker-compose para que seja iniciada junto ao
- ecossistema criado.
+\end_inset
+
+ com o código da documentação e adicionado ao docker-compose.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2222,7 +2244,7 @@ Produto
 \begin_inset Text
 
 \begin_layout Plain Layout
-PBI-05
+PBI-08
 \end_layout
 
 \end_inset
@@ -2251,7 +2273,7 @@ API
 \begin_inset Text
 
 \begin_layout Plain Layout
-PBI-06
+PBI-09
 \end_layout
 
 \end_inset
@@ -2293,49 +2315,7 @@ US 07
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
-\end_layout
-
-\begin_layout Standard
-Desejo uma forma de autenticar um aluno através de uma API
-\end_layout
-
-\begin_layout Standard
-Para que eu possa integrar os dados do aluno independente da plataforma.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Critério de Aceitação
-\end_layout
-
-\begin_layout Itemize
-A partir de um 
-\shape italic
-endpoint
-\shape default
- REST deve ser possível logar um aluno no Portal do Aluno SenacRS e retornar
- o um token autenticado para esse aluno.
-\end_layout
-
-\begin_layout Itemize
-O endpoint deve ser acessível via HTTPS.
-\end_layout
-
-\begin_layout Itemize
-Caso haja algum erro no processo deve-se retornar uma mensagem informando
- o erro ocorrido.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-US 06
-\end_layout
-
-\begin_layout Standard
-Eu como desenvolvedor
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -2353,7 +2333,10 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-Deve ser possível retornar as notas de um aluno a partir de um endpoint
+Deve ser possível retornar as notas de um aluno a partir de um 
+\shape italic
+endpoint
+\shape default
  REST.
 \end_layout
 
@@ -2366,9 +2349,61 @@ O endpoint deve ser protegido com autenticação via cabeçalho HTTP.
 \end_layout
 
 \begin_layout Itemize
-Caso não seja passado o token autenticado no cabeçalho da requisição o sistema
- deve retornar uma mensagem informando que a requisição não é autorizada
+Caso não seja passado o token autenticado no cabeçalho da requisição, o
+ sistema deve retornar uma mensagem informando que a requisição não é autorizada
  com HTTP Status Code 401.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+US 08
+\end_layout
+
+\begin_layout Standard
+Eu, como desenvolvedor,
+\end_layout
+
+\begin_layout Standard
+Desejo uma forma de consultar a documentação da API
+\end_layout
+
+\begin_layout Standard
+Para que eu possa entender o seu uso.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A documentação deve ser acessível em HTTPS.
+\end_layout
+
+\begin_layout Itemize
+Deve ser possível testar a API a partir da documentação
+\end_layout
+
+\begin_layout Itemize
+Deve possuir uma interface limpa e de uso simples.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -2380,10 +2415,6 @@ Modelagem de Dados
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2545,18 +2576,6 @@ name "fig:Tela-de-documentação"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Adicionar documentação expandida.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Adicionar tela inicial do Swagger
 \end_layout
 
 \end_body
