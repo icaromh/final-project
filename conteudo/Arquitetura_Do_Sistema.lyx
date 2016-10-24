@@ -1244,7 +1244,7 @@ https://travis-ci.org/easyac/crawler
 
 \begin_layout Standard
 Ao final da Sprint, com o código passando nos testes e as funcionalidades
- de login(US-01) e busca de dados(US-02) implementadas, o pacote foi publicado
+ de login (US-01) e busca de dados (US-02) implementadas, o pacote foi publicado
  no registro do NPM
 \begin_inset Foot
 status open
@@ -1375,7 +1375,7 @@ US 01
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor,
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -1399,7 +1399,7 @@ Deve ser construído um pacote NPM e publicado para que seja possível utilizá-
 \end_layout
 
 \begin_layout Itemize
-A partir dos dados de um aluno(usuário, senha e unidade), o módulo deve
+A partir dos dados de um aluno (usuário, senha e unidade), o módulo deve
  navegar até a página de login do Portal do Aluno SenacRS, efetuar o login
  e retornar a sessão do usuário.
 \end_layout
@@ -1420,7 +1420,7 @@ US 02
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor,
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -1438,7 +1438,7 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-Deve-se retornar os dados básicos do aluno autenticado(código do aluno,
+Deve-se retornar os dados básicos do aluno autenticado (código do aluno,
  turmas).
 \end_layout
 
@@ -1447,11 +1447,12 @@ Sprint 2
 \end_layout
 
 \begin_layout Standard
-Aqui ainda nao possui modelagem de dados porque nao há inserção no banco.
- Nessa sprint foram criadas as buscas de nota e falta de alunos, além de
- ser descoberto que há a necessidade de ter um normalizador dentro do crawler.
- Contrariando a arquitetura imaginada inicialmente, onde seria um microserviço.
- Os dados de saída do crawler ainda estão no formado bruto encontrado.
+Como continuação do desenvolvimento do Crawler, na Sprint 2 foram implementadas
+ as funcionalidades de busca de notas (US-03) e faltas do aluno (US-04)
+ autenticado.
+ Nesse processo, percebeu-se que que o Normalizer, antes imaginado como
+ um micro-serviço a parte, precisaria ser embutido dentro código do crawler
+ para melhor manuseio das informações.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1499,7 +1500,7 @@ Produto
 \begin_inset Text
 
 \begin_layout Plain Layout
-PBI-01
+PBI-02
 \end_layout
 
 \end_inset
@@ -1528,7 +1529,7 @@ Crawler
 \begin_inset Text
 
 \begin_layout Plain Layout
-PBI-04
+PBI-03
 \end_layout
 
 \end_inset
@@ -1537,7 +1538,7 @@ PBI-04
 \begin_inset Text
 
 \begin_layout Plain Layout
-Buscar dados de notas
+Buscar dados de notas do aluno
 \end_layout
 
 \end_inset
@@ -1570,7 +1571,7 @@ US 03
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -1588,13 +1589,17 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-A partir da sessão extraída na US-01 deve retornar em formato JSON todas
- as faltas do aluno autenticado.
+A partir da sessão extraída, deve-se retornar em formato JSON todas as faltas
+ do aluno autenticado.
 \end_layout
 
 \begin_layout Itemize
-Caso haja algum erro no processo de extração dos dados deverá retornar uma
- mensagem informando o erro ocorrido.
+Deve ser possível extrair dados retroativos de faltas do aluno.
+\end_layout
+
+\begin_layout Itemize
+Caso haja algum erro no processo de extração dos dados, deve-se retornar
+ uma mensagem informando o erro ocorrido.
 \end_layout
 
 \begin_layout Standard
@@ -1604,7 +1609,7 @@ US 04
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
+Eu, como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
@@ -1622,13 +1627,17 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-A partir da sessão extraída na US-01 deve retornar em formato JSON todas
- as notas do aluno autenticado.
+A partir da sessão extraída, deve-se retornar em formato JSON todas as notas
+ do aluno autenticado.
 \end_layout
 
 \begin_layout Itemize
-Caso haja algum erro no processo de extração dos dados deverá retornar uma
- mensagem informando o erro ocorrido.
+Deve ser possível extrair dados retroativos de notas do aluno.
+\end_layout
+
+\begin_layout Itemize
+Caso haja algum erro no processo de extração dos dados, deve-se retornar
+ uma mensagem informando o erro ocorrido.
 \end_layout
 
 \begin_layout Subsection
@@ -1636,57 +1645,62 @@ Sprint 3
 \end_layout
 
 \begin_layout Standard
-Nessa sprint foi iniciado o trabalho de normalizar os dados vindos do portal.
- Foi criada uma interface facade no crawler que facilita a extração dos
- dados e já normaliza a saída.
- 
+Etapa final do desenvolvimento do Crawler, a Sprint 3 inicia com a criação
+ de uma interface façade
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://sourcemaking.com/design_patterns/facade
+\end_layout
+
+\end_inset
+
+ que facilita o uso do Crawler e normaliza sua saída.
 \end_layout
 
 \begin_layout Standard
-Também nessa sprint foi iniciada a autenticação da API, por hora é o processo
- mais demorado do sistema, já que a autenticação é feita pelo próprio portal
- do aluno, por baixo dos panos.
- A API foi construída com o express e nginx.
- Para que os ambientes de produção e desenvolvimento fossem iguais nesse
- momento foram criadas imagens docker para a API
+Após a finalização e publicação do Crawler, partiu-se para o desenvolvimento
+ da API.
+ Para manter os ambientes de produção e desenvolvimento iguais, foram criados
+ containers Docker para API
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-link para repositório api
+https://github.com/easyac/api
 \end_layout
 
 \end_inset
 
- e o nginx
+, nginx
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-link para repositório container docker nginx
+https://github.com/easyac/nginx
 \end_layout
 
 \end_inset
 
-.
- E também utilizado o docker-compose para orquestrar os containers.
- Ainda nessa sprint.
+ e MongoDB, além de ser configurado o docker-compose
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/easyac/docker-compose
+\end_layout
+
+\end_inset
+
+ para orquestrá-los.
  
 \end_layout
 
 \begin_layout Standard
 Como uma das premissas do projeto é trafegar todos os dados utilizando uma
- conexão segura, nessa Sprint foi instalado um certificado de segurança,
- através do Let's Encrypt, no servidor de produção.
- O certificado instalado serve para as urls https://api.easyac.xyz e https://eayac.
-xyz que respectivamente são a url para consumo da API e a url do hotsite
- do projeto.
-\end_layout
-
-\begin_layout Standard
-Também nessa sprint foi iniciada a modelagem de dados e instanciado um novo
- container com mongoDB.
- Adicionado ao docker-compose.
+ conexão segura, nessa Sprint foram instalados certificados de segurança
+ no servidor de produção, de forma a atender as urls da API.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1926,7 +1940,7 @@ schema
 \size default
 .
  O formato de documentos que o MongoDB utiliza é o BSON, um formato binário
- de JSON, com a capacidade de armazenar mais formatos(como datas).
+ de JSON, com a capacidade de armazenar mais formatos (como datas).
  Para definição da estrutura dos documentos foi feita uma modelagem de documento
 s, onde a estrutura é imaginada como uma consulta única e não relacional.
 \end_layout
@@ -1936,21 +1950,21 @@ A partir do módulo mongoose é possível adicionar a uma coleção uma modelage
  baseada em schemas e, assim, trabalhar de forma mais organizadas os dados
  não estruturados do MongoDB.
  Adicionando validações e casting de informações, por exemplo.
- É possível ver a seguir definição dos esquemas de aluno(Algoritmo 
+ É possível ver a seguir definição dos esquemas de aluno (Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Schema-Aluno"
 
 \end_inset
 
-), Faltas(Algoritmo 
+), Faltas (Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Schema-Faltas"
 
 \end_inset
 
-) e Notas(Algoritmo 
+) e Notas (Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Schema-Notas"
@@ -1962,7 +1976,7 @@ reference "alg:Schema-Notas"
 \end_layout
 
 \begin_layout Standard
-Cada schema definido através do mongoose se torna uma coleção(collection)
+Cada schema definido através do mongoose se torna uma coleção (collection)
  no MongoDB.
  Como mencionado anteriormente, os dados foram modelados imaginado-os como
  resposta a uma consulta para que o processo de leitura seja otimizado.
@@ -2152,8 +2166,8 @@ Nessa sprint foi criada a rota faltante de busca de notas do aluno autenticado.
 
 \begin_layout Standard
 Adicionalmente, essa interface foi personalizada para a paleta de cores
- do projeto(tons de azul), criada uma nova url no servidor de produção e
- instalado um certificado para essa url.
+ do projeto (tons de azul), criada uma nova url no servidor de produção
+ e instalado um certificado para essa url.
  A documentação pode ser acessada em https://docs.easyac.xyz.
 \end_layout
 
