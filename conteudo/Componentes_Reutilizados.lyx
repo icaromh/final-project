@@ -440,5 +440,22 @@ Travis CI
  disponível em https://travis-ci.org/
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+e)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Swagger UI
+\series default
+ disponível em http://swagger.io/swagger-ui/
+\end_layout
+
 \end_body
 \end_document
