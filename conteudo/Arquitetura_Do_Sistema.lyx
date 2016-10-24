@@ -1202,59 +1202,61 @@ Sprint 1
 \end_layout
 
 \begin_layout Standard
-A Sprint 1 se deteve a criar o mínimo para que seja possível logar no Portal
- do Aluno SenacRS através de um módulo NPM facilmente instalável em qualquer
- projeto nodejs.
- Para atingir esse objetivo foi criado uma organização
+Com o objetivo principal de desenvolver o Crawler, a Sprint 1 iniciou com
+ a criação de uma organização pública no Github, chamada de Easyac
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-Organização Easyac: https://github.com/easyac
+https://github.com/easyac
 \end_layout
 
 \end_inset
 
- no Github, chamada de Easyac, onde estão todos os códigos desenvolvidos
- para o projeto.
+.
+ A partir dela, todos os repositórios relacionados ao projeto estão dispostos
+ em conjunto.
+ Dentro desta organização foi criado o repositório do Crawler
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/easyac/crawler
+\end_layout
+
+\end_inset
+
+.
+ A fim de manter a qualidade de código, o repositório foi configurado para
+ que a cada novo commit o código seja testado
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://travis-ci.org/easyac/crawler
+\end_layout
+
+\end_inset
+
+ automaticamente.
+ 
 \end_layout
 
 \begin_layout Standard
-Nessa Sprint, como dito, o objetivo maior era a criação do módulo crawler
+Ao final da Sprint, com o código passando nos testes e as funcionalidades
+ de login(US-01) e busca de dados(US-02) implementadas, o pacote foi publicado
+ no registro do NPM
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Repositório Crawler: https://github.com/easyac/crawler
+https://www.npmjs.com/package/easyac-crawler
 \end_layout
 
 \end_inset
 
-, que autentica o usuário e busca dados no Portal do Aluno SenacRS.
-\end_layout
-
-\begin_layout Standard
-O módulo de Crawler foi enviado para o NPM
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-NPM easyac-crawler: https://www.npmjs.com/package/easyac-crawler
-\end_layout
-
-\end_inset
-
- e a qualidade de código avaliado com integração contínua pelo TravisCI
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-TravisCI: https://travis-ci.org/easyac/crawler
-\end_layout
-
-\end_inset
-
-
+.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1373,11 +1375,11 @@ US 01
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
+Eu como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
-Desejo uma forma de logar automaticamente no Portal do Aluno SenacRS.
+Desejo uma forma de logar automaticamente no Portal do Aluno SenacRS
 \end_layout
 
 \begin_layout Standard
@@ -1392,14 +1394,14 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-Deve ser construído um módulo NPM e publicado para que seja possível utilizá-lo
- em qualquer projeto nodejs.
+Deve ser construído um pacote NPM e publicado para que seja possível utilizá-lo
+ em qualquer projeto NodeJS.
 \end_layout
 
 \begin_layout Itemize
-A partir dos dados de um aluno(usuário, senha e unidade) o módulo(crawler)
- deve navegar até a página de login do Portal do Aluno SenacRS, efetuar
- o login e retornar a sessão do usuário.
+A partir dos dados de um aluno(usuário, senha e unidade), o módulo deve
+ navegar até a página de login do Portal do Aluno SenacRS, efetuar o login
+ e retornar a sessão do usuário.
 \end_layout
 
 \begin_layout Itemize
@@ -1418,7 +1420,7 @@ US 02
 \end_layout
 
 \begin_layout Standard
-Eu como desenvolvedor
+Eu como desenvolvedor,
 \end_layout
 
 \begin_layout Standard
