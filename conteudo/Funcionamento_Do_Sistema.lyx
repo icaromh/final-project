@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -346,9 +348,8 @@ A partir dos artefatos levantados e documentados no capítulo anterior, criou-se
 
 \begin_layout Standard
 Para chegar no estado atual do projeto e possibilitar o acesso rápido às
- informações do aluno fez-se necessário desenvolver alguns serviços em separado:
+ informações do aluno, fez-se necessário desenvolver dois serviços separados:
  Crawler e API.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -363,15 +364,14 @@ O módulo Crawler é responsável por toda a navegação e extração de dados
 npm install easyac-crawler
 \series default
 .
- 
 \end_layout
 
 \begin_layout Standard
 Com as credenciais de acesso do aluno (senha, usuário e unidade) o módulo
  inicia uma instância do Electron a partir do Nightmare, navega até a página
  de login do Portal do Aluno SenacRS, aguarda o carregamento da página,
- preenche os dados de acesso, verifica se o login foi efetuado com sucesso
- testando se há uma mensagem de erro na página e, caso tenha sido um sucesso,
+ preenche os dados de acesso, verifica se o login foi efetuado com sucesso,
+ testando se há uma mensagem de erro na página, e, caso tenha obtido sucesso,
  retorna o valor do cookie de sessão autenticado do aluno.
  É possível ver o processo de forma simplificada no Algoritmo 
 \begin_inset CommandInset ref
@@ -380,15 +380,15 @@ reference "alg:Exemplo-de-login"
 
 \end_inset
 
-, onde a entrada são as credenciais e o resultado é o valor do cookie no
- console, ou uma mensagem informando um erro no processo.
+, no qual a entrada são as credenciais e o resultado é ou o valor do cookie
+ no console, ou uma mensagem informando um erro no processo.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -506,7 +506,7 @@ EasyacCrawler.login(user, password, unidade)
 
 \begin_layout Standard
 A autenticação do aluno é feita diretamente pelo portal do aluno, sem interferên
-cia do crawler ou qualquer serviço externo e pode ser observada no Algoritmo
+cia do Crawler ou qualquer serviço externo e pode ser observada no Algoritmo
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -528,7 +528,7 @@ reference "alg:Exemplo-de-login"
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -682,7 +682,7 @@ yield nightmare
 \begin_layout Standard
 Ao saber o valor do cookie de sessão do aluno, é possível iniciar o processo
  de extração de dados e, para que a navegação nas próximas páginas esteja
- autenticada, o crawler adiciona um cabeçalho à requisição informando o
+ autenticada, o Crawler adiciona um cabeçalho à requisição informando o
  valor da sessão.
  É possível ver no Algoritmo 
 \begin_inset CommandInset ref
@@ -691,14 +691,14 @@ reference "alg:Exemplo-de-uso-cookie"
 
 \end_inset
 
- na chave headers o Cookie sendo informado a partir de um parâmetro.
+, na chave headers, o Cookie sendo informado a partir de um parâmetro.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -820,16 +820,15 @@ Api.getCodigoAluno = function(cookie) {
 \begin_layout Standard
 Quando executada uma chamada ao crawler, o retorno é o código HTML da página
  gerada pelo Portal do Aluno e, para que seja possível trabalhar com os
- valores da página, o código passa por um processo chamado de “Parser”,
- através de uma chamada ao módulo Parser, interno do Crawler, o código HTML
+ valores da página, o código passa por um processo chamado de “Parser”.
+ Através de uma chamada ao módulo Parser, interno do Crawler, o código HTML
  é analisado e extrai-se as informações relevantes da página.
- O resultado dessa extração é um objeto JSON.
- 
+ O resultado desta extração é um objeto JSON.
 \end_layout
 
 \begin_layout Standard
 A fim de simplificar o uso do Crawler, foi adicionada uma interface facade
- que retorna uma saída normalizada e com o maior número de informações possível.
+ que retorna uma saída normalizada, com o maior número de informações possível.
  O crawler possui método chamado getTurmas que executa uma série de chamadas
  internas, organizadas de forma a simplificar o processo de extração dos
  dados, sem que o desenvolvedor necessite entender por completo a API do
@@ -850,38 +849,37 @@ API
 
 \begin_layout Standard
 Além do módulo crawler, foi desenvolvida uma API web com a finalidade de
- tornar acessíveis os dados do aluno, independente da plataforma ou linguagem
- a ser utilizadas.
+ tornar os dados do aluno acessíveis, independente da plataforma ou linguagem
+ a ser utilizada.
  A partir do módulo comentado anteriormente, junto ao módulo express, são
- expostos endpoints para login do usuário, leitura de notas e faltas e um,
- que força uma chamada ao crawler, e atualiza as informações a partir do
- portal do aluno em um banco de dados.
+ expostos endpoints para login do usuário, leitura de notas, faltas e atualizaçã
+o das informações a partir do portal do aluno em um banco de dados.
 \end_layout
 
 \begin_layout Standard
 O endpoint de login do aluno espera uma chamada HTTP com o verbo POST e
  o corpo da requisição em formato JSON contendo usuário, senha e unidade
  do aluno.
- Verifica-se se os dados estão preenchidos, e executa-se o método de login
- do Crawler.
- E, caso o usuário seja autenticado com sucesso, o username e a unidade
- do aluno são gravados no banco de dados e gerado um JSON Web Token com
- as informações username e id (autogerado pelo banco).
+ Verifica-se o preenchimento dos dados e executa-se o método de login do
+ Crawler.
+ Caso o usuário seja autenticado com sucesso, o username e a unidade do
+ aluno são gravados no banco de dados e gerado um JSON Web Token com as
+ informações username e id (autogerado pelo banco).
  O token gerado é enviado como resposta a chamada HTTP.
 \end_layout
 
 \begin_layout Standard
 O Token retornado é utilizado para autenticar as chamadas subsequentes.
  Caso exista algum aluno com o token, a API entende que ele está autorizado
- a buscar dados referentes a aquele aluno.
+ a buscar dados referentes àquele aluno.
  Os dados informados no token são criptografados a partir do algoritmo HMAC-SHA2
 56 e uma frase secreta, informada apenas no servidor da API.
 \end_layout
 
 \begin_layout Standard
 Nos endpoints /faltas e /notas é possível filtrar os resultados a partir
- de dois parâmetros: ano e semestre, ambos aceitam apenas caracteres numéricos
- e inteiros.
+ de dois parâmetros: ano e semestre.
+ Ambos aceitam apenas caracteres numéricos e inteiros.
  Quando efetuada uma chamada, como demonstrado no Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -889,8 +887,8 @@ reference "alg:Exemplo-de-chamada-faltas"
 
 \end_inset
 
-, o retorno é uma listagem das turmas do aluno, no ano e semestre informados
- ou todas e, contendo as informações do total de faltas (Algoritmo 
+, o retorno é uma listagem das turmas do aluno contendo as informações do
+ total de faltas (Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Exemplo-de-resposta-faltas"
@@ -911,7 +909,7 @@ reference "alg:Exemplo-de-resposta-notas"
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -986,7 +984,7 @@ curl -X GET
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1071,7 +1069,7 @@ status open
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1267,23 +1265,22 @@ status open
 \end_layout
 
 \begin_layout Standard
-A implementação, como visto no Algoritmo 
+Como visto no Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Código-da-rota-notas"
 
 \end_inset
 
-, da rota de busca de notas e faltas é muito semelhante, diferindo apenas
- nos campos a serem buscados e o modelo a ser chamado.
- 
+, a implementação da rota de busca de notas e faltas é muito semelhante,
+ diferindo apenas nos campos a serem buscados e o modelo a ser chamado.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1440,15 +1437,16 @@ Documentação API
 \end_layout
 
 \begin_layout Standard
-Complementando a API, foi desenvolvida uma interface web para exibir uma
- documentação de uso da API e uma forma de testar, através do browser, os
- endpoints existentes.
+Para complementar a API, foi desenvolvida uma interface web para exibir
+ uma documentação de uso da API e uma forma de testar, através do browser,
+ os endpoints existentes.
 \end_layout
 
 \begin_layout Standard
 A documentação é gerada através de um documento no formato .yml de acordo
  com a OpenAPI Specification (Especificação OpenAPI) e, exposta na internet,
  através da porta 80 sendo servida através do mesmo servidor nginx da API.
+ 
 \end_layout
 
 \end_body
