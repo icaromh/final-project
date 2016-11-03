@@ -339,159 +339,193 @@ Funcionamento do Sistema
 \end_layout
 
 \begin_layout Standard
-Nesta seção, você deve descrever em detalhes o funcionamento do sistema.
- Inclua detalhes não apenas do funcionamento do ponto de vista do usuário,
- mas também do funcionamento do 
-\emph on
-backend
-\emph default
- quando relevante.
+A partir dos artefatos levantados e documentados no capítulo anterior, criou-se
+ uma interface para visualização e consumo de dados do Portal do Aluno SenacRS.
+ 
+\end_layout
+
+\begin_layout Standard
+Para chegar no estado atual do projeto e possibilitar o acesso rápido às
+ informações do aluno fez-se necessário desenvolver alguns serviços em separado:
+ Crawler e API.
+ 
 \end_layout
 
 \begin_layout Subsection
-Funcionamento do Sistema desde projeto
+Crawler
 \end_layout
 
 \begin_layout Standard
-Para utilizar este modelo de TCC com o LyX, o aluno deverá, em primeiro
- lugar, obter a estrutura dos documentos, disponível no formato ZIP.
+O módulo Crawler é responsável por toda a navegação e extração de dados
+ do aluno no Portal do Aluno e pode ser facilmente instalado em qualquer
+ aplicação NodeJS com o comando 
+\series bold
+npm install easyac-crawler
+\series default
+.
+ 
 \end_layout
 
 \begin_layout Standard
-O formato de arquivos ZIP permite armazenar toda uma estrutura de diretórios
- e compactá-la de forma a facilitar a transferência entre diferentes computadore
-s.
- A estrutura de diretórios pode ser obtida a partir do link:
+Com as credenciais de acesso do aluno (senha, usuário e unidade) o módulo
+ inicia uma instância do Electron a partir do Nightmare, navega até a página
+ de login do Portal do Aluno SenacRS, aguarda o carregamento da página,
+ preenche os dados de acesso, verifica se o login foi efetuado com sucesso
+ testando se há uma mensagem de erro na página e, caso tenha sido um sucesso,
+ retorna o valor do cookie de sessão autenticado do aluno.
+ É possível ver o processo de forma simplificada no Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-login"
+
+\end_inset
+
+, onde a entrada são as credenciais e o resultado é o valor do cookie no
+ console, ou uma mensagem informando um erro no processo.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
-\align center
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
 
-\emph on
-https://github.com/rafasgj/senac-tcc-lyx/archive/master.zip
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-Após efetuar a cópia do arquivo, os dados do arquivo devem ser extraídos
- para um diretório, que será o 
-\emph on
-diretório raiz
-\emph default
- do projeto.
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Caption Standard
 
-\begin_layout Standard
-Uma vez que a estrutura de dados seja instalada, o aluno deverá utilizar
- o LyX para editar o modelo no qual deseja trabalhar.
- Existe um modelo para cada fase do TCC, e todos se encontram no diretório
- raiz do projeto.
- A edição do documento irá acompanhar o aluno ao longo do TCC, uma vez que
- os arquivos contendo os textos das seções são compartilhados entre os documento
-s, facilitando assim, a edição dos novos documentos quando uma das fases
- do TCC for finalizada.
-\end_layout
-
-\begin_layout Subsubsection
+\begin_layout Plain Layout
+Exemplo de login do módulo easyac-crawler
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Escolhendo-o-documento"
+name "alg:Exemplo-de-login"
 
 \end_inset
 
-Escolhendo o documento a ser editado
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+const EasyacCrawler  = require('easyac-crawler');
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+const user      = '631420378';
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+const password  = 'senha';
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+const unidade   = 63;
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+EasyacCrawler.login(user, password, unidade)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+  .then((cookie) => {
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+    console.log(cookie);
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+  })
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+  .catch((err) => {
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+    console.log('Houve um erro no login: ', err);
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+  });
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-O primeiro passo para editar o documento do TCC é escolher o documento correto
- a ser editado.
- Existem, no diretório raiz do projeto, três arquivos representando os documento
-s que devem ser gerados ao longo do TCC.
- Estes arquivos são os arquivos que devem se abertos utilizando o LyX para
- iniciar a edição.
-\end_layout
-
-\begin_layout Standard
-O arquivo 
-\family typewriter
-Plano_de_Trabalho.lyx
-\family default
- contém a estrutura utilizada para a edição do Plano de Trabalho, que é
- a primeira fase do projeto do TCC.
- Este documento deve ser entregue, em geral, até a sexta ou sétima semana
- de aula, durante a disciplina 
-\begin_inset Quotes eld
-\end_inset
-
-Trabalho de Conclusão de Curso I
-\begin_inset Quotes erd
-\end_inset
-
-.
- Após a aprovação do Plano de Trabalho, deverá se utilizado o arquivo 
-\family typewriter
-Relatorio_Parcial.lyx, que
-\family default
- contém a estrutura para a edição do Relatório Parcial de Projeto, documento
- que deve ser entregue ao final do primeiro semestre do projeto, e será
- defendido pelo aluno em uma banca para um professor avaliador.
- Este mesmo arquivo pode ser utilizado para a apresentação do Relatório
- de Andamento, que ocorre próximo da metade do segundo semestre do projeto
- de TCC (durante a disciplina 
-\begin_inset Quotes eld
-\end_inset
-
-Trabalho de Conclusão de Curso II
-\begin_inset Quotes erd
-\end_inset
-
-).
- O terceiro arquivo, 
-\family typewriter
-Relatorio_Final.lyx
-\family default
- contém a estrutura do documento final, que será apresentado na banca final,
- para dois professores avaliadores e para o orientador do TCC.
- Este arquivo final é responsável por gerar o documento que deverá ser entregue
- para a biblioteca em caso de aprovação.
-\end_layout
-
-\begin_layout Subsubsection
-Edição do documento
-\end_layout
-
-\begin_layout Standard
-Para editar o documento selecionado no primeiro passo (ver item 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Escolhendo-o-documento"
-
-\end_inset
-
-), siga as instruções contidas nas notas disponibilizadas (Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Exemplos-de-Notas"
-
-\end_inset
-
-).
- As notas não aparecem na versão final do documento, no entanto são importantes
- para o seu funcionamento correto, e por esse motivo não devem ser removidas.
- Para ocultar uma nota, clique no 
-\emph on
-label
-\emph default
+A autenticação do aluno é feita diretamente pelo portal do aluno, sem interferên
+cia do crawler ou qualquer serviço externo e pode ser observada no Algoritmo
  
-\begin_inset Quotes eld
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-validação"
+
 \end_inset
 
-Note
-\begin_inset Quotes erd
+, retirado da função de login visível no Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-login"
+
 \end_inset
 
 .
-\begin_inset Float figure
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
 wide false
 sideways false
 status open
@@ -500,13 +534,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Exemplo de validação do login
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Exemplos-de-Notas"
+name "alg:Exemplo-de-validação"
 
 \end_inset
 
-Exemplos de Notas dos documentos de TCC no LyX
+
 \end_layout
 
 \end_inset
@@ -515,13 +550,261 @@ Exemplos de Notas dos documentos de TCC no LyX
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+yield nightmare
+\end_layout
+
+\begin_layout Plain Layout
+
+    .useragent('Mozilla/5.0')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .goto('http://apsweb.senacrs.com.br/modulos/aluno')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .wait('a')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .click('a')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .wait(100)
+\end_layout
+
+\begin_layout Plain Layout
+
+    .wait('body')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .evaluate(function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+      oAjax.requester.map(function(el){ el.abort() });
+\end_layout
+
+\begin_layout Plain Layout
+
+    })
+\end_layout
+
+\begin_layout Plain Layout
+
+    .inject('js', __dirname + '/unidades.js')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .select('#lstUnidades', unidade)
+\end_layout
+
+\begin_layout Plain Layout
+
+    .type('#usr', username)
+\end_layout
+
+\begin_layout Plain Layout
+
+    .type('[name=passwd]', password)
+\end_layout
+
+\begin_layout Plain Layout
+
+    .click('#btnEntrar')
+\end_layout
+
+\begin_layout Plain Layout
+
+    .wait(function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+      var textFailed = document.querySelector('span[style="color:red"]');
+\end_layout
+
+\begin_layout Plain Layout
+
+      var loginFailed = textFailed 
+\end_layout
+
+\begin_layout Plain Layout
+
+		? textFailed.innerHTML.trim() !== ''
+\end_layout
+
+\begin_layout Plain Layout
+
+		: false;
+\end_layout
+
+\begin_layout Plain Layout
+
+      var loginSuccess  = document.querySelectorAll('iframe').length;
+\end_layout
+
+\begin_layout Plain Layout
+
+      return loginFailed || loginSuccess;
+\end_layout
+
+\begin_layout Plain Layout
+
+    });
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ao saber o valor do cookie de sessão do aluno, é possível iniciar o processo
+ de extração de dados e, para que a navegação nas próximas páginas esteja
+ autenticada, o crawler adiciona um cabeçalho à requisição informando o
+ valor da sessão.
+ É possível ver no Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-uso-cookie"
+
+\end_inset
+
+ na chave headers o Cookie sendo informado a partir de um parâmetro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de uso do Cookie em requisições
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Exemplo-de-uso-cookie"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Api.getCodigoAluno = function(cookie) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  return new Promise(function(resolve, reject){
+\end_layout
+
+\begin_layout Plain Layout
+
+    let url = 'http://apsweb.senacrs.com.br/modulos/aluno/index.php5';
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
 \begin_layout Plain Layout
 
-\size footnotesize
-Fonte: Autor do projeto.
+    baseRequest({
+\end_layout
+
+\begin_layout Plain Layout
+
+      url: url,
+\end_layout
+
+\begin_layout Plain Layout
+
+      method: 'GET',
+\end_layout
+
+\begin_layout Plain Layout
+
+      headers: {
+\end_layout
+
+\begin_layout Plain Layout
+
+        'Cookie': `PHPSESSID=${cookie};`
+\end_layout
+
+\begin_layout Plain Layout
+
+      },
+\end_layout
+
+\begin_layout Plain Layout
+
+    }, (err, data, body) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if(err) reject(err);
+\end_layout
+
+\begin_layout Plain Layout
+
+      resolve(Parser.dadosAluno.parse(body));
+\end_layout
+
+\begin_layout Plain Layout
+
+    });
+\end_layout
+
+\begin_layout Plain Layout
+
+  });
+\end_layout
+
+\begin_layout Plain Layout
+
+};
 \end_layout
 
 \end_inset
@@ -529,133 +812,643 @@ Fonte: Autor do projeto.
 
 \end_layout
 
-\begin_layout Subsubsection
-Edição das seções
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Para editar uma das seções do documento, o aluno deverá clicar no documento
- desejado, e escolher a opção 
-\emph on
-Edit
-\emph default
-.
- Ao executar essa ação, o LyX irá abrir o documento, mantendo, na medida
- do possível, a numeração das seções.
- O aluno deverá editar todas as seções que iniciam por 
-\begin_inset Quotes eld
-\end_inset
-
-Incluir
-\begin_inset Quotes erd
-\end_inset
-
-.
- Os outros elementos do texto, devem ser deixados como estão para garantir
- a formatação do documento final.
-\end_layout
-
-\begin_layout Subsubsection
-Visualização do documento
-\end_layout
-
-\begin_layout Standard
-Apesar do LyX aproximar a visualização do documento ao que seria a sua versão
- final, ele não mostra alguns elementos como as margens da página, ou o
- posicionamento final de elementos como figuras e tabelas.
- Para visualizar o documento como será impresso, é preciso utilizar a opção
+Quando executada uma chamada ao crawler, o retorno é o código HTML da página
+ gerada pelo Portal do Aluno e, para que seja possível trabalhar com os
+ valores da página, o código passa por um processo chamado de “Parser”,
+ através de uma chamada ao módulo Parser, interno do Crawler, o código HTML
+ é analisado e extrai-se as informações relevantes da página.
+ O resultado dessa extração é um objeto JSON.
  
-\begin_inset Quotes eld
-\end_inset
-
-Document
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-rightarrow$
 \end_layout
 
+\begin_layout Standard
+A fim de simplificar o uso do Crawler, foi adicionada uma interface facade
+ que retorna uma saída normalizada e com o maior número de informações possível.
+ O crawler possui método chamado getTurmas que executa uma série de chamadas
+ internas, organizadas de forma a simplificar o processo de extração dos
+ dados, sem que o desenvolvedor necessite entender por completo a API do
+ crawler.
+ O método getTurmas inicia encontrando todas as turmas do aluno, navega
+ até a página de notas do aluno, extrai os parâmetros necessários para buscar
+ a frequência de todos os semestres, efetua as chamadas buscando todos os
+ semestres, normaliza o resultado, transformando-o em uma listagem de turmas
+ com suas propriedades, executa chamadas para a página de notas, extrai
+ o todas as notas, popula a listagem de turmas com os valores obtidos e,
+ por fim, retorna esse objeto normalizado.
+ E, caso haja algum erro no processo, é retornada uma exceção.
+\end_layout
+
+\begin_layout Subsection
+API 
+\end_layout
+
+\begin_layout Standard
+Além do módulo crawler, foi desenvolvida uma API web com a finalidade de
+ tornar acessíveis os dados do aluno, independente da plataforma ou linguagem
+ a ser utilizadas.
+ A partir do módulo comentado anteriormente, junto ao módulo express, são
+ expostos endpoints para login do usuário, leitura de notas e faltas e um,
+ que força uma chamada ao crawler, e atualiza as informações a partir do
+ portal do aluno em um banco de dados.
+\end_layout
+
+\begin_layout Standard
+O endpoint de login do aluno espera uma chamada HTTP com o verbo POST e
+ o corpo da requisição em formato JSON contendo usuário, senha e unidade
+ do aluno.
+ Verifica-se se os dados estão preenchidos, e executa-se o método de login
+ do Crawler.
+ E, caso o usuário seja autenticado com sucesso, o username e a unidade
+ do aluno são gravados no banco de dados e gerado um JSON Web Token com
+ as informações username e id (autogerado pelo banco).
+ O token gerado é enviado como resposta a chamada HTTP.
+\end_layout
+
+\begin_layout Standard
+O Token retornado é utilizado para autenticar as chamadas subsequentes.
+ Caso exista algum aluno com o token, a API entende que ele está autorizado
+ a buscar dados referentes a aquele aluno.
+ Os dados informados no token são criptografados a partir do algoritmo HMAC-SHA2
+56 e uma frase secreta, informada apenas no servidor da API.
+\end_layout
+
+\begin_layout Standard
+Nos endpoints /faltas e /notas é possível filtrar os resultados a partir
+ de dois parâmetros: ano e semestre, ambos aceitam apenas caracteres numéricos
+ e inteiros.
+ Quando efetuada uma chamada, como demonstrado no Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-chamada-faltas"
+
 \end_inset
 
-View [PDF]
-\begin_inset Quotes erd
+, o retorno é uma listagem das turmas do aluno, no ano e semestre informados
+ ou todas e, contendo as informações do total de faltas (Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-resposta-faltas"
+
 \end_inset
 
- (menu 
-\emph on
-Documento
-\emph default
-, opção 
-\emph on
-View
-\emph default
+) ou os conceitos obtidos (Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Exemplo-de-resposta-notas"
+
+\end_inset
+
 ).
- Alternativamente, pode ser utilizada a combinação de teclas CTRL+R, ou
- o botão equivalente.
- Ao selecionar esta opção, o LyX irá gerar um arquivo PDF temporário e exibí-lo.
- O aluno pode escolher visualizar o arquivo sendo editado (sessão), ou o
- documento inteiro, selecionando o arquivo que define a estrutura do documento
- e acionando a opção de visualização.
-\end_layout
-
-\begin_layout Subsubsection
-Geração do documento para revisão ou impressão
 \end_layout
 
 \begin_layout Standard
-Para gerar o documento para revisão pelo orientador, ou para impressão para
- entregar o documento encadernado, o aluno deve habilitar a aba como o modelo
- do documento a ser exportado, e escolher a opção 
-\begin_inset Quotes eld
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de chamada HTTP para visualizar faltas
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Exemplo-de-chamada-faltas"
+
 \end_inset
 
-File
-\begin_inset ERT
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
 
-$
+TOKEN='eyJhbGciOzI1Ni.eyJVybmFtZSI6IjY.l9Uv28ftU2Jb25E7Ai1-bmUo'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+curl -X GET 
 \backslash
-rightarrow$
+
+\end_layout
+
+\begin_layout Plain Layout
+
+--header 'Accept: application/json' 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+--header 'Authorization: Bearer $TOKEN' 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+'https://api.easyac.xyz/faltas?ano=2016&semestre=2'
 \end_layout
 
 \end_inset
 
-Export
-\begin_inset ERT
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de resposta ao endopoint faltas
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Exemplo-de-resposta-faltas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
 
-$
-\backslash
-rightarrow$
+[
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    "cursoId": 365,
+\end_layout
+
+\begin_layout Plain Layout
+
+    "ano": 2016,
+\end_layout
+
+\begin_layout Plain Layout
+
+    "semestre": 2,
+\end_layout
+
+\begin_layout Plain Layout
+
+    "disciplina": "TCC I",
+\end_layout
+
+\begin_layout Plain Layout
+
+    "faltas": 8
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+]
 \end_layout
 
 \end_inset
 
-PDF
-\begin_inset Quotes erd
+
+\end_layout
+
 \end_inset
 
-.
- Existem várias opções para gerar o arquivo PDF, e normalmente a melhor
- opção é utilizar 
-\emph on
-PDF pdflatex
-\emph default
-.
+
 \end_layout
 
 \begin_layout Standard
-Uma vez escolhida a opção, será gerado um arquivo PDF que será gravado junto
- ao arquivo selecionado, na raiz do projeto.
- Este arquivo gerado deve ser enviado para o professor ou serviço de impressão.
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de resposta ao endpoint notas 
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Exemplo-de-resposta-notas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    "cursoId": 365,
+\end_layout
+
+\begin_layout Plain Layout
+
+    "ano": 2016,
+\end_layout
+
+\begin_layout Plain Layout
+
+    "semestre": 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+    "disciplina": "Tópicos Avançados em ADS",
+\end_layout
+
+\begin_layout Plain Layout
+
+    "conceito": "A",
+\end_layout
+
+\begin_layout Plain Layout
+
+    "parciais": [
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\end_layout
+
+\begin_layout Plain Layout
+
+        "descricao": "Proposta de Pesquisa",
+\end_layout
+
+\begin_layout Plain Layout
+
+        "ordemParcial": 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+        "valorAvaliacaoParcial": "B"
+\end_layout
+
+\begin_layout Plain Layout
+
+      },
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\end_layout
+
+\begin_layout Plain Layout
+
+        "descricao": "Realização da Pesquisa e Andamento - Parte1",
+\end_layout
+
+\begin_layout Plain Layout
+
+        "ordemParcial": 2,
+\end_layout
+
+\begin_layout Plain Layout
+
+        "valorAvaliacaoParcial": "B"
+\end_layout
+
+\begin_layout Plain Layout
+
+      },
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\end_layout
+
+\begin_layout Plain Layout
+
+        "descricao": "Realização da Pesquisa e Andamento - Parte2",
+\end_layout
+
+\begin_layout Plain Layout
+
+        "ordemParcial": 3,
+\end_layout
+
+\begin_layout Plain Layout
+
+        "valorAvaliacaoParcial": "A"
+\end_layout
+
+\begin_layout Plain Layout
+
+      },
+\end_layout
+
+\begin_layout Plain Layout
+
+      {
+\end_layout
+
+\begin_layout Plain Layout
+
+        "descricao": "Seminário com a apresentação final do trabalho",
+\end_layout
+
+\begin_layout Plain Layout
+
+        "ordemParcial": 4,
+\end_layout
+
+\begin_layout Plain Layout
+
+        "valorAvaliacaoParcial": "A"
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A implementação, como visto no Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Código-da-rota-notas"
+
+\end_inset
+
+, da rota de busca de notas e faltas é muito semelhante, diferindo apenas
+ nos campos a serem buscados e o modelo a ser chamado.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Código da rota de listagem de notas
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Código-da-rota-notas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+router.get('/', (req, res) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  const token = getToken(req);
+\end_layout
+
+\begin_layout Plain Layout
+
+  const payload = jwt.verify(token, Auth.jwtSecret);
+\end_layout
+
+\begin_layout Plain Layout
+
+  const queryFalta = { alunoId: payload.id };
+\end_layout
+
+\begin_layout Plain Layout
+
+  const filterFields = {
+\end_layout
+
+\begin_layout Plain Layout
+
+	alunoId: 0, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	_id: 0, __v: 0, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	'parciais._id': 0
+\end_layout
+
+\begin_layout Plain Layout
+
+  };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  if(req.query.ano)
+\end_layout
+
+\begin_layout Plain Layout
+
+    queryFalta.ano = req.query.ano;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if(req.query.semestre)
+\end_layout
+
+\begin_layout Plain Layout
+
+    queryFalta.semestre = req.query.semestre;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  Nota.find(queryFalta, filterFields, (err, faltas) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(err) res.status(400).send(err);
+\end_layout
+
+\begin_layout Plain Layout
+
+    res.send(faltas);
+\end_layout
+
+\begin_layout Plain Layout
+
+  });
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A API é exposta através da porta 3000 e, como proxy reverso, há um servidor
+ web nginx que recebe as requisições via HTTPS e repassa à API.
+\end_layout
+
+\begin_layout Subsection
+Documentação API
+\end_layout
+
+\begin_layout Standard
+Complementando a API, foi desenvolvida uma interface web para exibir uma
+ documentação de uso da API e uma forma de testar, através do browser, os
+ endpoints existentes.
+\end_layout
+
+\begin_layout Standard
+A documentação é gerada através de um documento no formato .yml de acordo
+ com a OpenAPI Specification (Especificação OpenAPI) e, exposta na internet,
+ através da porta 80 sendo servida através do mesmo servidor nginx da API.
 \end_layout
 
 \end_body

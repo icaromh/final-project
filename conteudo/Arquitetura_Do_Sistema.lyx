@@ -1369,6 +1369,7 @@ User Stories
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 01
@@ -1385,9 +1386,25 @@ Desejo uma forma de logar automaticamente no Portal do Aluno SenacRS
 \begin_layout Standard
 Para que eu possa extrair informações do portal sem necessidade de autenticar
  a cada interação.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -1410,10 +1427,7 @@ Em caso de dados inválidos o módulo deverá retornar uma mensagem de erro
 \end_layout
 
 \begin_layout Standard
-.
-\end_layout
-
-\begin_layout Standard
+\noindent
 
 \series bold
 US 02
@@ -1429,9 +1443,25 @@ Desejo uma forma de buscar dados dos alunos dentro do Portal do Aluno SenacRS
 
 \begin_layout Standard
 Para que eu possa utilizar em uma aplicação de terceiros.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -1565,6 +1595,7 @@ User Stories
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 03
@@ -1580,9 +1611,25 @@ Desejo uma forma de extrair dados de faltas do Portal do Aluno SenacRS
 
 \begin_layout Standard
 Para que eu possa utilizar esses valores em um sistema de terceiros.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -1603,6 +1650,7 @@ Caso haja algum erro no processo de extração dos dados, deve-se retornar
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 04
@@ -1618,9 +1666,25 @@ Desejo uma forma de extrair dados de notas do Portal do Aluno SenacRS
 
 \begin_layout Standard
 Para que eu possa utilizar esses valores em um sistema de terceiros.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -1842,6 +1906,7 @@ User Stories
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 05
@@ -1857,9 +1922,25 @@ Desejo uma forma de autenticar um aluno através de uma API
 
 \begin_layout Standard
 Para que eu possa integrar os dados do aluno independente da plataforma.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -1888,6 +1969,7 @@ Caso haja algum erro no processo, deve-se retornar uma mensagem informando
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 06
@@ -1903,9 +1985,26 @@ Desejo uma forma de consultar as faltas de um aluno em uma API
 
 \begin_layout Standard
 Para que eu possa integrar os dados do aluno independente da plataforma.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -2309,6 +2408,7 @@ User Stories
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 07
@@ -2324,9 +2424,25 @@ Desejo uma forma de consultar as notas de um aluno em uma API
 
 \begin_layout Standard
 Para que eu possa integrar os dados do aluno independente da plataforma.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
@@ -2355,6 +2471,7 @@ Caso não seja passado o token autenticado no cabeçalho da requisição, o
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 US 08
@@ -2370,9 +2487,25 @@ Desejo uma forma de consultar a documentação da API
 
 \begin_layout Standard
 Para que eu possa entender o seu uso.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Critério de Aceitação
