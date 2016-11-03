@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -445,7 +447,7 @@ Travis CI
 status open
 
 \begin_layout Plain Layout
-e)
+f)
 \end_layout
 
 \end_inset
@@ -455,6 +457,91 @@ e)
 Swagger UI
 \series default
  disponível em http://swagger.io/swagger-ui/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+g)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Express
+\series default
+ disponível em http://expressjs.com/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+h)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Mocha
+\series default
+ disponível em https://mochajs.org/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+i)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Istanbul
+\series default
+ disponível em https://istanbul.js.org/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+j)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Docker Compose
+\series default
+ disponível em https://docs.docker.com/compose/
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+k)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Nightmare
+\series default
+ disponível em http://www.nightmarejs.org/
 \end_layout
 
 \end_body
