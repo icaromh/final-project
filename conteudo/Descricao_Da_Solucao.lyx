@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -390,10 +392,21 @@ Os dados que aparecerão no aplicativo serão uma cópia exata dos apresentados
  Para que isso seja possível, será desenvolvido um robô que busque, de forma
  automática, os dados do aluno.
  O robô é uma implementação de um web crawler, o principal método de se
- obter informações de um website, tanto para indexação de motores de busca,
- quanto para arquivar dados.
+ obter informações de um 
+\shape italic
+\size small
+website
+\shape default
+\size default
+, tanto para indexação de motores de busca, quanto para arquivar dados.
  Isso é feito seguindo os caminhos dos links de uma página para outra, também
- chamado de “crawling”(
+ chamado de “
+\shape italic
+\size small
+crawling
+\shape default
+\size default
+”(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "andersen2007web"
@@ -426,9 +439,20 @@ begin{citacao}
 
 \end_inset
 
-O processo de ETL (Extract, Transform and Load) destina-se à extração, transform
-ação e carga dos dados de uma ou mais bases de dados de origem para uma
- ou mais bases de dados de destino (Data Warehouse).
+O processo de ETL (
+\shape italic
+\size small
+Extract, Transform and Load
+\shape default
+\size default
+) destina-se à extração, transformação e carga dos dados de uma ou mais
+ bases de dados de origem para uma ou mais bases de dados de destino (
+\shape italic
+\size small
+Data Warehouse
+\shape default
+\size default
+).
 \begin_inset CommandInset citation
 LatexCommand cite
 key "desmistificando-etl"
@@ -475,15 +499,30 @@ Application Programming Interface
 \begin_layout Standard
 A comunicação entre o banco de dados e o aplicativo se dará, como dito anteriorm
 ente, através de uma API pública.
- A forma de autenticação na API será através JWT (JSON Web Token), onde
- o usuário envia suas credenciais e é retornado um token, gerado pelo servidor,
- o qual é a chave de autenticação para utilizar os demais métodos da API,
- buscar dados de matrícula do aluno, por exemplo.
+ A forma de autenticação na API será através JWT (
+\shape italic
+\size small
+JSON Web Token
+\shape default
+\size default
+), onde o usuário envia suas credenciais e é retornado um 
+\shape italic
+\size small
+token
+\shape default
+\size default
+, gerado pelo servidor, o qual é a chave de autenticação para utilizar os
+ demais métodos da API, buscar dados de matrícula do aluno, por exemplo.
  É importante atentar-se que o usuário só tem acesso aos dados do aluno
  vinculados a ele.
  Por exemplo, quando um usuário se identifica com nome de usuário e senha
- válidos no Portal do Aluno, o token gerado só será válido para as informações
- referentes ao usuário informado.
+ válidos no Portal do Aluno, o 
+\shape italic
+\size small
+token
+\shape default
+\size default
+ gerado só será válido para as informações referentes ao usuário informado.
  Para garantir que os dados enviados pelo aluno para o servidor não sejam
  observados por analisadores de pacotes, todas as requisições serão criptografad
 as usando SSL (
@@ -501,8 +540,13 @@ Hyper Text Transfer Protocol Secure
 \begin_layout Standard
 Antes das requisições chegarem a API haverá um servidor NGINX que servirá
  como balanceador de carga entre algumas instâncias da API.
- E, também, como um servidor de proxy reverso, cacheando requisições iguais
- e não sobrecarregando os servidores.
+ E, também, como um servidor de 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ reverso, cacheando requisições iguais e não sobrecarregando os servidores.
  O modelo de exemplo da solução é visível na Figura
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -518,10 +562,6 @@ reference "fig:Modelo-exemplo-da-solucao"
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -564,10 +604,6 @@ Fonte:
  
 \size small
 Construída pelo autor do projeto
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset

@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -349,10 +351,21 @@ Business Value
 \end_layout
 
 \begin_layout Standard
-No Scrum as entregas são feitas em ciclos de trabalho chamadas de Sprints,
- normalmente de 2 a 4 semanas, definido para este projeto que tenham 2 semanas.
- Ao final de cada Sprint é entregue uma versão funcional e incremental do
- produto chamado de MVP(
+No Scrum as entregas são feitas em ciclos de trabalho chamadas de 
+\shape italic
+\size small
+Sprints
+\shape default
+\size default
+, normalmente de 2 a 4 semanas, definido para este projeto que tenham 2
+ semanas.
+ Ao final de cada 
+\shape italic
+\size small
+Sprint
+\shape default
+\size default
+ é entregue uma versão funcional e incremental do produto chamado de MVP(
 \shape italic
 Minimum Viable Product).
 \end_layout
@@ -428,8 +441,13 @@ key "pereira2007entendendo"
 \end_inset
 
 ) será escrito em cartões e fixado em um quadro de trabalho.
- Para ser possível visualizar o andamento da Sprint, será utilizado o Kanban
- com as fases: “
+ Para ser possível visualizar o andamento da 
+\shape italic
+\size small
+Sprint
+\shape default
+\size default
+, será utilizado o Kanban com as fases: “
 \shape italic
 To Do
 \shape default
@@ -452,12 +470,23 @@ Done
 Através das reuniões semanais será possível para o Scrum Master, definido
  como o professor orientador, acompanhar o andamento da Sprint, nessa reunião
  será mostrado o quadro de trabalho e possíveis tarefas bloqueantes.
- Ao final de cada Sprint há o 
+ Ao final de cada 
+\shape italic
+\size small
+Sprint
+\shape default
+\size default
+ há o 
 \shape italic
 Sprint Review
 \shape default
-, nessa reunião serão demonstrados todos os problemas da Sprint e tudo que
- aconteceu de forma adequada.
+, nessa reunião serão demonstrados todos os problemas da 
+\shape italic
+\size small
+Sprint
+\shape default
+\size default
+ e tudo que aconteceu de forma adequada.
  
 \end_layout
 

@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -362,12 +364,29 @@ key "about-node.js"
 \end_layout
 
 \begin_layout Subsection
-nginx
+NGINX
 \end_layout
 
 \begin_layout Standard
-nginx é um servidor HTTP e proxy reverso, um servidor proxy de e-mail e
- um servidor proxy TCP/UDP genérico, originalmente escrito por Igor Sysoev(
+NGINX é um servidor HTTP e 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ reverso, um servidor 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ de e-mail e um servidor 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ TCP/UDP genérico, originalmente escrito por Igor Sysoev(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "about-nginx"
@@ -376,9 +395,20 @@ key "about-nginx"
 
 ).
  Possui características de um servidor HTTP básico como servir arquivos
- estáticos, proxy reverso com cache, balanceamento de carga e suporta HTTP/2.
- Foi escolhido principalmente por ser um servidor de proxy reverso para
- servir as chamadas a API evitando assim a sobrecarga do servidor.
+ estáticos, 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ reverso com cache, balanceamento de carga e suporta HTTP/2.
+ Foi escolhido principalmente por ser um servidor de 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ reverso para servir as chamadas a API evitando assim a sobrecarga do servidor.
 \end_layout
 
 \begin_layout Subsection
@@ -396,9 +426,9 @@ key "what-docker"
 
 ).
  Utiliza o conceito de 
-\shape italic
-containers
-\shape default
+\size small
+contêineres
+\size default
  com benefícios similares a máquinas virtuais.
  Tais como alocação de recursos e isolamento de processos.
  Porém sua abordagem de arquitetura o torna muito mais portável e eficiente,
@@ -437,7 +467,7 @@ Comparativo entre arquitetura de VMs e Docker
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -574,11 +604,22 @@ NativeScript
 \end_layout
 
 \begin_layout Standard
-NativeScript é um framework para construir aplicativos iOS e Android nativos
- usando JavaScript e CSS.
+NativeScript é um 
+\shape italic
+\size small
+framework
+\shape default
+\size default
+ para construir aplicativos iOS e Android nativos usando JavaScript e CSS.
  NativeScript renderiza as interfaces de usuário através do motor de renderizaçã
-o nativo da plataforma, sem WebViews, resultando em uma performance e experiênci
-a do usuário como aplicativos nativos(
+o nativo da plataforma, sem 
+\shape italic
+\size small
+WebViews
+\shape default
+\size default
+, resultando em uma performance e experiência do usuário como aplicativos
+ nativos(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "about-nativescript"
@@ -586,7 +627,13 @@ key "about-nativescript"
 \end_inset
 
 ).
- O NativeScript, assim como outros frameworks, a exemplo do XAMARIN
+ O NativeScript, assim como outros 
+\shape italic
+\size small
+frameworks
+\shape default
+\size default
+, a exemplo do XAMARIN
 \begin_inset Foot
 status open
 
@@ -603,8 +650,13 @@ XAMARIN: saiba mais em https://www.xamarin.com
 
 \begin_layout Standard
 Foi escolhido pela familiaridade do autor com JavaScript, linguagem utilizada
- para desenvolver com NativeScript, por ser um projeto opensource e possuir
- uma comunidade altamente ativa.
+ para desenvolver com NativeScript, por ser um projeto 
+\shape italic
+\size small
+opensource
+\shape default
+\size default
+ e possuir uma comunidade altamente ativa.
 \end_layout
 
 \begin_layout Subsection
@@ -613,7 +665,13 @@ Travis CI
 
 \begin_layout Standard
 Travis CI é uma plataforma de integração contínua que é gratuita para projetos
- opensource hospedados no Github(
+ 
+\shape italic
+\size small
+opensource
+\shape default
+\size default
+ hospedados no Github(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "about-travis"
@@ -621,9 +679,12 @@ key "about-travis"
 \end_inset
 
 ).
- Trabalha com imagens docker pré-definidas e quando há alguma submissão
- de código ao Github inicia um novo container e executa os passos necessários
- para testar o código enviado.
+ Trabalha com imagens Docker pré-definidas e quando há alguma submissão
+ de código ao Github inicia um novo 
+\size small
+contêiner
+\size default
+ e executa os passos necessários para testar o código enviado.
  Ainda dentro do Travis CI é possível programá-lo para enviar notificações
  para outras plataformas e enviar o código para um servidor de produção.
  
@@ -651,7 +712,13 @@ Hospedado pelo desenvolvedor
 
  
 \shape default
-e ser gratuito para projetos opensource.
+e ser gratuito para projetos 
+\shape italic
+\size small
+opensource
+\shape default
+\size default
+.
 \end_layout
 
 \begin_layout Subsection
@@ -661,7 +728,7 @@ Git
 \begin_layout Standard
 Git é um sistema 
 \shape italic
-open source
+opensource
 \shape default
  de controle de versão distribuído(
 \begin_inset CommandInset citation
