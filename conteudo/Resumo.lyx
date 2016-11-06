@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -267,16 +269,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -332,15 +334,15 @@ Provides natbib 1
 \begin_body
 
 \begin_layout Abstract
-Em tempos de redes sociais e aplicativos nos avisando pró-ativamente sobre
- as mais diversas interações e atualizações em nossos meios é de se esperar
- que todas as informações que nos cercam sejam dessa forma.
+Em tempos de redes sociais e aplicativos nos avisando proativamente sobre
+ as mais diversas interações e atualizações em nossos meios, é de se esperar
+ que todas as informações nos cerquem dessa forma.
  Entre as informações relevantes que estamos expostos estão informações
- referêntes a nossa vida acadêmica e, diferente do que esperamos, o processo
- de obter informações relevantes sobre ela utilizando o Portal do Aluno
- SenacRS nao é um processo simples ou pró-ativo.
+ referentes a nossa vida acadêmica e, diferente do que esperamos, o processo
+ de obter informações relevantes sobre ela, utilizando o Portal do Aluno
+ SenacRS, não é um processo simples ou proativo.
  O projeto apresentado neste relatório tem como propósitos criar um aplicativo
- para ser uma fonte otimizada para acesso mobile dos dados do aluno e fornecer
+ mobile para ser fonte otimizada de acesso aos dados do aluno e fornecer
  notificações sobre alterações em suas informações acadêmicas, como notas
  e dados financeiros.
 \end_layout

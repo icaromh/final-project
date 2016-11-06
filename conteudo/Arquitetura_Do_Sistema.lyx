@@ -341,17 +341,13 @@ Arquitetura do Sistema
 \begin_layout Standard
 Os artefatos do sistema estão dispostos dentro das 
 \shape italic
-\size small
 Sprints
 \shape default
-\size default
  e são adicionados conforme as interações.
  A cada interação os itens do 
 \shape italic
-\size small
 Product Backlog
 \shape default
-\size default
  são atualizados e mudam de 
 \begin_inset Quotes eld
 \end_inset
@@ -405,10 +401,8 @@ status open
 \begin_layout Plain Layout
 Itens não implementados do 
 \shape italic
-\size small
 Product Backlog
 \shape default
-\size default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -779,19 +773,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Itens implementados do 
 \shape italic
-\size small
 Product Backlog
 \shape default
-\size default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -1226,10 +1214,8 @@ Sprint 1
 \begin_layout Standard
 Com o objetivo principal de desenvolver o Crawler, a 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  1 iniciou com a criação de uma organização pública no Github, chamada de
  Easyac
 \begin_inset Foot
@@ -1258,10 +1244,8 @@ https://github.com/easyac/crawler
  A fim de manter a qualidade de código, o repositório foi configurado para
  que a cada novo 
 \shape italic
-\size small
 commit
 \shape default
-\size default
  o código seja testado
 \begin_inset Foot
 status open
@@ -1279,10 +1263,8 @@ https://travis-ci.org/easyac/crawler
 \begin_layout Standard
 Ao final da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
 , com o código passando nos testes e as funcionalidades de login (US-01)
  e busca de dados (US-02) implementadas, o pacote foi publicado no registro
  do NPM
@@ -1306,10 +1288,8 @@ Itens do Backlog
 \begin_layout Standard
 Os itens implementados nessa 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  são apresentados na tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1327,19 +1307,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Itens implementados da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  1
 \begin_inset CommandInset label
 LatexCommand label
@@ -1585,15 +1559,13 @@ Sprint 2
 \begin_layout Standard
 Como continuação do desenvolvimento do Crawler, na 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  2 foram implementadas as funcionalidades de busca de notas (US-03) e faltas
  do aluno (US-04) autenticado.
- Nesse processo, percebeu-se que que o Normalizer, antes imaginado como
- um microsserviço a parte, precisaria ser embutido dentro código do Crawler
- para melhor manuseio das informações.
+ Nesse processo, percebeu-se que o Normalizer, antes imaginado como um microsser
+viço à parte, precisaria ser embutido dentro código do Crawler para melhor
+ manuseio das informações.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1603,10 +1575,8 @@ Itens do Backlog
 \begin_layout Standard
 Os itens implementados nessa 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  são apresentados na tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1624,19 +1594,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Itens implementados da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  2
 \begin_inset CommandInset label
 LatexCommand label
@@ -1888,10 +1852,8 @@ Sprint 3
 \begin_layout Standard
 Etapa final do desenvolvimento do Crawler, a 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  3 inicia com a criação de uma interface façade
 \begin_inset Foot
 status open
@@ -1902,18 +1864,14 @@ https://sourcemaking.com/design_patterns/facade
 
 \end_inset
 
- que facilita o uso do Crawler e normaliza sua saída.
+, que facilita o uso do Crawler e normaliza sua saída.
 \end_layout
 
 \begin_layout Standard
 Após a finalização e publicação do Crawler, partiu-se para o desenvolvimento
  da API.
  Para manter os ambientes de produção e desenvolvimento iguais, foram criados
- 
-\size small
-contêineres
-\size default
- Docker para API
+ contêineres Docker para API
 \begin_inset Foot
 status open
 
@@ -1951,10 +1909,8 @@ https://github.com/easyac/docker-compose
 Como uma das premissas do projeto é trafegar todos os dados utilizando uma
  conexão segura, nessa 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  foram instalados certificados de segurança no servidor de produção, de
  forma a atender as URLs da API.
 \end_layout
@@ -1966,10 +1922,8 @@ Itens do Backlog
 \begin_layout Standard
 Os itens implementados nessa 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  são apresentados na tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1987,19 +1941,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Itens implementados da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  3
 \begin_inset CommandInset label
 LatexCommand label
@@ -2215,20 +2163,16 @@ endpoint
 \begin_layout Itemize
 Deve-se retornar um 
 \shape italic
-\size small
 token
 \shape default
-\size default
  autenticado do aluno, caso o login seja efetuado com sucesso.
 \end_layout
 
 \begin_layout Itemize
 O 
 \shape italic
-\size small
 endpoint
 \shape default
-\size default
  deve ser acessível via HTTPS.
 \end_layout
 
@@ -2290,37 +2234,29 @@ endpoint
 \begin_layout Itemize
 O 
 \shape italic
-\size small
 endpoint
 \shape default
-\size default
  deve ser acessível em HTTPS.
 \end_layout
 
 \begin_layout Itemize
 O 
 \shape italic
-\size small
 endpoint
 \shape default
-\size default
  deve ser protegido com autenticação via cabeçalho HTTP.
 \end_layout
 
 \begin_layout Itemize
 Caso não seja passado o 
 \shape italic
-\size small
 token
 \shape default
-\size default
  autenticado no cabeçalho da requisição, o sistema deve retornar uma mensagem
  informando que a requisição não é autorizada com 
 \shape italic
-\size small
 HTTP Status Code
 \shape default
-\size default
  401.
 \end_layout
 
@@ -2330,8 +2266,8 @@ Modelagem de Dados
 
 \begin_layout Standard
 Para definição da estrutura dos documentos foi feita uma modelagem de documentos
-, onde a estrutura é imaginada como a resposta de uma consulta única e não
- relacional.
+, na qual a estrutura é imaginada como a resposta de uma consulta única
+ e não relacional.
  
 \end_layout
 
@@ -2380,10 +2316,8 @@ status open
 \begin_layout Plain Layout
 
 \shape italic
-\size small
 Schema
 \shape default
-\size default
  Aluno 
 \begin_inset CommandInset label
 LatexCommand label
@@ -2496,19 +2430,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \shape italic
-\size small
 Schema
 \shape default
-\size default
  Faltas
 \begin_inset CommandInset label
 LatexCommand label
@@ -2623,11 +2551,7 @@ Ao final da
 Sprint
 \shape default
 \size default
- foi gerado um novo 
-\size small
-contêiner
-\size default
- Docker
+ foi gerado um novo contêiner Docker
 \begin_inset Foot
 status open
 
@@ -2647,10 +2571,8 @@ Itens do Backlog
 \begin_layout Standard
 Os itens implementados nessa 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  são apresentados na tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2668,19 +2590,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Itens implementados da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  4
 \begin_inset CommandInset label
 LatexCommand label
@@ -2867,37 +2783,29 @@ endpoint
 \begin_layout Itemize
 O 
 \shape italic
-\size small
 endpoint
 \shape default
-\size default
  deve ser acessível em HTTPS.
 \end_layout
 
 \begin_layout Itemize
 O 
 \shape italic
-\size small
 endpoint
 \shape default
-\size default
  deve ser protegido com autenticação via cabeçalho HTTP.
 \end_layout
 
 \begin_layout Itemize
 Caso não seja passado o 
 \shape italic
-\size small
 token
 \shape default
-\size default
  autenticado no cabeçalho da requisição, o sistema deve retornar uma mensagem
  informando que a requisição não é autorizada com 
 \shape italic
-\size small
 HTTP Status Code
 \shape default
-\size default
  401.
 \end_layout
 
@@ -2968,10 +2876,8 @@ reference "fig:Schema-Notas"
 
  mostra o resultado da modelagem de dados realizada nesta 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
 .
 \end_layout
 
@@ -2982,19 +2888,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \shape italic
-\size small
 Schema
 \shape default
-\size default
  Notas
 \begin_inset CommandInset label
 LatexCommand label

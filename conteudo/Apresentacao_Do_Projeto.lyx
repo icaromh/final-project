@@ -343,7 +343,7 @@ Apresentação Geral do Projeto
 \begin_layout Standard
 Segundo Nielsen, 10 segundos é o tempo limite que um usuário mantém a atenção
  focada em um diálogo.
- Para períodos mais demorados, enquanto esperam o computador terminar de
+ Para períodos mais demorados, enquanto esperam o dispositivo terminar de
  carregar, os usuários querem efetuar outras tarefas (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -352,16 +352,22 @@ key "responsetimes-3-important-limits"
 \end_inset
 
 ).
- Para que o interesse não seja perdido, espera-se que sistemas web modernos
- sejam suficientemente rápidos.
+ Para que o interesse não seja perdido, espera-se que sistemas 
+\shape italic
+web
+\shape default
+ modernos sejam suficientemente rápidos.
  Contrariando o limite comentado por Nielsen, o Portal do Aluno SenacRS
- exibe a página de login no sistema após 10 a 40 segundos, apresentando
- um desempenho ainda mais baixo em redes móveis.
+ exibe a página de login no sistema após um período de 10 a 40 segundos,
+ apresentando um desempenho ainda mais baixo em redes móveis.
 \end_layout
 
 \begin_layout Standard
-A partir dessa problemática e, sendo percebido que o layout não foi desenhado
- para ser utilizado em dispositivos móveis, surgiu o Easyac
+A partir dessa problemática e, sendo percebido que o 
+\shape italic
+layout
+\shape default
+ não foi desenhado para ser utilizado em dispositivos móveis, surgiu o Easyac
 \begin_inset Foot
 status open
 
@@ -375,13 +381,17 @@ Easy
 
 \end_inset
 
-: uma aplicação mobile multiplataforma que notifica o aluno sobre alterações
- em suas notas e demais informações relevantes.
+: uma aplicação 
+\shape italic
+mobile
+\shape default
+ multiplataforma que notifica o aluno sobre alterações em suas notas e demais
+ informações relevantes.
  
 \end_layout
 
 \begin_layout Standard
-Para alcançar esse objetivo serão desenvolvidas aplicações distribuídas
+Para alcançar este objetivo serão desenvolvidas aplicações distribuídas
  que buscam os dados do aluno, os transformam em uma estrutura otimizada
  e alimentam o banco dados, verificando novas atualizações.
  Também serão disponibilizados outros dois projetos de código aberto, um

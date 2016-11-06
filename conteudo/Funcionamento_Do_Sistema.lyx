@@ -345,11 +345,7 @@ Funcionamento do Sistema
 \begin_layout Standard
 A partir dos artefatos levantados e documentados no capítulo anterior, criou-se
  uma interface para visualização e consumo de dados do Portal do Aluno SenacRS.
- 
-\end_layout
-
-\begin_layout Standard
-Para chegar no estado atual do projeto e possibilitar o acesso rápido às
+ Para chegar no estado atual do projeto e possibilitar o acesso rápido às
  informações do aluno, fez-se necessário desenvolver dois serviços separados:
  Crawler e API.
 \end_layout
@@ -376,10 +372,8 @@ Com as credenciais de acesso do aluno (senha, usuário e unidade) o módulo
  testando se há uma mensagem de erro na página, e, caso tenha obtido sucesso,
  retorna o valor do 
 \shape italic
-\size small
 cookie
 \shape default
-\size default
  de sessão autenticado do aluno.
  É possível ver o processo de forma simplificada na Figura 
 \begin_inset CommandInset ref
@@ -390,10 +384,8 @@ reference "fig:Exemplo-de-login"
 
 , no qual a entrada são as credenciais e o resultado é ou o valor do 
 \shape italic
-\size small
 cookie
 \shape default
-\size default
  no console, ou uma mensagem informando um erro no processo.
 \end_layout
 
@@ -401,7 +393,7 @@ cookie
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -546,7 +538,7 @@ reference "fig:Exemplo-de-login"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -719,10 +711,8 @@ Fonte:
 \begin_layout Standard
 Ao saber o valor do 
 \shape italic
-\size small
 cookie
 \shape default
-\size default
  de sessão do aluno, é possível iniciar o processo de extração de dados
  e, para que a navegação nas próximas páginas esteja autenticada, o Crawler
  adiciona um cabeçalho à requisição informando o valor da sessão.
@@ -735,16 +725,12 @@ reference "fig:Exemplo-de-uso-cookie"
 
 , na chave 
 \shape italic
-\size small
 headers
 \shape default
-\size default
 , o 
 \shape italic
-\size small
-Cookie
+cookie
 \shape default
-\size default
  sendo informado a partir de um parâmetro.
 \end_layout
 
@@ -752,7 +738,7 @@ Cookie
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -923,8 +909,8 @@ A fim de simplificar o uso do Crawler, foi adicionada uma interface façade
  a frequência de todos os semestres, efetua as chamadas buscando todos os
  semestres, normaliza o resultado, transformando-o em uma listagem de turmas
  com suas propriedades, executa chamadas para a página de notas, extrai
- o todas as notas, popula a listagem de turmas com os valores obtidos e,
- por fim, retorna esse objeto normalizado.
+ todas as notas, popula a listagem de turmas com os valores obtidos e, por
+ fim, retorna esse objeto normalizado.
  E, caso haja algum erro no processo, é retornada uma exceção.
 \end_layout
 
@@ -935,19 +921,15 @@ API
 \begin_layout Standard
 Além do módulo Crawler, foi desenvolvida uma API 
 \shape italic
-\size small
 web
 \shape default
-\size default
  com a finalidade de tornar os dados do aluno acessíveis, independente da
  plataforma ou linguagem a ser utilizada.
  A partir do módulo comentado anteriormente, junto ao módulo express, são
  expostos 
 \shape italic
-\size small
 endpoints
 \shape default
-\size default
  para login do usuário, leitura de notas, faltas e atualização das informações
  a partir do portal do aluno em um banco de dados.
 \end_layout
@@ -955,70 +937,52 @@ endpoints
 \begin_layout Standard
 O 
 \shape italic
-\size small
 endpoint
 \shape default
-\size default
  de login do aluno espera uma chamada HTTP com o verbo 
 \shape italic
-\size small
 POST
 \shape default
-\size default
  e o corpo da requisição em formato JSON contendo usuário, senha e unidade
  do aluno.
  Verifica-se o preenchimento dos dados e executa-se o método de login do
  Crawler.
  Caso o usuário seja autenticado com sucesso, o 
 \shape italic
-\size small
 username
 \shape default
-\size default
  e a unidade do aluno são gravados no banco de dados e gerado um 
 \shape italic
-\size small
 JSON Web Token
 \shape default
-\size default
  com as informações 
 \shape italic
-\size small
 username
 \shape default
-\size default
  e id (autogerado pelo banco).
  O 
 \shape italic
-\size small
 token
 \shape default
-\size default
  gerado é enviado como resposta a chamada HTTP.
 \end_layout
 
 \begin_layout Standard
 O 
 \shape italic
-\size small
 token
 \shape default
-\size default
  retornado é utilizado para autenticar as chamadas subsequentes.
  Caso exista algum aluno com o 
 \shape italic
-\size small
 token
 \shape default
-\size default
 , a API entende que ele está autorizado a buscar dados referentes àquele
  aluno.
  Os dados informados no 
 \shape italic
-\size small
 token
 \shape default
-\size default
  são criptografados a partir do algoritmo HMAC-SHA256 e uma frase secreta,
  informada apenas no servidor da API.
 \end_layout
@@ -1026,10 +990,8 @@ token
 \begin_layout Standard
 Nos 
 \shape italic
-\size small
 endpoints
 \shape default
-\size default
  /faltas e /notas é possível filtrar os resultados a partir de dois parâmetros:
  ano e semestre.
  Ambos aceitam apenas caracteres numéricos e inteiros.
@@ -1055,7 +1017,7 @@ reference "fig:Exemplo-de-resposta-faltas"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1139,7 +1101,7 @@ Fonte:
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1251,7 +1213,7 @@ reference "fig:Exemplo-da-implementação-rota-notas"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1410,17 +1372,13 @@ Fonte:
 \begin_layout Standard
 A API é exposta através da porta 3000 e, como 
 \shape italic
-\size small
 proxy
 \shape default
-\size default
  reverso, há um servidor 
 \shape italic
-\size small
 web
 \shape default
-\size default
- nginx que recebe as requisições via HTTPS e repassa à API.
+ NGINX que recebe as requisições via HTTPS e repassa à API.
 \end_layout
 
 \begin_layout Subsection
@@ -1431,16 +1389,12 @@ Documentação API
 Para complementar a API, foi desenvolvida uma interface web para exibir
  uma documentação de uso da API e uma forma de testar, através do 
 \shape italic
-\size small
 browser
 \shape default
-\size default
 , os 
 \shape italic
-\size small
 endpoints
 \shape default
-\size default
  existentes.
 \end_layout
 

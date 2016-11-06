@@ -352,7 +352,11 @@ reference "tab:Cronograma"
  Como definido na abordagem de desenvolvimento, as entregas serão feitas
  a cada duas semanas, acompanhadas de documentação e validação do MVP entregue.
  Podendo ao longo do projeto alterar o cronograma de acordo com novas prioridade
-s definidas na reunião de definição da Sprint.
+s definidas na reunião de definição da 
+\shape italic
+Sprint
+\shape default
+.
 \end_layout
 
 \begin_layout Standard
