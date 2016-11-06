@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -378,13 +380,23 @@ desktop: computador de mesa, notebooks.
 \end_layout
 
 \begin_layout Standard
-Na arquitetura atual do Portal do Aluno SenacRS, ao tentar acessar a página
+De acordo com estudo, usuários esperam páginas carregarem em até dois segundos,
+ depois do terceiro, cerca de 40% dos usuários abandonam o site (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "performance2segundos"
+
+\end_inset
+
+).
+ Na arquitetura atual do Portal do Aluno SenacRS, ao tentar acessar a página
  de login do usuário, o sistema redireciona para uma tela de sessão expirada
  e informa para clicar no link ou aguardar o redirecionamento.
  Esse processo leva em torno de 5 segundos.
  Após o usuário conseguir chegar na tela de login, há uma nova espera, agora
  para que o sistema liste as unidades do SENAC.
- Este processo pode demorar de 10 a 40 segundos, dependendo da rede do usuário.
+ Este processo pode demorar de 10 a 40 segundos, dependendo da velocidade
+ da rede.
  Em um dos testes efetuados, simulando uma rede 3G mediana
 \begin_inset Foot
 status open
@@ -404,44 +416,6 @@ reference "fig:Requisições-de-Rede"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{citacao}
-\end_layout
-
-\end_inset
-
-Usuários esperam páginas carregarem em dois segundos.
- Depois do terceiro, até 40% dos usuários abandonam o site.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "performance2segundos"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{citacao}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -590,7 +564,7 @@ Comparativo Portal do Aluno SenacRS e Easyac
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">

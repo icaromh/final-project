@@ -104,6 +104,7 @@
 % Set default figure and table placement
 \def\fps@figure{h}
 \def\fps@table{h}
+\def\fps@algorithm{h}
 
 % Bibliography configuration
 \usepackage[%
@@ -287,6 +288,7 @@ Provides natbib 1
 \output_sync 0
 \bibtex_command biber
 \index_command default
+\float_placement h
 \paperfontsize 12
 \spacing single
 \use_hyperref false
@@ -372,27 +374,34 @@ Com as credenciais de acesso do aluno (senha, usuário e unidade) o módulo
  de login do Portal do Aluno SenacRS, aguarda o carregamento da página,
  preenche os dados de acesso, verifica se o login foi efetuado com sucesso,
  testando se há uma mensagem de erro na página, e, caso tenha obtido sucesso,
- retorna o valor do cookie de sessão autenticado do aluno.
- É possível ver o processo de forma simplificada no Algoritmo 
+ retorna o valor do 
+\shape italic
+\size small
+cookie
+\shape default
+\size default
+ de sessão autenticado do aluno.
+ É possível ver o processo de forma simplificada na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Exemplo-de-login"
+reference "fig:Exemplo-de-login"
 
 \end_inset
 
-, no qual a entrada são as credenciais e o resultado é ou o valor do cookie
+, no qual a entrada são as credenciais e o resultado é ou o valor do 
+\shape italic
+\size small
+cookie
+\shape default
+\size default
  no console, ou uma mensagem informando um erro no processo.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -401,7 +410,7 @@ status collapsed
 Exemplo de login do módulo easyac-crawler
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:Exemplo-de-login"
+name "fig:Exemplo-de-login"
 
 \end_inset
 
@@ -499,6 +508,15 @@ EasyacCrawler.login(user, password, unidade)
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
 \end_inset
 
 
@@ -506,18 +524,18 @@ EasyacCrawler.login(user, password, unidade)
 
 \begin_layout Standard
 A autenticação do aluno é feita diretamente pelo portal do aluno, sem interferên
-cia do Crawler ou qualquer serviço externo e pode ser observada no Algoritmo
+cia do Crawler ou qualquer serviço externo e pode ser observada na Figura
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Exemplo-de-validação"
+reference "fig:Exemplo-de-validação"
 
 \end_inset
 
-, retirado da função de login visível no Algoritmo 
+, retirado da função de login visível na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Exemplo-de-login"
+reference "fig:Exemplo-de-login"
 
 \end_inset
 
@@ -525,10 +543,10 @@ reference "alg:Exemplo-de-login"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -537,7 +555,7 @@ status collapsed
 Exemplo de validação do login
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:Exemplo-de-validação"
+name "fig:Exemplo-de-validação"
 
 \end_inset
 
@@ -636,7 +654,12 @@ yield nightmare
 
 \begin_layout Plain Layout
 
-      var textFailed = document.querySelector('span[style="color:red"]');
+      var textFailed = 
+\end_layout
+
+\begin_layout Plain Layout
+
+        document.querySelector('span[style="color:red"]');
 \end_layout
 
 \begin_layout Plain Layout
@@ -656,7 +679,12 @@ yield nightmare
 
 \begin_layout Plain Layout
 
-      var loginSuccess  = document.querySelectorAll('iframe').length;
+      var loginSuccess = 
+\end_layout
+
+\begin_layout Plain Layout
+
+		document.querySelectorAll('iframe').length;
 \end_layout
 
 \begin_layout Plain Layout
@@ -674,31 +702,57 @@ yield nightmare
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Ao saber o valor do cookie de sessão do aluno, é possível iniciar o processo
- de extração de dados e, para que a navegação nas próximas páginas esteja
- autenticada, o Crawler adiciona um cabeçalho à requisição informando o
- valor da sessão.
- É possível ver no Algoritmo 
+Ao saber o valor do 
+\shape italic
+\size small
+cookie
+\shape default
+\size default
+ de sessão do aluno, é possível iniciar o processo de extração de dados
+ e, para que a navegação nas próximas páginas esteja autenticada, o Crawler
+ adiciona um cabeçalho à requisição informando o valor da sessão.
+ É possível ver na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Exemplo-de-uso-cookie"
+reference "fig:Exemplo-de-uso-cookie"
 
 \end_inset
 
-, na chave headers, o Cookie sendo informado a partir de um parâmetro.
+, na chave 
+\shape italic
+\size small
+headers
+\shape default
+\size default
+, o 
+\shape italic
+\size small
+Cookie
+\shape default
+\size default
+ sendo informado a partir de um parâmetro.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -708,10 +762,16 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Exemplo de uso do Cookie em requisições
+Exemplo de uso do 
+\shape italic
+\size small
+Cookie
+\shape default
+\size default
+ em requisições
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:Exemplo-de-uso-cookie"
+name "fig:Exemplo-de-uso-cookie"
 
 \end_inset
 
@@ -812,13 +872,38 @@ Api.getCodigoAluno = function(cookie) {
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Quando executada uma chamada ao crawler, o retorno é o código HTML da página
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quando executada uma chamada ao Crawler, o retorno é o código HTML da página
  gerada pelo Portal do Aluno e, para que seja possível trabalhar com os
  valores da página, o código passa por um processo chamado de “Parser”.
  Através de uma chamada ao módulo Parser, interno do Crawler, o código HTML
@@ -827,12 +912,12 @@ Quando executada uma chamada ao crawler, o retorno é o código HTML da página
 \end_layout
 
 \begin_layout Standard
-A fim de simplificar o uso do Crawler, foi adicionada uma interface facade
+A fim de simplificar o uso do Crawler, foi adicionada uma interface façade
  que retorna uma saída normalizada, com o maior número de informações possível.
- O crawler possui método chamado getTurmas que executa uma série de chamadas
+ O Crawler possui método chamado getTurmas que executa uma série de chamadas
  internas, organizadas de forma a simplificar o processo de extração dos
  dados, sem que o desenvolvedor necessite entender por completo a API do
- crawler.
+ Crawler.
  O método getTurmas inicia encontrando todas as turmas do aluno, navega
  até a página de notas do aluno, extrai os parâmetros necessários para buscar
  a frequência de todos os semestres, efetua as chamadas buscando todos os
@@ -848,68 +933,129 @@ API
 \end_layout
 
 \begin_layout Standard
-Além do módulo crawler, foi desenvolvida uma API web com a finalidade de
- tornar os dados do aluno acessíveis, independente da plataforma ou linguagem
- a ser utilizada.
+Além do módulo Crawler, foi desenvolvida uma API 
+\shape italic
+\size small
+web
+\shape default
+\size default
+ com a finalidade de tornar os dados do aluno acessíveis, independente da
+ plataforma ou linguagem a ser utilizada.
  A partir do módulo comentado anteriormente, junto ao módulo express, são
- expostos endpoints para login do usuário, leitura de notas, faltas e atualizaçã
-o das informações a partir do portal do aluno em um banco de dados.
+ expostos 
+\shape italic
+\size small
+endpoints
+\shape default
+\size default
+ para login do usuário, leitura de notas, faltas e atualização das informações
+ a partir do portal do aluno em um banco de dados.
 \end_layout
 
 \begin_layout Standard
-O endpoint de login do aluno espera uma chamada HTTP com o verbo POST e
- o corpo da requisição em formato JSON contendo usuário, senha e unidade
+O 
+\shape italic
+\size small
+endpoint
+\shape default
+\size default
+ de login do aluno espera uma chamada HTTP com o verbo 
+\shape italic
+\size small
+POST
+\shape default
+\size default
+ e o corpo da requisição em formato JSON contendo usuário, senha e unidade
  do aluno.
  Verifica-se o preenchimento dos dados e executa-se o método de login do
  Crawler.
- Caso o usuário seja autenticado com sucesso, o username e a unidade do
- aluno são gravados no banco de dados e gerado um JSON Web Token com as
- informações username e id (autogerado pelo banco).
- O token gerado é enviado como resposta a chamada HTTP.
+ Caso o usuário seja autenticado com sucesso, o 
+\shape italic
+\size small
+username
+\shape default
+\size default
+ e a unidade do aluno são gravados no banco de dados e gerado um 
+\shape italic
+\size small
+JSON Web Token
+\shape default
+\size default
+ com as informações 
+\shape italic
+\size small
+username
+\shape default
+\size default
+ e id (autogerado pelo banco).
+ O 
+\shape italic
+\size small
+token
+\shape default
+\size default
+ gerado é enviado como resposta a chamada HTTP.
 \end_layout
 
 \begin_layout Standard
-O Token retornado é utilizado para autenticar as chamadas subsequentes.
- Caso exista algum aluno com o token, a API entende que ele está autorizado
- a buscar dados referentes àquele aluno.
- Os dados informados no token são criptografados a partir do algoritmo HMAC-SHA2
-56 e uma frase secreta, informada apenas no servidor da API.
+O 
+\shape italic
+\size small
+token
+\shape default
+\size default
+ retornado é utilizado para autenticar as chamadas subsequentes.
+ Caso exista algum aluno com o 
+\shape italic
+\size small
+token
+\shape default
+\size default
+, a API entende que ele está autorizado a buscar dados referentes àquele
+ aluno.
+ Os dados informados no 
+\shape italic
+\size small
+token
+\shape default
+\size default
+ são criptografados a partir do algoritmo HMAC-SHA256 e uma frase secreta,
+ informada apenas no servidor da API.
 \end_layout
 
 \begin_layout Standard
-Nos endpoints /faltas e /notas é possível filtrar os resultados a partir
- de dois parâmetros: ano e semestre.
+Nos 
+\shape italic
+\size small
+endpoints
+\shape default
+\size default
+ /faltas e /notas é possível filtrar os resultados a partir de dois parâmetros:
+ ano e semestre.
  Ambos aceitam apenas caracteres numéricos e inteiros.
- Quando efetuada uma chamada, como demonstrado no Algoritmo 
+ Quando efetuada uma chamada, como demonstrado na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Exemplo-de-chamada-faltas"
+reference "fig:Exemplo-de-chamada-faltas"
 
 \end_inset
 
 , o retorno é uma listagem das turmas do aluno contendo as informações do
- total de faltas (Algoritmo 
+ total de faltas (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Exemplo-de-resposta-faltas"
+reference "fig:Exemplo-de-resposta-faltas"
 
 \end_inset
 
-) ou os conceitos obtidos (Algoritmo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "alg:Exemplo-de-resposta-notas"
-
-\end_inset
-
-).
+) ou os conceitos obtidos.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -918,7 +1064,7 @@ status collapsed
 Exemplo de chamada HTTP para visualizar faltas
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:Exemplo-de-chamada-faltas"
+name "fig:Exemplo-de-chamada-faltas"
 
 \end_inset
 
@@ -975,25 +1121,40 @@ curl -X GET
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Exemplo de resposta ao endopoint faltas
+Exemplo de resposta ao 
+\shape italic
+\size small
+endpoint
+\shape default
+\size default
+ faltas
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:Exemplo-de-resposta-faltas"
+name "fig:Exemplo-de-resposta-faltas"
 
 \end_inset
 
@@ -1060,203 +1221,13 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-wide false
-sideways false
-status collapsed
-
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Exemplo de resposta ao endpoint notas 
-\begin_inset CommandInset label
-LatexCommand label
-name "alg:Exemplo-de-resposta-notas"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-[
-\end_layout
-
-\begin_layout Plain Layout
-
-  {
-\end_layout
-
-\begin_layout Plain Layout
-
-    "cursoId": 365,
-\end_layout
-
-\begin_layout Plain Layout
-
-    "ano": 2016,
-\end_layout
-
-\begin_layout Plain Layout
-
-    "semestre": 1,
-\end_layout
-
-\begin_layout Plain Layout
-
-    "disciplina": "Tópicos Avançados em ADS",
-\end_layout
-
-\begin_layout Plain Layout
-
-    "conceito": "A",
-\end_layout
-
-\begin_layout Plain Layout
-
-    "parciais": [
-\end_layout
-
-\begin_layout Plain Layout
-
-      {
-\end_layout
-
-\begin_layout Plain Layout
-
-        "descricao": "Proposta de Pesquisa",
-\end_layout
-
-\begin_layout Plain Layout
-
-        "ordemParcial": 1,
-\end_layout
-
-\begin_layout Plain Layout
-
-        "valorAvaliacaoParcial": "B"
-\end_layout
-
-\begin_layout Plain Layout
-
-      },
-\end_layout
-
-\begin_layout Plain Layout
-
-      {
-\end_layout
-
-\begin_layout Plain Layout
-
-        "descricao": "Realização da Pesquisa e Andamento - Parte1",
-\end_layout
-
-\begin_layout Plain Layout
-
-        "ordemParcial": 2,
-\end_layout
-
-\begin_layout Plain Layout
-
-        "valorAvaliacaoParcial": "B"
-\end_layout
-
-\begin_layout Plain Layout
-
-      },
-\end_layout
-
-\begin_layout Plain Layout
-
-      {
-\end_layout
-
-\begin_layout Plain Layout
-
-        "descricao": "Realização da Pesquisa e Andamento - Parte2",
-\end_layout
-
-\begin_layout Plain Layout
-
-        "ordemParcial": 3,
-\end_layout
-
-\begin_layout Plain Layout
-
-        "valorAvaliacaoParcial": "A"
-\end_layout
-
-\begin_layout Plain Layout
-
-      },
-\end_layout
-
-\begin_layout Plain Layout
-
-      {
-\end_layout
-
-\begin_layout Plain Layout
-
-        "descricao": "Seminário com a apresentação final do trabalho",
-\end_layout
-
-\begin_layout Plain Layout
-
-        "ordemParcial": 4,
-\end_layout
-
-\begin_layout Plain Layout
-
-        "valorAvaliacaoParcial": "A"
-\end_layout
-
-\begin_layout Plain Layout
-
-      }
-\end_layout
-
-\begin_layout Plain Layout
-
-    ]
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-]
-\end_layout
-
-\end_inset
-
-
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
 \end_layout
 
 \end_inset
@@ -1265,10 +1236,10 @@ status open
 \end_layout
 
 \begin_layout Standard
-Como visto no Algoritmo 
+Como visto na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "alg:Código-da-rota-notas"
+reference "fig:Exemplo-da-implementação-rota-notas"
 
 \end_inset
 
@@ -1277,10 +1248,10 @@ reference "alg:Código-da-rota-notas"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1290,10 +1261,10 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Código da rota de listagem de notas
+Exemplo da implementação em nodejs da rota de notas
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:Código-da-rota-notas"
+name "fig:Exemplo-da-implementação-rota-notas"
 
 \end_inset
 
@@ -1422,14 +1393,34 @@ router.get('/', (req, res) => {
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-A API é exposta através da porta 3000 e, como proxy reverso, há um servidor
- web nginx que recebe as requisições via HTTPS e repassa à API.
+A API é exposta através da porta 3000 e, como 
+\shape italic
+\size small
+proxy
+\shape default
+\size default
+ reverso, há um servidor 
+\shape italic
+\size small
+web
+\shape default
+\size default
+ nginx que recebe as requisições via HTTPS e repassa à API.
 \end_layout
 
 \begin_layout Subsection
@@ -1438,14 +1429,31 @@ Documentação API
 
 \begin_layout Standard
 Para complementar a API, foi desenvolvida uma interface web para exibir
- uma documentação de uso da API e uma forma de testar, através do browser,
- os endpoints existentes.
+ uma documentação de uso da API e uma forma de testar, através do 
+\shape italic
+\size small
+browser
+\shape default
+\size default
+, os 
+\shape italic
+\size small
+endpoints
+\shape default
+\size default
+ existentes.
 \end_layout
 
 \begin_layout Standard
-A documentação é gerada através de um documento no formato .yml de acordo
- com a OpenAPI Specification (Especificação OpenAPI) e, exposta na internet,
- através da porta 80 sendo servida através do mesmo servidor nginx da API.
+A documentação é gerada através de um documento no formato YML de acordo
+ com a 
+\shape italic
+\size small
+OpenAPI Specification
+\shape default
+\size default
+ (Especificação OpenAPI) e, exposta na internet, através da porta 80 sendo
+ servida através do mesmo servidor NGINX da API.
  
 \end_layout
 

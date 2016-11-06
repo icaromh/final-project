@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -364,7 +366,11 @@ A partir dessa problemática e, sendo percebido que o layout não foi desenhado
 status open
 
 \begin_layout Plain Layout
-Easyac: Acrônimo para Easy e Senac - Senac fácil em inglês.
+Easyac: Acrônimo para 
+\shape italic
+Easy
+\shape default
+ e Senac - Senac fácil em inglês.
 \end_layout
 
 \end_inset
@@ -379,7 +385,7 @@ Para alcançar esse objetivo serão desenvolvidas aplicações distribuídas
  que buscam os dados do aluno, os transformam em uma estrutura otimizada
  e alimentam o banco dados, verificando novas atualizações.
  Também serão disponibilizados outros dois projetos de código aberto, um
- crawler responsável pela mineração dos dados do aluno, que pode ser acoplado
+ Crawler responsável pela mineração dos dados do aluno, que pode ser acoplado
  a qualquer aplicação node.js, e uma API com documentação para que seja possível
  integrar os dados do aluno a outros sistemas.
  Ambos só funcionarão com as devidas permissões e credenciais de acesso
