@@ -358,9 +358,8 @@ key "about-node.js"
 ).
  Possui o maior ecossistema de bibliotecas de código aberto do mundo, o
  NPM.
- Foi escolhido para manter a consistência entre as demais tecnologias, por
- tratar-se de JavaScript como servidor torna o desenvolvimento muito mais
- ágil.
+ Foi escolhido para manter a consistência entre banco de dados, aplicação
+ móvel e servidor web, tornando o desenvolvimento mais ágil.
 \end_layout
 
 \begin_layout Subsection
@@ -370,23 +369,17 @@ NGINX
 \begin_layout Standard
 NGINX é um servidor HTTP e 
 \shape italic
-\size small
 proxy
 \shape default
-\size default
  reverso, um servidor 
 \shape italic
-\size small
 proxy
 \shape default
-\size default
  de e-mail e um servidor 
 \shape italic
-\size small
 proxy
 \shape default
-\size default
- TCP/UDP genérico, originalmente escrito por Igor Sysoev(
+ TCP/UDP genérico, originalmente escrito por Igor Sysoev (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "about-nginx"
@@ -394,21 +387,21 @@ key "about-nginx"
 \end_inset
 
 ).
- Possui características de um servidor HTTP básico como servir arquivos
+ Possui características de um servidor HTTP básico, como servir arquivos
  estáticos, 
 \shape italic
-\size small
 proxy
 \shape default
-\size default
- reverso com cache, balanceamento de carga e suporta HTTP/2.
+ reverso com 
+\shape italic
+cache
+\shape default
+, balanceamento de carga e suporte a HTTP/2.
  Foi escolhido principalmente por ser um servidor de 
 \shape italic
-\size small
 proxy
 \shape default
-\size default
- reverso para servir as chamadas a API evitando assim a sobrecarga do servidor.
+ reverso para servir as chamadas a API, evitando assim a sobrecarga do servidor.
 \end_layout
 
 \begin_layout Subsection
@@ -417,7 +410,7 @@ Docker
 
 \begin_layout Standard
 Docker é uma plataforma aberta para desenvolvedores construírem, entregarem
- e executarem aplicações distribuídas independente do ambiente(
+ e executarem aplicações distribuídas independente do ambiente (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "what-docker"
@@ -425,15 +418,10 @@ key "what-docker"
 \end_inset
 
 ).
- Utiliza o conceito de 
-\size small
-contêineres
-\size default
- com benefícios similares a máquinas virtuais.
- Tais como alocação de recursos e isolamento de processos.
- Porém sua abordagem de arquitetura o torna muito mais portável e eficiente,
- enquanto máquinas virtuais simulam todo o sistema operacional o Docker
- faz uso de LXC(
+ Utiliza o conceito de contêineres com benefícios similares a máquinas virtuais,
+ tais como alocação de recursos e isolamento de processos, porém sua abordagem
+ de arquitetura o torna muito mais portável e eficiente, enquanto máquinas
+ virtuais simulam todo o sistema operacional, o Docker faz uso de LXC (
 \shape italic
 Linux Containers
 \shape default
@@ -560,8 +548,8 @@ MongoDB é um banco de dados
 opensource
 \shape default
  orientado a documentos que provê escala automática, alta performance e
- disponibilidade(MONGO, 2016).
- Elimina a necessidade de um ORM(
+ disponibilidade (MONGO, 2016).
+ Elimina a necessidade de um ORM (
 \shape italic
 Object Relational Mapping
 \shape default
@@ -570,7 +558,7 @@ Object Relational Mapping
 \shape italic
 opensource
 \shape default
- e possuir a maior comunidade entre os demais bancos de dados NOSQL(não
+ e possuir a maior comunidade entre os demais bancos de dados NOSQL (não
  somente SQL).
 \end_layout
 
@@ -585,7 +573,7 @@ Mongoose é um módulo de node.js que oferece uma solução simples e direta
 schema
 \shape default
  para modelar dados relacionados ao MongoDB.
- Ele trás validações, transformação de tipo de dados, gerador de consultas
+ Ele traz validações, transformação de tipo de dados, gerador de consultas
  e 
 \shape italic
 hooks
@@ -595,8 +583,7 @@ hooks
 \shape italic
 schemas
 \shape default
- e trabalhar em cima deles e, por suas demais características citadas anteriorme
-nte.
+ e trabalhar em cima deles.
 \end_layout
 
 \begin_layout Subsection
@@ -614,12 +601,10 @@ framework
  NativeScript renderiza as interfaces de usuário através do motor de renderizaçã
 o nativo da plataforma, sem 
 \shape italic
-\size small
 WebViews
 \shape default
-\size default
 , resultando em uma performance e experiência do usuário como aplicativos
- nativos(
+ nativos (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "about-nativescript"
@@ -629,10 +614,8 @@ key "about-nativescript"
 ).
  O NativeScript, assim como outros 
 \shape italic
-\size small
 frameworks
 \shape default
-\size default
 , a exemplo do XAMARIN
 \begin_inset Foot
 status open
@@ -644,7 +627,7 @@ XAMARIN: saiba mais em https://www.xamarin.com
 \end_inset
 
 , utiliza uma linguagem de programação para desenvolver o aplicativo e transpila
- para linguagem nativa do dispositivo, entregando à múltiplas plataformas.
+ para linguagem nativa do dispositivo, entregando a múltiplas plataformas.
  
 \end_layout
 
@@ -652,10 +635,8 @@ XAMARIN: saiba mais em https://www.xamarin.com
 Foi escolhido pela familiaridade do autor com JavaScript, linguagem utilizada
  para desenvolver com NativeScript, por ser um projeto 
 \shape italic
-\size small
 opensource
 \shape default
-\size default
  e possuir uma comunidade altamente ativa.
 \end_layout
 
@@ -667,10 +648,8 @@ Travis CI
 Travis CI é uma plataforma de integração contínua que é gratuita para projetos
  
 \shape italic
-\size small
 opensource
 \shape default
-\size default
  hospedados no Github(
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -679,19 +658,16 @@ key "about-travis"
 \end_inset
 
 ).
- Trabalha com imagens Docker pré-definidas e quando há alguma submissão
- de código ao Github inicia um novo 
-\size small
-contêiner
-\size default
- e executa os passos necessários para testar o código enviado.
+ Trabalha com imagens Docker predefinidas e, quando há alguma submissão
+ de código ao Github, inicia um novo contêiner e executa os passos necessários
+ para testar o código enviado.
  Ainda dentro do Travis CI é possível programá-lo para enviar notificações
  para outras plataformas e enviar o código para um servidor de produção.
  
 \end_layout
 
 \begin_layout Standard
-Foi escolhido, entre tantas outras plataformas de integração contínua por
+Foi escolhido, entre tantas outras plataformas de integração contínua, por
  não ser 
 \shape italic
 self-hosted
@@ -714,11 +690,7 @@ Hospedado pelo desenvolvedor
 \shape default
 e ser gratuito para projetos 
 \shape italic
-\size small
-opensource
-\shape default
-\size default
-.
+opensource.
 \end_layout
 
 \begin_layout Subsection
@@ -738,7 +710,7 @@ key "about-git"
 \end_inset
 
 ).
- Similar ao SVN e demais sistemas de controle de código porém mais rápido.
+ Similar ao SVN e demais sistemas de controle de código, porém mais rápido.
  Foi escolhido para manter o histórico de alterações e organizar novas funcional
 idades de forma eficiente.
  

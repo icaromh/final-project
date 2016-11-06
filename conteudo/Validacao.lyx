@@ -343,30 +343,24 @@ Validação
 \begin_layout Standard
 A validação foi feita ao longo do desenvolvimento do projeto a cada 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
 .
  Entre uma 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  e a próxima, foram levantados pontos que deixaram a desejar no desenvolvimento
  da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  e levados em consideração para o desenvolvimento da próxima.
  
 \end_layout
 
 \begin_layout Standard
-A fim de manter a qualidade de código escrito foram criados testes unitários
+A fim de manter a qualidade de código escrito, foram criados testes unitários
  para o módulo Crawler.
  Com o passar das 
 \shape italic
@@ -379,19 +373,15 @@ Sprints
  qual o percentual de cobertura de testes que um projeto possui.
  Este processo foi executado entre as 
 \shape italic
-\size small
 Sprints
 \shape default
-\size default
  3 e 4.
  O resultado recebido foi muito distante de positivo, com apenas 25% de
  cobertura de testes.
  Ao final da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  4, foi feito um trabalho de melhora na cobertura de testes, chegando a
  78% do projeto (Figura 
 \begin_inset CommandInset ref
@@ -410,14 +400,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Estado atual de cobertura de testes
+Tela de cobertura de testes gerada pelo Istanbul
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Estado-atual-de-cobertura-testes"
@@ -459,10 +445,8 @@ Fonte:
 \begin_layout Standard
 Para validar o resultado das 
 \shape italic
-\size small
 Sprints
 \shape default
-\size default
  foram usados critérios de aceitação nas Histórias de Usuário.
  Uma vez que a história possui todos os critérios de aceitação positivos,
  ela está pronta para ser liberada para produção.

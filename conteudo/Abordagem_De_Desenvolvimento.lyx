@@ -341,31 +341,24 @@ Abordagem de Desenvolvimento
 \end_layout
 
 \begin_layout Standard
-A metodologia de desenvolvimento escolhida foi o Scrum por ter como premissa
- entregas rápidas e que tenham valor de negócio(
+Por ter como premissa entregas rápidas e que tenham valor de negócio (
 \shape italic
 Business Value
 \shape default
-).
- Foi adaptado de forma que seja possível trabalhar apenas com uma pessoa.
-\end_layout
-
-\begin_layout Standard
-No Scrum as entregas são feitas em ciclos de trabalho chamadas de 
+), a metodologia de desenvolvimento escolhida foi o Scrum, porém adaptado
+ de forma que seja possível trabalhar apenas com uma pessoa.
+ No Scrum as entregas são feitas em ciclos de trabalho chamadas de 
 \shape italic
-\size small
 Sprints
 \shape default
-\size default
 , normalmente de 2 a 4 semanas, definido para este projeto que tenham 2
  semanas.
  Ao final de cada 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
- é entregue uma versão funcional e incremental do produto chamado de MVP(
+ é entregue uma versão funcional e incremental do produto chamado de MVP
+ (
 \shape italic
 Minimum Viable Product).
 \end_layout
@@ -433,7 +426,7 @@ Product Backlog
 \shape default
  que é “[...] uma lista de itens priorizados que incluem tudo o que precisa
  ser realizado, que possa ser associado com valor de negócio, para a finalização
- do projeto, sejam requisitos funcionais ou não [...]"(
+ do projeto, sejam requisitos funcionais ou não [...]" (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "pereira2007entendendo"
@@ -468,24 +461,24 @@ Done
 
 \begin_layout Standard
 Através das reuniões semanais será possível para o Scrum Master, definido
- como o professor orientador, acompanhar o andamento da Sprint, nessa reunião
- será mostrado o quadro de trabalho e possíveis tarefas bloqueantes.
- Ao final de cada 
+ como o professor orientador, acompanhar o andamento da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
+, nesta reunião será mostrado o quadro de trabalho e possíveis tarefas bloqueant
+es.
+ Ao final de cada 
+\shape italic
+Sprint
+\shape default
  há o 
 \shape italic
 Sprint Review
 \shape default
-, nessa reunião serão demonstrados todos os problemas da 
+, uma reunião na qual serão demonstrados todos os problemas da 
 \shape italic
-\size small
 Sprint
 \shape default
-\size default
  e tudo que aconteceu de forma adequada.
  
 \end_layout

@@ -342,16 +342,23 @@ Definição do Problema
 
 \begin_layout Standard
 No segundo semestre de 2015, aproximadamente 72% dos brasileiros possuíam
- acesso a internet através de smartphones(
+ acesso a internet através de 
+\shape italic
+smartphones
+\shape default
+(
 \begin_inset CommandInset citation
 LatexCommand cite
 key "nielsen-brasileiros-smartphones"
 
 \end_inset
 
-) caracterizando o Smartphone como meio mais comum de acesso a internet
- entre os brasileiros.
- Entretanto, nem todos os sites e sistemas são adaptados a esses dispositivos,
+), caracterizando o 
+\shape italic
+Smartphone
+\shape default
+ como meio mais comum de acesso a internet entre os brasileiros.
+ Entretanto, nem todos os sites e sistemas são adaptados a estes dispositivos,
  devido a suas características especiais, como o tamanho reduzido da tela,
  por exemplo.
 \end_layout
@@ -408,7 +415,7 @@ rede 3G mediana:100ms de latência e velocidade de 250kb/s à 750kb/s
 \end_inset
 
  o tempo necessário para liberar a inserção dos dados na tela inicial foi
- de 26.54 segundos como demonstrado na Figura
+ de 26,54 segundos, como demonstrado na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Requisições-de-Rede"
@@ -434,7 +441,7 @@ name "fig:Requisições-de-Rede"
 
 \end_inset
 
-Requisições de Rede feitas no carregamento da tela de login
+Requisições de rede feitas no carregamento da tela de login
 \end_layout
 
 \end_inset
@@ -467,8 +474,15 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
-O tamanho da fonte e layout também confirmam como o sistema não é otimizado
- para o acesso mobile, é possível ver na Figura 
+O tamanho da fonte e 
+\shape italic
+layout
+\shape default
+ também confirmam como o sistema não é otimizado para o acesso 
+\shape italic
+mobile
+\shape default
+, como é possível ver na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Processo-para-logar"
@@ -494,7 +508,17 @@ name "fig:Processo-para-logar"
 
 \end_inset
 
-Comparação layout em tela Desktop x Smartphone
+Comparação 
+\shape italic
+layout
+\shape default
+ em tela 
+\shape italic
+Desktop
+\shape default
+ x 
+\shape italic
+Smartphone
 \end_layout
 
 \end_inset
@@ -530,7 +554,7 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
-Conforme a Tabela
+Conforme a Tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Comparativo-Portal-do"
