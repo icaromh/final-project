@@ -3,11 +3,15 @@ SENAC TCC
 
 ## Cronograma
 
+
+
 ### TCC II 
 
 |Data | Atividade|
 |-----|-----|
 | **A Definir** | A Definir |
+
+
 
 ### TCC I 
 |Data | Atividade|
@@ -22,6 +26,9 @@ SENAC TCC
 | **~~10/11/2016~~** | ~~Simulação de banca~~ |
 | **~~17/11/2016~~** | ~~Postagem no Blackboard das **apresentações** para as bancas **(APS4)**~~ |
 | **~~19/11/2016~~** | ~~(sábado) Bancas de TCC1~~ |
+
+
+
 
 ## Créditos
 
