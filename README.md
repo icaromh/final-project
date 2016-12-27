@@ -1,5 +1,4 @@
 # SENAC TCC
-=========
 
 ## Cronograma
 
