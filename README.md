@@ -1,8 +1,10 @@
-# SENAC TCC
+SENAC TCC
+========
 
 ## Cronograma
 
 ### TCC II 
+
 |Data | Atividade|
 |-----|-----|
 | **A Definir** | A Definir |
