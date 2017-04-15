@@ -567,7 +567,7 @@ Mongoose
 \end_layout
 
 \begin_layout Standard
-Mongoose é um módulo de node.js que oferece uma solução simples e direta
+Mongoose é um módulo de Node.js que oferece uma solução simples e direta
  baseada em 
 \shape italic
 schema
@@ -631,21 +631,38 @@ XAMARIN: saiba mais em https://www.xamarin.com
  
 \end_layout
 
-\begin_layout Standard
-Foi escolhido pela familiaridade do autor com JavaScript, linguagem utilizada
- para desenvolver com NativeScript, por ser um projeto 
-\shape italic
-opensource
-\shape default
- e possuir uma comunidade altamente ativa.
-\end_layout
-
 \begin_layout Subsection
 IonicJS
 \end_layout
 
 \begin_layout Standard
-TEM QUE ESCREVER SOBRE O IONIC
+Ionic é um 
+\shape italic
+framework
+\shape default
+ para desenvolvimento de aplicativos móveis híbridos utilizando HTML5.
+ Aplicativos híbridos são, essencialmente, pequenos sites rodando em um
+ navegador dentro de um aplicativo que tem acesso a camada nativa do dispositivo.
+ Alguns benefícios sobre aplicativos nativos puros são percebidos no desenvolvim
+ento de aplicativos híbridos, tais como: velocidade no desenvolvimento,
+ suporte a plataformas e acesso a bibliotecas de terceiros (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-ionic"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Foi escolhido ao longo do projeto como 
+\shape italic
+framework
+\shape default
+ de desenvolvimento móvel por ter um melhor suporte e documentação do que
+ o NativeScript.
 \end_layout
 
 \begin_layout Subsection
@@ -653,11 +670,61 @@ Redis
 \end_layout
 
 \begin_layout Standard
-TEM QUE ESCREVER SOBRE O Redis 
+Redis é um armazenador 
+\shape italic
+open source
+\shape default
+ de estrutura de dados em memória, usado como banco de dados, cache e 
+\shape italic
+message broker 
+\shape default
+(
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-redis"
+
+\end_inset
+
+).
+ Foi estudado e escolhido pela capacidade de trabalhar com o padrão 
+\shape italic
+publish–subscribe
+\shape default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 \end_layout
 
-\begin_layout Enumerate
-Usado como message queue
+\end_inset
+
+ tornando possível a troca de mensagens entre os serviços desenvolvidos.
+\end_layout
+
+\begin_layout Subsection
+Mocha
+\end_layout
+
+\begin_layout Standard
+Mocha é um 
+\shape italic
+framework
+\shape default
+ de testes JavaScript capaz de executar testes unitários de forma síncrona
+ e assíncrona, possui alta flexibilidade e mapeia exceções não previstas
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "about-mocha"
+
+\end_inset
+
+).
+ Foi necessário para executar os testes unitários do projeto e escolhido
+ pela simples instalação tanto localmente quanto em um servidor de integração
+ contínua.
 \end_layout
 
 \begin_layout Subsection
@@ -670,7 +737,7 @@ Travis CI é uma plataforma de integração contínua que é gratuita para proje
 \shape italic
 opensource
 \shape default
- hospedados no Github(
+ hospedados no Github (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "about-travis"
