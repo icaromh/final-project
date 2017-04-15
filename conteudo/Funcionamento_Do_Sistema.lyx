@@ -346,8 +346,8 @@ Funcionamento do Sistema
 A partir dos artefatos levantados e documentados no capítulo anterior, criou-se
  uma interface para visualização e consumo de dados do Portal do Aluno SenacRS.
  Para chegar no estado atual do projeto e possibilitar o acesso rápido às
- informações do aluno, fez-se necessário desenvolver dois serviços separados:
- Crawler e API.
+ informações do aluno, fez-se necessário desenvolver três serviços separados:
+ Crawler, API e Worker.
 \end_layout
 
 \begin_layout Subsection
@@ -356,8 +356,8 @@ Crawler
 
 \begin_layout Standard
 O módulo Crawler é responsável por toda a navegação e extração de dados
- do aluno no Portal do Aluno e pode ser facilmente instalado em qualquer
- aplicação NodeJS com o comando 
+ do aluno no Portal do Aluno SenacRS e pode ser facilmente instalado em
+ qualquer aplicação NodeJS com o comando 
 \series bold
 npm install easyac-crawler
 \series default
@@ -382,7 +382,7 @@ reference "fig:Exemplo-de-login"
 
 \end_inset
 
-, no qual a entrada são as credenciais e o resultado é ou o valor do 
+, na qual a entrada são as credenciais e o resultado é ou o valor do 
 \shape italic
 cookie
 \shape default
@@ -393,7 +393,7 @@ cookie
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -538,7 +538,7 @@ reference "fig:Exemplo-de-login"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -738,11 +738,7 @@ cookie
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -890,8 +886,8 @@ break
 
 \begin_layout Standard
 Quando executada uma chamada ao Crawler, o retorno é o código HTML da página
- gerada pelo Portal do Aluno e, para que seja possível trabalhar com os
- valores da página, o código passa por um processo chamado de “Parser”.
+ gerada pelo Portal do Aluno SenacRS e, para que seja possível trabalhar
+ com os valores da página, o código passa por um processo chamado de “Parser”.
  Através de uma chamada ao módulo Parser, interno do Crawler, o código HTML
  é analisado e extrai-se as informações relevantes da página.
  O resultado desta extração é um objeto JSON.
@@ -911,7 +907,292 @@ A fim de simplificar o uso do Crawler, foi adicionada uma interface façade
  com suas propriedades, executa chamadas para a página de notas, extrai
  todas as notas, popula a listagem de turmas com os valores obtidos e, por
  fim, retorna esse objeto normalizado.
- E, caso haja algum erro no processo, é retornada uma exceção.
+ Caso haja algum erro no processo, é retornada uma exceção.
+\end_layout
+
+\begin_layout Subsection
+Worker
+\end_layout
+
+\begin_layout Standard
+O módulo Worker foi desenvolvido para efetuar assincronamente chamadas ao
+ Crawler a partir da API.
+ Quando uma requisição de login é recebida pela API, ela repassa essa informação
+, através de um sistema de mensageria, para o Worker, que então efetua o
+ login do aluno no Portal do Aluno, por exemplo.
+ No mesmo momento em que a API recebe a solicitação e a encaminha, também
+ responde com um status OK para o cliente que efetuou a requisição.
+ Desse modo é possível evitar uma sobrecarga no servidor da API, uma vez
+ que o Worker e o serviço de mensageria (Redis) são serviços desacoplados.
+\end_layout
+
+\begin_layout Standard
+Por não possuir acesso direto ao banco de dados, o Worker quando finaliza
+ sua tarefa, encaminha para a API uma mensagem informando o resultado.
+\end_layout
+
+\begin_layout Standard
+O Worker é um módulo enxuto e responsável por um pequeno grupo de tarefas
+ (Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Módulo-Worker"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Módulo-Worker:-Tarefa-login"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Módulo Worker
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Módulo-Worker"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+const NRP = require('node-redis-pubsub');
+\end_layout
+
+\begin_layout Plain Layout
+
+const Tasks = require('./tasks');
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+const config = {
+\end_layout
+
+\begin_layout Plain Layout
+
+  host: process.env.REDIS_HOST,
+\end_layout
+
+\begin_layout Plain Layout
+
+  port  : process.env.REDIS_PORT,
+\end_layout
+
+\begin_layout Plain Layout
+
+  scope : 'senac'
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+const nrp = new NRP(config);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+nrp.on('worker:login', (data) => Tasks.login(data, nrp));
+\end_layout
+
+\begin_layout Plain Layout
+
+nrp.on('worker:sync', (data) => Tasks.sync(data, nrp));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Módulo Worker: Tarefa Login
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Módulo-Worker:-Tarefa-login"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+const Easyac = require('easyac-crawler');
+\end_layout
+
+\begin_layout Plain Layout
+
+const debug = require('debug')('worker');
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+module.exports = (data, nrp) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  const {username, password, unity} = data;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  debug('Start login process for %s', username);
+\end_layout
+
+\begin_layout Plain Layout
+
+  Easyac
+\end_layout
+
+\begin_layout Plain Layout
+
+  .login(username, password, unity)
+\end_layout
+
+\begin_layout Plain Layout
+
+  .then(cookie => {
+\end_layout
+
+\begin_layout Plain Layout
+
+    debug('Cookie sucessfully found for %s', username);
+\end_layout
+
+\begin_layout Plain Layout
+
+    nrp.emit('api:save-cookie', {username, cookie});
+\end_layout
+
+\begin_layout Plain Layout
+
+  })
+\end_layout
+
+\begin_layout Plain Layout
+
+  .catch(err => debug(err));
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -925,41 +1206,20 @@ web
 \shape default
  com a finalidade de tornar os dados do aluno acessíveis, independente da
  plataforma ou linguagem a ser utilizada.
- A partir do módulo comentado anteriormente, junto ao módulo express, são
- expostos 
-\shape italic
-endpoints
-\shape default
- para login do usuário, leitura de notas, faltas e atualização das informações
- a partir do portal do aluno em um banco de dados.
+ 
 \end_layout
 
 \begin_layout Standard
-O 
-\shape italic
-endpoint
-\shape default
- de login do aluno espera uma chamada HTTP com o verbo 
-\shape italic
-POST
-\shape default
- e o corpo da requisição em formato JSON contendo usuário, senha e unidade
- do aluno.
- Verifica-se o preenchimento dos dados e executa-se o método de login do
- Crawler.
- Caso o usuário seja autenticado com sucesso, o 
-\shape italic
-username
-\shape default
- e a unidade do aluno são gravados no banco de dados e gerado um 
+Para utilizar todos os métodos da API é necessário criar um usuário através
+ de uma chamada HTTP com o verbo POST tendo o corpo da requisição em formato
+ JSON.
+ Após a criação de uma conta é necessário efetuar a autenticação, utilizando
+ o e-mail e senha informados na criação.
+ Caso o usuário seja autenticado com sucesso, é gerado um 
 \shape italic
 JSON Web Token
 \shape default
- com as informações 
-\shape italic
-username
-\shape default
- e id (autogerado pelo banco).
+ com as informações e-mail e id (autogerado pelo banco).
  O 
 \shape italic
 token
@@ -973,12 +1233,12 @@ O
 token
 \shape default
  retornado é utilizado para autenticar as chamadas subsequentes.
- Caso exista algum aluno com o 
+ Caso exista algum usuário com o 
 \shape italic
 token
 \shape default
 , a API entende que ele está autorizado a buscar dados referentes àquele
- aluno.
+ usuário.
  Os dados informados no 
 \shape italic
 token
@@ -988,11 +1248,11 @@ token
 \end_layout
 
 \begin_layout Standard
-Nos 
+No
 \shape italic
-endpoints
+ endpoint
 \shape default
- /faltas e /notas é possível filtrar os resultados a partir de dois parâmetros:
+ /classes é possível filtrar os resultados a partir de dois parâmetros:
  ano e semestre.
  Ambos aceitam apenas caracteres numéricos e inteiros.
  Quando efetuada uma chamada, como demonstrado na Figura 
@@ -1002,28 +1262,28 @@ reference "fig:Exemplo-de-chamada-faltas"
 
 \end_inset
 
-, o retorno é uma listagem das turmas do aluno contendo as informações do
- total de faltas (Figura 
+, o retorno é uma listagem das disciplinas do aluno contendo as informações
+ do total de faltas (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Exemplo-de-resposta-faltas"
 
 \end_inset
 
-) ou os conceitos obtidos.
+) e conceitos obtidos.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Exemplo de chamada HTTP para visualizar faltas
+Exemplo de chamada HTTP para visualizar disciplinas
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Exemplo-de-chamada-faltas"
@@ -1075,7 +1335,7 @@ curl -X GET
 
 \begin_layout Plain Layout
 
-'https://api.easyac.xyz/faltas?ano=2016&semestre=2'
+'https://api.easyac.xyz/classes?ano=2016&semestre=1'
 \end_layout
 
 \end_inset
@@ -1101,7 +1361,7 @@ Fonte:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1113,7 +1373,7 @@ Exemplo de resposta ao
 endpoint
 \shape default
 \size default
- faltas
+ classes 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Exemplo-de-resposta-faltas"
@@ -1135,219 +1395,117 @@ status open
 
 \begin_layout Plain Layout
 
-[
+{
 \end_layout
 
 \begin_layout Plain Layout
 
-  {
+    "_id" : "58f18e0275b5be4e92182854",
 \end_layout
 
 \begin_layout Plain Layout
 
-    "cursoId": 365,
+    "ano" : 2016,
 \end_layout
 
 \begin_layout Plain Layout
 
-    "ano": 2016,
+    "semestre" : 1,
 \end_layout
 
 \begin_layout Plain Layout
 
-    "semestre": 2,
+    "periodo" : "2016|1",
 \end_layout
 
 \begin_layout Plain Layout
 
-    "disciplina": "TCC I",
+    "descricaoDisciplina" : "Sistemas Distribuídos",
 \end_layout
 
 \begin_layout Plain Layout
 
-    "faltas": 8
+    "descricaoReduzidaDisciplina" : "SIST.DISTR",
 \end_layout
 
 \begin_layout Plain Layout
 
-  }
+    "notas" : {
 \end_layout
 
 \begin_layout Plain Layout
 
-]
-\end_layout
-
-\end_inset
-
-
+        "parciais" : [ 
 \end_layout
 
 \begin_layout Plain Layout
 
-\series bold
-\size small
-Fonte:
-\series default
- Autor do projeto.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Como visto na Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Exemplo-da-implementação-rota-notas"
-
-\end_inset
-
-, a implementação da rota de busca de notas e faltas é muito semelhante,
- diferindo apenas nos campos a serem buscados e o modelo a ser chamado.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Exemplo da implementação em nodejs da rota de notas
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Exemplo-da-implementação-rota-notas"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-router.get('/', (req, res) => {
+            {
 \end_layout
 
 \begin_layout Plain Layout
 
-  const token = getToken(req);
+                "descricao" : "Trabalho 1",
 \end_layout
 
 \begin_layout Plain Layout
 
-  const payload = jwt.verify(token, Auth.jwtSecret);
+                "descricaoReduzida" : "T1",
 \end_layout
 
 \begin_layout Plain Layout
 
-  const queryFalta = { alunoId: payload.id };
+                "ordemParcial" : 1,
 \end_layout
 
 \begin_layout Plain Layout
 
-  const filterFields = {
+                "valorAvaliacaoParcial" : "B",
 \end_layout
 
 \begin_layout Plain Layout
 
-	alunoId: 0, 
+                "pesoParcial" : "0,00"
 \end_layout
 
 \begin_layout Plain Layout
 
-	_id: 0, __v: 0, 
+            }
 \end_layout
 
 \begin_layout Plain Layout
 
-	'parciais._id': 0
+        ],
 \end_layout
 
 \begin_layout Plain Layout
 
-  };
+        "conceito" : "B"
 \end_layout
 
 \begin_layout Plain Layout
 
-  
+    },
 \end_layout
 
 \begin_layout Plain Layout
 
-  if(req.query.ano)
+    "faltas" : {
 \end_layout
 
 \begin_layout Plain Layout
 
-    queryFalta.ano = req.query.ano;
+        "total" : "4"
 \end_layout
 
 \begin_layout Plain Layout
 
+    }
 \end_layout
 
 \begin_layout Plain Layout
 
-  if(req.query.semestre)
-\end_layout
-
-\begin_layout Plain Layout
-
-    queryFalta.semestre = req.query.semestre;
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  Nota.find(queryFalta, filterFields, (err, faltas) => {
-\end_layout
-
-\begin_layout Plain Layout
-
-    if(err) res.status(400).send(err);
-\end_layout
-
-\begin_layout Plain Layout
-
-    res.send(faltas);
-\end_layout
-
-\begin_layout Plain Layout
-
-  });
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-});
+}
 \end_layout
 
 \end_inset
@@ -1386,8 +1544,15 @@ Documentação API
 \end_layout
 
 \begin_layout Standard
-Para complementar a API, foi desenvolvida uma interface web para exibir
- uma documentação de uso da API e uma forma de testar, através do 
+Para complementar a API, foi desenvolvida uma interface web (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Documentação-da-API"
+
+\end_inset
+
+) para exibir uma documentação de uso da API e uma forma de testar, através
+ do 
 \shape italic
 browser
 \shape default
@@ -1406,9 +1571,59 @@ A documentação é gerada através de um documento no formato YML de acordo
 OpenAPI Specification
 \shape default
 \size default
- (Especificação OpenAPI) e, exposta na internet, através da porta 80 sendo
+ (Especificação OpenAPI) e exposta na internet através da porta 80, sendo
  servida através do mesmo servidor NGINX da API.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Documentação da API 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Documentação-da-API"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/Swagger-docs.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
