@@ -364,7 +364,7 @@ background
 \end_inset
 
 , cada serviço possui responsabilidades específicas.
- Desenvolvido em JavaScript e compilado para linguagem nativa do dispositivo
+ Desenvolvido em JavaScript e através de uma camada nativa do dispositivo
  (Android, iOS), o aplicativo possuirá uma interface fluída com 
 \shape italic
 look'n feel
@@ -481,9 +481,8 @@ Os dados enviados pelo robô são lidos, interpretados, mapeados e transformados
  O Differ será ativado a cada nova busca de dados no Portal do Aluno SenacRS;
  ele é responsável por receber a estrutura normalizada, criar uma camada
  de diferenciação com os dados já inseridos no banco de dados e, caso haja
- alguma alteração relevante, como uma nova nota publicada, uma nova falta,
- um novo título para pagar, ele enviará uma mensagem notificando o usuário
- dessa alteração.
+ alguma alteração relevante, como uma nova nota publicada ou uma nova falta,
+ ele enviará uma mensagem notificando o usuário dessa alteração.
  Ao fim deste processo, os novos dados serão salvos na base de dados e poderão
  ser consultados através da API (
 \shape italic
@@ -504,7 +503,7 @@ JSON Web Token
 token
 \shape default
 , gerado pelo servidor, o qual é a chave de autenticação para utilizar os
- demais métodos da API, buscar dados de matrícula do aluno, por exemplo.
+ demais métodos da API, buscar dados das disciplinas do aluno, por exemplo.
  É importante atentar-se que o usuário só tem acesso aos dados do aluno
  vinculados a ele.
  Por exemplo, quando um usuário se identifica com nome de usuário e senha
@@ -534,7 +533,8 @@ Antes das requisições chegarem a API, haverá um servidor NGINX que servirá
 \shape italic
 proxy
 \shape default
- reverso, cacheando requisições iguais e não sobrecarregando os servidores.
+ reverso, cacheando requisições iguais e não sobrecarregando os servidores
+ de banco de dados.
  O modelo de exemplo da solução é visível na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref

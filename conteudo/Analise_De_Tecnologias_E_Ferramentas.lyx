@@ -641,6 +641,26 @@ opensource
 \end_layout
 
 \begin_layout Subsection
+IonicJS
+\end_layout
+
+\begin_layout Standard
+TEM QUE ESCREVER SOBRE O IONIC
+\end_layout
+
+\begin_layout Subsection
+Redis
+\end_layout
+
+\begin_layout Standard
+TEM QUE ESCREVER SOBRE O Redis 
+\end_layout
+
+\begin_layout Enumerate
+Usado como message queue
+\end_layout
+
+\begin_layout Subsection
 Travis CI
 \end_layout
 

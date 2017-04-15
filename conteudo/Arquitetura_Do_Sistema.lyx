@@ -3009,5 +3009,415 @@ Fonte:
 
 \end_layout
 
+\begin_layout Subsection
+Sprint 5
+\end_layout
+
+\begin_layout Standard
+A Sprint iniciou com o desenvolvimento de uma 
+\shape italic
+POC
+\shape default
+ (prova de conceito) do aplicativo utilizando NativeScript.
+ Ao instalar o 
+\shape italic
+framework
+\shape default
+, alguns erros não previstos na documentação impossibilitaram o avanço da
+ aplicação.
+ Para solucionar este problema, foi utilizado o Ionic como substituto do
+ NativeScript.
+\end_layout
+
+\begin_layout Standard
+Através do desenvolvimento da 
+\shape italic
+POC
+\shape default
+ do aplicativo foi possível perceber algumas falhas na estruturação da API
+ e a necessidade de implementar um sistema de autenticação com usuários.
+ Foi feita uma refatoração no código da API, que agora possui rotas para
+ criação de usuário, associação do usuário Easyac com uma conta do Portal
+ do Aluno SenacRS, além de rotas que solicitam ao Crawler a sincronia dos
+ dados.
+\end_layout
+
+\begin_layout Standard
+Diferente da Sprint anterior, em que o Crawler existia dentro do código
+ da API, nessa Sprint foi criado um serviço chamado Worker
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/easyac/workers
+\end_layout
+
+\end_inset
+
+.
+ Através de um sistema de mensageria, a API informa ao Worker qual função
+ o Crawler deve executar.
+ Com isso, a API agora é unicamente responsável por acessar o banco de dados
+ e retornar os dados através de chamadas HTTP, sem a necessidade de levantar
+ uma instância de navegador para que o Crawler execute suas funções.
+ 
+\end_layout
+
+\begin_layout Standard
+O processo de mensageria ocorre através de 
+\shape italic
+Publish/Subscriber
+\shape default
+ que é uma metodologia de programação assíncrona na qual existe um publicador
+ (
+\shape italic
+publisher
+\shape default
+), que envia mensagens para um servidor de distribuição, e um ouvinte (
+\shape italic
+subscriber
+\shape default
+), que aguarda a chegada de mensagens para executar alguma ação.
+\end_layout
+
+\begin_layout Standard
+O protótipo desenhado inicialmente continha três abas: notas, faltas e configura
+ções (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Protótipo-inicial-com-abas"
+
+\end_inset
+
+).
+ Após uma demonstração a um grupo de alunos e, uma breve discussão sobre
+ a usabilidade do aplicativo, foi feito um novo protótipo.
+ Na nova versão a tela inicial exibe todas as informações referentes as
+ disciplinas do semestre corrente, e um seletor para navegar nos demais
+ semestres, removendo assim as abas.
+\end_layout
+
+\begin_layout Standard
+O desenho da nova versão do aplicativo tornou possível a descoberta de outra
+ falha na estruturação da API: não são necessários dois 
+\shape italic
+endpoints
+\shape default
+ que retornam notas e faltas separadamente.
+ E, a partir de uma nova refatoração, foi criado o 
+\shape italic
+endpoint
+\shape default
+ /classes, que retorna em uma única chamada todas as informações sobre uma
+ disciplina (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schema-Disciplina"
+
+\end_inset
+
+), tais como: ano, semestre, notas e faltas.
+\end_layout
+
+\begin_layout Standard
+Após a refatoração da API foi gerada uma documentação atualizada através
+ do Swagger.
+\end_layout
+
+\begin_layout Subsubsection
+Modelagem de Dados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\shape italic
+Schema
+\shape default
+ Disciplina
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schema-Disciplina"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  userId: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  codigo: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  codigoEnturmacao: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  cursoId: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  ano: Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  semestre: Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  periodo: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  descricao: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  codigoDisciplina: Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+  descricaoDisciplina: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  descricaoReduzidaDisciplina: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+  faltas: {
+\end_layout
+
+\begin_layout Plain Layout
+
+    total: { type: String, default: '0' },
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  notas: {
+\end_layout
+
+\begin_layout Plain Layout
+
+    conceito: { type: String, default: 'S/N' },
+\end_layout
+
+\begin_layout Plain Layout
+
+    parciais: {
+\end_layout
+
+\begin_layout Plain Layout
+
+      type: [
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+          descricao: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+          descricaoReduzida: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+          ordemParcial: Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+          valorAvaliacaoParcial: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+          pesoParcial: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+          descricaoDispensaParcial: { type: String, default: '' },
+\end_layout
+
+\begin_layout Plain Layout
+
+          legendaDispensaParcial: { type: String, default: '' },
+\end_layout
+
+\begin_layout Plain Layout
+
+          divulgaNotas: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+          codigoAvaliacaoParcial: Number,
+\end_layout
+
+\begin_layout Plain Layout
+
+          disciplina: String,
+\end_layout
+
+\begin_layout Plain Layout
+
+          subParciais: { type: Array, default: [] },
+\end_layout
+
+\begin_layout Plain Layout
+
+        },
+\end_layout
+
+\begin_layout Plain Layout
+
+      ],
+\end_layout
+
+\begin_layout Plain Layout
+
+      default: [],
+\end_layout
+
+\begin_layout Plain Layout
+
+    },
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Modelagem de Interface
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Protótipo inicial com três abas 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Protótipo-inicial-com-abas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/prototipo-1.jpeg
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

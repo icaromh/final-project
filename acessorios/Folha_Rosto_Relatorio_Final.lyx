@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 \usepackage{changepage}
@@ -14,16 +16,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -109,7 +111,7 @@ Insira seu nome completo.
 
 \end_inset
 
-NOME DO AUTOR
+ÍCARO MAINES HEIMIG
 \end_layout
 
 \begin_layout Standard
@@ -155,7 +157,7 @@ Insira o título e, se existir, o subtitulo do trabalho.
 \align center
 
 \series bold
-TITULO
+EASYAC
 \series default
 
 \begin_inset ERT
@@ -172,7 +174,7 @@ status open
 
 \end_inset
 
-Subtitulo
+Aplicativo mobile para acompanhamento acadêmico no SenacRS
 \series bold
 
 \begin_inset VSpace 2cm
@@ -247,11 +249,11 @@ Altere o nome do seu orientador
 
 
 \size small
-Prof.
- Esp./Me./Dr.
- 
+Pr
 \size default
-Fulano de Tal
+of.
+ Me.
+ Rafael Guterres Jeffman
 \begin_inset ERT
 status open
 
@@ -301,7 +303,7 @@ Altere o ANO.
 
 \end_inset
 
-2016
+2017
 \end_layout
 
 \end_body
