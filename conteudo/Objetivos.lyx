@@ -340,18 +340,27 @@ Provides natbib 1
 Objetivos
 \end_layout
 
+\begin_layout Standard
+Esta seção apresenta os objetivos do trabalho, divididos em objetivo geral
+ e objetivos específicos.
+\end_layout
+
 \begin_layout Subsection
 Objetivo Geral
 \end_layout
 
 \begin_layout Standard
-O objetivo geral deste trabalho é desenvolver uma aplicação móvel multiplataform
-a para facilitar o acesso a dados acadêmicos dos alunos do SenacRS e alertá-los
- sobre informações alteradas no portal.
+O objetivo geral deste trabalho é desenvolver uma aplicação móvel para facilitar
+ o acesso a dados acadêmicos dos alunos do SenacRS e alertá-los sobre informaçõe
+s alteradas no portal.
 \end_layout
 
 \begin_layout Subsection
 Objetivos Específicos
+\end_layout
+
+\begin_layout Standard
+Os objetivos específicos deste trabalho são:
 \end_layout
 
 \begin_layout Enumerate
