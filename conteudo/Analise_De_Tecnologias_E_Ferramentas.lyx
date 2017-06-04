@@ -340,6 +340,11 @@ Provides natbib 1
 Análise de Tecnologias e Ferramentas
 \end_layout
 
+\begin_layout Standard
+Nesta sessão são apresentadas tecnologias e ferramentas utilizadas no desenvolvi
+mento deste projeto.
+\end_layout
+
 \begin_layout Subsection
 Node.js
 \end_layout
@@ -405,7 +410,7 @@ proxy
 \end_layout
 
 \begin_layout Subsection
-Docker
+Docker e Docker Compose
 \end_layout
 
 \begin_layout Standard
@@ -432,7 +437,7 @@ Linux Containers
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -538,6 +543,162 @@ m/what-docker
 
 \end_layout
 
+\begin_layout Standard
+Docker Compose é uma ferramenta para definir e rodar aplicações Docker multi
+ contêineres (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "what-docker-compose"
+
+\end_inset
+
+).
+ Foi utilizado em conjunto aos contêineres Docker para levantá-los e lincar
+ as portas necessárias para que a arquitetura inteira conversasse (Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitetura-da-aplicação"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitetura da aplicação 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitetura-da-aplicação"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/arquitetura_ascii.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte
+\series default
+: Construída pelo autor do projeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tanto para desenvolvimento quanto para levantar a arquitetura no servidor
+ em produção, uma vez escrito o arquivo de configuração informando através
+ de quais portas os contêineres se comunicam, bastava um comando para que
+ a arquitetura estivesse inteira funcionando.
+ 
+\end_layout
+
+\begin_layout Standard
+O Docker Compose também disponibiliza uma forma de visualizar os logs gerados
+ por cada um dos containeres de forma centralizada (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Logs-Docker-Compose"
+
+\end_inset
+
+), o que facilita o acompanhamento possíveis erros em alguma aplicação.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logs Docker Compose 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logs-Docker-Compose"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/docker-compose-logs.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte
+\series default
+: Construída pelo autor do projeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 MongoDB
 \end_layout
@@ -554,12 +715,220 @@ opensource
 Object Relational Mapping
 \shape default
 ) para facilitar o desenvolvimento.
- Foi escolhido por ser um banco de dados 
-\shape italic
-opensource
-\shape default
- e possuir a maior comunidade entre os demais bancos de dados NOSQL (não
- somente SQL).
+ 
+\end_layout
+
+\begin_layout Standard
+A motivação para utilização do MongoDB foi a forma como os dados serão apresenta
+dos aos clientes.
+ Na arquitetura do Easyac o banco de dados serve como uma espécie de cache
+ dos dados do portal do aluno, sendo necessário otimizar a consulta e exibição
+ dos dados.
+ 
+\end_layout
+
+\begin_layout Standard
+Imaginando que a saída esperada é uma lista de disciplinas por ano/semestre
+ contendo as faltas e a lista de notas parciais (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-esperado-da"
+
+\end_inset
+
+), sendo possível filtrar pelo ano e pelo semestre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado esperado da API
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-esperado-da"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/saida_esperada_json.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte
+\series default
+: Construída pelo autor do projeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de um banco de dados relacional (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-ER-Easyac"
+
+\end_inset
+
+) seria necessária a construção de uma consulta complexa que busque todas
+ as disciplinas a partir de um usuário, então agrupe as notas e notas parciais,
+ além das faltas.
+ E, após isso, o servidor deve organizar os dados vindos das linhas de resposta
+ do banco de dados no formato esperado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama ER Easyac 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-ER-Easyac"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/diagrama_er.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte
+\series default
+: Construída pelo autor do projeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em contrapartida, desnormalizando o banco de dados relacional em um formato
+ de documentos, tal como o modelo não relacional do MongoDB, é possível
+ que a partir de uma consulta simples (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Consulta-ao-MongoDB"
+
+\end_inset
+
+) seja possível retornar ao cliente a resposta sem a necessidade de manipulação
+ dos dados por parte do servidor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Consulta ao MongoDB filtrando por mês e semestre
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Consulta-ao-MongoDB"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/consulta_mongo.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte
+\series default
+: Construída pelo autor do projeto
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -627,6 +996,19 @@ XAMARIN: saiba mais em https://www.xamarin.com
 \end_inset
 
 , utiliza uma linguagem de programação para desenvolver o aplicativo e transpila
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Tipo de compilação 
+\shape italic
+source-to-source
+\shape default
+, onde o código é compilado ao seu equivalente em outra linguagem de programação.
+\end_layout
+
+\end_inset
+
  para linguagem nativa do dispositivo, entregando a múltiplas plataformas.
  
 \end_layout
