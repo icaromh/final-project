@@ -1687,6 +1687,15 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
+Após a sincronia dos dados, eles são disponíveis para consulta 
+\shape italic
+offline
+\shape default
+, ou seja, mesmo que o usuário não tenha conexão com a internet poderá consultar
+ suas notas e faltas de qualquer semestre.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
