@@ -341,6 +341,10 @@ Descrição da Solução
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 Para atingir o objetivo de simplificar a navegação nos dados do Portal do
  Aluno SenacRS será desenvolvido um aplicativo mobile e, para que seja possível
  exibir os dados no aplicativo, existirão vários serviços.

@@ -743,7 +743,7 @@ reference "fig:Resultado-esperado-da"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -990,7 +990,7 @@ frameworks
 status open
 
 \begin_layout Plain Layout
-XAMARIN: saiba mais em https://www.xamarin.com
+XAMARIN: https://www.xamarin.com
 \end_layout
 
 \end_inset
@@ -1072,16 +1072,6 @@ key "about-redis"
 \shape italic
 publish–subscribe
 \shape default
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
-\end_layout
-
-\end_inset
-
  tornando possível a troca de mensagens entre os serviços desenvolvidos.
 \end_layout
 
