@@ -963,6 +963,82 @@ Alta
 \begin_inset Text
 
 \begin_layout Plain Layout
+Receber alerta quando houver notas lançadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Receber alerta quando houver uma nova falta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Média
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Consultar notas por ano e semestre
 \end_layout
 
@@ -1035,45 +1111,7 @@ Baixa
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Receber alerta quando houver notas lançadas
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Aplicativo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Alta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1082,49 +1120,11 @@ Atualizar automaticamente dados dos alunos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Worker
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Média
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Receber alerta quando houver uma nova falta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Aplicativo
 \end_layout
 
 \end_inset
@@ -2296,59 +2296,10 @@ name "fig:Schema-Aluno"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\begin_layout Plain Layout
-
-  'username': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'unity': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'password': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'cookie': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'webToken': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'isValidCookie': Boolean,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'createdAt': Date,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'lastSearch': Date
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/schema_aluno_1.png
+	lyxscale 80
+	width 80text%
 
 \end_inset
 
@@ -2362,22 +2313,6 @@ status open
 Fonte:
 \series default
  Autor do projeto.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-break
 \end_layout
 
 \end_inset
@@ -2415,49 +2350,10 @@ name "fig:Schema-Faltas"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\begin_layout Plain Layout
-
-  'alunoId': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'cursoId': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'disciplina': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'ano': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'semestre': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'faltas': Number
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/schema_faltas_1.png
+	lyxscale 80
+	width 80text%
 
 \end_inset
 
@@ -2824,6 +2720,22 @@ Deve ser possível testar a API a partir da documentação
 Deve possuir uma interface limpa e de uso simples.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Modelagem de Dados
 \end_layout
@@ -2873,84 +2785,10 @@ name "fig:Schema-Notas"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\begin_layout Plain Layout
-
-  'alunoId': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'cursoId': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'disciplina': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'ano': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'semestre': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'conceito': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-  'parciais': [
-\end_layout
-
-\begin_layout Plain Layout
-
-    {
-\end_layout
-
-\begin_layout Plain Layout
-
-      'descricao': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-      'ordemParcial': Number,
-\end_layout
-
-\begin_layout Plain Layout
-
-      'valorAvaliacaoParcial': String,
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-  ]
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/schema_notas.png
+	lyxscale 80
+	width 80text%
 
 \end_inset
 
@@ -2964,22 +2802,6 @@ status open
 Fonte:
 \series default
  Autor do projeto.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
 \end_layout
 
 \end_inset
@@ -3243,22 +3065,6 @@ Alta
 Fonte:
 \series default
  Autor do projeto.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
 \end_layout
 
 \end_inset
@@ -4279,6 +4085,242 @@ Média
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+User Stories
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+US 09
+\end_layout
+
+\begin_layout Standard
+Eu, como aluno,
+\end_layout
+
+\begin_layout Standard
+Desejo receber uma notificação em meu celular sempre que uma nota for lançada
+\end_layout
+
+\begin_layout Standard
+Para acompanhar meu desempenho acadêmico.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A cada nova nota publicada no Portal do Aluno SenacRS deve ser enviada uma
+ notificação ao celular do aluno.
+\end_layout
+
+\begin_layout Itemize
+A notificação deve conter o nome da disciplina.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+US 10
+\end_layout
+
+\begin_layout Standard
+Eu, como aluno,
+\end_layout
+
+\begin_layout Standard
+Desejo receber uma notificação em meu celular sempre que uma falta for lançada
+\end_layout
+
+\begin_layout Standard
+Para acompanhar minhas faltas e meu desempenho acadêmico.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Critério de Aceitação
+\end_layout
+
+\begin_layout Itemize
+A cada nova falta publicada no Portal do Aluno SenacRS deve ser enviada
+ uma notificação ao celular do aluno.
+\end_layout
+
+\begin_layout Itemize
+A notificação deve conter o nome da disciplina.
+\end_layout
+
+\begin_layout Subsubsection
+Modelagem de Interface
+\end_layout
+
+\begin_layout Standard
+Nessa sessão serão exibidas as interfaces implementadas nessa 
+\shape italic
+Sprint
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Conforme a US10, foi implement)ada uma notificação push no celular do aluno
+ a cada nova falta publicada no portal do Aluno SenacRS (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Notificação-Push-informando-nova-falta"
+
+\end_inset
+
+).
+ E, segundo a US09, implementada uma notificação push a cada nota publicada,
+ informando ao aluno que há novas informações referentes a nota publicadas
+ (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Notificação-Push-informando-nova-nota"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Notificação Push informando nova falta
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Notificação-Push-informando-nova-falta"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/app/not_faltas.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Notificação Push informando nova nota
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Notificação-Push-informando-nova-nota"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/app/not_notas.png
+	width 50text%
 
 \end_inset
 

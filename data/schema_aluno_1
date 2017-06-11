@@ -1,0 +1,10 @@
+{
+  "username": String,
+  "unity": Number,
+  "password": String,
+  "cookie": String,
+  "webToken": String,
+  "isValidCookie": Boolean,
+  "createdAt": Date,
+  "lastSearch": Date
+}

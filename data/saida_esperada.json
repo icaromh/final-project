@@ -1,0 +1,24 @@
+[
+  {
+    "ano": 2016,
+    "semestre": 1,
+    "periodo": "2016|1",
+    "descricaoDisciplina": "Sistemas Distribuídos",
+    "descricaoReduzidaDisciplina": "SIST.DISTR",
+    "notas": {
+      "conceito": "B",
+      "parciais": [
+        {
+          "descricao": "Trabalho 1",
+          "descricaoReduzida": "T1",
+          "ordemParcial": 1,
+          "valorAvaliacaoParcial": "B"
+        }
+      ]
+    },
+    "faltas": {
+      "aps": 0,
+      "total": 4
+    }
+  }
+]

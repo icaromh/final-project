@@ -709,7 +709,14 @@ MongoDB é um banco de dados
 opensource
 \shape default
  orientado a documentos que provê escala automática, alta performance e
- disponibilidade (MONGO, 2016).
+ disponibilidade (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "what-is-mongodb"
+
+\end_inset
+
+).
  Elimina a necessidade de um ORM (
 \shape italic
 Object Relational Mapping
@@ -941,7 +948,14 @@ Mongoose é um módulo de Node.js que oferece uma solução simples e direta
 \shape italic
 schema
 \shape default
- para modelar dados relacionados ao MongoDB.
+ para modelar dados relacionados ao MongoDB (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "what-is-mongoose"
+
+\end_inset
+
+).
  Ele traz validações, transformação de tipo de dados, gerador de consultas
  e 
 \shape italic
