@@ -708,6 +708,22 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 O Worker é um módulo enxuto e responsável por um grupo de tarefas assincronas,
  tais como:
 \end_layout
@@ -944,7 +960,7 @@ status open
 
 
 \backslash
-break
+newpage
 \end_layout
 
 \end_inset
@@ -1018,7 +1034,7 @@ name "fig:Documentação-da-API"
 \begin_inset Graphics
 	filename /home/icaro/Documentos/tcc/images/Swagger-docs.png
 	lyxscale 40
-	width 100text%
+	width 90text%
 
 \end_inset
 
@@ -1032,6 +1048,22 @@ name "fig:Documentação-da-API"
 Fonte:
 \series default
  Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
 \end_layout
 
 \end_inset
@@ -1321,7 +1353,14 @@ Associar usuário
 
 \begin_layout Standard
 Ao clicar no link informado na sessão anterior, a tela de associção de contas
- é exibida.
+ é exibida (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tela-do-fluxo"
+
+\end_inset
+
+ à esquerda).
  Nela são solicitadas as credenciais do aluno no Portal do Aluno SenacRS:
  usuário, unidade e senha.
  A unidade é preenchida automaticamente enquanto o usuário digita o seu
@@ -1339,22 +1378,26 @@ Quando o usuário opta por salvar a senha do Portal do Aluno SenacRS no Easyac,
 
 \begin_layout Standard
 Após o submeter o formulário de associação, o usuário recebe um feedback
- visual informando que a requisição foi recebida (Tabela 
+ visual informando que a requisição foi recebida (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Tela-do-fluxo"
 
 \end_inset
 
-).
+ à direita).
  
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
+\begin_inset Float figure
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1382,27 +1425,27 @@ name "tab:Tela-do-fluxo"
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Formulário de associação
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Feedback visual ao submeter o formulário
+
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1418,7 +1461,7 @@ Feedback visual ao submeter o formulário
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
