@@ -341,22 +341,24 @@ Validação
 \end_layout
 
 \begin_layout Standard
-A validação foi feita ao longo do desenvolvimento do projeto a cada 
+Nessa sessão serão apresentado os itens relacionados a validação do projeto,
+ separados em duas partes: validação das Sprints e validação final do projeto.
+\end_layout
+
+\begin_layout Subsection
+Validação das Sprints
+\end_layout
+
+\begin_layout Standard
+Entre cara 
 \shape italic
 Sprint
 \shape default
-.
- Entre uma 
-\shape italic
-Sprint
-\shape default
- e a próxima, foram levantados pontos que deixaram a desejar no desenvolvimento
- da 
+ foram levantados pontos que deixaram a desejar no desenvolvimento da 
 \shape italic
 Sprint
 \shape default
  e levados em consideração para o desenvolvimento da próxima.
- 
 \end_layout
 
 \begin_layout Standard
@@ -452,6 +454,29 @@ Sprints
  ela está pronta para ser liberada para produção.
  Entre os critérios de aceitação estão premissas de usabilidade e aprovação
  nos testes automatizados.
+\end_layout
+
+\begin_layout Subsection
+Validação final do projeto
+\end_layout
+
+\begin_layout Standard
+A fim de validar se os objetivos propostos foram atingidos, ao final do
+ projeto, juntamente com lançamento do aplicativo Easyac foi pedido que
+ os usuários respondesse um questionário de satisfação.
+ Para este questionário foram considerados aspectos da
+\end_layout
+
+\begin_layout Standard
+qualidade em uso, que correspondem ao ponto de vista do usuário sobre o
+ sistema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "koscianski2007qualidade"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

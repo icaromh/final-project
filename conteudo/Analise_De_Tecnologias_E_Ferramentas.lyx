@@ -804,10 +804,17 @@ reference "fig:Diagrama-ER-Easyac"
 \end_inset
 
 ) seria necessária a construção de uma consulta complexa que busque todas
- as disciplinas a partir de um usuário, então agrupe as notas e notas parciais,
- além das faltas.
- E, após isso, o servidor deve organizar os dados vindos das linhas de resposta
- do banco de dados no formato esperado.
+ as disciplinas a partir de um usuário, então agrupe as notas, notas parciais
+ e faltas.
+ E, após isso, o servidor deve organizar os dados vindos das linhas retornadas
+ do banco de dados no formato esperado (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-esperado-da"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -876,17 +883,17 @@ Fonte
 \end_layout
 
 \begin_layout Standard
-Em contrapartida, desnormalizando o banco de dados relacional em um formato
- de documentos, tal como o modelo não relacional do MongoDB, é possível
- que a partir de uma consulta simples (Figura 
+Desnormalizando o banco de dados relacional em um formato de documentos,
+ tal como o modelo não relacional do MongoDB, é possível a partir de uma
+ consulta simples (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Consulta-ao-MongoDB"
 
 \end_inset
 
-) seja possível retornar ao cliente a resposta sem a necessidade de manipulação
- dos dados por parte do servidor.
+) retornar ao cliente a resposta sem a necessidade de manipulação dos dados
+ no servidor.
 \end_layout
 
 \begin_layout Standard
