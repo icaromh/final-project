@@ -346,7 +346,7 @@ Nessa sessão serão apresentado os itens relacionados a validação do projeto,
 \end_layout
 
 \begin_layout Subsection
-Validação das Sprints
+Estratégia para validação das Sprints
 \end_layout
 
 \begin_layout Standard
@@ -457,22 +457,826 @@ Sprints
 \end_layout
 
 \begin_layout Subsection
-Validação final do projeto
+Estratégia para validação do projeto
 \end_layout
 
 \begin_layout Standard
-A fim de validar se os objetivos propostos foram atingidos, ao final do
- projeto, juntamente com lançamento do aplicativo Easyac foi pedido que
- os usuários respondesse um questionário de satisfação.
- Para este questionário foram considerados aspectos da
-\end_layout
-
-\begin_layout Standard
-qualidade em uso, que correspondem ao ponto de vista do usuário sobre o
- sistema 
+Para validar se os objetivos propostos foram alcançados, ao final do projeto,
+ juntamente com lançamento do aplicativo Easyac foi pedido que os usuários
+ respondessem um questionário de satisfação.
+ Para este questionário foram considerados aspectos da qualidade em uso,
+ que correspondem ao ponto de vista do usuário sobre o sistema (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "koscianski2007qualidade"
+
+\end_inset
+
+).
+ A pesquisa foi aplicada através da ferramenta Google Forms, que permite
+ a criação, publicação e coleta de dados de um questionário, o questionário
+ encontra-se disponível no Apêndice A - Questionário de validação.
+ 
+\end_layout
+
+\begin_layout Standard
+O questionário foi dividido em cinco partes, de forma a agrupar as perguntas
+ referentes a uma mesma sessão.
+ As perguntas iniciais foram feitas para descobrir o perfil do avaliador,
+ uma vez que o projeto é para uso exclusivo dos alunos da instituição SenacRS.
+ Nas seções seguintes, foram feitas perguntas específicas sobre a usabilidade
+ do aplicativo, sendo utilizada a Escala Likert, com cinco níveis.
+ As demais questões foram baseadas nas heurísticas de Jakob Nielsen (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nielsen199510-usability"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Enumerate
+Visibilidade de Status do Sistema
+\end_layout
+
+\begin_layout Enumerate
+Relacionamento entre a interface do sistema e o mundo real
+\end_layout
+
+\begin_layout Enumerate
+Consistência
+\end_layout
+
+\begin_layout Enumerate
+Prevenção de erros
+\end_layout
+
+\begin_layout Enumerate
+Estética e design minimalista
+\end_layout
+
+\begin_layout Standard
+Além do questionário, também foi criado um campo para que o usuário envie
+ sua mensagem - reportando algum possível erro ou sugestão - dentro do aplicativ
+o.
+ E, uma vez que o aplicativo foi aceito pela Google Play Store, é possível
+ fazer download e avaliar o Easyac através da Google Play Store.
+\end_layout
+
+\begin_layout Subsection
+Consolidação dos dados coletados 
+\end_layout
+
+\begin_layout Standard
+As avaliações foram feitas por dez alunos, que utilizaram o aplicativo por
+ pelo menos um dia e realizaram todas as funções disponíveis.
+ 
+\end_layout
+
+\begin_layout Standard
+Nesta sessão serão apresentadas as análises feitas de acordo com cada sessão
+ criada no questionário de validação.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Análise do perfil 
+\end_layout
+
+\begin_layout Standard
+Os avaliadores válidos deveriam ser alunos da instituição SenacRS e as perguntas
+ iniciais foram elaboradas para que fosse possível filtrar esse perfil.
+ Inicialmente foi levantada qual a faixa-etária dos avaliadores, conforme
+ é exibida na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:01-Gráfico-de-respostas"
+
+\end_inset
+
+.
+ É possível concluir que em sua maioria os avaliadores são jovens de até
+ 30 anos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Qual sua idade?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:01-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/01-qual-sua-idade.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Juntamente com a idade foi perguntado se o avaliador foi ou ainda é aluno
+ do SenacRS, para que fosse possível prosseguir no questionário.
+ Conforme pode ser observado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:02-Gráfico-de-respostas"
+
+\end_inset
+
+, todos os avaliadores foram ou ainda são alunos da instituição, permitindo
+ que continuassem avaliando o aplicativo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Você é ou foi aluno do SenacRS?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:02-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/02-voce-e-aluno-senac.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Análise da avaliação da funcionalidade “Associar Contas” 
+\end_layout
+
+\begin_layout Standard
+A associação de contas é o primeiro passo para que o aluno tenha seus dados
+ sincronizados com o aplicativo sendo de extrema importância que os avaliadores
+ conseguissem passar por esse processo de forma satisfatória.
+ 
+\end_layout
+
+\begin_layout Standard
+Como é possível observar na Figura 
+\series bold
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:03-Gráfico-de-respostas"
+
+\end_inset
+
+
+\series default
+, todos os avaliadores associaram seus dados do Portal do Aluno ao aplicativo
+ Easyac.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Você associou seu login do Portal ao Easyac?”
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:03-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/03-voce-associou-seu-login.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo que 70% dos avaliadores (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:04-Gráfico-de-respostas"
+
+\end_inset
+
+) salvou sua senha para que o Easyac faça consultas periódicas ao portal
+ do aluno e sincronize de forma automática.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Você optou por salvar a senha do portal
+ para futuras consultas automáticas?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:04-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/04-salvou-a-senha-para-consultas-automaticas.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a submissão do formulário de associação de contas e o processo de login
+ no portal, o avaliador deveria receber uma notificação informando que o
+ processo foi finalizado com sucesso.
+ Ou, no caso de algum problema de autenticação com o Portal, uma notificação
+ de erro.
+ Essa questão tem o objetivo de compreender se os usuários estão recebendo
+ o feedback necessário para a primeira ação do aplicativo.
+ Segundo a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:05-Gráfico-de-respostas"
+
+\end_inset
+
+ é possível observar que 80% dos avaliadores receberam o feedback e apenas
+ 20% não recebeu.
+ Infelizmente não foi possível descobrir o motivo dos usuários não terem
+ recebido tal notificação, sendo possível pela formulação da questão, não
+ ter ficado claro se a notificação de erro também não foi recebida ou apenas
+ a de “Dados Prontos”.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Após associar e sincronizar, você recebeu
+ uma notificação informando que os dados estão prontos?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:05-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/05-recebeu-notificacao-dados-prontos.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ao final da sessão de Associar Contas, foi questionado sobre a experiência
+ de uso desta funcionalidade, sendo consideradas as heurísticas “Visibilidade
+ de Status do Sistema”, “Relacionamento entre a interface do sistema e o
+ mundo real” e “Prevenção de erros”.
+ Segundo os avaliadores, a experiência de uso desta funcionalidade foi,
+ em sua maioria 40% e 50% próximas a 5 (Excelente).
+ E, apenas 10% dos avaliadores, que é traduzido a uma única pessoa, considerou
+ 1 (Péssima) a experiência de uso da funcionalidade (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:06-Gráfico-de-respostas"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Avalie de 1 à 5 sua experiência ao associar
+ suas contas?
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:06-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/06-avalie-experiencia-associar-contas.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Análise da avaliação da funcionalidade “Consulta de Faltas e Notas” 
+\end_layout
+
+\begin_layout Standard
+Após a associação de contas é possível consultar os dados de faltas e notas
+ do semestre atual ou demais semestres.
+ As questões a seguir foram construídas baseando-se nas heurísticas “Relacioname
+nto entre a interface do sistema e o mundo real”, “Consistência” e “Estética
+ e design minimalista”.
+ 
+\end_layout
+
+\begin_layout Standard
+Conforme é possível observar na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:07-Gráfico-de-respostas"
+
+\end_inset
+
+, 70% dos avaliadores considerou Excelente a exibição de faltas no aplicativo,
+ sendo que apenas 20% considerou mediano.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “De 1 à 5, como você classifica a exibição
+ de FALTAS no aplicativo?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:07-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/07-exibicao-FALTAS.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Já na questão 8, “De 1 à 5, como você classifica a exibição de NOTAS apresentada
+ no aplicativo?”, exibida na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:08-Gráfico-de-respostas"
+
+\end_inset
+
+.
+ 60% dos avaliadores considerou Excelente a exibição de notas, enquanto
+ 20% considerou mediano e outros 20% entre mediano e excelente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “De 1 à 5, como você classifica a exibição
+ de NOTAS no aplicativo?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:08-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/08-exibicao-NOTAS.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As questões demonstradas nas Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:07-Gráfico-de-respostas"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:08-Gráfico-de-respostas"
+
+\end_inset
+
+ foram elaboradas a fim de comprovar o objetivo do projeto de disponibilizar
+ uma alternativa de visualização de dados acadêmicos ao Portal do Aluno
+ SenacRS.
+\end_layout
+
+\begin_layout Standard
+No final da sessão foi perguntado por qual período de tempo o avaliador
+ utilizou o aplicativo Easyac a fim de entender se seria possível que o
+ avaliador recebesse uma notificação informando sobre alterações nos dados
+ do aluno.
+ Na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:09-Gráfico-de-respostas"
+
+\end_inset
+
+ é possível observar que 40% dos avaliadores utilizaram o aplicativo por
+ pelo menos uma semana, sendo possível que esse grupo recebesse ao menos
+ uma notificação informando sobre uma nova falta ou nota publicada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “De 1 à 5, como você classifica a exibição
+ de NOTAS no aplicativo?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:09-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/09-quando-tempo-usou.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Análise da avaliação da funcionalidade 
+\begin_inset Quotes eld
+\end_inset
+
+Notificações
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma das principais funcionalidades propostas pelo projeto é a possibilidade
+ do aluno ser informado sobre uma nota ou falta lançada no Portal do Aluno,
+ sem ter que entrar no sistema para consultar.
+ 
+\end_layout
+
+\begin_layout Standard
+Na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:10-Gráfico-de-respostas"
+
+\end_inset
+
+ é possível observar que apenas um avaliador teve uma falta ou nota publicada
+ no Portal do Aluno durante a utilização do aplicativo.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Houve alguma alteração em suas faltas ou
+ notas durante o período em que você utilizou o aplicativo?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:10-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/10-houve-alteracao-notas-semana.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O avaliador que teve uma nota ou falta publicada, também foi o único a receber
+ uma notificação informando sobre essa alteração, conforme Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:11-Gráfico-de-respostas"
 
 \end_inset
 
@@ -480,6 +1284,291 @@ key "koscianski2007qualidade"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Houve alguma alteração em suas faltas ou
+ notas durante o período em que você utilizou o aplicativo?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:11-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/11-se-sim-houve-notificacao.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As questões avaliadas nesta sessão foram idealizadas para validar os objetivos
+ do projeto de notificar o aluno sobre alterações nas notas ou faltas ao
+ longo do semestre.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Análise da avaliação geral de experiência do aplicativo
+\end_layout
+
+\begin_layout Standard
+A última sessão do questionário foi reservada para coletar as observações
+ gerais dos avaliadores sobre o uso por completo do aplicativo.
+ Nela os avaliadores foram questionados sobre a experiência de uso do aplicativo
+ Easyac e também se consideraram-no como uma alternativa válida ao Portal
+ do Aluno SenacRS.
+\end_layout
+
+\begin_layout Standard
+Segundo o que pode ser observado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:12-Gráfico-de-respostas"
+
+\end_inset
+
+, 40% dos avaliadores consideraram a experiência de uso do aplicativo Easyac
+ como Excelente, enquanto 50% considerou como Ótima, somando 90% de aprovação
+ enquanto apenas uma pessoa (10% dos avaliadores) considerou como ruim a
+ experiência.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Como você avalia a experiência de uso do
+ aplicativo Easyac?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:12-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/12-avalia-o-uso-do-app.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para compreender se o objetivo de se tornar uma alternativa mais eficiente
+ ao Portal do Aluno SenacRS a questão 13, questionou os avaliadores se considera
+ram a experiência de uso do aplicativo mais veloz do que consultar os dados
+ no próprio Portal do Aluno.
+ Como é possível observar na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:13-Gráfico-de-respostas"
+
+\end_inset
+
+, 90% dos avaliadores consideram o aplicativo mais veloz que o Portal.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Você considera que o Easyac é uma alternativa
+ mais rápida de acesso a informações como faltas e notas do que o Portal
+ do Aluno SenacRS?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:13-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/13-considera-mais-rapido-que-portal.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E, por fim, os avaliadores foram questionados sobre utilizar o aplicativo
+ como forma principal de consulta aos seus dados acadêmicos do SenacRS e,
+ conforme a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:14-Gráfico-de-respostas"
+
+\end_inset
+
+, 100% dos avaliadores consideram utilizar o aplicativo como forma principal.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de respostas da questão “Após essa primeira experiência você utilizaria
+ o aplicativo como forma principal de consulta a notas e faltas?”
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:14-Gráfico-de-respostas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/graficos/14-usaria-o-app.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto a partir de dados gerados pelo Google Forms.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

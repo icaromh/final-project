@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
@@ -270,16 +272,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -339,9 +341,80 @@ Considerações Finais
 \end_layout
 
 \begin_layout Standard
-Conclusões e considerações sobre o projeto e seus resultados.
- Estas considerações devem estar baseadas nas avaliações e fatos verificados
- no projeto.
+O Easyac surgiu de uma frustração pessoal do autor do projeto com o Portal
+ do Aluno SenacRS, após discutir com outros alunos do SenacRS percebeu-se
+ ser uma frustração conjunta.
+ 
+\end_layout
+
+\begin_layout Standard
+O aplicativo Easyac foi idealizado no início do projeto, mas para que tal
+ fosse possível ser desenvolvido foi necessário um grande trabalho de arquitetur
+a para minerar os dados do aluno autenticado, além de criar uma camada de
+ cache responsável por entregar os dados de forma mais efetiva que o Portal
+ do Aluno SenacRS.
+ 
+\end_layout
+
+\begin_layout Standard
+Por se tratar de um público muito específico e a baixa divulgação do aplicativo
+ dentro do SenacRS houveram poucas pessoas avaliando o aplicativo.
+ De qualquer forma, segundo as avaliações feitas, é possível ver uma grande
+ satisfação com as funcionalidades propostas.
+ Somando, por exemplo, 80% de ótimo/excelente forma como são exibidas as
+ notas no aplicativo, além de 90% dos avaliadores considerarem o aplicativo
+ uma alternativa mais rápida para consulta de notas e faltas ao Portal do
+ Aluno SenacRS.
+\end_layout
+
+\begin_layout Standard
+Alguns pontos na avaliação não ficaram claros, tais como o avaliador que
+ considerou péssima a experiência de uso no aplicativo, mas o utilizaria
+ como principal alternativa ao Portal do Aluno SenacRS.
+ Pode-se considerar que a experiência do aplicativo para esse avaliador
+ foi frustrante mas não tanto quanto acessar o Portal do Aluno.
+ Ou, talvez por ele não ter recebido notificação de quando os dados ficaram
+ prontos para o consumo no aplicativo.
+\end_layout
+
+\begin_layout Standard
+É possível perceber que houve uma falha na aplicação do formulário, não
+ dando espaço para que o avaliador comentasse sua experiência e motivações
+ para aplicar as notas das funcionalidades.
+ Ao ser desenvolvido o questionário o formulário de 
+\shape italic
+feedback
+\shape default
+ dentro do aplicativo já havia sido desenvolvido, então imaginou-se que
+ os usuários utilizariam o 
+\shape italic
+feedback
+\shape default
+ para informar suas frustrações.
+\end_layout
+
+\begin_layout Standard
+Por se tratar de um projeto que trás uma alternativa de acesso aos dados
+ do Portal do Aluno SenacRS (o qual está em constante evolução), espera-se
+ que em determinado momento não seja mais necessário aplicar funcionalidades
+ ao Easyac, uma vez que o próprio Portal do Aluno poderá evoluir até tornar
+ o projeto Easyac dispensável.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -349,9 +422,97 @@ Trabalhos Futuros
 \end_layout
 
 \begin_layout Standard
-Demonstrar opções para a continuidade ou melhorias do projeto, mostrando
- dados obtidos a partir da validação ou de ocorrências durante o desenvolvimento
- que não estavam no escopo original do projeto e não foram implementadas.
+A partir do formulário de 
+\shape italic
+feedback
+\shape default
+ dentro do aplicativo foi possível coletar pontos de melhoria a serem trabalhado
+s no futuro.
+ Conforme é possível ver na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Feedbacks-de-um"
+
+\end_inset
+
+ o usuário informou alguns erros e solicitações.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\shape italic
+Feedbacks
+\shape default
+ de um usuário do aplicativo Easyac
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Feedbacks-de-um"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/icaro/Documentos/tcc/images/feedback-inside-app.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Fonte:
+\series default
+ Autor do projeto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Melhorias na usabilidade do aplicativo como exibir automaticamente os dados
+ atualizados, sem a necessidade de 
+\begin_inset Quotes eld
+\end_inset
+
+puxar para baixo
+\begin_inset Quotes erd
+\end_inset
+
+ na tela inicial, exibição de notas parciais para melhor acompanhamento
+ ao longo do semestre e melhoria na navegação são exemplos de implementações
+ futuras vindas de 
+\shape italic
+feedback
+\shape default
+ direto dos usuários.
+\end_layout
+
+\begin_layout Standard
+Para abranger ainda mais alunos da instituição outra possível melhoria futura
+ é a publicação do aplicativo em sua versão para IOS na Apple Store.
 \end_layout
 
 \end_body
