@@ -341,7 +341,20 @@ Apresentação Geral do Projeto
 \end_layout
 
 \begin_layout Standard
-Segundo Nielsen, 10 segundos é o tempo limite que um usuário mantém a atenção
+O acesso aos dados acadêmicos é uma importante forma de acompanhamento do
+ desenvolvimento do aluno ao longo dos semestres.
+ Grande parte das instituições de ensino disponibilizam uma forma 
+\shape italic
+online
+\shape default
+ de visualizar dados como notas e faltas.
+ Entre elas está o Senac, uma instituição de ensino de nível nacional.
+\end_layout
+
+\begin_layout Standard
+Disponibilizar o acesso aos dados acadêmicos não necessariamente significa
+ que isso é feito da melhor forma para o usuário interessado (aluno).
+ Segundo Nielsen, 10 segundos é o tempo limite que um usuário mantém a atenção
  focada em um diálogo.
  Para períodos mais demorados, enquanto esperam o dispositivo terminar de
  carregar, os usuários querem efetuar outras tarefas (
@@ -358,8 +371,17 @@ web
 \shape default
  modernos sejam suficientemente rápidos.
  Contrariando o limite comentado por Nielsen, o Portal do Aluno SenacRS
- exibe a página de login no sistema após um período de 10 a 40 segundos,
- apresentando um desempenho ainda mais baixo em redes móveis.
+ (foco deste trabalho), exige que o aluno execute 9 passos até conseguir
+ visualizar suas notas e faltas.
+ Os passos consistem em: Entrar no site, esperar um redirecionamento (3
+ segundos), selecionar a unidade em uma lista com aproximadamente 59 opções,
+ preencher o usuário e senha, submeter o formulário, esperar que a página
+ inicial do sistema seja carregada, selecionar no menu lateral o item boletim,
+ selecionar o período de consulta dos dados desejado, esperar o carregamento,
+ para então poder consultá-los.
+ Todo esse processo demora em média uns 40 segundos, em uma rede de internet
+ a cabo, o cenário piora em um cenário de rede móvel.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -385,9 +407,7 @@ Easy
 \shape italic
 mobile
 \shape default
- multiplataforma que notifica o aluno sobre alterações em suas notas e demais
- informações relevantes.
- 
+ multiplataforma que notifica o aluno sobre alterações em suas notas e faltas.
 \end_layout
 
 \begin_layout Standard
@@ -396,10 +416,21 @@ Para alcançar este objetivo foram desenvolvidas aplicações distribuídas
  e alimentam o banco dados, verificando novas atualizações.
  Também foram disponibilizados outros dois projetos de código aberto, um
  Crawler responsável pela mineração dos dados do aluno, que pode ser acoplado
- a qualquer aplicação node.js, e uma API com documentação para que seja possível
+ a qualquer aplicação Node.js, e uma API com documentação para que seja possível
  integrar os dados do aluno a outros sistemas.
- Ambos só funcionarão com as devidas permissões e credenciais de acesso
- do aluno.
+ Ambos só funcionam com as devidas permissões e credenciais de acesso do
+ aluno.
+\end_layout
+
+\begin_layout Standard
+Ao longo do projeto, foi desenvolvido um aplicativo móvel para que o aluno
+ possa consultar os dados a partir de um layout otimizado para o seu dispositivo
+, além de receber notificações toda vez que uma nova nota ou falta for publicada
+ por um professor.
+ Os dados do aluno ficam disponíveis no aplicativo mesmo que o telefone
+ não esteja conectado com a internet, sendo possível consultar os dados
+ em qualquer lugar.
+ 
 \end_layout
 
 \end_body
