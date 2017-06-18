@@ -396,17 +396,18 @@ key "performance2segundos"
 \end_inset
 
 ).
- Na arquitetura atual do Portal do Aluno SenacRS, ao tentar acessar a página
- de login do usuário, o sistema redireciona para uma tela de sessão expirada
- e informa para clicar no link ou aguardar o redirecionamento.
- Esse processo leva em torno de 5 segundos.
- Após o usuário conseguir chegar na tela de login, há uma nova espera, agora
- para que o sistema liste as unidades do SENAC.
- Este processo pode demorar de 10 a 40 segundos, dependendo da velocidade
+ Na arquitetura do Portal do Aluno SenacRS, no início do desenvolvimento
+ deste projeto, ao tentar acessar a página de login do usuário, o sistema
+ redirecionava para uma tela de sessão expirada e informa para clicar no
+ link ou aguardar o redirecionamento.
+ Esse processo levava em torno de 5 segundos.
+ Após o usuário conseguir chegar na tela de login, havia uma nova espera,
+ para que o sistema buscasse a lista de unidades do SENAC.
+ Este processo poderia demorar de 10 a 40 segundos, dependendo da velocidade
  da rede.
  Em um dos testes efetuados, simulando uma rede 3G mediana
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 rede 3G mediana:100ms de latência e velocidade de 250kb/s à 750kb/s
@@ -471,6 +472,16 @@ Fonte:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Ao longo do desenvolvimento deste projeto o Portal do Aluno SenacRS recebeu
+ uma atualização que melhorou, consideravelmente, o tempo de espera para
+ o carregamento dos dados na tela de login, caindo de 10 a 40 segundos para
+ até 10 segundos, mesmo em redes móveis.
+ Tal melhoria foi bem vinda, mas ainda distante do tempo ideal de até 2
+ segundos descrito por GOMEZ (2016).
+ 
 \end_layout
 
 \begin_layout Standard
