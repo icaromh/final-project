@@ -341,16 +341,22 @@ Validação
 \end_layout
 
 \begin_layout Standard
-Nessa sessão serão apresentado os itens relacionados a validação do projeto,
- separados em duas partes: validação das Sprints e validação final do projeto.
+Nesta seção serão apresentados os itens relacionados a validação do projeto,
+ separados em duas partes: validação das 
+\shape italic
+Sprints
+\shape default
+ e validação final do projeto.
 \end_layout
 
 \begin_layout Subsection
-Estratégia para validação das Sprints
+Estratégia para validação das 
+\shape italic
+Sprints
 \end_layout
 
 \begin_layout Standard
-Entre cara 
+Entre cada 
 \shape italic
 Sprint
 \shape default
@@ -362,15 +368,15 @@ Sprint
 \end_layout
 
 \begin_layout Standard
-A fim de manter a qualidade de código escrito, foram criados testes unitários
- para o módulo Crawler.
+A fim de manter a uma alta qualidade do código escrito, foram criados testes
+ unitários para o módulo Crawler.
  Com o passar das 
 \shape italic
 \size small
 Sprints
 \shape default
 \size default
- notou-se que havia muito código não testado e, para confirmar, foi instalado
+, notou-se que havia muito código não testado e, para confirmar, foi instalado
  o módulo Istanbul, que executa uma varredura na pasta de testes e informa
  qual o percentual de cobertura de testes que um projeto possui.
  Este processo foi executado entre as 
@@ -384,7 +390,7 @@ Sprints
 \shape italic
 Sprint
 \shape default
- 4, foi feito um trabalho de melhora na cobertura de testes, chegando a
+ 4, foi feito um trabalho de melhoria na cobertura de testes, chegando a
  78% do projeto (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -462,7 +468,7 @@ Estratégia para validação do projeto
 
 \begin_layout Standard
 Para validar se os objetivos propostos foram alcançados, ao final do projeto,
- juntamente com lançamento do aplicativo Easyac foi pedido que os usuários
+ juntamente com lançamento do aplicativo Easyac, foi pedido que os usuários
  respondessem um questionário de satisfação.
  Para este questionário foram considerados aspectos da qualidade em uso,
  que correspondem ao ponto de vista do usuário sobre o sistema (
@@ -520,7 +526,11 @@ Além do questionário, também foi criado um campo para que o usuário envie
  sua mensagem - reportando algum possível erro ou sugestão - dentro do aplicativ
 o.
  É possível avaliar o aplicativo também através da Google Play Store, uma
- vez que ele está disponível para download.
+ vez que ele está disponível para 
+\shape italic
+download
+\shape default
+.
  
 \end_layout
 
@@ -677,16 +687,12 @@ A associação de contas é o primeiro passo para que o aluno tenha seus dados
 
 \begin_layout Standard
 Como é possível observar na Figura 
-\series bold
-
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:03-Gráfico-de-respostas"
 
 \end_inset
 
-
-\series default
 , todos os avaliadores associaram seus dados do Portal do Aluno ao aplicativo
  Easyac.
  
@@ -696,7 +702,7 @@ reference "fig:03-Gráfico-de-respostas"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -756,22 +762,22 @@ newpage
 \end_layout
 
 \begin_layout Standard
-Sendo que 70% dos avaliadores (Figura 
+De todos os avaliadores, 70% salvou sua senha (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:04-Gráfico-de-respostas"
 
 \end_inset
 
-) salvou sua senha para que o Easyac faça consultas periódicas ao portal
- do aluno e sincronize de forma automática.
+) para que o Easyac faça consultas periódicas ao portal do aluno e sincronize
+ de forma automática.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -823,11 +829,11 @@ Fonte:
 
 \begin_layout Standard
 Após a submissão do formulário de associação de contas e o processo de login
- no portal, o avaliador deveria receber uma notificação informando que o
- processo foi finalizado com sucesso.
+ no portal, o avaliador deve receber uma notificação informando que o processo
+ foi finalizado com sucesso.
  Ou, no caso de algum problema de autenticação com o Portal, uma notificação
  de erro.
- Essa questão tem o objetivo de compreender se os usuários estão recebendo
+ Esta questão tem o objetivo de compreender se os usuários estão recebendo
  o 
 \shape italic
 feedback
@@ -845,10 +851,19 @@ reference "fig:05-Gráfico-de-respostas"
 feedback
 \shape default
  e apenas 20% não recebeu.
- Infelizmente não foi possível descobrir o motivo dos usuários não terem
- recebido tal notificação, sendo possível pela formulação da questão, não
- ter ficado claro se a notificação de erro também não foi recebida ou apenas
- a de “Dados Prontos”.
+ Infelizmente, não foi possível descobrir o motivo dos usuários não terem
+ recebido tal notificação.
+ É possível que, pela formulação da questão, não tenha ficado claro se o
+ avaliador não recebeu nenhuma notificação em caso de erro ou apenas não
+ recebeu a de 
+\begin_inset Quotes eld
+\end_inset
+
+Dados Pronto
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -904,7 +919,7 @@ Ao final da sessão de Associar Contas, foi questionada a experiência de
  de Status do Sistema”, “Relacionamento entre a interface do sistema e o
  mundo real” e “Prevenção de erros”.
  Segundo os avaliadores, a experiência de uso desta funcionalidade foi,
- em sua maioria 40% e 50% próximas a 5 (Excelente).
+ em sua maioria, 90% próximas a 5 (Excelente).
  E, apenas 10% dos avaliadores, que é traduzido a uma única pessoa, considerou
  1 (Péssima) a experiência de uso da funcionalidade (Figura 
 \begin_inset CommandInset ref
@@ -973,8 +988,8 @@ Análise da avaliação da funcionalidade “Consulta de Faltas e Notas”
 \begin_layout Standard
 Após a associação de contas é possível consultar os dados de faltas e notas
  do semestre atual ou demais semestres.
- As questões a seguir foram construídas baseando-se nas heurísticas “Relacioname
-nto entre a interface do sistema e o mundo real”, “Consistência” e “Estética
+ As questões a seguir foram construídas com base nas heurísticas “Relacionamento
+ entre a interface do sistema e o mundo real”, “Consistência” e “Estética
  e design minimalista”.
  
 \end_layout
@@ -987,8 +1002,16 @@ reference "fig:07-Gráfico-de-respostas"
 
 \end_inset
 
-, 70% dos avaliadores considerou 'Excelente' a exibição de faltas no aplicativo,
- sendo que apenas 20% considerou 'Mediano'.
+, 70% dos avaliadores considerou a exibição de faltas no aplicativo como
+ Excelente, sendo que apenas 20% considerou 
+\begin_inset Quotes eld
+\end_inset
+
+Mediano
+\begin_inset Quotes erd
+\end_inset
+
+.
  
 \end_layout
 
@@ -1055,8 +1078,8 @@ reference "fig:08-Gráfico-de-respostas"
 
 \end_inset
 
-, 60% dos avaliadores considerou 'Excelente' a exibição de notas, enquanto
- 20% considerou 'Mediano' e outros 20% entre 'Mediano' e 'Excelente'.
+, 60% dos avaliadores considerou Excelente a exibição de notas, enquanto
+ 20% considerou Mediano e outros 20% entre Mediano e Excelente.
  
 \end_layout
 
@@ -1135,8 +1158,8 @@ reference "fig:08-Gráfico-de-respostas"
 \end_layout
 
 \begin_layout Standard
-No final da sessão foi perguntado por quanto tempo o avaliador utilizou
- o aplicativo Easyac.
+No final da seção foi perguntado por quanto tempo o avaliador utilizou o
+ aplicativo Easyac.
  Na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1146,7 +1169,7 @@ reference "fig:09-Gráfico-de-respostas"
 
 , é possível observar que 40% dos avaliadores utilizaram o aplicativo por
  uma semana, sendo possível que tenham faltado a alguma aula e, por conta
- disso, receber uma notificação informando a falta contabilizada.
+ disso, receberam uma notificação informando a falta contabilizada.
  
 \end_layout
 
@@ -1155,10 +1178,6 @@ reference "fig:09-Gráfico-de-respostas"
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1241,10 +1260,6 @@ reference "fig:10-Gráfico-de-respostas"
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1354,23 +1369,22 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
-O baixo número de avaliadores a receber uma notificação pode-se dar ao fato
- de apenas 40% ter utilizado o aplicativo por pelo menos uma semana, como
- visto na Figura 
+O baixo número de avaliadores que receberam uma notificação pode-se dar
+ ao fato de que apenas 40% utilizou o aplicativo por, pelo menos, uma semana,
+ como visto na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:09-Gráfico-de-respostas"
 
 \end_inset
 
-.
- E, também, a necessidade de que os avaliadores tenham faltado a uma aula
- ou ainda que algum professor tenha publicado novas notas no Portal do Aluno,
- gerando assim um dado a ser notificado.
+, pela necessidade de que algum professor tenha publicado novas notas no
+ Portal do Aluno, gerando assim um dado a ser notificado, ou que os avaliadores
+ tenham faltado a uma aula.
 \end_layout
 
 \begin_layout Standard
-As questões avaliadas nesta sessão foram idealizadas para validar os objetivos
+As questões avaliadas nesta seção foram idealizadas para validar os objetivos
  do projeto de notificar o aluno sobre alterações nas notas ou faltas ao
  longo do semestre.
  
@@ -1381,7 +1395,7 @@ Análise da avaliação geral de experiência do aplicativo
 \end_layout
 
 \begin_layout Standard
-A última sessão do questionário foi reservada para coletar as observações
+A última seção do questionário foi reservada para coletar as observações
  gerais dos avaliadores sobre o uso por completo do aplicativo.
  Nela os avaliadores foram questionados sobre a experiência de uso do aplicativo
  Easyac e também se consideraram-no como uma alternativa válida ao Portal
@@ -1397,9 +1411,9 @@ reference "fig:12-Gráfico-de-respostas"
 \end_inset
 
 , 40% dos avaliadores consideraram a experiência de uso do aplicativo Easyac
- como Excelente, enquanto 50% considerou como 'Ótima', somando 90% de aprovação
- enquanto apenas uma pessoa (10% dos avaliadores) considerou como 'Ruim'
- a experiência.
+ como Excelente, enquanto 50% considerou como Ótima, somando 90% de aprovação
+ enquanto apenas uma pessoa (10% dos avaliadores) considerou como Ruim a
+ experiência.
 \end_layout
 
 \begin_layout Standard
@@ -1457,8 +1471,8 @@ Fonte:
 \end_layout
 
 \begin_layout Standard
-O avaliador que considerou ‘Ruim’ a experiência de uso do aplicativo é o
- mesmo que não recebeu a notificação de 
+O avaliador que considerou Ruim a experiência de uso do aplicativo é o mesmo
+ que não recebeu a notificação de 
 \shape italic
 feedback
 \shape default
@@ -1567,12 +1581,10 @@ O avaliador que não considerou o aplicativo uma alternativa mais veloz de
 
 \begin_layout Standard
 E, por fim, os avaliadores foram questionados sobre utilizar o aplicativo
- como forma principal de consulta aos seus dados acadêmicos do SenacRS e,
- até mesmo os avaliadores que não consideraram o aplicativo como ‘Excelente’,
- trocariam o consumo de notas e faltas, feito hoje no Portal do Aluno, pelo
- aplicativo Easyac após uma primeira experiência de uso.
- Uma vez que, 100% dos avaliadores consideram utilizar o aplicativo como
- forma principal, conforme a Figura 
+ como forma principal de consulta aos seus dados acadêmicos do SenacRS.
+ Todos (100%), até mesmo os avaliadores que não consideraram o aplicativo
+ como Excelente, optaram por utilizar o aplicativo como forma principal
+ de acesso a suas notas e faltas conforme a Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:14-Gráfico-de-respostas"
@@ -1580,6 +1592,7 @@ reference "fig:14-Gráfico-de-respostas"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard

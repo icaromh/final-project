@@ -341,8 +341,8 @@ Análise de Tecnologias e Ferramentas
 \end_layout
 
 \begin_layout Standard
-Nesta sessão são apresentadas tecnologias e ferramentas utilizadas no desenvolvi
-mento deste projeto.
+Nesta seção são apresentadas tecnologias e ferramentas utilizadas no desenvolvim
+ento deste projeto.
 \end_layout
 
 \begin_layout Subsection
@@ -616,10 +616,9 @@ Fonte
 
 \begin_layout Standard
 Tanto para desenvolvimento quanto para levantar a arquitetura no servidor
- em produção, uma vez escrito o arquivo de configuração informando através
- de quais portas os contêineres se comunicam, bastava um comando para que
- a arquitetura estivesse inteira funcionando.
- 
+ em produção, uma vez escrito o arquivo de configuração e informando quais
+ portas os contêineres devem utilizar para se comunicar, basta um comando
+ para que a arquitetura inteira esteja funcionando.
 \end_layout
 
 \begin_layout Standard
@@ -736,14 +735,15 @@ dos aos clientes.
 
 \begin_layout Standard
 Imaginando que a saída esperada é uma lista de disciplinas por ano/semestre
- contendo as faltas e a lista de notas parciais (Figura 
+ contendo as faltas e a lista de notas parciais, o documento para consumo
+ no cliente seria similar ao apresentado na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Resultado-esperado-da"
 
 \end_inset
 
-), sendo possível filtrar pelo ano e pelo semestre.
+.
 \end_layout
 
 \begin_layout Standard
@@ -806,15 +806,15 @@ reference "fig:Diagrama-ER-Easyac"
 ) seria necessária a construção de uma consulta complexa que busque todas
  as disciplinas a partir de um usuário, então agrupe as notas, notas parciais
  e faltas.
- E, após isso, o servidor deve organizar os dados vindos das linhas retornadas
- do banco de dados no formato esperado (Figura 
+ E, após isso, o servidor deve organizar no formato esperado (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Resultado-esperado-da"
 
 \end_inset
 
-).
+) os dados oriundos das tuplas retornados a partir da consulta ao banco
+ de dados.
 \end_layout
 
 \begin_layout Standard
@@ -1064,8 +1064,9 @@ Foi escolhido ao longo do projeto como
 \shape italic
 framework
 \shape default
- de desenvolvimento móvel por ter um melhor suporte e documentação do que
- o NativeScript.
+ de desenvolvimento móvel substituto ao NativeScript por ter sido percebido
+ que não havia necessidade de um aplicativo nativo, sendo mais simples o
+ desenvolvimento de um aplicativo híbrido em HTML, CSS e Javascript.
 \end_layout
 
 \begin_layout Subsection
@@ -1093,7 +1094,8 @@ key "about-redis"
 \shape italic
 publish–subscribe
 \shape default
- tornando possível a troca de mensagens entre os serviços desenvolvidos.
+ tornando possível a troca de mensagens assíncronas entre os serviços desenvolvi
+dos.
 \end_layout
 
 \begin_layout Subsection

@@ -342,7 +342,7 @@ Apresentação Geral do Projeto
 
 \begin_layout Standard
 O acesso aos dados acadêmicos é uma importante forma de acompanhamento do
- desenvolvimento do aluno ao longo dos semestres.
+ desenvolvimento do aluno ao longo de sua jornada acadêmica.
  Grande parte das instituições de ensino disponibilizam uma forma 
 \shape italic
 online
@@ -376,11 +376,18 @@ web
  Os passos consistem em: Entrar no site, esperar um redirecionamento (3
  segundos), selecionar a unidade em uma lista com aproximadamente 59 opções,
  preencher o usuário e senha, submeter o formulário, esperar que a página
- inicial do sistema seja carregada, selecionar no menu lateral o item boletim,
- selecionar o período de consulta dos dados desejado, esperar o carregamento,
+ inicial do sistema seja carregada, selecionar no menu lateral o item 
+\begin_inset Quotes eld
+\end_inset
+
+boletim
+\begin_inset Quotes erd
+\end_inset
+
+, selecionar o período de consulta dos dados desejado, esperar o carregamento,
  para então poder consultá-los.
  Todo esse processo demora em média uns 40 segundos, em uma rede de internet
- a cabo, o cenário piora em um cenário de rede móvel.
+ a cabo, o cenário piora em um ambiente de rede móvel.
  
 \end_layout
 

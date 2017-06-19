@@ -346,7 +346,7 @@ No segundo semestre de 2015, aproximadamente 72% dos brasileiros que acessaram
 \shape italic
 smartphones
 \shape default
-(
+ (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "nielsen-brasileiros-smartphones"
@@ -387,7 +387,7 @@ desktop: computador de mesa, notebooks.
 \end_layout
 
 \begin_layout Standard
-De acordo com estudo, usuários esperam páginas carregarem em até dois segundos,
+De acordo com estudo, usuários esperam páginas carregarem em até 2 segundos,
  depois do terceiro, cerca de 40% dos usuários abandonam o site (
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -398,8 +398,8 @@ key "performance2segundos"
 ).
  Na arquitetura do Portal do Aluno SenacRS, no início do desenvolvimento
  deste projeto, ao tentar acessar a página de login do usuário, o sistema
- redirecionava para uma tela de sessão expirada e informa para clicar no
- link ou aguardar o redirecionamento.
+ redirecionava para uma tela de sessão expirada e informa para clicar em
+ um link ou aguardar o redirecionamento.
  Esse processo levava em torno de 5 segundos.
  Após o usuário conseguir chegar na tela de login, havia uma nova espera,
  para que o sistema buscasse a lista de unidades do SENAC.

@@ -351,19 +351,37 @@ O Easyac surgiu de uma frustração pessoal do autor do projeto com o Portal
 O aplicativo Easyac foi idealizado no início do projeto, mas, para que fosse
  possível desenvolvê-lo, foi necessário um grande trabalho de arquitetura
  para minerar os dados do aluno autenticado, além de criar uma camada de
- cache responsável por entregar os dados de forma mais efetiva que o Portal
- do Aluno SenacRS.
+ 
+\shape italic
+cache
+\shape default
+ responsável por entregar os dados de forma mais efetiva que o Portal do
+ Aluno SenacRS.
+ 
 \end_layout
 
 \begin_layout Standard
 Por se tratar de um público muito específico, houve poucas pessoas avaliando
  o aplicativo.
  Segundo as avaliações recebidas, é possível perceber uma grande satisfação
- com as funcionalidades propostas, somando 80% de ‘ótimo/excelente’ para
- a forma como as notas são exibidas no aplicativo Além disso, 90% dos avaliadore
-s consideraram o aplicativo uma forma mais rápida para consulta de notas
- e faltas e 100% dos avaliadores consideraram utilizar o aplicativo Easyac
- como alternativa principal ao Portal do Aluno SenacRS.
+ com as funcionalidades propostas, somando 80% de 
+\begin_inset Quotes eld
+\end_inset
+
+ótimo/excelente
+\begin_inset Quotes erd
+\end_inset
+
+ para a forma como as notas são exibidas no aplicativo Além disso, 90% dos
+ avaliadores consideraram o aplicativo uma forma mais rápida para consulta
+ de notas e faltas e 100% dos avaliadores consideraram utilizar o aplicativo
+ Easyac como alternativa principal ao Portal do Aluno SenacRS.
+ Salienta-se que, uma vez sincronizados os dados no aplicativo, eles ficam
+ disponíveis para acesso 
+\shape italic
+offline
+\shape default
+ tendo seu carregamento instantâneo ao abrir o aplicativo.
 \end_layout
 
 \begin_layout Standard

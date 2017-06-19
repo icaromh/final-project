@@ -341,13 +341,13 @@ Descrição da Solução
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 Para atingir o objetivo de simplificar a navegação nos dados do Portal do
- Aluno SenacRS será desenvolvido um aplicativo mobile e, para que seja possível
- exibir os dados no aplicativo, existirão vários serviços.
+ Aluno SenacRS foi desenvolvido um aplicativo 
+\shape italic
+mobile
+\shape default
+ e, para que seja possível exibir os dados no aplicativo, criados vários
+ serviços.
  Executados em 
 \shape italic
 background
@@ -368,10 +368,10 @@ background
 \end_inset
 
 , cada serviço possui responsabilidades específicas.
- Desenvolvido em JavaScript e através de uma camada nativa do dispositivo
- (Android, iOS), o aplicativo possuirá uma interface fluída com 
+ Desenvolvido em JavaScript e, através de uma camada nativa do dispositivo
+ (Android, iOS), o aplicativo possui uma interface fluida com 
 \shape italic
-look'n feel
+look'n feell
 \shape default
 
 \begin_inset Foot
@@ -391,20 +391,20 @@ look'n feel
 \end_layout
 
 \begin_layout Standard
-Os dados que aparecerão no aplicativo serão uma cópia exata dos apresentados
+Os dados que aparecem no aplicativo são uma cópia exata dos apresentados
  no Portal do Aluno SenacRS.
- Para que isso seja possível, será desenvolvido um robô que busque, de forma
+ Para que isso fosse possível, foi desenvolvido um robô que busca, de forma
  automática, os dados do aluno.
- O robô é uma implementação de um 
+ O robô é uma implementação de um web 
 \shape italic
-web crawler
+crawler
 \shape default
 , o principal método de se obter informações de um 
 \shape italic
 website
 \shape default
 , tanto para indexação de motores de busca, quanto para arquivar dados.
- Isso é feito seguindo os caminhos dos links de uma página para outra, também
+ Isso é feito seguindo o caminho dos links de uma página para outra, também
  chamado de “
 \shape italic
 crawling
@@ -417,7 +417,7 @@ key "andersen2007web"
 \end_inset
 
 ).
- Uma vez que o usuário informe seus dados de acesso ao Portal do Aluno SenacRS
+ Uma vez que o usuário informa seus dados de acesso ao Portal do Aluno SenacRS
  no aplicativo, o robô navega através do portal e se encarrega de buscar
  as informações e, de tempos em tempos, atualizá-las na base de dados.
 \end_layout
@@ -425,8 +425,8 @@ key "andersen2007web"
 \begin_layout Standard
 Além de buscar os dados, o robô também é responsável por enviá-los a outro
  serviço, chamado de Normalizer.
- O Normalizer é um normalizador de dados e funcionará de modo similar a
- ferramentas de ETL.
+ O Normalizer é um normalizador de dados e funciona de modo similar a ferramenta
+s de ETL.
 \end_layout
 
 \begin_layout Standard
@@ -456,6 +456,7 @@ Data
 Warehouse
 \shape default
 ).
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "desmistificando-etl"
@@ -482,12 +483,12 @@ end{citacao}
 Os dados enviados pelo robô são lidos, interpretados, mapeados e transformados
  em uma estrutura normalizada para que então seja enviado a uma camada de
  diferenciação, o serviço Differ.
- O Differ será ativado a cada nova busca de dados no Portal do Aluno SenacRS;
+ O Differ é utilizado a cada nova busca de dados no Portal do Aluno SenacRS;
  ele é responsável por receber a estrutura normalizada, criar uma camada
  de diferenciação com os dados já inseridos no banco de dados e, caso haja
  alguma alteração relevante, como uma nova nota publicada ou uma nova falta,
- ele enviará uma mensagem notificando o usuário dessa alteração.
- Ao fim deste processo, os novos dados serão salvos na base de dados e poderão
+ ele é encarregado de enviar uma mensagem notificando o usuário dessa alteração.
+ Ao fim deste processo, os novos dados são salvos na base de dados e podem
  ser consultados através da API (
 \shape italic
 Application Programming Interface
@@ -496,9 +497,9 @@ Application Programming Interface
 \end_layout
 
 \begin_layout Standard
-A comunicação entre o banco de dados e o aplicativo se dará através de uma
+A comunicação entre o banco de dados e o aplicativo se dá através de uma
  API pública.
- A forma de autenticação na API será através JWT (
+ A forma de autenticação na API é através de JWT (
 \shape italic
 JSON Web Token
 \shape default
@@ -506,8 +507,13 @@ JSON Web Token
 \shape italic
 token
 \shape default
-, gerado pelo servidor, o qual é a chave de autenticação para utilizar os
- demais métodos da API, buscar dados das disciplinas do aluno, por exemplo.
+, gerado pelo servidor.
+ 
+\shape italic
+Token
+\shape default
+ esse, que é a chave de autenticação para utilizar os demais métodos da
+ API, buscar dados das disciplinas do aluno, por exemplo.
  É importante atentar-se que o usuário só tem acesso aos dados do aluno
  vinculados a ele.
  Por exemplo, quando um usuário se identifica com nome de usuário e senha
@@ -517,8 +523,8 @@ token
 \shape default
  gerado só será válido para as informações referentes ao usuário informado.
  Para garantir que os dados enviados pelo aluno para o servidor não sejam
- observados por analisadores de pacotes, todas as requisições serão criptografad
-as usando SSL (
+ observados por analisadores de pacotes, todas as requisições são criptografadas
+ usando SSL (
 \shape italic
 Secure Socket Layer
 \shape default
@@ -531,9 +537,9 @@ Hyper Text Transfer Protocol Secure
 \end_layout
 
 \begin_layout Standard
-Antes das requisições chegarem a API, haverá um servidor NGINX que servirá
- como balanceador de carga entre algumas instâncias da API e, também, como
- um servidor de 
+Antes das requisições chegarem a API, há um servidor NGINX que serve como
+ balanceador de carga entre algumas instâncias da API e, também, como um
+ servidor de 
 \shape italic
 proxy
 \shape default
@@ -601,6 +607,69 @@ Construída pelo autor do projeto
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+A arquitetura desenhada segue um modelo distribuído, tendo comunicações
+ síncronas e assíncronas.
+ Quando uma chamada é feita para a API, o servidor responde imediatamente
+ para o cliente que efetuou a requisição de forma síncrona, mesmo que haja
+ alguma consulta ao banco de dados.
+ Se as solicitações do cliente envolvem algum tipo de consulta ao Portal
+ do Aluno SenacRS, a API envia uma mensagem para a fila de mensagens, no
+ Redis, e responde ao cliente que a solicitação foi feita com sucesso.
+\end_layout
+
+\begin_layout Standard
+Os Workers, quando estiverem ociosos, pegam a mensagem da fila e a processam,
+ tornando essa parte da arquitetura assíncrona.
+ Caso o trabalho do Worker seja uma consulta ao Portal do Aluno SenacRS,
+ ele efetua requisições síncronas ao portal, as processa e o resultado é
+ enviado novamente para a fila de mensagens.
+ 
+\end_layout
+
+\begin_layout Standard
+Existem dois 
+\shape italic
+namespaces
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\shape italic
+namespaces
+\shape default
+: termo em inglês que significa delimitador abstrato (container) que fornece
+ um contexto para os itens que ele armazena.
+\end_layout
+
+\end_inset
+
+
+\shape default
+ para as mensagens da fila.
+ Mensagens que serão processadas pela API são nomeadas seguindo a convenção
+ 
+\begin_inset Quotes eld
+\end_inset
+
+API:nome_da_tarefa
+\begin_inset Quotes erd
+\end_inset
+
+, já as que serão processadas pelos Workers seguem o padrão 
+\begin_inset Quotes eld
+\end_inset
+
+WORKER:nome_da_tarefa
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Dessa forma, todas as mensagens vão para a mesma fila de tarefas e são
+ processadas pelo serviço responsável.
 \end_layout
 
 \end_body

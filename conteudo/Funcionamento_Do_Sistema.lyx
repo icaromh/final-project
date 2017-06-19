@@ -357,7 +357,7 @@ Crawler
 \begin_layout Standard
 O módulo Crawler é responsável por toda a navegação e extração de dados
  do aluno no Portal do Aluno SenacRS e pode ser facilmente instalado em
- qualquer aplicação NodeJS com o comando 
+ qualquer aplicação Node.js com o comando 
 \series bold
 npm install easyac-crawler
 \series default
@@ -465,7 +465,7 @@ reference "fig:Exemplo-de-validação"
 
 \end_inset
 
-, retirado da função de login visível na Figura 
+, retirada da função de login visível na Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Exemplo-de-login"
@@ -544,7 +544,7 @@ reference "fig:Exemplo-de-uso-cookie"
 \shape italic
 cookie
 \shape default
- sendo informado a partir de um parâmetro.
+ sendo informado a partir de um parâmetro, na linha 9.
 \end_layout
 
 \begin_layout Standard
@@ -653,7 +653,7 @@ reference "fig:Exemplo-de-fluxo"
 \end_layout
 
 \begin_layout Standard
-Por não possuir acesso direto ao banco de dados, o Worker quando finaliza
+Por não possuir acesso direto ao banco de dados, o Worker, quando finaliza
  sua tarefa, encaminha para a API uma mensagem informando o resultado.
 \end_layout
 
@@ -785,7 +785,7 @@ JSON Web Token
 \shape italic
 token
 \shape default
- gerado é enviado como resposta a chamada HTTP.
+ gerado é enviado como resposta à chamada HTTP.
 \end_layout
 
 \begin_layout Standard
@@ -813,8 +813,15 @@ No
 \shape italic
  endpoint
 \shape default
- /classes é possível filtrar os resultados a partir de dois parâmetros:
- ano e semestre.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+/classes
+\begin_inset Quotes erd
+\end_inset
+
+ é possível filtrar os resultados a partir de dois parâmetros: ano e semestre.
  Ambos aceitam apenas caracteres numéricos e inteiros.
  Quando efetuada uma chamada, como demonstrado na Figura 
 \begin_inset CommandInset ref
@@ -844,7 +851,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Exemplo de chamada HTTP para visualizar disciplinas
+Exemplo de chamada HTTPS para visualizar disciplinas
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Exemplo-de-chamada-faltas"
@@ -949,7 +956,8 @@ proxy
 \shape italic
 web
 \shape default
- NGINX que recebe as requisições via HTTPS e repassa à API.
+ NGINX que recebe as requisições via HTTPS, na porta 443 e encaminha à API
+ na porta 3000.
 \end_layout
 
 \begin_layout Standard
@@ -973,7 +981,11 @@ Documentação API
 \end_layout
 
 \begin_layout Standard
-Para complementar a API, foi desenvolvida uma interface web (Figura 
+Para complementar a API, foi desenvolvida uma interface 
+\shape italic
+web
+\shape default
+ (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Documentação-da-API"
@@ -1077,8 +1089,12 @@ Aplicativo
 
 \begin_layout Standard
 Ao juntar o desenvolvimento do Crawler, API e Worker foi possível criar
- um aplicativo mobile para visualização de notas e faltas do aluno.
- Essa sessão demonstrará o funcionamento do aplicativo.
+ um aplicativo 
+\shape italic
+mobile
+\shape default
+ para visualização de notas e faltas do aluno.
+ Esta seção demonstrará o funcionamento do aplicativo.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1086,7 +1102,7 @@ Login
 \end_layout
 
 \begin_layout Standard
-A tela inicial exibida ao usuário é a tela de Login(Figura 
+A tela inicial exibida ao usuário é a tela de login (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Tela-de-login"
@@ -1176,8 +1192,8 @@ Cadastro de usuário
 \end_layout
 
 \begin_layout Standard
-Caso, na tela inicial, o usuário tenha optado pela opção de cadastrar um
- novo usuário, a tela de cadastro (Figura 
+Caso, na tela inicial, o usuário tenha optado por cadastrar um novo usuário,
+ a tela de cadastro (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Tela-de-cadastro"
@@ -1352,7 +1368,7 @@ Associar usuário
 \end_layout
 
 \begin_layout Standard
-Ao clicar no link informado na sessão anterior, a tela de associção de contas
+Ao clicar no link informado na seção anterior, a tela de associação de contas
  é exibida (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1377,8 +1393,8 @@ Quando o usuário opta por salvar a senha do Portal do Aluno SenacRS no Easyac,
 \end_layout
 
 \begin_layout Standard
-Após o submeter o formulário de associação, o usuário recebe um feedback
- visual informando que a requisição foi recebida (Figura 
+Após submeter o formulário de associação, o usuário recebe um feedback visual
+ informando que a requisição foi recebida (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Tela-do-fluxo"
@@ -1524,7 +1540,7 @@ reference "fig:Notificação-Push-de-dados-prontos"
 
 \end_inset
 
-) informando que os dados estão sincronizados.
+) em seu celular informando que os dados estão sincronizados.
  Ou, no caso de alguma falha na autenticação, receberá uma notificação informand
 o que houve um erro (Figura 
 \begin_inset CommandInset ref
@@ -1760,8 +1776,8 @@ Menu de opções
 
 \begin_layout Standard
 Há ainda a opção do usuário deslogar de sua conta no aplicativo, solicitar
- uma sincronia dos seus dados manualmente, ou até mesmo reportar um erro
- ou sugestão para o aplicativo.
+ a sincronia de seus dados manualmente, ou até mesmo reportar um erro ou
+ sugestão para o aplicativo.
  Tais opções estão dentro da tela de Configurações (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref

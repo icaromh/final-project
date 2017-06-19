@@ -339,12 +339,17 @@ Em tempos de redes sociais e aplicativos nos avisando proativamente sobre
  que todas as informações nos cerquem dessa forma.
  Entre as informações relevantes que estamos expostos estão informações
  referentes a nossa vida acadêmica e, diferente do que esperamos, o processo
- de obter informações relevantes sobre ela, utilizando o Portal do Aluno
- SenacRS, não é um processo simples ou proativo.
+ de obter informações relevantes sobre ela utilizando o Portal do Aluno
+ SenacRS não é um processo simples ou proativo.
  O projeto apresentado neste relatório tem como propósitos criar um aplicativo
- mobile para ser fonte otimizada de acesso aos dados do aluno e fornecer
- notificações sobre alterações em suas informações acadêmicas, como notas
- e faltas.
+ 
+\shape italic
+mobile
+\shape default
+ para ser fonte otimizada de acesso aos dados do aluno e fornecer notificações
+ sobre alterações em suas informações acadêmicas, como notas e faltas.
+ Além de criar uma alternativa de consulta através aos dados do Portal do
+ Aluno SenacRS através de uma API pública.
 \end_layout
 
 \begin_layout Abstract
@@ -354,7 +359,11 @@ Em tempos de redes sociais e aplicativos nos avisando proativamente sobre
 \series bold
 Palavras-chave: 
 \series default
-Aplicativo Mobile.
+Aplicativo 
+\shape italic
+Mobile
+\shape default
+.
  API.
  Portal do Aluno SenacRS.
 \end_layout

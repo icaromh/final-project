@@ -6,10 +6,6 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-% Fixes footnote alignment
-\usepackage[hang]{footmisc}
-\setlength\footnotemargin{8pt}
-
 % Comandos para escrever BibTeX e BibLaTeX com a grafia esperada.
 \newcommand{\bibtex}{\textsc{Bib}\negthinspace\TeX\space}
 \newcommand{\biblatex}{\textsc{Bib}\LaTeX}
@@ -61,11 +57,6 @@
 \renewcommand{\cftloftitlefont}{\hfill\bfseries\MakeUppercase}
 \renewcommand{\cftafterloftitle}{\hfill}
 
-% Fix page number on second page of TOC
-\renewcommand{\cftsecafterpnum}{\thispagestyle{empty}}
-\renewcommand{\cftsubsecafterpnum}{\thispagestyle{empty}}
-\renewcommand{\cftsubsubsecafterpnum}{\thispagestyle{empty}}
-
 %% Fixes description in LOT and LOF
 \renewcommand{\cftfigfont}{Figura }
 \renewcommand{\cfttabfont}{Tabela }
@@ -105,6 +96,10 @@
 
 % Fix identation of first paragraph
 \usepackage{indentfirst}
+
+% Fixes footnote alignment
+\usepackage[hang]{footmisc}
+\setlength\footnotemargin{8pt}
 
 % Set default figure and table placement
 \def\fps@figure{h}
@@ -264,14 +259,8 @@
   \newunit
   \printfield{year}%
  \finentry}
-
-% add a new line to every bib entry
-\setlength\bibitemsep{2\itemsep}
 \end_preamble
 \use_default_options true
-\begin_modules
-enumitem
-\end_modules
 \maintain_unincluded_children false
 \begin_local_layout
 Provides natbib 1
@@ -293,12 +282,12 @@ Provides natbib 1
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command biber
+\bibtex_command default
 \index_command default
 \paperfontsize 12
 \spacing single
 \use_hyperref false
-\papersize a4paper
+\papersize default
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -310,8 +299,8 @@ Provides natbib 1
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type authoryear
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -334,7 +323,7 @@ Provides natbib 1
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle fancy
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -344,184 +333,37 @@ Provides natbib 1
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-IMPORTANTE: Você não deve alterar NADA neste arquivo, ele serve como 
-\begin_inset Quotes eld
-\end_inset
-
-master
-\begin_inset Quotes erd
-\end_inset
-
- para gerar o documento.
+\begin_layout Abstract
+A esta faculdade e todo seu corpo docente, além da direção e administração
+ que me proporcionaram as condições necessárias para que eu alcançasse meus
+ objetivos.
 \end_layout
 
-\begin_layout Plain Layout
-Nem mesmo as NOTAS podem ser removidas!
+\begin_layout Abstract
+Ao meu orientador Prof.
+ Me.
+ Rafael Guterres Jeffman, pelo tempo dedicado, mesmo fora das dependências
+ da faculdade, ajuda e suporte em todas as etapas do desenvolvimento deste
+ trabalho.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Abstract
+Aos meus pais, por terem me incentivado a nunca desistir, continuar estudando
+ e evoluindo como aluno e pessoa.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Para editar um dos arquivos contido neste documento, basta clicar no 
-\begin_inset Quotes eld
-\end_inset
-
-link
-\begin_inset Quotes erd
-\end_inset
-
- e escolher a opção (botão) 
-\begin_inset Quotes eld
-\end_inset
-
-Editar
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
+\begin_layout Abstract
+A minha companheira Marciele Gottschalk, pela paciência e compreensão nessa
+ longa jornada, pelo apoio e ajuda em todos os momentos necessários, além
+ da ajuda como revisora gramatical.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Abstract
+E enfim, a todos que contribuíram para a realização deste trabalho, seja
+ de forma direta ou indireta, fica registrado aqui, o meu muito obrigado!
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Você deve alterar os campos exitentes na Capa e na Folha de Rosto (nome,
- título e data).
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "acessorios/Capa_Relatorio_Final.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "acessorios/Folha_Rosto_Relatorio_Final.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Altere o arquivo Resumo.lyx para incluir seu resumo.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-abstractname}{Agradecimentos}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Agradecimentos.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-abstractname}{Resumo}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Resumo.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Remova o item abaixo, e a quebra de página, APENAS se a Lista de Figuras
- ficar vazia.
- Isto nunca deveria acontecer, uma vez que a tabela comparativa de sistemas,
- é uma figura, os diagramas são figuras, assim como as imagens que você
- deveria ter utilizado para auxiliar no entendimento da Descrição da Solução.
-\end_layout
-
-\begin_layout Plain Layout
-Para não precisar reinserir a lista, remova-a apenas na versão final do
- documento.
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -531,385 +373,6 @@ status open
 \backslash
 thispagestyle{empty}
 \end_layout
-
-\end_inset
-
-
-\begin_inset FloatList figure
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Remova o item abaixo, e a quebra de página, APENAS se a Lista de Tabelas
- ficar vazia.
- De acordo com a norma do IBGE, adotada pela ABNT para relatórios, Tabelas
- possuem como dado principal números, caso os dados da 
-\begin_inset Quotes eld
-\end_inset
-
-tabela
-\begin_inset Quotes erd
-\end_inset
-
- não sejam números, ela deve ser considerada um 
-\begin_inset Quotes eld
-\end_inset
-
-Quadro
-\begin_inset Quotes erd
-\end_inset
-
- ou 
-\begin_inset Quotes eld
-\end_inset
-
-Figura
-\begin_inset Quotes erd
-\end_inset
-
- (use 
-\begin_inset Quotes eld
-\end_inset
-
-Figura
-\begin_inset Quotes erd
-\end_inset
-
-, devido a uma limitação deste modelo).
-\end_layout
-
-\begin_layout Plain Layout
-Para não precisar reinserir a lista, remova-a apenas na versão final do
- documento.
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\end_inset
-
-
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-O sumário é gerado automaticamente, e inclui seções, subseções e subsubseções.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Os arquivos abaixo representam, cada um, uma seção do documento.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Apresentacao_Do_Projeto.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Definicao_Do_Problema.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Objetivos.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Analise_De_Tecnologias_E_Ferramentas.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Descricao_Da_Solucao.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Abordagem_De_Desenvolvimento.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Arquitetura_Do_Sistema.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Funcionamento_Do_Sistema.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Validacao.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Consideracoes_Finais.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conteudo/Componentes_Reutilizados.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A bibliografia é gerada automaticamente, altere o arquivo bibliografia.bib
- para incluir os livros e artigos citados no texto.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Para o Bib\SpecialChar LaTeX
-: 
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "bibliografia"
-options "bibtotoc,bib/senac-plainnat"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-printbibliography
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-\start_of_appendix
-Apêndice A - Questionário de validação
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte1.png
-	lyxscale 40
-	width 85col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte2-0.png
-	lyxscale 40
-	width 85col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte2-1.png
-	lyxscale 40
-	width 85col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte3-0.png
-	lyxscale 40
-	width 85col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte3-1.png
-	lyxscale 40
-	width 85col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte4.png
-	lyxscale 40
-	width 85col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename images/formulario/parte5.png
-	lyxscale 40
-	width 85col%
 
 \end_inset
 

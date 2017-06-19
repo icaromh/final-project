@@ -371,7 +371,7 @@ Product Backlog
 \end_layout
 
 \begin_layout Standard
-Nessa sessão serão apresentados os itens de 
+Nesta seção serão apresentados os itens de 
 \shape italic
 Product Backlog
 \shape default
@@ -1248,7 +1248,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -1535,7 +1535,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -1739,7 +1739,7 @@ Critério de Aceitação
 \end_layout
 
 \begin_layout Itemize
-A partir da sessão extraída, deve-se retornar em formato JSON todas as faltas
+A partir da sesão extraída, deve-se retornar em formato JSON todas as faltas
  do aluno autenticado.
 \end_layout
 
@@ -1869,7 +1869,7 @@ https://github.com/easyac/docker-compose
 
 \begin_layout Standard
 Como uma das premissas do projeto é trafegar todos os dados utilizando uma
- conexão segura, nessa 
+ conexão segura, nesta 
 \shape italic
 Sprint
 \shape default
@@ -1882,7 +1882,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -2119,7 +2119,7 @@ A partir de um
 \shape italic
 endpoint
 \shape default
- REST, deve ser possível logar um aluno no Portal do Aluno SenacRS.
+ REST, deve ser possível autenticar um aluno no Portal do Aluno SenacRS.
 \end_layout
 
 \begin_layout Itemize
@@ -2215,9 +2215,9 @@ Caso não seja passado o
 token
 \shape default
  autenticado no cabeçalho da requisição, o sistema deve retornar uma mensagem
- informando que a requisição não é autorizada com 
+ informando que a requisição não é autorizada com HTTP
 \shape italic
-HTTP Status Code
+ Status Code
 \shape default
  401.
 \end_layout
@@ -2379,7 +2379,7 @@ Sprint 4
 \end_layout
 
 \begin_layout Standard
-Nessa 
+Nesta 
 \shape italic
 \size small
 Sprint
@@ -2427,7 +2427,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -2660,9 +2660,9 @@ Caso não seja passado o
 token
 \shape default
  autenticado no cabeçalho da requisição, o sistema deve retornar uma mensagem
- informando que a requisição não é autorizada com 
+ informando que a requisição não é autorizada com HTTP
 \shape italic
-HTTP Status Code
+ Status Code
 \shape default
  401.
 \end_layout
@@ -2843,8 +2843,15 @@ POC
 \end_layout
 
 \begin_layout Standard
-Diferente da Sprint anterior, em que o Crawler existia dentro do código
- da API, nessa Sprint foi criado um serviço chamado Worker
+Diferente da 
+\shape italic
+Sprint
+\shape default
+ anterior, em que o Crawler existia dentro do código da API, nesta 
+\shape italic
+Sprint
+\shape default
+ foi criado um serviço chamado Worker
 \begin_inset Foot
 status collapsed
 
@@ -2908,8 +2915,16 @@ endpoints
 \shape italic
 endpoint
 \shape default
- /classes, que retorna em uma única chamada todas as informações sobre uma
- disciplina (Figura 
+ 
+\begin_inset Quotes eld
+\end_inset
+
+/classes
+\begin_inset Quotes erd
+\end_inset
+
+, que retorna em uma única chamada todas as informações sobre uma disciplina
+ (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Schema-Disciplina"
@@ -2929,7 +2944,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -3251,12 +3266,12 @@ Sprint 6
 \end_layout
 
 \begin_layout Standard
-Nessa 
+Nesta 
 \shape italic
 Sprint
 \shape default
- foram desenhados os rascunhos de interface do aplicativo e em seguida implement
-ados, comunicando com a API anteriormente desenvolvida.
+ foram desenhados os rascunhos de interface do aplicativo e, em seguida,
+ implementados comunicando com a API anteriormente desenvolvida.
  
 \end_layout
 
@@ -3265,7 +3280,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -3513,10 +3528,10 @@ Modelagem de Interface
 \end_layout
 
 \begin_layout Standard
-Nessa sessão serão exibidos os rascunhos de interface desenhados e implementados
- nessa 
+Nesta seção serão exibidos os rascunhos de interface desenhados e implementados
+ na
 \shape italic
-Sprint
+ Sprint
 \shape default
 .
 \end_layout
@@ -3751,7 +3766,11 @@ reference "fig:Rascunho-da-tela-configuracoes"
 \end_inset
 
 ).
- Nessa tela também é possível sair do aplicativo ou enviar um feedback.
+ Nesta tela também é possível sair do aplicativo ou enviar um 
+\shape italic
+feedback
+\shape default
+.
 \end_layout
 
 \begin_layout Standard
@@ -3916,7 +3935,7 @@ Itens do Backlog
 \end_layout
 
 \begin_layout Standard
-Os itens implementados nessa 
+Os itens implementados nesta 
 \shape italic
 Sprint
 \shape default
@@ -4214,7 +4233,7 @@ Modelagem de Interface
 \end_layout
 
 \begin_layout Standard
-Nessa sessão serão exibidas as interfaces implementadas nessa 
+Nesta seção serão exibidas as interfaces implementadas na 
 \shape italic
 Sprint
 \shape default
@@ -4222,8 +4241,12 @@ Sprint
 \end_layout
 
 \begin_layout Standard
-Conforme a US10, foi implement)ada uma notificação push no celular do aluno
- a cada nova falta publicada no portal do Aluno SenacRS (Figura 
+Conforme a US10, foi implementada uma notificação 
+\shape italic
+Push
+\shape default
+ no celular do aluno a cada nova falta publicada no portal do Aluno SenacRS
+ (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Notificação-Push-informando-nova-falta"
@@ -4231,9 +4254,12 @@ reference "fig:Notificação-Push-informando-nova-falta"
 \end_inset
 
 ).
- E, segundo a US09, implementada uma notificação push a cada nota publicada,
- informando ao aluno que há novas informações referentes a nota publicadas
- (Figura 
+ E, segundo a US09, implementada uma notificação 
+\shape italic
+Push
+\shape default
+ a cada nota publicada, informando ao aluno que há novas informações referentes
+ a notas publicadas (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Notificação-Push-informando-nova-nota"
