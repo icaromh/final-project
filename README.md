@@ -4,22 +4,22 @@ SENAC TCC
 ## Cronograma
 
 
-### TCC II 
+### TCC II
 
-| Data           | Atividade                                       |
-|----------------|-------------------------------------------------|
-| **17/04**      | Entrega do Relatório de Projeto Atualizado      |
-| **24 a 28/04** | Seminário de Andamento                          |
-| **19/06**      | Entrega do Relatório Final de Projeto           |
-| **26 a 30/06** | Bancas Finais                                   |
-| **10/07**      | Entrega da versão final do Relatório de Projeto |
-
-
+| Data           | Atividade                                               |
+|----------------|---------------------------------------------------------|
+| **~~17/04~~**      | ~~Entrega do Relatório de Projeto Atualizado~~      |
+| **~~24 a 28/04~~** | ~~Seminário de Andamento~~                          |
+| **~~19/06~~**      | ~~Entrega do Relatório Final de Projeto~~           |
+| **26 a 30/06** | Bancas Finais                                           |
+| **10/07**      | Entrega da versão final do Relatório de Projeto         |
 
 
 
 
-### TCC I 
+
+
+### TCC I
 | Data               | Atividade                                                                    |
 |--------------------|------------------------------------------------------------------------------|
 | **~~12/08/2016~~** | ~~(sexta-feira) Entrega do **formulário de Aceite** (secretaria)~~           |
