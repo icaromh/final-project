@@ -337,7 +337,7 @@ Provides natbib 1
 \begin_body
 
 \begin_layout Section
-Análise de Tecnologias e Ferramentas
+ANÁLISE DE TECNOLOGIAS E FERRAMENTAS
 \end_layout
 
 \begin_layout Standard
@@ -346,7 +346,7 @@ ento deste projeto.
 \end_layout
 
 \begin_layout Subsection
-Node.js
+NODE.JS
 \end_layout
 
 \begin_layout Standard
@@ -410,7 +410,7 @@ proxy
 \end_layout
 
 \begin_layout Subsection
-Docker e Docker Compose
+DOCKER E DOCKER COMPOSE
 \end_layout
 
 \begin_layout Standard
@@ -699,7 +699,7 @@ break
 \end_layout
 
 \begin_layout Subsection
-MongoDB
+MONGODB
 \end_layout
 
 \begin_layout Standard
@@ -843,7 +843,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama ER Easyac 
+Exemplo de diagrama ER imaginado para o projeto
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Diagrama-ER-Easyac"
@@ -946,7 +946,7 @@ Fonte
 \end_layout
 
 \begin_layout Subsection
-Mongoose
+MONGOOSE
 \end_layout
 
 \begin_layout Standard
@@ -977,7 +977,7 @@ schemas
 \end_layout
 
 \begin_layout Subsection
-NativeScript
+NATIVESCRIPT
 \end_layout
 
 \begin_layout Standard
@@ -1035,7 +1035,7 @@ source-to-source
 \end_layout
 
 \begin_layout Subsection
-IonicJS
+IONICJS
 \end_layout
 
 \begin_layout Standard
@@ -1070,7 +1070,7 @@ framework
 \end_layout
 
 \begin_layout Subsection
-Redis
+REDIS
 \end_layout
 
 \begin_layout Standard
@@ -1099,7 +1099,7 @@ dos.
 \end_layout
 
 \begin_layout Subsection
-Mocha
+MOCHA
 \end_layout
 
 \begin_layout Standard
@@ -1123,7 +1123,7 @@ key "about-mocha"
 \end_layout
 
 \begin_layout Subsection
-Travis CI
+TRAVIS CI
 \end_layout
 
 \begin_layout Standard
@@ -1176,7 +1176,7 @@ opensource.
 \end_layout
 
 \begin_layout Subsection
-Git
+GIT
 \end_layout
 
 \begin_layout Standard

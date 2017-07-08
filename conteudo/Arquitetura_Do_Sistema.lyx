@@ -335,7 +335,7 @@ enumitem
 \begin_body
 
 \begin_layout Section
-Arquitetura do Sistema
+ARQUITETURA DO SISTEMA
 \end_layout
 
 \begin_layout Standard
@@ -367,7 +367,7 @@ reference "tab:Itens-implementados-do"
 \end_layout
 
 \begin_layout Subsection
-Product Backlog
+PRODUCT BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -379,7 +379,7 @@ Product Backlog
 \end_layout
 
 \begin_layout Subsubsection
-Itens implementados
+ITENS IMPLEMENTADOS
 \end_layout
 
 \begin_layout Standard
@@ -1170,7 +1170,7 @@ Fonte
 \end_layout
 
 \begin_layout Subsection
-Sprint 1
+SPRINT 1
 \end_layout
 
 \begin_layout Standard
@@ -1244,7 +1244,7 @@ https://www.npmjs.com/package/easyac-crawler
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+Itens do BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -1407,7 +1407,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-User Stories
+USER STORIES
 \end_layout
 
 \begin_layout Standard
@@ -1515,7 +1515,7 @@ Deve-se retornar os dados básicos do aluno autenticado (código do aluno,
 \end_layout
 
 \begin_layout Subsection
-Sprint 2
+SPRINT 2
 \end_layout
 
 \begin_layout Standard
@@ -1531,7 +1531,7 @@ viço à parte, precisaria ser embutido dentro código do Crawler para melhor
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+ITENS DO BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -1694,7 +1694,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-User Stories
+USER STORIES
 \end_layout
 
 \begin_layout Standard
@@ -1808,7 +1808,7 @@ Caso haja algum erro no processo de extração dos dados, deve-se retornar
 \end_layout
 
 \begin_layout Subsection
-Sprint 3
+SPRINT 3
 \end_layout
 
 \begin_layout Standard
@@ -1878,7 +1878,7 @@ Sprint
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+ITENS DO BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -2070,7 +2070,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-User Stories
+USER STORIES
 \end_layout
 
 \begin_layout Standard
@@ -2223,7 +2223,7 @@ token
 \end_layout
 
 \begin_layout Subsubsection
-Modelagem de Dados
+MODELAGEM DE DADOS
 \end_layout
 
 \begin_layout Standard
@@ -2375,7 +2375,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsection
-Sprint 4
+SPRINT 4
 \end_layout
 
 \begin_layout Standard
@@ -2423,7 +2423,7 @@ https://github.com/easyac/apidocs
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+ITENS DO BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -2586,7 +2586,7 @@ Autor do projeto.
 \end_layout
 
 \begin_layout Subsubsection
-User Stories
+USER STORIES
 \end_layout
 
 \begin_layout Standard
@@ -2737,7 +2737,7 @@ break
 \end_layout
 
 \begin_layout Subsubsection
-Modelagem de Dados
+MODELAGEM DE DADOS
 \end_layout
 
 \begin_layout Standard
@@ -2810,7 +2810,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsection
-Sprint 5
+SPRINT 5
 \end_layout
 
 \begin_layout Standard
@@ -2940,7 +2940,7 @@ Após a refatoração da API foi gerada uma documentação atualizada através
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+ITENS DO BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -3088,7 +3088,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-Modelagem de Dados
+MODELAGEM DE DADOS
 \end_layout
 
 \begin_layout Standard
@@ -3177,7 +3177,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-Modelagem de Interface
+MODELAGEM DE INTERFACE
 \end_layout
 
 \begin_layout Standard
@@ -3262,7 +3262,7 @@ newpage
 \end_layout
 
 \begin_layout Subsection
-Sprint 6
+SPRINT 6
 \end_layout
 
 \begin_layout Standard
@@ -3276,7 +3276,7 @@ Sprint
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+ITENS DO BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -3524,7 +3524,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-Modelagem de Interface
+MODELAGEM DE INTERFACE
 \end_layout
 
 \begin_layout Standard
@@ -3910,7 +3910,7 @@ newpage
 \end_layout
 
 \begin_layout Subsection
-Sprint 7
+SPRINT 7
 \end_layout
 
 \begin_layout Standard
@@ -3931,7 +3931,7 @@ Iniciou-se o desenvolvimento do Worker pró-ativo, implementado junto aos
 \end_layout
 
 \begin_layout Subsubsection
-Itens do Backlog
+ITENS DO BACKLOG
 \end_layout
 
 \begin_layout Standard
@@ -4125,7 +4125,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-User Stories
+USER STORIES
 \end_layout
 
 \begin_layout Standard
@@ -4229,7 +4229,7 @@ A notificação deve conter o nome da disciplina.
 \end_layout
 
 \begin_layout Subsubsection
-Modelagem de Interface
+MODELAGEM DE INTERFACE
 \end_layout
 
 \begin_layout Standard

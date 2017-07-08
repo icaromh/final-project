@@ -339,7 +339,7 @@ Provides natbib 1
 \begin_body
 
 \begin_layout Section
-Funcionamento do Sistema
+FUNCIONAMENTO DO SISTEMA
 \end_layout
 
 \begin_layout Standard
@@ -351,7 +351,7 @@ A partir dos artefatos levantados e documentados no capítulo anterior, criou-se
 \end_layout
 
 \begin_layout Subsection
-Crawler
+CRAWLER
 \end_layout
 
 \begin_layout Standard
@@ -629,7 +629,7 @@ A fim de simplificar o uso do Crawler, foi adicionada uma interface façade
 \end_layout
 
 \begin_layout Subsection
-Worker
+WORKER
 \end_layout
 
 \begin_layout Standard
@@ -977,7 +977,7 @@ newpage
 \end_layout
 
 \begin_layout Subsection
-Documentação API
+DOCUMENTAÇÃO API
 \end_layout
 
 \begin_layout Standard
@@ -1084,7 +1084,7 @@ newpage
 \end_layout
 
 \begin_layout Subsection
-Aplicativo
+APLICATIVO
 \end_layout
 
 \begin_layout Standard
@@ -1098,7 +1098,7 @@ mobile
 \end_layout
 
 \begin_layout Subsubsection
-Login
+LOGIN
 \end_layout
 
 \begin_layout Standard
@@ -1188,7 +1188,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-Cadastro de usuário
+CADASTRO DE USUÁRIO
 \end_layout
 
 \begin_layout Standard
@@ -1282,7 +1282,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-Lista de disciplinas em branco
+LISTA DE DISCIPLINAS EM BRANCO
 \end_layout
 
 \begin_layout Standard
@@ -1364,7 +1364,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-Associar usuário
+ASSOCIAR USUÁRIO
 \end_layout
 
 \begin_layout Standard
@@ -1669,7 +1669,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-Lista de disciplinas
+LISTA DE DISCIPLINAS
 \end_layout
 
 \begin_layout Standard
@@ -1771,7 +1771,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-Menu de opções
+MENU DE OPÇÕES
 \end_layout
 
 \begin_layout Standard
