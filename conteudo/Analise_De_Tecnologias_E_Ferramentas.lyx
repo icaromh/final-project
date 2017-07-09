@@ -368,6 +368,51 @@ key "about-node.js"
 \end_layout
 
 \begin_layout Subsection
+NIGHTMARE.JS
+\end_layout
+
+\begin_layout Standard
+Nightmare é uma biblioteca de auto nível para automação de navegação de
+ sites.
+ O seu objetivo principal é expor métodos simples que imitem ações de usuários,
+ como ir para página, digitar e clicar.
+ Inicialmente foi construída para tarefas automáticas em sites que não possuem
+ uma API mas é comumente utilizado para testes de interface e 
+\shape italic
+crawling
+\shape default
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nightmare"
+
+\end_inset
+
+).
+ Em seu código, para possuir acesso a páginas web e poder navegar entre
+ elas o Nightmare utiliza o Electron, o qual é uma combinação de uma instância
+ do Chromium
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Chromium: https://www.chromium.org/Home
+\end_layout
+
+\end_inset
+
+ e Node.js.
+\end_layout
+
+\begin_layout Standard
+Uma vez que é possível unir código Node.js com navegação em páginas da web,
+ pode-se simular o processo de login de um usuário, extrair informações
+ da página e manipulá-las no código da aplicação para então salvá-las.
+ Esses processos são necessários para a produção do módulo que busca dados
+ do aluno no Portal do Aluno SenacRS.
+\end_layout
+
+\begin_layout Subsection
 NGINX
 \end_layout
 
