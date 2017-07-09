@@ -342,13 +342,7 @@ DESCRIÇÃO DA SOLUÇÃO
 
 \begin_layout Standard
 Para atingir o objetivo de simplificar a navegação nos dados do Portal do
- Aluno SenacRS foi desenvolvido um aplicativo 
-\shape italic
-mobile
-\shape default
- e, para que seja possível exibir os dados no aplicativo, criados vários
- serviços.
- Executados em 
+ Aluno SenacRS foram criados serviços que executam tarefas em 
 \shape italic
 background
 \shape default
@@ -367,27 +361,8 @@ background
 
 \end_inset
 
-, cada serviço possui responsabilidades específicas.
- Desenvolvido em JavaScript e, através de uma camada nativa do dispositivo
- (Android, iOS), o aplicativo possui uma interface fluida com 
-\shape italic
-look'n feell
-\shape default
-
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-
-\shape italic
-look'n feel
-\shape default
-: no contexto do projeto é a aparência nativa do dispositivo
-\end_layout
-
-\end_inset
-
- do dispositivo acessado.
+, buscando e organizando a estrutura dos dados do aluno, e um aplicativo
+ para visualização desses dados.
 \end_layout
 
 \begin_layout Standard
@@ -614,7 +589,7 @@ A arquitetura desenhada segue um modelo distribuído, tendo comunicações
  síncronas e assíncronas.
  Quando uma chamada é feita para a API, o servidor responde imediatamente
  para o cliente que efetuou a requisição de forma síncrona, mesmo que haja
- alguma consulta ao banco de dados.
+ alguma consulta ao banco de dados responsável por guardar as informações.
  Se as solicitações do cliente envolvem algum tipo de consulta ao Portal
  do Aluno SenacRS, a API envia uma mensagem para a fila de mensagens, no
  Redis, e responde ao cliente que a solicitação foi feita com sucesso.
