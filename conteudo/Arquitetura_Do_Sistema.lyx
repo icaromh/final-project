@@ -379,7 +379,7 @@ Product Backlog
 \end_layout
 
 \begin_layout Subsubsection
-ITENS IMPLEMENTADOS
+Itens implementados
 \end_layout
 
 \begin_layout Standard
@@ -1244,7 +1244,7 @@ https://www.npmjs.com/package/easyac-crawler
 \end_layout
 
 \begin_layout Subsubsection
-Itens do BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -1407,7 +1407,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-USER STORIES
+User Stories
 \end_layout
 
 \begin_layout Standard
@@ -1531,7 +1531,7 @@ viço à parte, precisaria ser embutido dentro código do Crawler para melhor
 \end_layout
 
 \begin_layout Subsubsection
-ITENS DO BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -1694,7 +1694,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-USER STORIES
+User Stories
 \end_layout
 
 \begin_layout Standard
@@ -1878,7 +1878,7 @@ Sprint
 \end_layout
 
 \begin_layout Subsubsection
-ITENS DO BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -2070,7 +2070,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-USER STORIES
+User Stories
 \end_layout
 
 \begin_layout Standard
@@ -2223,7 +2223,7 @@ token
 \end_layout
 
 \begin_layout Subsubsection
-MODELAGEM DE DADOS
+Modelagem de dados
 \end_layout
 
 \begin_layout Standard
@@ -2423,7 +2423,7 @@ https://github.com/easyac/apidocs
 \end_layout
 
 \begin_layout Subsubsection
-ITENS DO BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -2586,7 +2586,7 @@ Autor do projeto.
 \end_layout
 
 \begin_layout Subsubsection
-USER STORIES
+User Stories
 \end_layout
 
 \begin_layout Standard
@@ -2737,7 +2737,7 @@ break
 \end_layout
 
 \begin_layout Subsubsection
-MODELAGEM DE DADOS
+Modelagem de dados
 \end_layout
 
 \begin_layout Standard
@@ -2940,7 +2940,7 @@ Após a refatoração da API foi gerada uma documentação atualizada através
 \end_layout
 
 \begin_layout Subsubsection
-ITENS DO BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -3088,7 +3088,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-MODELAGEM DE DADOS
+Modelagem de dados
 \end_layout
 
 \begin_layout Standard
@@ -3177,7 +3177,7 @@ newpage
 \end_layout
 
 \begin_layout Subsubsection
-MODELAGEM DE INTERFACE
+Modelagem de interface
 \end_layout
 
 \begin_layout Standard
@@ -3276,7 +3276,7 @@ Sprint
 \end_layout
 
 \begin_layout Subsubsection
-ITENS DO BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -3524,7 +3524,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-MODELAGEM DE INTERFACE
+Modelagem de interface
 \end_layout
 
 \begin_layout Standard
@@ -3931,7 +3931,7 @@ Iniciou-se o desenvolvimento do Worker pró-ativo, implementado junto aos
 \end_layout
 
 \begin_layout Subsubsection
-ITENS DO BACKLOG
+Itens do Backlog
 \end_layout
 
 \begin_layout Standard
@@ -4125,7 +4125,7 @@ Fonte:
 \end_layout
 
 \begin_layout Subsubsection
-USER STORIES
+User Stories
 \end_layout
 
 \begin_layout Standard
@@ -4229,7 +4229,7 @@ A notificação deve conter o nome da disciplina.
 \end_layout
 
 \begin_layout Subsubsection
-MODELAGEM DE INTERFACE
+Modelagem de interface
 \end_layout
 
 \begin_layout Standard
